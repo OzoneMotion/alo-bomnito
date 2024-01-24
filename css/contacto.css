@@ -1,3 +1,27 @@
+:root {
+    --main-bg-color: #2A4849;
+    --secondary: #222E50;
+    --highlight: #87BBA2;
+    --light: #F0F7EE;
+    --widthfull: 100vw;
+}
+
+.container {
+    background-color: #767957;
+    padding: 3rem;
+    /* display: flex;  */
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 * {
