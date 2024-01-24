@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color:#2A4849 ;
+    --main-bg-color: #2A4849;
     --secondary: #222E50;
     --highlight: #87BBA2;
     --light: #F0F7EE;
@@ -16,8 +16,55 @@
     justify-items: center;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red: #ff3e3e;
+    --blue: #3fc8e0;
+    --orange: #ffa11e;
+    --square-size: 200px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.red,
+.blue,
+.orange {
+    width: var(--square-size);
+    height: var(--square-size);
+}
+
+.red {
+    background-color: var(--red);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.orange {
+    background-color: var(--orange);
+}
