@@ -28,18 +28,19 @@
             <h2 class="contenido">Escríbenos</h2>
         </div>
         <div class="form-container">
-            <form class="needs-validation" novalidate>
+            <form action="https://formsubmit.co/christian.mhm.escom@gmail.com" method="POST" class="needs-validation"
+                novalidate>
                 <div class="input-container">
                     <div class="input-text-container">
                         <label for="nameId" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nameId " required>
+                        <input type="text" class="form-control" id="nameId " name="nameID" required>
                         <div class="invalid-feedback">
-                            Completa este campogit
+                            Completa este campo
                         </div>
                     </div>
                     <div class="input-text-container">
                         <label for="emailId" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="emailId " required
+                        <input type="email" class="form-control" id="emailId " name="emailId" required
                             placeholder="nombre@dominio.com">
                         <div class="invalid-feedback">
                             Completa este campo
@@ -47,7 +48,8 @@
                     </div>
                     <div class="input-text-container">
                         <label for="phoneId" class="form-label">Telefono</label>
-                        <input type="text" class="form-control" pattern="^+?\d{10,}$" id="phoneId" required>
+                        <input type="text" class="form-control" pattern="^+?\d{10,}$" id="phoneId" name="phoneId"
+                            required>
                         <div class="invalid-feedback">
                             Completa este campo
                         </div>
@@ -55,7 +57,7 @@
                 </div>
                 <div class="message-container">
                     <label for="comentId" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="comentId" rows="9" required></textarea>
+                    <textarea class="form-control" id="comentId" rows="9" name="comentId" required></textarea>
                     <div class="invalid-feedback">
                         Completa este campo
                     </div>
@@ -63,6 +65,7 @@
                 <div class="btn-container">
                     <button type="submit" class="btn btn-light">Enviar</button>
                 </div>
+                <input type="hidden" name="_captcha" value="false">
             </form>
         </div>
     </div>

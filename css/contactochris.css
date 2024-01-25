@@ -19,7 +19,7 @@
 }
 
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-size: var(--sizeContenido);
     font-family: var(--contenido);
     box-sizing: border-box;
@@ -125,12 +125,12 @@ label {
 }
 
 .invalid-feedback {
-    display: block;
+    /* display: block; */
 }
 
 /* Estilos tablet */
 
-@media (min-width: 900px) {
+@media (min-width: 744px) {
 
     /* Estilos para pantallas de tamaño 'xl' y superiores */
     .container {
@@ -145,7 +145,7 @@ label {
 
 /* Estilos desktop */
 
-@media (min-width: 1280px) {
+@media (min-width: 992px) {
 
     /* Estilos para pantallas de tamaño 'xxl' y superiores */
     .container {
