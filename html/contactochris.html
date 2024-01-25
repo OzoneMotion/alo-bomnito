@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Agregamos archivo JS -->
+    <script async defer src="../javascript/contactochris.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Agregamos google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
+    <!-- Agregamos CSS de contacto -->
+    <link rel="stylesheet" href="../css/contactochris.css">
+</head>
+
+<body>
+    <!--creación de formulario-->
+    <div class="container">
+        <div class="title-container">
+            <h1 class="titulo">¿Tienes dudas?</h1>
+            <h2 class="contenido">Escríbenos</h2>
+        </div>
+        <div class="form-container">
+            <form class="needs-validation" novalidate>
+                <div class="input-container">
+
+                    <div class="input-text-container">
+                        <label for="nameId" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nameId " required>
+                        <div class="invalid-feedback">
+                            Completa este campogit
+                        </div>
+                    </div>
+
+                    <div class="input-text-container">
+                        <label for="emailId" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="emailId " required
+                            placeholder="nombre@dominio.com">
+                        <div class="invalid-feedback">
+                            Completa este campo
+                        </div>
+                    </div>
+                    <div class="input-text-container">
+                        <label for="phoneId" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" pattern="^+?\d{10,}$" id="phoneId" required>
+                        <div class="invalid-feedback">
+                            Completa este campo
+                        </div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <label for="comentId" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="comentId" rows="9" required></textarea>
+                    <div class="invalid-feedback">
+                        Completa este campo
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-light">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

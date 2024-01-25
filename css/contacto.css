@@ -140,6 +140,20 @@ label {
     .needs-validation {
         gap: 32px;
     }
+    .titulo {
+        font-size: var(--sizeTituloDesktop);
+
+    }
+
+    .form-label {
+        font-size: var(--sizeEtiqueta);
+        font-family: var(--fontEtiqueta);
+        color: var(--text);
+    }
+
+    .title-container {
+        height: 85px;
+    }
 }
 
 /* Estilos desktop */
@@ -157,7 +171,7 @@ label {
     }
 
     .titulo {
-        font-size: var(--sizeTituloDesktop);
+        font-size: var(--sizeTituloTablet);
 
     }
 
