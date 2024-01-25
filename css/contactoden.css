@@ -2,22 +2,62 @@
     --backgroud:#EFEBE7 ;
     --primary: #BD9870;
     --secondary: #EEAA44;
-    --Accent: #767957;
-    --Text: #2E2E2E;
+    --accent: #767957;
+    --text: #2E2E2E;
     --widthfull: 100vw;
+    --titulo: 'Quicksand', sans-serif;
+    --subtitulo: 'Quicksand', sans-serif;
+    --contenido: 'Lato', sans-serif;
+    --etiqueta: 'Lato', sans-serif;
+    --sizeTitulo: 40px;
+    --sizeSubtitulo: 36px;
+    --sizeContenido: 16px;
+    --sizeEtiqueta: 16px;
 }
 
+  @media (min-width: 576px) {
+    /* Estilos para pantallas de tamaño 'sm' y superiores */
+  }
+  
+  @media (min-width: 768px) {
+    /* Estilos para pantallas de tamaño 'md' y superiores */
+  }
+  
+  @media (min-width: 992px) {
+    /* Estilos para pantallas de tamaño 'lg' y superiores */
+  }
+  
+  @media (min-width: 1200px) {
+    /* Estilos para pantallas de tamaño 'xl' y superiores */
+  }
+  
+  @media (min-width: 1400px) {
+    /* Estilos para pantallas de tamaño 'xxl' y superiores */
+  }
+
 body {
-    background-color:var(--backgroud);
+    background: url(../imagenes/contacto.jpg);
 }
 
 .container {
     background-color: var(--primary);
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 20px;
+    border-radius: 5%;
+    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
 }
 
 h1,h2 {
     text-align: center;
-    color: var(--Text);
+    color: var(--text);
+}
+
+.titulo {
+    font-family: var(--titulo);
+    font-size: var(--sizeTitulo);
+}
+
+.contenido {
+    font-family: var(--contenido);
+    font-size: var(--sizeContenido);
 }
