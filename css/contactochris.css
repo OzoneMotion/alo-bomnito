@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Quicksand:wght@500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@700&display=swap');
+
 :root {
     --backgroud: #EFEBE7;
     --primary: #BD9870;
@@ -12,34 +15,25 @@
     --sizeTituloDesktop: 40px;
     --sizeTituloTablet: 40px;
     --sizeTituloMobile: 24px;
-    --sizeContenido: 16px;
-    --sizeEtiqueta: 14px;
+    --sizeSubtituloDes-Tab:30px;
+    --sizeContenido: 20px;
+    --sizeEtiqueta: 16px;
     --btnMedium-w: 200px;
     --btnMedium-h: 45px;
 }
 
-* {
-    border: 1px solid black;
-    font-size: var(--sizeContenido);
+ * {
+    /* border: 1px solid black;   */
+    font-size: var(--sizeContenido); 
     font-family: var(--contenido);
     box-sizing: border-box;
     margin: 0;
-}
+} 
 
 
 body {
     background: url(../imagenes/contacto.jpg);
 }
-
-/* Estilos títulos */
-
-h1,
-h2 {
-    text-align: center;
-    color: var(--text);
-    margin: 0;
-}
-
 
 /* Estilos container */
 
@@ -65,6 +59,8 @@ h2 {
     width: 100%;
     height: 69px;
     justify-content: space-between;
+    text-align: center;
+    color: var(--text);
 }
 
 /* Estilos container */
@@ -85,10 +81,10 @@ h2 {
 
 }
 
-input[type="text"] {
+  input {
     height: 39px;
     padding: 10px;
-}
+}  
 
 label {
     margin-bottom: 4px;
@@ -100,12 +96,12 @@ label {
 
 /* Estilos textos */
 .contenido {
-    font-family: var(--contenido);
-    font-size: var(--sizeContenido);
+    font-family: var(--fontContenido);
+    font-size: var(--sizeSubtituloDescktop);
 }
 
 .titulo {
-    font-family: var(--titulo);
+    font-family: var(--fontTitulo);
     font-size: var(--sizeTituloMobile);
 }
 
@@ -121,12 +117,15 @@ label {
     height: var(--btnMedium-h);
     background-color: var(--accent);
     border: none;
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
     color: var(--backgroud);
+    /* box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40); */
 }
 
-.invalid-feedback {
+/* .invalid-feedback {
     display: block;
-}
+} */
 
 /* Estilos tablet */
 
@@ -156,4 +155,17 @@ label {
     .needs-validation {
         gap: 32px;
     }
+    .titulo {
+        font-size: var(--sizeTituloDesktop);
+        
+    }
+    .form-label {
+        font-size: var(--sizeEtiqueta);
+        font-family: var(--fontEtiqueta);
+        color: var(--text);
+    }
+    .title-container {
+        height: 85px;
+    }
+    
 }
