@@ -41,8 +41,7 @@ body {
 
 .container {
   background-color: var(--primary);
-  width: 10px;
-  height: 20px;
+  width: 800px;
   border-radius: 5%;
   box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
 }
