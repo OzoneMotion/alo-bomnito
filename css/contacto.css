@@ -15,14 +15,14 @@
     --sizeTituloTablet: 40px;
     --sizeTituloMobile: 24px;
     --sizeSubtituloDes-Tab: 30px;
-    --sizeContenido: 16px;
+    --sizeContenido: 18px;
     --sizeEtiqueta: 14px;
     --btnMedium-w: 200px;
     --btnMedium-h: 45px;
 }
 
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-size: var(--sizeContenido);
     font-family: var(--fontContenido);
     color: var(--text);
@@ -84,17 +84,15 @@ body {
 
 }
 
-input,
-textarea {
+input {
     padding: 10px;
     width: 100%;
     border-radius: 5px;
     border: none;
     margin: 5px 0;
-}
-
-input {
     height: 39px;
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
 }
 
 label {
@@ -117,11 +115,6 @@ label {
     font-weight: 700;
 }
 
-label,
-.invalid-feedback {
-    font-size: var(--sizeEtiqueta);
-}
-
 /* Estilos boton */
 .btn-container {
     display: flex;
@@ -137,12 +130,16 @@ label,
     font-size: var(--sizeEtiqueta);
     font-family: var(--fontEtiqueta);
     color: var(--backgroud);
-    /* box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40); */
+    border-radius: 10px;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
 }
 
 .invalid-feedback {
     display: block;
-}
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+    color: red;
+} 
 
 .alerts-container {
     height: 20px;
