@@ -117,12 +117,12 @@ body {
     font-style: normal;
 }
 
-img{
-    width: 160;
-    height: 160;
-    max-width: 100%;
-    border-radius: 100px;
-}
+/*img{
+    width: 10rem;
+    height: 10rem;
+    max-width: fit-content;
+    border-radius: 6.25rem;
+}*/
 
 .row{
    text-align: center;
@@ -227,10 +227,10 @@ img{
   }
   
   img{
-      width: 160;
-      height: 160;
-      max-width: 100%;
-      border-radius: 100px;
+      width: 12.4rem;
+      height: 12.4rem;
+      max-width: fit-content;
+      border-radius: 7.75rem;
   }
   
   .row{
@@ -273,15 +273,16 @@ img{
 
 img{
   width: 10rem;
-  height: 10rem;
-  max-width: 100%;
-  border-radius: 100px;
+    height: 10rem;
+    max-width: none;
+    border-radius: 6.25rem;
 }
 
 .row{
  text-align: center;
  justify-content: space-around;
 }
+
 .modal-title{
   position:relative;
   left: 10rem;
@@ -290,8 +291,8 @@ img{
 
 .body-photo{
   margin: 1rem;
-  width: 5rem;
-  height: 5rem;
+  width: 10rem;
+  height: 10rem;
   max-width: 100%;
   border-radius: 100%;
 }
@@ -301,9 +302,6 @@ img{
   margin: 1rem;
   color: #767957;
 }
-
-
-
 
 }
   
