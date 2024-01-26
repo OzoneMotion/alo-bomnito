@@ -128,8 +128,20 @@ img{
    justify-content: space-around;
 }
 
-.modal{
+
+.modal-header{
+  background-color: #BD9870;
+  
+}
+.modal-body{
+  background-color: #BD9870;
+}
+.modal-fotter{
+  background-color:#BD9870 ;
+}
+.modal-content{
   position: fixed;
+  border: none;
   top: 0;
   left: 0;
   right: 0;
@@ -137,16 +149,31 @@ img{
 
 }
 
+.modal-title{
+  position:relative;
+  left: 10rem;
+  font-family:"Quicksand", sans-serif;
+}
+
+.body-photo{
+  margin: 1rem;
+  width: 5rem;
+  height: 5rem;
+  max-width: 100%;
+  border-radius: 100%;
+}
+
+.fa-brands{
+  font-size: 3rem;
+  margin: 1rem;
+  color: #767957;
+}
+
 #miembroModal1{
   justify-content: space-around;
   text-align: center; 
 }
 
-#fa-brands{
-  width: 3rem;
-  height: 3rem;
-  background-position: center;
-}
 
 
 
