@@ -14,7 +14,6 @@
   <body>
 
 <!-- INICIO DE NAVBAR -->
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded subtitulo" aria-label="Thirteenth navbar example">
       <div class="container-fluid ">
           <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +26,7 @@
               <button class="btn-cerrar-border" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
                 <span class="material-symbols-outlined">
                   close
-                  </span>
+                </span>
               </button>
             </div>
             <div class="offcanvas-body d-flex flex-column">
@@ -35,7 +34,7 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Home</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item oculto-desktop">
                     <a class="nav-link" href="#">Carrito de compras</a>
                   </li>
                   <li class="nav-item">
@@ -50,44 +49,40 @@
                       <li><a class="nav-link" href="#">Productos</a></li>
                     </ul>
                   </li>
-
                   <li class="nav-item">
                     <a class="nav-link" href="#">Conoce tu tipo de piel</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTipos">
-                      Cuenta <span class="material-symbols-outlined">arrow_drop_down</span>
-                    </a>
-                  <ul class="collapse colapsable" id="collapseTipos">
-                    <li><a class="nav-link" href="#">Mis datos</a></li>
-
-                  </ul>
-                </li>
-
+                  <li class="nav-item oculto-desktop">
+                      <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCuenta">
+                        Cuenta <span class="material-symbols-outlined">arrow_drop_down</span>
+                      </a>
+                    <ul class="collapse colapsable" id="collapseCuenta">
+                      <li>
+                        <a class="nav-link" href="#">Mis datos</a>
+                      </li>
+                    </ul>
+                  </li>
                   <li> 
                     <a class="nav-link" aria-current="page" href="./nosotros.html">Sobre nosotros</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./contacto.html">Contacto</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item oculto-desktop">
                     <a class="nav-link" href="#">Cerrar sesión</a>
                   </li>
               </ul>
-
             </div>
             <div class="d-lg-none aling-self-center canvas-footer titulo">
               <p>ALO' BOMNITO</p>
             </div>
           </div>
-        </div>
+      </div>
         <div class="icons">
           <a class="navbar-brand" href="#"><span class="material-symbols-outlined navbar-brand">account_circle</span></a>
           <a class="navbar-brand" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
         </div>
     </nav>
-
-
 <!-- FIN DE NAVBAR -->
 
    

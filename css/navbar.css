@@ -79,6 +79,11 @@ body {
         visibility: hidden !important;
     }
 
+    .oculto-desktop {
+        visibility: hidden;
+        position: absolute;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
