@@ -7,13 +7,13 @@
     <title>Contacto</title>
 
     <!-- Agregamos archivo JS -->
-    <script async defer src="../../javascript/contacto.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script async defer src="../javascript/versionJ.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- Agregamos google font -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Quicksand:wght@500&display=swap" rel="stylesheet"> -->
     <!-- Agregamos CSS de contacto -->
-    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/contactochris.css">
 </head>
 
 <body>
@@ -32,6 +32,8 @@
                         <input type="text" class="form-control" id="nameId" name="nameID" required>
                         <div class="alerts-container">
                             <p class="invalid-feedback">Completa este campo</p>
+                            <p class="invalid-feedback">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+                                numeros, letras y guion bajo.</p>
                         </div>
                     </div>
                     <div class="input-text-container">
@@ -40,13 +42,17 @@
                             placeholder="nombre@dominio.com">
                         <div class="alerts-container">
                             <p class="invalid-feedback">Completa este campo</p>
+                            <p class="invalid-feedback">El correo solo puede contener letras, numeros, puntos,
+                                guiones y guion bajo.</p>
                         </div>
                     </div>
                     <div class="input-text-container">
                         <label for="phoneId" class="form-label">Telefono</label>
-                        <input type="text" class="form-control" id="phoneId" required>
+                        <input type="tel" class="form-control" id="phoneId" required>
                         <div class="alerts-container">
-                            <p class="invalid-feedback">Completa este campo</p>
+                            <p class="invalid-feedback invalid-feedback">Completa este campo</p>
+                            <p class="invalid-feedback">El telefono solo puede contener numeros y el maximo son 14
+                                dígitos.</p>
                         </div>
                     </div>
                 </div>
@@ -55,6 +61,8 @@
                     <textarea class="form-control" id="comentId" rows="9" name="comentId" required></textarea>
                     <div class="alerts-container">
                         <p class="invalid-feedback">Completa este campo</p>
+                        <p class="invalid-feedback">El correo solo puede contener letras, numeros, puntos,
+                            guiones y guion bajo.</p>
                     </div>
                 </div>
                 <div class="btn-container">
@@ -66,7 +74,7 @@
             </form>
         </div>
     </div>
-
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
