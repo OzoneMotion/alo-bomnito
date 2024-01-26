@@ -123,10 +123,6 @@ label {
     /* box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40); */
 }
 
-.invalid-feedback {
-    /* display: block; */
-}
-
 /* Estilos tablet */
 
 @media (min-width: 744px) {
