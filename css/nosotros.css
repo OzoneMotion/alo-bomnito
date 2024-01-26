@@ -128,7 +128,25 @@ img{
    justify-content: space-around;
 }
 
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
+}
+
+#miembroModal1{
+  justify-content: space-around;
+  text-align: center; 
+}
+
+#fa-brands{
+  width: 3rem;
+  height: 3rem;
+  background-position: center;
+}
 
 
 
@@ -191,3 +209,6 @@ img{
      justify-content: space-around;
   }
 }
+
+
+
