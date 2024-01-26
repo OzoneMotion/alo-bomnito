@@ -49,7 +49,7 @@ main {
 	transition: .3s ease all;
 }
 
-.formulario__input-caja {
+.caja {
     height: 12.5rem;
     gap: 30px;
 }
