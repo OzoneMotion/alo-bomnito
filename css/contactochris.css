@@ -15,7 +15,7 @@
     --sizeTituloTablet: 40px;
     --sizeTituloMobile: 24px;
     --sizeSubtituloDes-Tab: 30px;
-    --sizeContenido: 18px;
+    --sizeContenido: 16px;
     --sizeEtiqueta: 14px;
     --btnMedium-w: 200px;
     --btnMedium-h: 45px;
@@ -55,6 +55,10 @@ body {
     margin-bottom: 4rem;
 }
 
+.input-text-container {
+    position: relative;
+}
+
 /* Estilos title container */
 .title-container {
     display: flex;
@@ -67,7 +71,7 @@ body {
 }
 
 /* Estilos container */
-.needs-validation {
+.form-validation {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -95,6 +99,16 @@ textarea {
     font-family: var(--fontEtiqueta);
 }
 
+label {
+    font-size: var(--sizeEtiqueta);
+}
+
+input:focus,
+textarea:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+}
+
 input {
     height: 39px;
 }
@@ -108,12 +122,12 @@ label {
 }
 
 /* Estilos textos */
-#contenido {
+#content {
     font-family: var(--fontContenido);
     font-size: var(--sizeSubtituloDescktop);
 }
 
-#titulo {
+#title {
     font-family: var(--fontTitulo);
     font-size: var(--sizeTituloMobile);
     font-weight: 700;
@@ -122,38 +136,99 @@ label {
 /* Estilos boton */
 .btn-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
+    gap: 10px;
 }
 
-.btn {
+#btn-submit {
     width: var(--btnMedium-w);
     height: var(--btnMedium-h);
     background-color: var(--accent);
     border: none;
-    font-size: var(--sizeEtiqueta);
-    font-family: var(--fontEtiqueta);
+    font-size: 16px;
+    font-weight: 700;
     color: var(--backgroud);
     border-radius: 10px;
     box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
 }
 
+#btn-submit:hover {
+    cursor: pointer;
+}
+
 /* Estilos error */
 /* .formulario__input-error */
 .invalid-feedback {
-    /* display: none; */
+    display: none;
     font-size: var(--sizeEtiqueta);
     font-family: var(--fontEtiqueta);
     color: red;
 }
 
 /* .formulario__input-error-activo */
-.invalid-feedback-activo {
+.invalid-feedback-active {
     display: block;
 }
 
 .alerts-container {
-    height: 20px;
+    height: 40px;
+}
+
+.input-elements-container {
+    position: relative;
+}
+
+.icon-state {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    opacity: 0;
+}
+
+/* Estilos exito */
+.alert-success-container {
+    width: 100%;
+
+}
+
+.form-submitted-success {
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+    color: green;
+    display: none;
+}
+
+.form-submitted-success-active {
+    display: block;
+}
+
+/* Estilos validacion */
+.input-text-container-correct .icon-state {
+    color: green;
+    opacity: 1;
+}
+
+.input-text-container-incorrect .form-label {
+    color: red;
+}
+
+.input-text-container-incorrect .icon-state {
+    color: red;
+    opacity: 1;
+}
+
+.input-text-container-incorrect .form-control {
+    border: 3px solid red;
+}
+
+/* Estilo btn-submit disabled */
+#btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 /* Estilos tablet */
@@ -166,11 +241,11 @@ label {
         padding: 89px;
     }
 
-    .needs-validation {
+    .form-validation {
         gap: 32px;
     }
 
-    .titulo {
+    #title {
         font-size: var(--sizeTituloDesktop);
 
     }
@@ -196,13 +271,12 @@ label {
         padding: 109px;
     }
 
-    .needs-validation {
+    .form-validation {
         gap: 32px;
     }
 
-    .titulo {
+    #title {
         font-size: var(--sizeTituloTablet);
-
     }
 
     .form-label {

@@ -3,16 +3,16 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    phoneId: /^\d{10}$/, // 10 numeros.
-    comentId: /^[a-zA-ZÀ-ÿ\s]{1,100}$/, // Letras, numeros, guion y guion_bajo
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    telefono: /^\d{10}$/, // 10 numeros.
+    caja: /^[a-zA-ZÀ-ÿ\s]{1,100}$/, // Letras, numeros, guion y guion_bajo
 }
 
 const campos = {
-    comentId: false,
+    caja: false,
     nombre: false,
-    emailId: false,
-    phoneId: false
+    correo: false,
+    telefono: false
 }
 
 const validarFormulario = (e) => {
@@ -20,14 +20,14 @@ const validarFormulario = (e) => {
         case "nombre":
             validarCampo(expresiones.nombre, e.target, 'nombre');
             break;
-        case "emailId":
-            validarCampo(expresiones.emailId, e.target, 'emailId');
+        case "correo":
+            validarCampo(expresiones.correo, e.target, 'correo');
             break;
-        case "phoneId":
-            validarCampo(expresiones.phoneId, e.target, 'phoneId');
+        case "telefono":
+            validarCampo(expresiones.telefono, e.target, 'telefono');
             break;
-        case "comentId":
-            validarCampo(expresiones.comentId, e.target, 'comentId');
+        case "caja":
+            validarCampo(expresiones.caja, e.target, 'caja');
             break;
     }
 }
@@ -60,7 +60,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const terminos = document.getElementById('terminos');
-    if (campos.comentId && campos.nombre && campos.emailId && campos.phoneId) {
+    if (campos.caja && campos.nombre && campos.correo && campos.telefono) {
         formulario.reset();
 
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
