@@ -5,14 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-
     <!-- Agregamos archivo JS -->
-    <script async defer src="../javascript/versionJ.js"></script>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- Agregamos google font -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Quicksand:wght@500&display=swap" rel="stylesheet"> -->
-    <!-- Agregamos CSS de contacto -->
+    <script async defer src="../javascript/contactochris.js"></script>
     <link rel="stylesheet" href="../css/contactochris.css">
 </head>
 
@@ -20,54 +14,86 @@
     <!--creación de formulario-->
     <div class="container">
         <div class="title-container">
-            <h1 id="titulo">¿Tienes dudas?</h1>
-            <h2 id="contenido">Escríbenos</h2>
+            <h1 id="title">¿Tienes dudas?</h1>
+            <h2 id="content">Escríbenos</h2>
         </div>
         <div class="form-container">
-            <form action="https://formsubmit.co/c01499140a44963b8da94138f76a485d" method="POST" class="needs-validation"
-                novalidate>
+            <form action="https://formsubmit.co/c01499140a44963b8da94138f76a485d" method="POST" class="form-validation"
+                id="form-validation" novalidate>
                 <div class="input-container">
-                    <div class="input-text-container">
+                    <!-- Grupo nombre -->
+                    <div class="input-text-container" id="id-nameId">
                         <label for="nameId" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nameId" name="nameID" required>
+                        <div class="input-elements-container">
+                            <input type="text" class="form-control" id="nameId" name="nameId"
+                                placeholder="Nombre completo" required>
+                            <i class="icon-state fas fa-times-circle"></i>
+                        </div>
                         <div class="alerts-container">
-                            <p class="invalid-feedback">Completa este campo</p>
-                            <p class="invalid-feedback">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
-                                numeros, letras y guion bajo.</p>
+                            <p class="invalid-feedback" id="nameId-empty">Completa este campo</p>
+                            <p class="invalid-feedback" id="nameId-regex">Solo puede contener números, letras y guion
+                                bajo.</p>
                         </div>
                     </div>
-                    <div class="input-text-container">
+
+                    <!-- Grupo email -->
+                    <div class="input-text-container" id="id-emailId">
                         <label for="emailId" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="emailId" name="emailId" required
-                            placeholder="nombre@dominio.com">
+                        <div class="input-elements-container">
+                            <input type="email" class="form-control" id="emailId" name="emailId"
+                                placeholder="nombre@dominio.com" required>
+                            <i class="icon-state fas fa-times-circle"></i>
+                        </div>
+
                         <div class="alerts-container">
-                            <p class="invalid-feedback">Completa este campo</p>
-                            <p class="invalid-feedback">El correo solo puede contener letras, numeros, puntos,
+                            <p class="invalid-feedback" id="emailId-empty">Completa este campo</p>
+                            <p class="invalid-feedback" id="emailId-regex">El correo solo puede contener letras,
+                                numeros,
+                                puntos,
                                 guiones y guion bajo.</p>
                         </div>
                     </div>
-                    <div class="input-text-container">
-                        <label for="phoneId" class="form-label">Telefono</label>
-                        <input type="tel" class="form-control" id="phoneId" required>
+
+                    <!-- Grupo telefono -->
+                    <div class="input-text-container" id="id-phoneId">
+                        <label for="phoneId" class="form-label">Teléfono</label>
+                        <div class="input-elements-container">
+                            <input type="tel" class="form-control" id="phoneId" name="phoneId" placeholder="10 dígitos"
+                                required>
+                            <i class="icon-state fas fa-times-circle"></i>
+                        </div>
+
                         <div class="alerts-container">
-                            <p class="invalid-feedback invalid-feedback">Completa este campo</p>
-                            <p class="invalid-feedback">El telefono solo puede contener numeros y el maximo son 14
-                                dígitos.</p>
+                            <p class="invalid-feedback" id="phoneId-empty">Completa este campo</p>
+                            <p class="invalid-feedback" id="phoneId-regex">El máximo son 10 dígitos.</p>
                         </div>
                     </div>
                 </div>
-                <div class="message-container">
-                    <label for="comentId" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="comentId" rows="9" name="comentId" required></textarea>
+
+                <!-- Grupo mensaje -->
+                <div class="message-container" id="id-commentId">
+                    <label for="commentId" class="form-label">Mensaje</label>
+                    <div class="input-elements-container">
+                        <textarea class="form-control" id="commentId" rows="9" name="commentId"
+                            placeholder="Máximo 200 caracteres" required></textarea>
+                        <i class="icon-state fas fa-times-circle"></i>
+                    </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback">Completa este campo</p>
-                        <p class="invalid-feedback">El correo solo puede contener letras, numeros, puntos,
-                            guiones y guion bajo.</p>
+                        <p class="invalid-feedback" id="commentId-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="commentId-regex">Agrega un mensaje</p>
                     </div>
                 </div>
-                <div class="btn-container">
-                    <button type="submit" class="btn btn-light">Enviar</button>
+
+                <!-- Grupo btn -->
+                <div class="input-text-container formulario__grupo-btn-enviar btn-container">
+                    <button type="submit" id="btn-submit" disabled>Enviar</button>
+                    <div class="alert-success-container">
+                        <p class="form-submitted-success" id="form-submitted-success">¡Tu mensaje se ha enviado
+                            correctamente!</p>
+                    </div>
                 </div>
+
+                <!-- API para enviar correo -->
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/html/contacto.html">
                 <input type="hidden" name="_cc" value="arq.denisseher@gmail.com,seovelaz@gmail.com">
