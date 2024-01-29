@@ -8,7 +8,7 @@ const regex = {
     nameId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     phoneId: /^\d{10}$/, // 10 numeros.
-    commentId: /^(?!\\s*$).{1,200}$/,
+    commentId: /^(?!\\s*$).{1,1000}$/,
 }
 
 const names = {

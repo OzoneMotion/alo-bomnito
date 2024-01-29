@@ -99,6 +99,10 @@ textarea {
     font-family: var(--fontEtiqueta);
 }
 
+label {
+    font-size: var(--sizeEtiqueta);
+}
+
 input:focus,
 textarea:focus {
     border: 3px solid #0075FF;
