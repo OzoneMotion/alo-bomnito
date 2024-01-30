@@ -199,6 +199,7 @@ label {
     font-family: var(--fontEtiqueta);
     color: green;
     display: none;
+    text-align: center;
 }
 
 .form-submitted-success-active {

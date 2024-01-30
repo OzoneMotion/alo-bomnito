@@ -8,6 +8,9 @@
     <!-- Agregamos archivo JS -->
     <script async defer src="../javascript/contactochris.js"></script>
     <link rel="stylesheet" href="../css/contactochris.css">
+    <!-- API para enviar correo -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -17,10 +20,12 @@
             <h1 id="title">¿Tienes dudas?</h1>
             <h2 id="content">Escríbenos</h2>
         </div>
+
         <div class="form-container">
-            <form action="https://formsubmit.co/c01499140a44963b8da94138f76a485d" method="POST" class="form-validation"
-                id="form-validation" novalidate>
+
+            <form  class="form-validation" id="form-validation" novalidate>
                 <div class="input-container">
+
                     <!-- Grupo nombre -->
                     <div class="input-text-container" id="id-nameId">
                         <label for="nameId" class="form-label">Nombre</label>
@@ -91,14 +96,10 @@
                             correctamente!</p>
                     </div>
                 </div>
-
-                <!-- API para enviar correo -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/html/contacto.html">
-                <input type="hidden" name="_cc" value="arq.denisseher@gmail.com,seovelaz@gmail.com">
             </form>
         </div>
     </div>
+    <!-- API para iconos -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 
