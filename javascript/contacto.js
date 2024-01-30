@@ -8,7 +8,7 @@ const regex = {
     nameId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     phoneId: /^\d{10}$/, // 10 numeros.
-    commentId: /^(?!\s*$)[\s\S]{1,1000}$/,
+    commentId: /^(?!\s*$)[\s\S]{1,500}$/,
 }
 
 const names = {
@@ -70,9 +70,7 @@ formValidation.addEventListener('submit', (e) => {
 
     if (Object.values(names).every(state => state)) {
         emailjs.init('2c-VMt_t8jQv-N8E-');
-        //manda a llamar la funcion
         sendMail();
-        //borra el form
         formValidation.reset();
 
         const successMessage = document.getElementById('form-submitted-success');
@@ -82,7 +80,6 @@ formValidation.addEventListener('submit', (e) => {
         document.querySelectorAll('.input-text-container-correct').forEach((icon) => icon.classList.remove('input-text-container-correct'));
     }
 });
-
 
 const sendMail = () => {
     const params = {
@@ -97,6 +94,3 @@ const sendMail = () => {
 
     emailjs.send(serviceID, templateID, params);
 }
-
-
-

@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <!-- Agregamos archivo JS -->
-    <script async defer src="../javascript/contactochris.js"></script>
-    <link rel="stylesheet" href="../css/contactochris.css">
-    <!-- API para enviar correo -->
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script async defer src="../javascript/contacto.js"></script>
+    <script async defer type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- <script async defer type="text/javascript">
+        (function () {
+            emailjs.init('2c-VMt_t8jQv-N8E-');
+        })();
+    </script> -->
+    <link rel="stylesheet" href="../css/contacto.css">
 </head>
 
 <body>
@@ -22,8 +26,7 @@
         </div>
 
         <div class="form-container">
-
-            <form  class="form-validation" id="form-validation" novalidate>
+            <form class="form-validation" id="form-validation" novalidate>
                 <div class="input-container">
 
                     <!-- Grupo nombre -->
@@ -79,12 +82,12 @@
                     <label for="commentId" class="form-label">Mensaje</label>
                     <div class="input-elements-container">
                         <textarea class="form-control" id="commentId" rows="9" name="commentId"
-                            placeholder="Máximo 1000 caracteres" required></textarea>
+                            placeholder="Máximo 500 caracteres" required></textarea>
                         <i class="icon-state fas fa-times-circle"></i>
                     </div>
                     <div class="alerts-container">
                         <p class="invalid-feedback" id="commentId-empty">Completa este campo</p>
-                        <p class="invalid-feedback" id="commentId-regex">El máximo son 1000 caracteres</p>
+                        <p class="invalid-feedback" id="commentId-regex">El máximo son 500 caracteres</p>
                     </div>
                 </div>
 
