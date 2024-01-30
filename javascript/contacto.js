@@ -8,7 +8,7 @@ const regex = {
     nameId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     phoneId: /^\d{10}$/, // 10 numeros.
-    commentId: /^(?!\\s*$).{1,1000}$/,
+    commentId: /^(?!\s*$)[\s\S]{1,500}$/,
 }
 
 const names = {
@@ -37,7 +37,6 @@ elements.forEach((element) => {
 });
 
 const inputValidation = (regex, input, name) => {
-    console.log(name);
     const idElement = document.getElementById(`id-${name}`);
     const iconElement = document.querySelector(`#id-${name} i`);
     const feedbackEmptyElement = document.querySelector(`#id-${name} .invalid-feedback#${name}-empty`);
@@ -70,6 +69,8 @@ formValidation.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (Object.values(names).every(state => state)) {
+        emailjs.init('2c-VMt_t8jQv-N8E-');
+        sendMail();
         formValidation.reset();
 
         const successMessage = document.getElementById('form-submitted-success');
@@ -80,3 +81,16 @@ formValidation.addEventListener('submit', (e) => {
     }
 });
 
+const sendMail = () => {
+    const params = {
+        nameId: document.getElementById("nameId").value,
+        emailId: document.getElementById("emailId").value,
+        phoneId: document.getElementById("phoneId").value,
+        commentId: document.getElementById("commentId").value,
+    };
+
+    const serviceID = "service_gytyy4i";
+    const templateID = "template_sndgac6";
+
+    emailjs.send(serviceID, templateID, params);
+}
