@@ -1,0 +1,58 @@
+:root {
+    --primary: #BD9870;
+    --secondary: #EEAA44;
+    --highlight: #767957;
+    --background: #EFEBE7;
+    --text: #2E2E2E;
+    --subtitles-titles-font: 'Quicksand', sans-serif;
+    --title-size: 1.3rem;
+    --subtitles-size: 1rem;
+    --content-font: font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0%;
+}
+
+.titulo {
+    font-family: var(--subtitles-titles-font) !important;
+    font-size: var(--title-size);
+    font-weight: 700 !important;
+}
+
+.subtitulo {
+    font-family: var(--subtitles-titles-font);
+    font-size: var(--subtitles-size);
+}
+
+.navbar {
+    background-color: var(--primary) !important;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: var(--text);
+}
+
+.material-symbols-outlined:hover {
+    color: var(--secondary);
+} 
+
+
+.justifyContent-desktop {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column;
+    width: auto;
+}
