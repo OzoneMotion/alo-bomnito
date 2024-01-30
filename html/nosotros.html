@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <link rel="stylesheet" href="../css/nosotros.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/90863715b1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,74 @@
     <title>Nosotros</title>
 </head>
 <body>
+
+  <!-- INICIO DE NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary rounded subtitulo" aria-label="Thirteenth navbar example">
+    <div class="container-fluid ">
+        <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+          menu
+        </span>
+      <a class="navbar-brand" href="#"><img src="/img/logo-noOficial.png" alt="logo Alo' Bomnito" class="img-logo"> Alo' Bomnito</a>
+      <a class="navbar-brand ocultar-carrito" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+        <div class="offcanvas offcanvas-start canvas-body" id="menuLateral">
+          <div class="offcanvas-header">
+            <button class="btn-cerrar-border" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
+              <span class="material-symbols-outlined">
+                close
+                </span>
+            </button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav col-lg-5 justify-content-lg-center justifyContent-desktop">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Carrito de compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTipos">
+                      Tipos de piel <span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a>
+                  <ul class="collapse colapsable" id="collapseTipos">
+                    <li><a class="nav-link" href="#">Mixta</a></li>
+                    <li><a class="nav-link" href="#">Grasa</a></li>
+                    <li><a class="nav-link" href="#">Seca</a></li>
+                    <li><a class="nav-link" href="#">Normal</a></li>
+                    <li><a class="nav-link" href="#">Productos</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Conoce tu tipo de piel</a>
+                </li>
+                <li class="nav-item oculto-desktop">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCuenta">
+                      Cuenta <span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a>
+                  <ul class="collapse colapsable " id="collapseCuenta">
+                    <li><a class="nav-link" href="#">Iniciar sesión</a></li>
+                    <li><a class="nav-link" href="#">Crear mi cuenta</a></li>
+                  </ul>
+                </li>
+                <li> 
+                  <a class="nav-link" aria-current="page" href="./nosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+          </div>
+            <div class="d-lg-none aling-self-center canvas-footer titulo">
+              <p>ALO' BOMNITO</p>
+            </div>
+        </div>
+    </div>
+      <div class="icons">
+        <a class="navbar-brand" href="#"><span class="material-symbols-outlined navbar-brand">account_circle</span></a>
+        <a class="navbar-brand" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+      </div>
+  </nav>
+<!-- FIN DE NAVBAR -->
 
 <div class="container">
 
@@ -28,6 +98,7 @@
         <div class="collapse multi-collapse" id="multiCollapseExample1">
           <div class="card card-body">
               <p>En Alo' Bomnito nos dedicamos a ser pioneros en el e-commerce de productos para el cuidado de la piel. Guiados por los principios de innovación, integridad y un compromiso con la excelencia, hemos diseñado nuestra plataforma para satisfacer las necesidades específicas de aquellos que buscan el mejor cuidado para su piel.</p>
+              <p>Nuestra meta principal es simplificar la vida de nuestros usuarios, con nuestra propuesta de e-commerce. Proporcionamos asesoramiento en la identificación del tipo de piel de nuestros usuarios, permitiendo así ofrecer productos personalizados que se ajusten a sus necesidades individuales. Además, nos esforzamos por ser una fuente confiable de información, detallando los ingredientes de los productos que ofertamos y que cumplen con las normas de calidad.</p>
           </div>
         </div>
       </div>
@@ -68,6 +139,7 @@
         <div class="card-body">
           <h6 class="card-title">Misión</h6>
           <p class="card-text">En Alo' Bomnito nos dedicamos a ser pioneros en el e-commerce de productos para el cuidado de la piel. Guiados por los principios de innovación, integridad y un compromiso con la excelencia, hemos diseñado nuestra plataforma para satisfacer las necesidades específicas de aquellos que buscan el mejor cuidado para su piel.</p>
+          <p>Nuestra meta principal es simplificar la vida de nuestros usuarios, con nuestra propuesta de e-commerce. Proporcionamos asesoramiento en la identificación del tipo de piel de nuestros usuarios, permitiendo así ofrecer productos personalizados que se ajusten a sus necesidades individuales. Además, nos esforzamos por ser una fuente confiable de información, detallando los ingredientes de los productos que ofertamos y que cumplen con las normas de calidad.</p>
         </div>
       </div>
       <div class="card col-md-4"> 
@@ -156,7 +228,8 @@
                   </div>
                   <div class="modal-body">
                     <img src="../imagenes/chris.jpg" class="body-photo"  alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, magni! Enim aspernatur doloremque asperiores eos, modi repellat suscipit cum. Quasi, dolores vel ex esse libero quis architecto minus mollitia provident!</p>
+                    <p>Con un interés genuino en el desarrollo de software después de desempeñarme como ingeniero Tester Manual durante los últimos dos años. Estoy interesado en el desarrollo web con Java y eso me ha llevado a buscar la capacitación ardua durante el último año en Digital House y Generation como desarrollador Full-Stack Java.</p>
+                    <p>La experiencia de Testing me permitió desarrollar habilidades de trabajo en equipo y la aplicación de metodologías ágiles (Scrum y Kanban) que aplico en mi día a día. Abierto al cambio y al aprendizaje constante dentro del desarrollo web.</p>
                   </div>
                   <div class="modal-fotter"> 
                     <a href="https://github.com/ChrisMHM" target="_blank">
@@ -177,7 +250,7 @@
             <!--MAGGY-->
           <div class="col-md-2">
             <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#miembroModal3">
-              <img src="../imagenes/maggy.jpg" alt="">
+              <img src="../imagenes/maggy_new_real.jpg" alt="">
             </button>
             <p class="cinta-miembro">Magali Quijano</p>
             <p class="cinta-rol">Diseñadora</p>
@@ -189,8 +262,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <img src="../imagenes/maggy.jpg" class="body-photo" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, magni! Enim aspernatur doloremque asperiores eos, modi repellat suscipit cum. Quasi, dolores vel ex esse libero quis architecto minus mollitia provident!</p>
+                    <img src="../imagenes/maggy_new_real.jpg" class="body-photo" alt="">
+                    <p>Inicié mi trayectoria profesional como auxiliar administrativo y actualmente estoy inmersa en mis estudios de Desarrollo Web y Java Fullstack. Mi pasión por crear y desarrollar cosas innovadoras me motiva constantemente. Me entusiasman los retos, el trabajo en equipo y aprender nuevas habilidades para expandir mis conocimientos.</p>
+                    <p>Vivo bajo la premisa de: </p>
+                    <p>{Si lo puedo imaginar, lo puedo programar}</p>
                   </div>
                   <div class="modal-fotter">
                     <a href="https://github.com/MaggyQuijano" target="_blank">
@@ -212,7 +287,7 @@
           <!--CARLOS-->
             <div class="col-md-2"> 
               <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#miembroModal4">
-              <img src="../imagenes/carlos.jpg" alt="">
+              <img src="../imagenes/carlos_new_real.jpg" alt="">
             </button>
             <p class="cinta-miembro">Carlos Álvarez</p>
             <p class="cinta-rol">Diseñador</p>
@@ -224,8 +299,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <img src="../imagenes/carlos.jpg" class="body-photo" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, magni! Enim aspernatur doloremque asperiores eos, modi repellat suscipit cum. Quasi, dolores vel ex esse libero quis architecto minus mollitia provident!</p>
+                    <img src="../imagenes/carlos_new_real.jpg" class="body-photo" alt="">
+                    <p>Soy Arquitecto y actualmente me estoy preparando como Desarrollador Java Full Stack Junior.
+                      Me encanta aprender cosas nuevas, no puedo mantenerme estático y busco ampliar mi campo de conocimiento siempre que puedo.</p>
                   </div>
                   <div class="modal-fotter">
                     <a href="https://github.com/carlosamadri" target="_blank">
@@ -249,7 +325,7 @@
         <div class="row">
           <div class="col-md-2"> 
             <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#miembroModal5">
-              <img src="../imagenes/denisse.jpg" alt="">
+              <img src="../imagenes/denisse_new_real.jpg" alt="">
             </button>
             <p class="cinta-miembro">Denisse Hernández</p>
             <p class="cinta-rol">Desarrolladora</p>
@@ -261,8 +337,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <img src="../imagenes/denisse.jpg" class="body-photo" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad rerum error quibusdam, fuga alias odit eveniet qui aliquam ut mollitia obcaecati ea maxime minima ipsam facere accusantium dolores molestias tempora, repellendus totam quas. Amet obcaecati tempora fugiat accusamus reiciendis officia, quos tenetur, molestiae molestias ad voluptatum sunt ab aut necessitatibus atque quasi nostrum incidunt beatae temporibus. A voluptatum quas consequatur accusantium sed exercitationem dolorum sit vel necessitatibus. Aliquid pariatur repudiandae adipisci cum iusto nemo corrupti voluptatum qui? Voluptatum, provident impedit. Ad sunt perspiciatis similique, suscipit error perferendis in saepe ab. Aut adipisci quam consequuntur corporis facilis, excepturi vitae saepe quos tenetur laudantium mollitia soluta sit? Cumque velit modi facilis sapiente qui, harum nisi ea.</p>
+                    <img src="../imagenes/denisse_new_real.jpg" class="body-photo" alt="">
+                    <p>Mi nombre es Denisse Paola Hernández Jiménez, nací el 3 de septiembre de 1995. He construido una vida al lado de mi esposo, Ángel Mario Mejía Ortega, quien ha sido mi apoyo constante. Al ser solo él y yo, disfrutamos de la flexibilidad y el tiempo necesario para enfocarnos en nuestras carreras y metas personales.</p>
+                    <p>Mi experiencia en el bootcamp me ha enseñado la importancia de la continua preparación en el campo de la tecnología. Mi objetivo es seguir ampliando mis conocimientos y habilidades para desempeñarme cada día mejor. Estoy emocionada y comprometida con las oportunidades que este camino presenta y ansío alcanzar metas significativas en el ámbito tecnológico.</p>
                   </div>
                   <div class="modal-fotter">
                     <a href="https://github.com/Denisse-HJ" target="_blank">
@@ -358,12 +435,13 @@
             </button>
             <p class="cinta-miembro">Alo' Bombito</p>
             <p class="cinta-rol">Dueño</p>
-            <div class="modal fade" id="miembroModal8" tabindex="-1"  aria-hidden="true">
-              <div class="modal-dialog">
+            <div class="modal fade" id="miembroModal8" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="miembroModalLabel">Alo' Bombito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
                   </div>
                   <div class="modal-body">
                     <img src="../imagenes/aloBomnito.jpg" class="body-photo" alt="">
