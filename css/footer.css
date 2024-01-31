@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+    --backgroud: #EFEBE7;
+    --primary: #BD9870;
+    --secondary: #EEAA44;
+    --accent: #767957;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesktop: 2.5rem;
+    --sizeTituloTablet: 2.5rem;
+    --sizeTituloMobile: 1.5rem;
+    --sizeSubtituloDes-Tab: 1.875rem;
+    --sizeContenido: 1rem;
+    --sizeEtiqueta: 0.875rem;
+    --btnMedium-w: 200px;
+    --btnMedium-h: 45px;
+}
+
+/* *{
+    border: solid 1px;
+} */
+
+footer{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--primary);
+    font-size: 1rem;
+    font-family: var(--fontSubtitulo);
+   
+}
+.contenedor-base{
+    display:grid;
+    grid-template-columns: 70% 30%;
+
+}
+
+.contenedor-izq ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  
+    margin-top: 23px;
+   
+}
+
+.contenedor-der ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ocultar-desktop{
+    visibility: hidden;
+    
+}
+footer ul{
+    list-style: none;
+}
+
+.link1{
+    text-decoration: none;
+    color: var(--text);
+}
+
+footer i{
+    margin-inline: 1rem;
+    font-size: 1.5rem;
+    color: var(--text);
+}
