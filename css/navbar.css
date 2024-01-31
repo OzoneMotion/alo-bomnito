@@ -57,7 +57,7 @@ body {
         width: auto;
     }
 
-    .colapsable, .show {
+    .colapsable, .show1 {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -112,7 +112,7 @@ body {
         background-color: #bd9870 
     }
     
-    .colapsable, .show {
+    .colapsable, .show1 {
         background-color: #bd9870;
         padding: 2%;
         list-style: none;
