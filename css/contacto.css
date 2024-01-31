@@ -33,7 +33,7 @@
 
 body {
     background: url(../imagenes/contacto.jpg);
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: center;
 }
