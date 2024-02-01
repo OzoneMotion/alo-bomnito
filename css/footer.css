@@ -27,7 +27,7 @@
 
 footer{
     width: 100%;
-    height: auto;
+    height: 10%;
     position: absolute;
     bottom: 0;
     background-color: var(--primary);
@@ -35,39 +35,165 @@ footer{
     font-family: var(--fontSubtitulo);
    
 }
+/* define el espacion de los dos contenedores */
 .contenedor-base{
     display:grid;
     grid-template-columns: 70% 30%;
 
 }
-
+/* ayuda a que los links se coloquen en vertical a 5 columnas, el auto es para darle el mismo espacio entre cada una */
 .contenedor-izq ul{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);  
+    grid-template-columns: repeat(5, auto);  
     margin-top: 23px;
    
 }
-
+/* coloca los iconos en linea vertical */
 .contenedor-der ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 23px;
 }
 
-.ocultar-desktop{
-    visibility: hidden;
-    
-}
+
+/* quita viñetas */
 footer ul{
     list-style: none;
 }
-
+/* quita hipervinculos */
 .link1{
     text-decoration: none;
     color: var(--text);
 }
 
+.link1:hover{
+    color:var(--secondary)
+    
+}
+/* da el tamaño y color a los iconos */
 footer i{
     margin-inline: 1rem;
     font-size: 1.5rem;
     color: var(--text);
+}
+
+footer i:hover{
+    color: var(--secondary);
+}
+
+
+/* escritorio */
+@media only screen and (min-width:1024px) and (max-width:2560px){
+    /* para hacerlo responsivo tuve que colocar contacto y carrito encima de los iconos y se ocultan para escritorio */
+.ocultar-desktop{
+    visibility: hidden;
+    position: absolute;
+    
+    
+}
+
+.contenedor-der ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+}
+
+/* tableta */
+
+@media only screen and (min-width:745px) and (max-width:1024px) {
+    
+    footer{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        font-size: .9rem;
+    
+    }
+
+    .ocultar-desktop{
+        visibility: hidden;
+        position: absolute;
+        
+        
+    }
+    .contenedor-base{
+        display:grid;
+        grid-template-columns: auto auto;
+
+    
+    }
+
+    .contenedor-der ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* .contenedor-izq ul{
+        display: grid;
+        grid-template-columns: repeat(5, auto);  
+        margin-top: 23px;
+       } */
+}
+
+/* celular */
+
+@media only screen and (min-width:320px) and (max-width:530px){
+
+    footer{
+        width: 100%;
+        height: auto;
+
+    }
+
+    /* oculta los links de contacto y carrito que usamos en escritorio */
+    .ocultar-mobile{
+        visibility: hidden;
+        position: absolute;
+    }
+/* hace visible los links del lado derecho   */
+    .ocultar-desktop{
+        visibility: visible;
+     
+    }
+
+    .contenedor-base{
+        display:grid;
+        grid-template-columns: auto auto;
+        height: 160px ;
+        grid-template-rows: 5px;
+        padding: 0;
+        margin: 0;
+    
+    }
+
+
+    .contenedor-izq ul{
+        display:flex;
+        flex-direction:column;
+        align-items: center;      
+        padding: 0px; 
+      
+    }
+/* ayuda a la separacion */
+
+.contenedor-izq li {
+    margin-bottom: 10px; /* Ajusta el espacio entre los elementos <li> */
+}
+
+.contenedor-der li{
+        margin-bottom: 10px; 
+    
+}
+
+    
+    .contenedor-der ul{
+        display:flex;
+        flex-direction:column;
+        align-items: center;      
+        padding: 0px; 
+        padding-top: 0 ;
+    
+
+}
 }
