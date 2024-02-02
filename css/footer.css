@@ -15,6 +15,7 @@
     --sizeTituloTablet: 2.5rem;
     --sizeTituloMobile: 1.5rem;
     --sizeSubtituloDes-Tab: 1.875rem;
+    --sizeSubtitulo-Tab: 1.25rem;
     --sizeContenido: 1rem;
     --sizeEtiqueta: 0.875rem;
     --btnMedium-w: 200px;
@@ -28,11 +29,12 @@
 footer{
     width: 100%;
     height: 10%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: var(--primary);
     font-size: 1rem;
     font-family: var(--fontSubtitulo);
+    margin-top: 50px;
    
 }
 /* define el espacion de los dos contenedores */
@@ -85,17 +87,15 @@ footer i:hover{
 /* escritorio */
 @media only screen and (min-width:1024px) and (max-width:2560px){
     /* para hacerlo responsivo tuve que colocar contacto y carrito encima de los iconos y se ocultan para escritorio */
-.ocultar-desktop{
-    visibility: hidden;
-    position: absolute;
-    
-    
-}
+    .ocultar-desktop{
+        visibility: hidden;
+        position: absolute;   
+    }
 
-.contenedor-der ul{
-    display: flex;
-    justify-content: flex-end;
-}
+    .contenedor-der ul{
+        display: flex;
+        justify-content: flex-end;
+    }
 
 }
 
@@ -106,22 +106,16 @@ footer i:hover{
     footer{
         width: 100%;
         height: auto;
-        position: absolute;
         font-size: .9rem;
-    
     }
 
     .ocultar-desktop{
         visibility: hidden;
-        position: absolute;
-        
-        
+        position: absolute;    
     }
     .contenedor-base{
         display:grid;
         grid-template-columns: auto auto;
-
-    
     }
 
     .contenedor-der ul{
@@ -143,7 +137,7 @@ footer i:hover{
     footer{
         width: 100%;
         height: auto;
-
+        font-size: var(--sizeEtiqueta);
     }
 
     /* oculta los links de contacto y carrito que usamos en escritorio */
@@ -154,46 +148,38 @@ footer i:hover{
 /* hace visible los links del lado derecho   */
     .ocultar-desktop{
         visibility: visible;
-     
     }
 
     .contenedor-base{
         display:grid;
         grid-template-columns: auto auto;
-        height: 160px ;
+        height: 150px ;
         grid-template-rows: 5px;
         padding: 0;
         margin: 0;
-    
     }
-
 
     .contenedor-izq ul{
         display:flex;
         flex-direction:column;
         align-items: center;      
         padding: 0px; 
-      
     }
 /* ayuda a la separacion */
 
 .contenedor-izq li {
     margin-bottom: 10px; /* Ajusta el espacio entre los elementos <li> */
-}
+    }
 
 .contenedor-der li{
         margin-bottom: 10px; 
-    
-}
+    }
 
-    
     .contenedor-der ul{
         display:flex;
         flex-direction:column;
         align-items: center;      
         padding: 0px; 
         padding-top: 0 ;
-    
-
-}
+    }
 }
