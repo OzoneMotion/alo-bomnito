@@ -37,18 +37,12 @@ function resultado() {
 
     nota = p1 + p2 + p3 + p4 + p5 + p6;
     if (nota >= 6 && nota < 18) {
-        alert("");
-        window.location = 'cuestionario.html'
         this.initModal('Tu piel es normal');
     }
     if (nota >= 18 && nota < 30) {
-        alert("");
-        window.location = 'cuestionario.html'
         this.initModal('Tu piel es seca');
     }
     if (nota >= 30 && nota < 42) {
-        alert("");
-        window.location = 'cuestionario.html'
         this.initModal('Tu piel es grasa');
     }
     if (nota >= 42 && nota < 30) {
@@ -71,7 +65,7 @@ function validate() {
         }
     }
     if (valid) {
-        this.initModal('Validación exitosa');
+        console.log('Validación exitosa');
     } else {
         this.initModal('Debe seleccionar una opcion');
         return false;
@@ -96,4 +90,13 @@ function initModal(text){
     let content = document.getElementById('modalContent')
     content.textContent = text;
     $('#modalCentro').modal('show')
+}
+
+/*
+ this fuction opens and set a text for the result
+*/
+function testModal(text){
+    let content = document.getElementById('modalCentro2')
+    content.textContent = text;
+    $('#modalCentro2').modal('show')
 }
