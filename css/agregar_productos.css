@@ -1,0 +1,117 @@
+/* :root {
+    --primary: #BD9870;
+    --secondary: #EEAA44;
+    --highlight: #767957;
+    --background: #EFEBE7;
+    --text: #2E2E2E;
+    --subtitles-titles-font: 'Quicksand', sans-serif;
+    --title-size: 1.3rem;
+    --subtitles-size: 1rem;
+    --content-size: 1rem;
+    --content-font: 'Lato', sans-serif;
+}
+
+body{
+    font-family: var(--content-font);
+    font-size: var(--content-size);
+    margin: 0px;
+}
+
+.container {
+    padding: 20px;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    margin: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+}
+input, textarea, select {
+    background-color: var(--background);
+    border-radius: 5px;
+    width: 413px;
+    height: auto;
+    outline: none;
+    border: none;
+} */
+
+/* input:focus {
+    border: solid 1px;
+    border-color: #3970FF;
+} */
+
+/* .containersForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+} */
+
+/* .containerInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 5px;
+    margin-top: 15px;
+} */
+
+/* .containerInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 5px;
+    width: 413px;
+    padding: 7px;
+}
+
+.btn-style {
+    width: 258px;
+    height: 45px;
+    border: none;
+    background-color: var(--highlight);
+    color: var(--text);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn-style:hover {
+    color: var(--secondary);
+}
+
+.intento {
+    display: flex;
+
+}
+
+.container_inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+} */
+
+/* a {
+    color: #2E2E2E;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+} */
+/* .border {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+} */
