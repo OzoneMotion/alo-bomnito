@@ -37,20 +37,22 @@ function resultado() {
 
     nota = p1 + p2 + p3 + p4 + p5 + p6;
     if (nota >= 6 && nota < 18) {
-        alert("Tu piel es normal");
+        alert("");
         window.location = 'cuestionario.html'
+        this.initModal('Tu piel es normal');
     }
     if (nota >= 18 && nota < 30) {
-        alert("Tu piel es seca");
+        alert("");
         window.location = 'cuestionario.html'
+        this.initModal('Tu piel es seca');
     }
     if (nota >= 30 && nota < 42) {
-        alert("Tu piel es grasa");
+        alert("");
         window.location = 'cuestionario.html'
+        this.initModal('Tu piel es grasa');
     }
     if (nota >= 42 && nota < 30) {
-        alert("Tu piel es Mixta");
-        window.location = 'cuestionario.html'
+        this.initModal('Tu piel es Mixta');
     }
     // alert(" Aciertos: " + nota);
    //window.location = 'cuestionario.html'
