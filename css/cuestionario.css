@@ -1,0 +1,64 @@
+:root{
+    --backgroud: #EFEBE7;
+    --primary: #BD9870;
+    --secondary: #EEAA44;
+    --accent: #767957;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesktop: 3rem;
+    --sizeTituloTablet: 3rem;
+    --sizeTituloMobile: 1.5rem;
+    --sizeSubtituloDes-Tab: 2rem;
+    --sizeContenido: 1rem;
+    --sizeEtiqueta: 0.9rem;
+    --btnMedium-w: 12.5rem;
+    --btnMedium-h: 3rem;
+}
+
+body{
+    background-color: var(--backgroud);
+}
+
+
+#h1{
+    color: var(--text);
+    font-size: var(--sizeTituloDesktop);
+    font-family: var(--fontTitulo);
+}
+
+.card{
+    border-radius: 1rem;
+    margin: 1.5rem;
+    transition: all;
+}
+
+.card-header{
+    background-color: var(--primary);
+    font-size: var(--sizeContenido);
+    font-family: var(--fontSubtitulo);
+    color: var(--text);
+}
+ li:hover{
+    background-color: var(--secondary);
+ }
+ li {
+    margin-bottom: 1rem;
+ }
+
+ ol{
+    ;
+ }
+
+ #validar{
+    border: ridge;
+    background: var(--accent);
+    color: var(--secondary);
+    position: relative;
+    left: 40%;
+    size: 1rem;
+ }
+
