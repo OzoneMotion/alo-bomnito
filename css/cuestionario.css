@@ -83,12 +83,22 @@ body{
 }
 
 
- #myInput{
+ /*#myInput{
     background-color: var(--accent);
     color: var(--backgroud);
     border: ridge;
     position: relative;
     left: 40%;
     size: 2rem;
+ }*/
+
+ .vstack{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-self: stretch;
+    border-radius: 1rem;
+    position: relative;
+    left: 40%;
  }
 
