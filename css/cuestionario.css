@@ -19,26 +19,46 @@
     --btnMedium-h: 3rem;
 }
 
+/* responsive  tablet and desktop*/
+
+@media (min-width:745px){
+
 body{
-    background-color: var(--backgroud);
+    background-image: url("../imagenes/test-D-T.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.col{
-    margin-top: 2rem;
-
-}
-
-.titulo{
+#titulo-test{
+    background-color: var(--primary);
+    border-radius: 10rem;
+    width: 40rem;
     color: var(--backgroud);
     font-size: var(--sizeTituloDesktop);
     font-family: var(--fontTitulo);
-    background-color: var(--primary);
+    text-align: center;
+    background-size: auto;
+    position: relative;
+    left: 23%;
+    border: solid;
+    border-color: var(--text);
+    top: 1rem;
 }
+
 
 .card{
     border-radius: 1rem;
-    margin: 1rem;
+    padding: auto;
     transition: all;
+    margin-top: auto; 
+    width: 70%;
+    border: 0.8rem;
+    position: relative;
+    left: 15%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
 }
 
 .card-header{
@@ -46,21 +66,34 @@ body{
     font-size: var(--sizeContenido);
     font-family: var(--fontSubtitulo);
     color: var(--text);
+    
+}
+
+ol{
+    margin-bottom: 0.8rem;
+    line-height: 1rem;
 }
  li:hover{
     background-color: var(--accent);
+    background-size: auto;
     color: var(--secondary);
+    cursor: pointer;
+    border: solid;
+    border-color: var(--text);
+    border-radius: 2rem;
     
  }
  li {
+    margin-top: 1rem;
     margin-bottom: 1rem;
-    border-radius: 2px var(--primary);
+    border-radius: 30px var(--primary);
+    transition: background-color 0.3s ease;
  }
 
  .modal-content{
-    border-radius: 2rem;
-    height: 15rem;
-    width: 20rem;
+    border-radius: 15%;
+    height: 16rem;
+    width: 24rem;
     position: relative;
     left: 22%;
     border-color: var(--primary);
@@ -71,6 +104,15 @@ body{
     font-size: var(--sizeSubtituloDes-Tab);
     position: relative;
     left: 10%;
+}
+.modal-header{
+    width: 24rem;
+    height: 10rem;
+}
+img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
 }
 
 .modal-body{
@@ -83,15 +125,6 @@ body{
 }
 
 
- /*#myInput{
-    background-color: var(--accent);
-    color: var(--backgroud);
-    border: ridge;
-    position: relative;
-    left: 40%;
-    size: 2rem;
- }*/
-
  .vstack{
     display: flex;
     flex: 1 1 auto;
@@ -102,3 +135,101 @@ body{
     left: 40%;
  }
 
+}
+
+/* responsive  mobil*/
+@media only screen and (min-width: 350px) and (max-width: 744px) {
+
+    body{
+        background-image: url("../imagenes/test.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .titulo{
+        color: var(--backgroud);
+        font-size: var(--sizeTituloMobile);
+        font-family: var(--fontSubtitulo);
+        background-color: var(--primary);
+        width: auto;
+        position: center;
+    }
+    
+    .card{
+        border-radius: 1rem;
+        margin: 1rem;
+        transition: all;
+        width: auto;
+    }
+    
+    .card-header{
+        width: 100%;
+        background-color: var(--primary);
+        font-size: var(--sizeContenido);
+        font-family: var(--fontSubtitulo);
+        color: var(--text);
+        align-content: center;
+    }
+    
+    ol{
+        margin-bottom: 0.8rem;
+        line-height: 1rem;
+    }
+     li:hover{
+        background-color: var(--accent);
+        background-size: auto;
+        color: var(--secondary);
+        cursor: pointer;
+        border: solid;
+        border-color: var(--text);
+        border-radius: 2rem;
+     }
+     li {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 30px var(--primary);
+        transition: background-color 0.3s ease;
+        
+     }
+    
+     .modal-content{
+        border-radius: 2rem;
+        height: 15rem;
+        width: 20rem;
+        position: relative;
+        left: 6%;
+        border-color: var(--primary);
+     }
+    .modal-title{
+        color: var(--accent);
+        font-family: var(--fontTitulo);
+        font-size: var(--sizeSubtituloDes-Tab);
+        position: relative;
+        left: 10%;
+    }
+
+    img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100%;
+    }
+    
+    .modal-body{
+        background-color: var(--backgroud);
+        border-radius: 7%;
+        color: var(--text);
+        font-size: var(--sizeContenido);
+        font-family: var(--fontContenido);
+        text-align: center;
+    }
+    
+     .vstack{
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-self: stretch;
+        border-radius: 1rem;
+        position: relative;
+        left: 40%;
+     }
+}

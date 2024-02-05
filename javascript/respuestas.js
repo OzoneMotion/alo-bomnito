@@ -67,7 +67,7 @@ function validate() {
     if (valid) {
         console.log('Validación exitosa');
     } else {
-        this.initModal('Debe seleccionar una opcion');
+        this.initModal('¡UPS! Al parecer ha faltado alguna pregunta...');
         return false;
     }
 }
