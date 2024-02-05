@@ -23,16 +23,21 @@ body{
     background-color: var(--backgroud);
 }
 
+.col{
+    margin-top: 2rem;
 
-#h1{
-    color: var(--text);
+}
+
+.titulo{
+    color: var(--backgroud);
     font-size: var(--sizeTituloDesktop);
     font-family: var(--fontTitulo);
+    background-color: var(--primary);
 }
 
 .card{
     border-radius: 1rem;
-    margin: 1.5rem;
+    margin: 1rem;
     transition: all;
 }
 
@@ -49,6 +54,7 @@ body{
  }
  li {
     margin-bottom: 1rem;
+    border-radius: 2px var(--primary);
  }
 
  .modal-content{
