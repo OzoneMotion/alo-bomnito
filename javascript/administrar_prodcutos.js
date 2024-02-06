@@ -1,7 +1,7 @@
 import productos from '../productos.json' assert {type: 'json'};
 
 let productosID = document.querySelector('.main-container');
-let tablaIngredientes =document.querySelector('.new-cont');
+let tablaIngredientes = document.querySelector('.new-cont');
 
 productos.forEach(item => {
     productosID.innerHTML += `<div class="main-container">
@@ -38,23 +38,23 @@ productos.forEach(item => {
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th id="pie-card">
-                          <button id="open">
+                        <th class="pie-card">
+                          <button class="open">
                             <span class="material-symbols-outlined">
                             gallery_thumbnail
                             </span>
                           </button>
-                          <button id="abrir">
+                          <button class="abrir">
                             <span class="material-symbols-outlined">
                             contact_support
                             </span>
                           </button>
-                          <button id="delate" onclick="delateProduct">
+                          <button class="delate" onclick="delateProduct">
                             <span class="material-symbols-outlined">
                             delete
                             </span>
                           </button>
-                          <button id="edit" onclick="location.href='./agregar_productos'">
+                          <button class="edit" onclick="location.href='./agregar_productos'">
                             <span class="material-symbols-outlined">
                             border_color
                             </span>
@@ -70,19 +70,23 @@ productos.forEach(item => {
 
 
 
-const open = document.getElementById('open');
+const openButtons = document.querySelectorAll('.open');
 const mod_cont = document.getElementById('mod_cont');
 const close = document.getElementById('close');
-const abrir = document.getElementById('abrir');
+const abrirButtons = document.querySelectorAll('.abrir');
 const mod_contenedor = document.getElementById('mod_contenedor');
 const cerrar = document.getElementById('cerrar');
 
-open.addEventListener('click', () => {
-    mod_cont.classList.add('show');
+openButtons.forEach(open => {
+    open.addEventListener('click', () => {
+        mod_cont.classList.add('show');
+    });
 });
 
-abrir.addEventListener('click', () => {
-    mod_contenedor.classList.add('show');
+abrirButtons.forEach(abrir => {
+    abrir.addEventListener('click', () => {
+        mod_contenedor.classList.add('show');
+    });
 });
 
 close.addEventListener('click', () => {
