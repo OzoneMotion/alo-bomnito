@@ -1,0 +1,50 @@
+:root {
+    --backgroud: #EFEBE7;
+    --primary: #BD9870;
+    --secondary: #EEAA44;
+    --accent: #767957;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesktop: 40px;
+    --sizeTituloTablet: 40px;
+    --sizeTituloMobile: 24px;
+    --sizeSubtituloDes-Tab: 30px;
+    --sizeContenido: 16px;
+    --sizeEtiqueta: 14px;
+    --btnMedium-w: 200px;
+    --btnMedium-h: 45px;
+}
+
+
+.card {
+    margin-bottom: 30px;
+    background-color:#acaf88;
+}
+
+.btn {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    gap: 30px;
+}
+
+.formulario__mensaje {
+	height: 100px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
