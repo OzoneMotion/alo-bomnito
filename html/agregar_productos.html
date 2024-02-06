@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script async defer src="../javascript/agregar_productos.js"></script>
   </head>
   <body>
 
@@ -64,106 +65,176 @@
 
 <!-- <main> -->
     <div class="container">
-        <form id="validation" action="/">
-            <div class="row">
-                <div class="col-lg-6 containersForm container-fluid">
-                    <div class="col-lg-12">
-                        <input class="containerInput" type="file">
+        <p class="tittle">Agregar producto</p>
+        <form class="formato" id="validation" action="/">
+            <div class="container1">
+                <div class="container_labels">
+                    <div class="container_preview">
+                        <div class="containerImg">
+                            <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                                <div class="carousel-inner" id="carruselWrapper">
+                                    <img class="example" id="eliminar" src="../img/dibel_beaute1.jpg" width="350px 350px" alt="...">
+                                </div>
+                                <div class="container_btns">
+                                    <button class="btn_prevNext" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                </div>
+                                <div class="container_btns2">
+                                    <button class="btn_prevNext" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span class="material-symbols-outlined" >arrow_forward_ios</span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                              </div>
+                            <div class="objContainerImg">
+                                <div>
+                                    <span class="material-symbols-outlined">add_a_photo</span>
+                                    <input class="imgInput" id="imagesInput" type="file" multiple required>
+                                </div>
+                            </div>
+                            <div class="container_iDelete">
+                                <span class="material-symbols-outlined">delete</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-12">
-                        <label for="cantidadProducto">Cantidad</label>
-                        <div class="containerInput">
-                            <input  id="cantidadProducto" type="number" placeholder="000" required>
+                </div>
+                <div class="container_labels">
+                    <label for="cantidadProducto">Cantidad</label>
+                    <div class="containerInput">
+                        <input  id="cantidadProducto" type="number" placeholder="000" required>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="IdProducto">ID</label>
+                    <div class="containerInput">
+                        <input id="IdProducto" type="text" placeholder="000" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>   
+                        </div>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="nombreProducto">Nombre</label>
+                    <div class="containerInput">
+                        <input id="nombreProducto" type="text" placeholder=" Nombre del producto" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="marcaProducto">Marca</label>
+                    <div class="containerInput">
+                        <input id="marcaProducto" type="text" placeholder=" Marca del producto" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="precioProducto">Precio</label>
+                    <div class="containerInput">
+                        <input type="text" placeholder=" $000.00" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="container_labels">
+                    <label for="contenidoProducto">Contenido</label>
+                    <div class="containerInput">
+                        <input id="contenidoProducto" type="text" placeholder="000.00ml/g" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span> 
+                        </div>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="descripcionProducto">Descripción</label>
+                    <div class="containerTextArea">
+                        <textarea 
+                            name="descripcionProducto" 
+                            id="descripcionProducto" 
+                            cols="53" rows="6" 
+                            placeholder="Descripcion del producto" 
+                            required>
+                        </textarea>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="descripcionProducto">Indicaciones de uso</label>
+                    <div class="containerTextArea">
+                        <textarea 
+                            name="descripcionProducto" 
+                            id="descripcionProducto" 
+                            cols="53" rows="6" 
+                            placeholder="Indicaciones de uso sobre el producto" 
+                            required>
+                        </textarea>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="selectorTipoPiel">Tipo de piel</label>
+                    <div class="select-menu">
+                        <div class="select-btndrop">
+                            <span class="sBtn-text">Selecciona el tipo de piel</span>
                             <span class="material-symbols-outlined">arrow_drop_down</span>
-                            <span class="material-symbols-outlined">arrow_drop_up</span> 
                         </div>
-                        <div class="alerts"></div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Normal</span>
+                            </li>
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Mixta</span>
+                            </li>
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Grasa</span>
+                            </li>
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Seca</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-lg-12">
-                        <label for="IdProducto">ID</label>
-                        <div class="inputsForm containerInput">
-                            <input id="IdProducto" type="text" placeholder="000" required>
-                            <span class="material-symbols-outlined">edit_square</span>
+                </div> 
+                <div class="container_labels">
+                    <label>Ingredientes (6 principales)</label>
+                    <div>
+                        <div class="select-btn">
+                            <span class="btn-text">Selecciona los ingredientes.</span>
+                            <span class="material-symbols-outlined">arrow_drop_down</span>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="nombreProducto">Nombre</label>
-                        <div class="containerInput">
-                            <input id="nombreProducto" type="text" placeholder="Nombre del producto" required>
-                            <span class="material-symbols-outlined">edit_square</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="marcaProducto">Marca</label>
-                        <div class="containerInput">
-                            <input id="marcaProducto" type="text" placeholder="Marca del producto" required>
-                            <span class="material-symbols-outlined">edit_square</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="precioProducto">Precio</label>
-                        <div class="containerInput">
-                            <input type="text" placeholder="$000.00" required>
-                            <span class="material-symbols-outlined">edit_square</span>
-                        </div>
+                        <ul class="list-items">
+                            <li class="item">
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 containersForm">
-                    <div class="col-lg-12 ">
-                        <label for="contenidoProducto">Contenido</label>
-                        <div class="containerInput">
-                            <input id="contenidoProducto" type="text" placeholder="000.00ml/g" required>
-                            <span class="material-symbols-outlined">edit_square</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="descripcionProducto">Descripción</label>
-                        <div class="containerInput">
-                            <textarea name="descripcionProducto" id="descripcionProducto" cols="53" rows="8" placeholder="Descripcion del producto" required></textarea>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="descripcionProducto">Indicaciones de uso</label>
-                        <div class="containerInput">
-                            <textarea name="descripcionProducto" id="descripcionProducto" cols="53" rows="8" placeholder="Indicaciones de uso sobre el producto" required></textarea>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="selectorTipoPiel">Tipo de piel</label>
-                        <div class="containerInput">
-                        <select id="selectorTipoPiel" name="select" required>
-                            <option value="" selected>Selecciona el tipo de piel</option>
-                            <option id="tipoPiel1" value="value1">Mixta</option>
-                            <option id="tipoPiel2" value="value2">Normal</option>
-                            <option id="tipoPiel3" value="value3">Grasa</option>
-                            <option id="tipoPiel4" value="value3">Seca</option>
-                        </select>
-                        <span class="material-symbols-outlined">arrow_drop_down</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <label for="selectorIngredientes">Ingredientes</label>
-                        <div class="containerInput">
-                        <select id="selectorIngredientes containerInput" name="select" required>
-                            <option value="" selected>Selecciona los ingredientes</option>
-                            <option value="value1">Value 1</option>
-                            <option value="value2">Value 2</option>
-                            <option value="value3">Value 3</option>
-                        </select>
-                        <span class="material-symbols-outlined">arrow_drop_down</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <button class="btn-style">
-                           Cancelar
-                        </button>
-                    </div>
-                    <div class="col-lg-12">
-                        <button class="btn-style" type="submit" id="btn_enviar" >
-                            Agregar
-                        </button>
-                    </div>
-                </div>
+                <div class="container_btn">
+                    <button class="btn-style">
+                        Cancelar
+                    </button>
+                    <button class="btn-style" type="submit" id="btn_enviar">
+                        Agregar
+                    </button>
+                </div>   
             </div>
         </form>
     </div>
