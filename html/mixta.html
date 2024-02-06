@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alo' Bomnito | Piel Mixta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- INICIO DE NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded subtitulo" aria-label="Thirteenth navbar example">
+      <div class="container-fluid ">
+          <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            menu
+          </span>
+        <a class="navbar-brand" href="#"><img src="/img/logo-noOficial.png" alt="logo Alo' Bomnito"> Alo' Bomnito</a>
+        <a class="navbar-brand ocultar-carrito" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+          <div class="offcanvas offcanvas-start canvas-body" id="menuLateral">
+            <div class="offcanvas-header">
+              <button class="btn-cerrar-border" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
+                <span class="material-symbols-outlined">
+                  close
+                  </span>
+              </button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+              <ul class="navbar-nav col-lg-5 justify-content-lg-center justifyContent-desktop">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./carrito_de_compras.html">Carrito de compras</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./tipos_de_piel.html" data-bs-toggle="collapse" data-bs-target="#collapseTipos">
+                        Tipos de piel <span class="material-symbols-outlined">arrow_drop_down</span>
+                      </a>
+                    <ul class="collapse colapsable show1" id="collapseTipos">
+                      <li><a class="nav-link" href="./mixta.html">Mixta</a></li>
+                      <li><a class="nav-link" href="./grasa.html">Grasa</a></li>
+                      <li><a class="nav-link" href="./seca.html">Seca</a></li>
+                      <li><a class="nav-link" href="./normal.html">Normal</a></li>
+                      <li><a class="nav-link" href="./productos.html">Productos</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./conoce_tu_tipo.html">Conoce tu tipo de piel</a>
+                  </li>
+                  <li class="nav-item oculto-desktop">
+                      <a class="nav-link" href="./cuenta.html" data-bs-toggle="collapse" data-bs-target="#collapseCuenta">
+                        Cuenta <span class="material-symbols-outlined">arrow_drop_down</span>
+                      </a>
+                    <ul class="collapse colapsable show1" id="collapseCuenta">
+                      <li><a class="nav-link" href="./iniciar_sesion.html">Iniciar sesión</a></li>
+                      <li><a class="nav-link" href="./crear_mi_cuenta.html">Crear mi cuenta</a></li>
+                    </ul>
+                  </li>
+                  <li> 
+                    <a class="nav-link" aria-current="page" href="./nosotros.html">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                  </li>
+              </ul>
+            </div>
+              <div class="d-lg-none aling-self-center canvas-footer titulo">
+                <p>ALO' BOMNITO</p>
+              </div>
+          </div>
+      </div>
+        <div class="icons">
+          <a class="navbar-brand" href="./iniciar_sesion.html"><span class="material-symbols-outlined navbar-brand">account_circle</span></a>
+          <a class="navbar-brand" href="./carrito_de_compras.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+        </div>
+    </nav>
+<!-- FIN DE NAVBAR -->
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
