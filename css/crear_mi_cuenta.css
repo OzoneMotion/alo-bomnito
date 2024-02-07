@@ -139,6 +139,12 @@ label {
     width: 100%;
 }
 
+/* Div de ¿tienes cuenta? */
+.content-sesion{
+    margin-top: 2rem;
+    text-align: center;
+}
+
 /* Estilos textos */
 #content {
     font-family: var(--fontContenido);
