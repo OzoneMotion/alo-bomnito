@@ -121,6 +121,7 @@ body {
     color: var(--backgroud);
     border-radius: 10px;
     box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    margin-top: 30px;
 }
 
 #btn-submit:hover {
