@@ -79,6 +79,15 @@ body {
     margin-bottom: 46px;
 }
 
+/* Imagen*/
+.img-Tuser{
+    text-align: center;
+}
+.img-user{
+    width: 15rem;
+    height: 15rem;
+}
+
 /* Estilos container */
 .form-validation {
     width: 100%;
