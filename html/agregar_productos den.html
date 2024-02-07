@@ -68,6 +68,7 @@
         <p class="tittle">Agregar producto</p>
         <form class="formato" id="validation" action="/">
             <div class="container1">
+                <!-- Inicio de carrusel con la galeria de imagenes / para agregarlas / eliminarlas-->
                 <div class="container_labels">
                     <div class="container_preview">
                         <div class="containerImg">
@@ -91,7 +92,7 @@
                             <div class="objContainerImg">
                                 <div>
                                     <span class="material-symbols-outlined">add_a_photo</span>
-                                    <input class="imgInput" id="imagesInput" type="file" multiple required>
+                                    <input class="imgInput" id="imagesInput" type="file" name="imagenes" multiple required>
                                 </div>
                             </div>
                             <div class="container_iDelete">
@@ -100,10 +101,16 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fin de carrusel con la galeria de imagenes / para agregarlas / eliminarlas-->
+
                 <div class="container_labels">
                     <label for="cantidadProducto">Cantidad</label>
                     <div class="containerInput">
-                        <input  id="cantidadProducto" type="number" placeholder="000" required>
+                        <input  id="cantidadProducto" type="tel" placeholder="000" required>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="cantidadProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="cantidadProducto-regex">El máximo son 3 dígitos.</p>
                     </div>
                 </div>
                 <div class="container_labels">
@@ -114,6 +121,10 @@
                             <span class="material-symbols-outlined">edit_square</span>   
                         </div>
                     </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="IdProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="IdProducto-regex">El máximo son 3 dígitos.</p>
+                    </div>
                 </div>
                 <div class="container_labels">
                     <label for="nombreProducto">Nombre</label>
@@ -122,6 +133,10 @@
                         <div class="layoutIcons">
                             <span class="material-symbols-outlined">edit_square</span>
                         </div>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="nombreProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="nombreProducto-regex">Solo puede contener letras.</p>
                     </div>
                 </div>
                 <div class="container_labels">
@@ -132,17 +147,24 @@
                             <span class="material-symbols-outlined">edit_square</span>
                         </div>
                     </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="marcaProducto-empty">Completa este campo</p>
+                    </div>
                 </div>
                 <div class="container_labels">
                     <label for="precioProducto">Precio</label>
                     <div class="containerInput">
-                        <input type="text" placeholder=" $000.00" required>
+                        <input type="text" id="precioProducto" placeholder=" $000.00" required>
                         <div class="layoutIcons">
                             <span class="material-symbols-outlined">edit_square</span>
                         </div>
                     </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="precioProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="precioProducto-regex">Máximo 5 dígitos.</p>
+                    </div>
                 </div>
-            </div>
+            </div>   
             
             <div>
                 <div class="container_labels">
@@ -152,6 +174,10 @@
                         <div class="layoutIcons">
                             <span class="material-symbols-outlined">edit_square</span> 
                         </div>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="contenidoProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="contenidoProducto-regex">Debe cumplir con este formato 000.00ml/g.</p>
                     </div>
                 </div>
                 <div class="container_labels">
@@ -165,17 +191,25 @@
                             required>
                         </textarea>
                     </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="descripcionProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="descripcionProducto-regex">El máximo son 500 caracteres.</p>
+                    </div>
                 </div>
                 <div class="container_labels">
-                    <label for="descripcionProducto">Indicaciones de uso</label>
+                    <label for="indicacionesProducto">Indicaciones de uso</label>
                     <div class="containerTextArea">
                         <textarea 
-                            name="descripcionProducto" 
-                            id="descripcionProducto" 
+                            name="indicacionesProducto" 
+                            id="indicacionesProducto" 
                             cols="53" rows="6" 
                             placeholder="Indicaciones de uso sobre el producto" 
                             required>
                         </textarea>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="indicacionesProducto-empty">Completa este campo</p>
+                        <p class="invalid-feedback" id="indicacionesProducto-regex">El máximo son 500 caracteres.</p>
                     </div>
                 </div>
                 <div class="container_labels">
@@ -185,7 +219,7 @@
                             <span class="sBtn-text">Selecciona el tipo de piel</span>
                             <span class="material-symbols-outlined">arrow_drop_down</span>
                         </div>
-                        <ul class="options">
+                        <ul class="options" id="options">
                             <li class="option">
                                 <span class="checkbox">
                                     <i class="fa-solid fa-check check-icon"></i>
@@ -212,26 +246,32 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="options-empty">Selecciona una opción</p>
+                    </div>
                 </div> 
                 <div class="container_labels">
                     <label>Ingredientes (6 principales)</label>
                     <div>
-                        <div class="select-btn">
+                        <div class="select-btn" id="listItems">
                             <span class="btn-text">Selecciona los ingredientes.</span>
                             <span class="material-symbols-outlined">arrow_drop_down</span>
                         </div>
-                        <ul class="list-items">
+                        <ul class="list-items" id="listItems">
                             <li class="item">
                                 <span class="item-text">HTML & CSS</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="listItems-empty">Selecciona una opción</p>
                     </div>
                 </div>
                 <div class="container_btn">
                     <button class="btn-style">
                         Cancelar
                     </button>
-                    <button class="btn-style" type="submit" id="btn_enviar">
+                    <button class="btn-style" type="submit" id="btn_enviar" disabled>
                         Agregar
                     </button>
                 </div>   
