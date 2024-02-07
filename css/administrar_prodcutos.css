@@ -179,7 +179,7 @@ h1 {
     font-size: var(--subtitles-size);
 }
 
-#cerrar {
+.cerrar {
     background-color: #2E2E2E;
     border: 0;
     padding: .4rem;
@@ -250,7 +250,8 @@ input[type="radio"] {
     padding: 0 .6rem;
     line-height: 1.5rem;
     max-height: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: auto;
     transition: max-height 0.5s, padding 0.5s;
 }
 
