@@ -1,7 +1,6 @@
 import productos from '../productos.json' assert {type: 'json'};
 
 let productosID = document.querySelector('.main-container');
-let tablaIngredientes = document.querySelector('.new-cont');
 
 productos.forEach(item => {
     productosID.innerHTML += `<div class="main-container">
@@ -72,10 +71,10 @@ productos.forEach(item => {
 
 const openButtons = document.querySelectorAll('.open');
 const mod_cont = document.getElementById('mod_cont');
-const close = document.getElementById('close');
+const closeButtons = document.querySelectorAll('.close');
 const abrirButtons = document.querySelectorAll('.abrir');
 const mod_contenedor = document.getElementById('mod_contenedor');
-const cerrar = document.getElementById('cerrar');
+const cerrarButtons = document.querySelectorAll('.cerrar');
 
 openButtons.forEach(open => {
     open.addEventListener('click', () => {
@@ -89,10 +88,14 @@ abrirButtons.forEach(abrir => {
     });
 });
 
+closeButtons.forEach(close => {
 close.addEventListener('click', () => {
     mod_cont.classList.remove('show');
+    });
 });
 
+cerrarButtons.forEach(cerrar => {
 cerrar.addEventListener('click', () => {
     mod_contenedor.classList.remove('show');
+    });
 });

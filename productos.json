@@ -35,16 +35,13 @@
         "precio": 670.00,
         "images": [
             {
-                "url":"https://drive.google.com/drive/folders/1GuPPW7ykdHtfupyiamA4O8fFN1ZehwOf",
-                "imagen1":"dibel_hyaluronic1.jpg"
+                "imagen1":"../imagenes/dibel_hyaluronic1.jpg"
             },
             {
-                "url":"https://drive.google.com/drive/folders/1GuPPW7ykdHtfupyiamA4O8fFN1ZehwOf",
-                "imagen1":"dibel_hyaluronic2.jpg"
+                "imagen2":"../imagenes/dibel_hyaluronic2.jpg"
             },
             {
-                "url":"https://drive.google.com/drive/folders/1GuPPW7ykdHtfupyiamA4O8fFN1ZehwOf",
-                "imagen1":"dibel_hyaluronic3.jpg"
+                "imagen3":"../imagenes/dibel_hyaluronic3"
             }
         ]
     },
