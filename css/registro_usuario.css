@@ -167,7 +167,72 @@ label {
     cursor: pointer;
 }
 
+/* Estilos error */
+/* .formulario__input-error */
+.invalid-feedback {
+    display: none;
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+    color: red;
+}
 
+/* .formulario__input-error-activo */
+.invalid-feedback-active {
+    display: block;
+}
+
+.alerts-container {
+    height: 40px;
+}
+
+.input-elements-container {
+    position: relative;
+}
+
+.icon-state {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    opacity: 0;
+}
+
+/* Estilos exito */
+.alert-success-container {
+    width: 100%;
+
+}
+
+.form-submitted-success {
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+    color: green;
+    display: none;
+    text-align: center;
+}
+
+.form-submitted-success-active {
+    display: block;
+}
+
+/* Estilos validacion */
+.input-text-container-correct .icon-state {
+    color: green;
+    opacity: 1;
+}
+
+.input-text-container-incorrect .form-label {
+    color: red;
+}
+
+.input-text-container-incorrect .icon-state {
+    color: red;
+    opacity: 1;
+}
+
+.input-text-container-incorrect .form-control {
+    border: 3px solid red;
+}
 
 /* Estilo btn-submit disabled */
 #btn-submit:disabled {
