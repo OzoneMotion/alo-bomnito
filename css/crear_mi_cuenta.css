@@ -62,11 +62,6 @@ body {
     margin-left: auto;
 }
 
-.input-text-container {
-    position: relative;
-    width: 264px;
-}
-
 /* Estilos title container */
 .title-container {
     display: flex;
@@ -88,56 +83,6 @@ body {
     height: 15rem;
 }
 
-/* Estilos container */
-.form-validation {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Estilos input container */
-.input-container {
-    height: 300px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-input,
-textarea {
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    margin: 5px 0;
-    font-size: var(--sizeEtiqueta);
-    font-family: var(--fontEtiqueta);
-}
-
-label {
-    font-size: var(--sizeEtiqueta);
-}
-
-input:focus,
-textarea:focus {
-    border: 3px solid #0075FF;
-    outline: none;
-}
-
-input {
-    height: 39px;
-}
-
-label {
-    margin-bottom: 4px;
-}
-
-.message-container {
-    width: 100%;
-}
 
 /* Div de ¿tienes cuenta? */
 .content-sesion{
@@ -182,14 +127,6 @@ label {
     cursor: pointer;
 }
 
-
-
-/* Estilo btn-submit disabled */
-#btn-submit:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    box-shadow: none;
-}
 /* Estilos tablet */
 
 @media (min-width: 744px) {
