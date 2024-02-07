@@ -139,23 +139,9 @@ body {
         padding: 89px;
     }
 
-    .input-text-container {
-        width: 412px;
-    }
-
-    .form-validation {
-        gap: 32px;
-    }
-
     #title {
         font-size: var(--sizeTituloDesktop);
 
-    }
-
-    .form-label {
-        font-size: var(--sizeEtiqueta);
-        font-family: var(--fontEtiqueta);
-        color: var(--text);
     }
 
     .title-container {
@@ -178,26 +164,7 @@ body {
         padding: 109px;
     }
 
-    .input-text-container {
-        width: 412px;
-    }
-
-    .form-validation {
-        gap: 32px;
-    }
-
     #title {
         font-size: var(--sizeTituloTablet);
     }
-
-    .form-label {
-        font-size: var(--sizeEtiqueta);
-        font-family: var(--fontEtiqueta);
-        color: var(--text);
-    }
-
-    .title-container {
-        height: 85px;
-    }
-
 }
