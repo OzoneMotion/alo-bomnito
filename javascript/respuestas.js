@@ -90,4 +90,10 @@ function initModal(text){
     let content = document.getElementById('modalContent')
     content.innerHTML = text;
     $('#modalCentro').modal('show')
+
+}
+
+/* Redirecciona el boton comprar a la pagina de productos*/
+function redirectProductos(){
+    window.location.href = "productos.html"
 }
