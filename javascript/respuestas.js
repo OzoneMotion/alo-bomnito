@@ -37,16 +37,16 @@ function resultado() {
 
     nota = p1 + p2 + p3 + p4 + p5 + p6;
     if (nota >= 6 && nota < 18) {
-        this.initModal('Tu Bomnita piel es: normal');
+        this.initModal('Tu Bomnita piel es: </br>Normal');
     }
     if (nota >= 18 && nota < 30) {
-        this.initModal('Tu Bomnita piel es: seca');
+        this.initModal('Tu Bomnita piel es: </br>Seca');
     }
     if (nota >= 30 && nota < 42) {
-        this.initModal('Tu Bomnita piel es: grasa');
+        this.initModal('Tu Bomnita piel es: </br>Grasa');
     }
     if (nota >= 42 && nota < 30) {
-        this.initModal('Tu Bomnita piel es: Mixta');
+        this.initModal('Tu Bomnita piel es: </br>Mixta');
     }
     // alert(" Aciertos: " + nota);
    //window.location = 'cuestionario.html'
@@ -88,6 +88,6 @@ function preventFormReload() {
  */
 function initModal(text){
     let content = document.getElementById('modalContent')
-    content.textContent = text;
+    content.innerHTML = text;
     $('#modalCentro').modal('show')
 }
