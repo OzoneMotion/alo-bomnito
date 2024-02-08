@@ -29,10 +29,10 @@ const formNamesValidation = (e) => {
 
     if (validations[name]) {
         inputValidation(validations[name], input, name);
-    if (name === 'password'|| name === 'password2') { // Si el campo es passwordId, validamos también password2
-        validarPasswords();
-        } 
-    } 
+        if (name === 'password' || name === 'password2') { // Si el campo es passwordId, validamos también password2
+            validarPasswords();
+        }
+    }
 }
 
 elements.forEach((element) => {
@@ -45,8 +45,10 @@ elements.forEach((element) => {
 const inputValidation = (regex, input, name) => {
     const idElement = document.getElementById(`id-${name}`);
     const iconElement = document.querySelector(`#id-${name} i`);
+    // class="invalid-feedbac invalid-feedbac-active"
     const feedbacEmptyElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-empty`);
     const feedbacRegexElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-regex`);
+    // console.log(feedbacEmptyElement);
 
     if (input.value.trim() === "") {
         feedbacEmptyElement.classList.add('invalid-feedbac-active');
@@ -71,68 +73,80 @@ const inputValidation = (regex, input, name) => {
 }
 
 // Función para validar la confirmación de la contraseña
-/*
-const validarPasswords = () => {
-    const inputPassword1 = document.getElementById('password');
-    const inputPassword2 = document.getElementById('password2');
-    const idElement = document.getElementById('id-password2');
-    const iconElement = idElement.querySelector('i');
-    const emptyfeedbacElement = idElement.querySelector('.invalid-feedbac');
-
-    if (inputPassword1.value !== inputPassword2.value || inputPassword2.value.trim() === "") {
-        emptyfeedbacElement.textContent = "Las contraseñas no coinciden";
-        emptyfeedbacElement.classList.add('invalid-feedbac-active');
-        iconElement.classList.remove('fa-check-circle');
-        iconElement.classList.add('fa-times-circle');
-        idElement.classList.add('input-text-container-incorrect');
-        idElement.classList.remove('input-text-container-correct');
-        names['password2'] = false;
-    } else {
-        emptyfeedbacElement.textContent = ""; // Limpiar el mensaje de error
-        emptyfeedbacElement.classList.remove('invalid-feedbac-active');
-        iconElement.classList.remove('fa-times-circle');
-        iconElement.classList.add('fa-check-circle');
-        idElement.classList.remove('input-text-container-incorrect');
-        idElement.classList.add('input-text-container-correct');
-    }
-
-    btnSubmit.disabled = !Object.values(names).every(state => state);
-}
-*/
 
 const validarPasswords = () => {
     const inputPassword1 = document.getElementById('password');
     const inputPassword2 = document.getElementById('password2');
-    const idElement = document.getElementById('id-password2');
-    const iconElement = idElement.querySelector('i');
-    const emptyfeedbacElement = idElement.querySelector('.invalid-feedbac');
+    const containerPassword2 = document.getElementById('id-password2');
+    const iconElement = containerPassword2.querySelector('i');
+    const emptyfeedbacElement = containerPassword2.querySelector('#password2-empty');
+    const regexfeedbacElement = containerPassword2.querySelector('#password2-regex');
 
-    console.log("Validar Contraseñas llamado");
-    console.log("Contraseña 1:", inputPassword1.value);
-    console.log("Contraseña 2:", inputPassword2.value);
-
-    if (inputPassword1.value === inputPassword2.value && inputPassword2.value.trim() !== "") {
-        emptyfeedbacElement.textContent = ""; // Limpiar el mensaje de error
-        emptyfeedbacElement.classList.remove('invalid-feedbac-active');
-        iconElement.classList.remove('fa-times-circle');
-        iconElement.classList.add('fa-check-circle');
-        idElement.classList.remove('input-text-container-incorrect');
-        idElement.classList.add('input-text-container-correct');
-        names['password2'] = true;
-    } else {
-        emptyfeedbacElement.textContent = "Las contraseñas no coinciden";
+    if (inputPassword2.value.trim() === "") {
         emptyfeedbacElement.classList.add('invalid-feedbac-active');
+        regexfeedbacElement.classList.remove('invalid-feedbac-active');
         iconElement.classList.remove('fa-check-circle');
         iconElement.classList.add('fa-times-circle');
-        idElement.classList.add('input-text-container-incorrect');
-        idElement.classList.remove('input-text-container-correct');
+        containerPassword2.classList.add('input-text-container-incorrect');
+        containerPassword2.classList.remove('input-text-container-correct');
         names['password2'] = false;
     }
-
-    console.log("Estado de names['password2']:", names['password2']);
+    else if (inputPassword1.value !== inputPassword2.value) {
+        emptyfeedbacElement.classList.remove('invalid-feedbac-active');
+        regexfeedbacElement.classList.add('invalid-feedbac-active');
+        iconElement.classList.remove('fa-check-circle');
+        iconElement.classList.add('fa-times-circle');
+        containerPassword2.classList.add('input-text-container-incorrect');
+        containerPassword2.classList.remove('input-text-container-correct');
+        names['password2'] = false;
+    } else {
+        emptyfeedbacElement.textContent = ""; // Limpiar el mensaje de error
+        console.log(emptyfeedbacElement);
+        emptyfeedbacElement.classList.remove('invalid-feedbac-active');
+        regexfeedbacElement.classList.remove('invalid-feedbac-active');
+        iconElement.classList.add('fa-check-circle');
+        iconElement.classList.remove('fa-times-circle');
+        containerPassword2.classList.remove('input-text-container-incorrect');
+        containerPassword2.classList.add('input-text-container-correct');
+    }
 
     btnSubmit.disabled = !Object.values(names).every(state => state);
 }
+
+
+// const validarPasswords = () => {
+//     const inputPassword1 = document.getElementById('password');
+//     const inputPassword2 = document.getElementById('password2');
+//     const containerPassword2 = document.getElementById('id-password2');
+//     const iconElement = containerPassword2.querySelector('i');
+//     const emptyfeedbacElement = containerPassword2.querySelector('.invalid-feedbac');
+
+//     console.log("Validar Contraseñas llamado");
+//     console.log("Contraseña 1:", inputPassword1.value);
+//     console.log("Contraseña 2:", inputPassword2.value);
+
+//     if (inputPassword1.value === inputPassword2.value && inputPassword2.value.trim() !== "") {
+//         emptyfeedbacElement.textContent = ""; // Limpiar el mensaje de error
+//         emptyfeedbacElement.classList.remove('invalid-feedbac-active');
+//         iconElement.classList.remove('fa-times-circle');
+//         iconElement.classList.add('fa-check-circle');
+//         containerPassword2.classList.remove('input-text-container-incorrect');
+//         containerPassword2.classList.add('input-text-container-correct');
+//         names['password2'] = true;
+//     } else {
+//         emptyfeedbacElement.textContent = "Las contraseñas no coinciden";
+//         emptyfeedbacElement.classList.add('invalid-feedbac-active');
+//         iconElement.classList.remove('fa-check-circle');
+//         iconElement.classList.add('fa-times-circle');
+//         containerPassword2.classList.add('input-text-container-incorrect');
+//         containerPassword2.classList.remove('input-text-container-correct');
+//         names['password2'] = false;
+//     }
+
+//     // console.log("Estado de names['password2']:", names['password2']);
+
+//     btnSubmit.disabled = !Object.values(names).every(state => state);
+// }
 
 
 
