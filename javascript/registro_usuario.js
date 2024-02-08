@@ -71,7 +71,7 @@ const inputValidation = (regex, input, name) => {
 }
 
 // Función para validar la confirmación de la contraseña
-/*
+
 const validarPasswords = () => {
     const inputPassword1 = document.getElementById('password');
     const inputPassword2 = document.getElementById('password2');
@@ -98,8 +98,8 @@ const validarPasswords = () => {
 
     btnSubmit.disabled = !Object.values(names).every(state => state);
 }
-*/
 
+/*
 const validarPasswords = () => {
     const inputPassword1 = document.getElementById('password');
     const inputPassword2 = document.getElementById('password2');
@@ -133,10 +133,10 @@ const validarPasswords = () => {
 
     btnSubmit.disabled = !Object.values(names).every(state => state);
 }
-
-
+*/
 
 /*
+
 // Visibilidad de las contraseñas
 const togglePasswordVisibility = (inputId, iconId) => {
     const input = document.getElementById(inputId);
