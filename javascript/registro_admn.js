@@ -4,13 +4,13 @@ const btnSubmit = document.getElementById('btn-crear-submit');  //btn-crear-subm
 const elements = [...inputs];
 
 const regex = {
-    nameId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
+    admnId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^(?=.*[!@#$%^&*()-_=+{};:,<.>]).{8,14}$/, // 8 a 14 numeros y con caracteres especiales.
 }
 
 const names = {
-    nameId: false,
+    admnId: false,
     emailId: false,
     password: false,
     password2: false
@@ -18,7 +18,7 @@ const names = {
 
 const formNamesValidation = (e) => {
     const validations = {
-        "nameId": regex.nameId,
+        "admnId": regex.admnId,
         "emailId": regex.emailId,
         "password": regex.password,
         "password2": regex.password // para utilizar la misma expresion de passwordId
