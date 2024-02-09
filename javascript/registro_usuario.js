@@ -131,4 +131,3 @@ const togglePasswordVisibility = (inputId, iconId) => {
 togglePasswordVisibility('password', 'togglePassword1');
 togglePasswordVisibility('password2', 'togglePassword2');
 */
-

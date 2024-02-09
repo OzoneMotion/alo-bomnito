@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
 
+/*
 :root {
     --backgroud: #EFEBE7;
     --primary: #BD9870;
@@ -23,6 +24,40 @@
     --sizeContenidoCardMobile: 0.625rem;
     --btnMedium-w: 200px;
     --btnMedium-h: 45px;
+}*/
+
+:root {
+    --backgroud: #EFEBE7;
+    --primary: #CFAD7C;
+    --secondary: #C38D56;
+    --accent: #7E703D;
+    --highlight: #FDA73D;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --font-weightTitulos: 700;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesk-tab: 3rem;
+    --sizeSubtituloDesk-Tab: 1.9rem;
+    --sizeTituloMobile: 1.5rem;
+    --sizeSubtituloMobile: 1.3rem;
+    --sizeContenido: 1rem;
+    --sizeEtiqueta: 0.9rem;
+    --sizeErrorAlerts: 0.8rem;
+    --btnColapsable-w: 258px;
+    --btnLarge-w: 258px;
+    --btnMedium-w: 200px;
+    --btnSmall-w: 150px;
+    --btns-h: 45px;
+    --inputsDeskTab-w: 413px;
+    --inputsMobile-w: 258px;
+    --inputs-h: 39px;
+    --textareaDeskTab-h: 129px;
+    --textareaMobile-h: 194px;
+    --marginTopBottom: 3rem;
+    --shadow: 2px 4px 2.5px 0px rgba(0,0,0,0.12);
 }
 /*Css general */
 * {
@@ -48,23 +83,23 @@
     display: flex;
     justify-content: center; 
     align-items: center;
-    height: 180px;
+    height: 250px;
 }
 /* Cards individuales formado de su contenedor */
 .card {
-    width: 100px;
-    height: 170px;
+    width: 141px;
+    height: 233.04px;
     border-radius: 5px;
     border:0.1px solid var(--backgroud);
     background-color: white;
     box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
     margin: 0 8px;
-    background: linear-gradient(var(--secondary) 0,transparent 50%)
+   /* background: linear-gradient(var(--secondary) 0,transparent 50%)*/
 }
 
 .card-img {
-    width: 98px;
-    height: 88px;
+    width: 141px;
+    height: 141px;
     padding: 1px;
     border-radius: 5px;
     object-fit: cover;
