@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+    --backgroud: #EFEBE7;
+    --primary: #BD9870;
+    --secondary: #EEAA44;
+    --accent: #767957;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesktop: 2.5rem;
+    --sizeTituloTablet: 2.5rem;
+    --sizeTituloMobile: 1.5rem;
+    --sizeSubtituloDes-Tab: 1.875rem;
+    --sizeContenido: 1rem;
+    --sizeEtiqueta: 0.875rem;
+    --sizeTituloCardDes-Tab: 1.25rem;
+    --sizeTituloCardMobile: 0.75rem;
+    --sizeSubtituloCardMobile: 0.75rem;
+    --sizeContenidoCardMobile: 0.625rem;
+    --btnMedium-w: 200px;
+    --btnMedium-h: 45px;
+}
+/*Css general */
+* {
+    /* border: 1px solid black; */
+    font-size: var(--sizeContenido);
+    font-family: var(--fontContenido);
+    color: var(--text);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    background: url(../imagenes/contacto.jpg);
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos container */
+
+.containerRegistro {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
+    width: 350px;
+    height: 700px;
+    /* display: flex;  */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 43px;
+    gap: 20px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input-text-container {
+    position: relative;
+    width: 264px;
+}
+
+/* Estilos title container */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 69px;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 46px;
+}
+
+/* Estilos container */
+.form-validation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos input container */
+.input-container {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+input,
+textarea {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0;
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+}
+
+label {
+    font-size: var(--sizeEtiqueta);
+}
+
+input:focus,
+textarea:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+}
+
+input {
+    height: 39px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+.message-container {
+    width: 100%;
+}
+
+/* Estilos textos */
+#content {
+    font-family: var(--fontContenido);
+    font-size: var(--sizeSubtituloDescktop);
+}
+
+#title {
+    font-family: var(--fontTitulo);
+    font-size: var(--sizeTituloMobile);
+    font-weight: 700;
+}
+
+/* Estilos boton */
+.btn-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+#btn-submit {
+    width: var(--btnMedium-w);
+    height: var(--btnMedium-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--backgroud);
+    border-radius: 10px;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+}
+
+
+
+/* Estilo btn-submit disabled */
+#btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+/* Estilos tablet */
+
+@media (min-width: 744px) {
+
+    /* Estilos para pantallas de tamaño 'xl' y superiores */
+    .containerRegistro {
+        width: 590px;
+        height: 800px;
+        padding: 89px;
+    }
+
+    .input-text-container {
+        width: 412px;
+    }
+
+    .form-validation {
+        gap: 32px;
+    }
+
+    #title {
+        font-size: var(--sizeTituloDesktop);
+
+    }
+
+    .form-label {
+        font-size: var(--sizeEtiqueta);
+        font-family: var(--fontEtiqueta);
+        color: var(--text);
+    }
+
+    .title-container {
+        height: 85px;
+    }
+
+    #btn-submit{
+        margin-top: 30px;
+    }
+}
+
+/* Estilos desktop */
+
+@media (min-width: 992px) {
+
+    /* Estilos para pantallas de tamaño 'xxl' y superiores */
+    .containerRegistro {
+        width: 630px;
+        height: 830px;
+        padding: 109px;
+    }
+
+    .input-text-container {
+        width: 412px;
+    }
+
+    .form-validation {
+        gap: 32px;
+    }
+
+    #title {
+        font-size: var(--sizeTituloTablet);
+    }
+
+    .form-label {
+        font-size: var(--sizeEtiqueta);
+        font-family: var(--fontEtiqueta);
+        color: var(--text);
+    }
+
+    .title-container {
+        height: 85px;
+    }
+
+}

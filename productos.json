@@ -33,7 +33,20 @@
         ],
         "uso":"Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
         "precio": 670.00,
-        "imagen":""
+        "images": [
+            {
+                "url":"https://drive.google.com/drive/folders/1GuPPW7ykdHtfupyiamA4O8fFN1ZehwOf",
+                "imagen1":"dibel_hyaluronic1.jpg"
+            },
+            {
+                "url":"https://drive.google.com/drive/folders/1GuPPW7ykdHtfupyiamA4O8fFN1ZehwOf",
+                "imagen1":"dibel_hyaluronic2.jpg"
+            },
+            {
+                "url":"https://drive.google.com/drive/folders/1GuPPW7ykdHtfupyiamA4O8fFN1ZehwOf",
+                "imagen1":"dibel_hyaluronic3.jpg"
+            }
+        ]
     },
     {
         "nombre":"VIT C Booster Serum",
