@@ -15,7 +15,20 @@
       "password2": "contraseña."
     }
   ],
-  "admins":[
-
+  "admins": [
+    {
+      "id": "502d",
+      "admnId": "ElbaLazo",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    },
+    {
+      "id": "3dee",
+      "admnId": "Changuito",
+      "emailId": "correo@mail.com",
+      "password": "contraseñaaa.",
+      "password2": "contraseñaaa."
+    }
   ]
 }

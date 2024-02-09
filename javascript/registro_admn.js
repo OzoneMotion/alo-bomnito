@@ -48,7 +48,7 @@ const inputValidation = (regex, input, name) => {
     // class="invalid-feedbac invalid-feedbac-active"
     const feedbacEmptyElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-empty`);
     const feedbacRegexElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-regex`);
-     console.log(feedbacEmptyElement);
+    console.log(feedbacEmptyElement);
 
     if (input.value.trim() === "") {
         feedbacEmptyElement.classList.add('invalid-feedbac-active');
@@ -132,3 +132,39 @@ togglePasswordVisibility('password', 'togglePassword1');
 togglePasswordVisibility('password2', 'togglePassword2');
 */
 
+//Almacenamiento de los datos introducidos en el formulario en la base de datos
+
+const formulario = document.querySelector(".validation-registro");
+
+const getData = () => {
+
+    const datos = new FormData(formulario);
+    const datosProcesados = Object.fromEntries(datos.entries())
+
+    formulario.reset();
+    return datosProcesados;
+}
+
+const postData = async () => {
+    const newUser = getData();
+
+    try {
+        const response = await fetch("http://localhost:3000/admins", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newUser)
+        })
+        if (response.ok) {
+            const jsonResponse = await response.json()
+            const { username, password } = jsonResponse;
+        }
+    }
+    catch (error) { console.log(error) }
+}
+
+formulario.addEventListener("submit", event => {
+    event.preventDefault();
+    postData();
+})
