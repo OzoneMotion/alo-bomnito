@@ -1,31 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
 
-/*
-:root {
-    --backgroud: #EFEBE7;
-    --primary: #BD9870;
-    --secondary: #EEAA44;
-    --accent: #767957;
-    --text: #2E2E2E;
-    --widthfull: 100vw;
-    --fontTitulo: 'Quicksand', sans-serif;
-    --fontSubtitulo: 'Quicksand', sans-serif;
-    --fontContenido: 'Lato', sans-serif;
-    --fontEtiqueta: 'Lato', sans-serif;
-    --sizeTituloDesktop: 2.5rem;
-    --sizeTituloTablet: 2.5rem;
-    --sizeTituloMobile: 1.5rem;
-    --sizeSubtituloDes-Tab: 1.875rem;
-    --sizeContenido: 1rem;
-    --sizeEtiqueta: 0.875rem;
-    --sizeTituloCardDes-Tab: 1.25rem;
-    --sizeTituloCardMobile: 0.75rem;
-    --sizeSubtituloCardMobile: 0.75rem;
-    --sizeContenidoCardMobile: 0.625rem;
-    --btnMedium-w: 200px;
-    --btnMedium-h: 45px;
-}*/
-
 :root {
     --backgroud: #EFEBE7;
     --primary: #CFAD7C;
@@ -71,7 +45,8 @@
 }
 .img-principal {
     width: 100%;
-    height: 100%;
+    height: 400px;
+    object-fit: cover;  /* Para que la imagen respete la medida asignada y esta salga al tamaño sin deformar*/
   /*  object-fit: fill;  */ /* esto es para que la imagen no se deforme, pero que si respete la medida general */
 }
 
@@ -87,23 +62,24 @@
 }
 /* Cards individuales formado de su contenedor */
 .card {
-    width: 141px;
+    width: 142px;
     height: 233.04px;
     border-radius: 5px;
-    border:0.1px solid var(--backgroud);
-    background-color: white;
+    background-color: var(--primary);
     box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
     margin: 0 8px;
    /* background: linear-gradient(var(--secondary) 0,transparent 50%)*/
 }
 
 .card-img {
-    width: 141px;
-    height: 141px;
-    padding: 1px;
-    border-radius: 5px;
+    margin-top: 0px;
+    margin-left: 0px;
+    /*margin-right: 0px;*/
+    width: 140px;
+    height: 140px;
+    border-radius: 5px 5px 0px 0px;
     object-fit: cover;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    /*box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);*/
 }
 
 .card-title{
@@ -182,11 +158,13 @@
 }
 .frase-derecha {
     font-family: var(--fontSubtitulo);
-    font-size: var(--sizeContenido);
-    width: 60%;
+    font-size: var(--sizeSubtituloMobile);
+    width: 100%;
+    height: 100%;
     text-align: center;
     margin: 0;
-    margin-bottom: 20px;
+    margin-top: 48px;
+    margin-bottom: 30px;
     font-weight: bold;
 }
 
@@ -197,7 +175,7 @@
 }
 /* Inicia Css de 2 parte su contenedor*/
 .container-img-text {
-    margin-top: 50px;
+    margin-top: 48px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 75% 25%;
@@ -206,10 +184,10 @@
     justify-items: center;
 }
 .img-parte-dos {
-    width: 200px;
-    height: 200px;
+    width: 165px;
+    height: 165px;
     object-fit: cover;
-
+    box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
  /*  object-fit: cover;    *//*      en caso de que la imagen sea rectangular  */
 }
 .frase-izquierda {
@@ -217,8 +195,10 @@
     font-size: var(--sizeContenido);
     text-align: center;
     margin: 0;
-    width: 75%;
-    margin-top: 20px;
+    width: 90%;
+    height: 100%;
+    margin-top: 25px;
+    margin-bottom: 0px;
     font-weight: bold;
 }
 
@@ -229,6 +209,10 @@
         margin-left: 40px;
         margin-right: 40px;
     }
+    .img-principal {
+        width: 100%;
+        height: 100%;
+    }
     .container-card-text{
         display: grid;
         grid-template-columns: 40% 60%;
@@ -238,29 +222,23 @@
     .frase-derecha {
         width: 70%;
     }
-
-    .titulo-frase {
-        font-size: var(--sizeTituloDesktop);
-    }
     .container-envoltura {
-        height: 245px;
+        height: 280px;
         
     }
     .card {
         width: 150px;
-        height: 236px;
-        margin: 0 5px;
+        height: 263px;
     }
     .card-img {
-        width: 148px;
-        height: 119px;
-        padding: 2px;
+        width: 150px;
+        height: 150px;
     }
     .card-title{
         font-family: var(--fontSubtitulo);
         font-size: var(--sizeContenido);
-        margin-top: 10px;
-        margin-bottom: 8px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .card-marca, .card-modelo, .card-precio {
         font-size: var(--sizeEtiqueta);
@@ -285,8 +263,13 @@
         width: 350px;
         height: 350px;
     }
+    .frase-derecha {
+        width: 100%;
+        font-size: var(--sizeSubtituloDesk-Tab);
+    }
     .frase-izquierda {
-        width: 60%;
+        width: 90%;
+        font-size: var(--sizeSubtituloDes-Tab);
     }
 }
 
@@ -305,24 +288,20 @@
     .container-img-text {
         margin-top: 150px;
     }
-    .titulo-frase {
-        font-size: var(--sizeTituloDesktop);
-    }
     .frase-derecha {
         width: 100%;
         font-size: var(--sizeSubtituloDes-Tab);
     }
     .container-envoltura {
-        height: 310px;
+        height: 340px;
     }
     .card {
         width: 191px;
-        height: 296px;
+        height: 326px;
     }
     .card-img {
         width: 189px;
-        height: 159px;
-        padding: 3px;
+        height: 189px;
     }
     .card-title{
         font-family: var(--fontSubtitulo);
@@ -344,8 +323,11 @@
     #icon-card {
         font-size: 30px;
     }
+    .frase-derecha{
+        font-size: var(--sizeSubtituloDes-Tab);
+    }
     .frase-izquierda {
-        width: 70%;
+        width: 90%;
         font-size: var(--sizeSubtituloDes-Tab);
     }
     .img-parte-dos {
@@ -368,27 +350,26 @@
         margin-top: 170px;
     }
     .container-envoltura {
-        height: 380px;
+        height: 440px;
     }
     .card {
-        width: 240px;
-        height: 370px;
+        width: 250px;
+        height: 423px;
         margin: 0 20px;
     }
     .card-img {
-        width: 238px;
-        height: 170px;
-        padding: 3px;
+        width: 248px;
+        height: 248px;
     }
     .card-title{
         font-family: var(--fontSubtitulo);
         font-size: var(--sizeTituloMobile);
-        margin-top: 25px;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
     .card-marca, .card-modelo, .card-precio {
         font-size: var(--sizeTituloMobile);
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .card-modelo{
         font-size: var(--sizeContenido);
@@ -398,10 +379,12 @@
         width: 150px;
     }
     .frase-derecha {
-        width: 70%;
+        font-size: var(--sizeTituloDesk-tab);
+        width: 100%;
     }
     .frase-izquierda {
-        width: 50%;
+        font-size: var(--sizeTituloDesk-tab);
+        width: 100%;
     }
     .img-parte-dos {
         width: 650px;

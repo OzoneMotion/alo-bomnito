@@ -45,7 +45,7 @@
 
 
 body {
-    background: url(../imagenes/contacto.jpg);
+    background: url(https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/fondo.png);
     display: block;
     flex-wrap: wrap;
     justify-content: center;
@@ -54,7 +54,7 @@ body {
 /* Estilos container */
 
 .containerRegistro {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
     width: 350px;

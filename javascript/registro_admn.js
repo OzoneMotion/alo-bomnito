@@ -48,7 +48,7 @@ const inputValidation = (regex, input, name) => {
     // class="invalid-feedbac invalid-feedbac-active"
     const feedbacEmptyElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-empty`);
     const feedbacRegexElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-regex`);
-    // console.log(feedbacEmptyElement);
+     console.log(feedbacEmptyElement);
 
     if (input.value.trim() === "") {
         feedbacEmptyElement.classList.add('invalid-feedbac-active');
