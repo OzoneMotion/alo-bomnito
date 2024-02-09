@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": "676d",
+      "nameId": "Jorge Velazquez",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    },
+    {
+      "id": "150c",
+      "nameId": "Alan Brito",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    }
+  ],
+  "admins":[
+
+  ]
+}
