@@ -73,7 +73,6 @@ function validate() {
 }
 
 
-
 /**
  * This function prevents the reload of the form
  */
