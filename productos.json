@@ -5,6 +5,7 @@
         "id":1,
         "piel":"normal",
         "contenido":"30 ml",
+        "descripcion":"Este suero está enriquecido con Ácido Hialurónico de bajo peso molecular, activo que penetra en las capas más profundas de la piel, proporcionando una profunda humectación, ayudando a mejorar la firmeza de la misma. Con la finalidad de reforzar sus dotes hidratantes, también incluye Ácido Hialurónico de alto peso molecular, componente encargado de crear una fina película protectora en la superficie de la piel, con la finalidad de mantener una suave textura y elasticidad.",
         "tabla": [
             {
                 "ingrediente":"Ácido hialurónico",
@@ -33,7 +34,17 @@
         ],
         "uso":"Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
         "precio": 670.00,
-        "imagen":""
+        "images": [
+            {
+                "imagen":"./imagenes/dibel_hyaluronic1.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_hyaluronic2.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_hyaluronic3.jpg"
+            }
+        ]
     },
     {
         "nombre":"VIT C Booster Serum",
@@ -41,6 +52,7 @@
         "id":2,
         "piel":"normal",
         "contenido":"30 ml",
+        "descripcion":"La singularidad del nuevo VIT C Booster Serum viene dada por su textura ligera que evita dejar sensación grasa, sin olor y de rápida absorción, logrando revitalizar e iluminar la piel, previniendo la sensación de sequedad gracias a sus increíbles dotes hidratantes.",
         "tabla": [
             {
                 "ingrediente":"Vitamina C",
@@ -65,7 +77,17 @@
         ],
         "uso":"Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
         "precio":950.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/dibel_serum1.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_serum2.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_serum3.jpg"
+            }
+        ]
     },
     {
         "nombre":"SOIE Couleur",
@@ -73,6 +95,7 @@
         "id":3,
         "piel":"normal",
         "contenido":"50 ml",
+        "descripcion":"SunVeil SOIE Couleur combina una textura sedosa con la protección contra los rayos solares. Contiene filtros solares físicos que no se absorben, ya que forman una capa superior en la piel, la cual actúa como un espejo desviando la luz UV. Además, su textura elegante y delicada proporcionará sedosidad a la piel.",
         "tabla": [
             {
                 "ingrediente":"Dióxido de titanio",
@@ -93,7 +116,17 @@
         ],
         "uso":"Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol. Reaplique después de transpirar, nadar o secarse. Se recomienda reaplicar cada 3 o 4 horas.",
         "precio":680.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/sunveil_solar1.jpg"
+            },
+            {
+                "imagen":"../imagenes/sunveil_solar2.jpg"
+            },
+            {
+                "imagen":"../imagenes/sunveil_solar3.jpg"
+            }
+        ]
     },
     {
         "nombre":"Neudermic Gentle Skin Cleanser",
@@ -101,6 +134,7 @@
         "id":4,
         "piel":"mixta",
         "contenido":"240 ml",
+        "descripcion":"El suave y delicado gel dermolimpiador Neudermic Gentle Skin Cleanser es la opción ideal para todo tipo de pieles, además de que su mezcla de activos se ha elegido para ser tolerada hasta por las pieles más sensibles. Este gel tiene la función de limpiar con delicadeza, retirando la suciedad sin resecar ni irritar, respetando la capa hidrolipídica y el equilibrio natural de la piel por su pH. Puede ser utilizado tanto en el rostro como en el cuerpo.",
         "tabla": [
             {
                 "ingrediente":"Glicerina",
@@ -117,7 +151,17 @@
         ],
         "uso":"Aplique por la mañana y noche sobre la piel húmeda. Masajee con suaves movimientos circulares. Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
         "precio":300.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/reve_dermic1.jpg"
+            },
+            {
+                "imagen":"../imagenes/reve_dermic2.jpg"
+            },
+            {
+                "imagen":"../imagenes/reve_dermic3.jpg"
+            }
+        ]
     },
     {
         "nombre":"Omega Water Cream",
@@ -125,6 +169,7 @@
         "id":5,
         "piel":"mixta",
         "contenido":"50 ml",
+        "descripcion":"Gel humectante ligero que hidrata instantáneamente sin dejar la piel grasosa. Contiene glicerina, complejo de ácidos grasos, niacinamida y betaína que trabajan juntos para brindar una hidratación duradera, controlan los niveles de grasa en el rostro y ayudan a emparejar el tono de la piel.",
         "tabla": [
             {
                 "ingrediente":"Carbonato de dicaprililo",
@@ -141,7 +186,17 @@
         ],
         "uso":"Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
         "precio":285.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/omega-water-cream.jpg"
+            },
+            {
+                "imagen":"../imagenes/omega-water-cream2.jpg"
+            },
+            {
+                "imagen":"../imagenes/omega-water-cream3.jpg"
+            }
+        ]
     },
     {
         "nombre":"Awaking Klotho",
@@ -149,6 +204,7 @@
         "id":6,
         "piel":"mixta",
         "contenido":"30 gr",
+        "descripcion":"Ayuda a estimular las células para reparar daños causado por la edad y factores externos como contaminación y luz.",
         "tabla": [
             {
                 "ingrediente":"Pistacia Lentiscus",
@@ -165,7 +221,11 @@
         ],
         "uso":"Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
         "precio":440.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/nuda_awaking1.jpg"
+            }
+        ]
     },
     {
         "nombre":"Puro Vera",
@@ -173,6 +233,7 @@
         "id":7,
         "piel":"grasa",
         "contenido":"75 gr",
+        "descripcion":"Limpiador natural de rostro con extracto de Aloe Vera y suaves esferas de carbón activado, que al romperse hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel. Piel más equilibrada desde la primera aplicación. Contiene potentes extractos de raíces, semillas y frutos antioxidantes, antiinflamatorios, regenerativos. Es una formulación que limpia a profundidad sin sensación de sequedad.",
         "tabla": [
             {
                 "ingrediente":"Aloe vera",
@@ -189,7 +250,11 @@
         ],
         "uso":"Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón. Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
         "precio":300.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/nuda_purovera1.jpg"
+            }
+        ]
     },
     {
         "nombre":"3 Blocks",
@@ -197,6 +262,7 @@
         "id":8,
         "piel":"grasa",
         "contenido":"29 gr",
+        "descripcion":"Fórmula avanzada para quienes están en constante exposición a la luz de dispositivos electrónicos y luz artificial.Protege de partículas contaminantes y radicales libres presentes en el medio ambiente. Evita la aparición de manchas y de envejecimiento prematuro en la piel.",
         "tabla": [
             {
                 "ingrediente":"Ácido hialurónico",
@@ -213,7 +279,11 @@
         ],
         "uso":"Úsalo como último paso a tu rutina de belleza. Esparce en el rostro suavemente y con pequeños toques hasta su total absorción. Mantén el producto en un lugar fresco.",
         "precio":360.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/nude_3blocks.jpg"
+            }
+        ]
     },
     {
         "nombre":"Oxidermic Foamer G5",
@@ -221,6 +291,7 @@
         "id":9,
         "piel":"grasa",
         "contenido":"200 ml",
+        "descripcion":"El dermolimpiador Oxidermic Foamer G5 está enriquecido con componentes naturales como el Extracto de Corteza de Salix alba, mismo que funciona como un excelente exfoliante, devolviendo la vitalidad y luminosidad facial. También contiene Extracto de Opuntia Ficus-indica, activo encargado de brindar suavidad y calmar irritaciones en el rostro, dando propiedades hidratantes que, a su vez, dejan una agradable sensación en la piel.",
         "tabla": [
             {
                 "ingrediente":"Ácido glicólico",
@@ -245,7 +316,14 @@
         ],
         "uso":"Humedezca su rostro y aplique la espuma. Permita actuar al producto de 30 segundos hasta 1 minuto. Enjuague con abundante agua. Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
         "precio":340.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/reve_oxidermic1.jpg"
+            },
+            {
+                "imagen":"../imagenes/reve_oxidermic2.jpg"
+            }
+        ]
     },
     {
         "nombre":"Dibel Beauté",
@@ -253,6 +331,7 @@
         "id":10,
         "piel":"seca",
         "contenido":"50 ml",
+        "descripcion":"Esta crema contiene ingredientes activos para ayudar a la piel a brin-dar una profunda hidratación y lograr un efecto sedoso con poder antioxidante, brindando suavidad, elasticidad y firmeza.",
         "tabla": [
             {
                 "ingrediente":"Ácido hialurónico",
@@ -289,7 +368,17 @@
         ],
         "uso":"Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
         "precio":840.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/dibel_beaute1.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_beaute2.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_beaute3.jpg"
+            }
+        ]
     },
     {
         "nombre":"Neudermic Rich Hydrating Body Cream",
@@ -297,6 +386,7 @@
         "id":11,
         "piel":"seca",
         "contenido":"360 ml",
+        "descripcion":"Su fórmula contiene Fibra de Avena, ingrediente clave con propiedades suavizantes, relajantes, hidratantes y emolientes. Uno de los mayores beneficios que brinda a la piel es que evita la deshidratación de la misma, manteniendo la barrera hidrolipídica estable.",
         "tabla": [
             {
                 "ingrediente":"Fibra de avena",
@@ -317,7 +407,11 @@
         ],
         "uso":"Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
         "precio":640.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/reve_bodycream.jpg"
+            }
+        ]
     },
     {
         "nombre":"Serum Luminiscente",
@@ -325,6 +419,7 @@
         "id":12,
         "piel":"seca",
         "contenido":"30 ml",
+        "descripcion":"Dibel Serum Luminiscente, el aliado que ayuda a recuperar la luminosidad y energía del rostro. Este suero es una magnifica opción de complemento como cuidado diario gracias a su alto valor nutritivo de absorción rápida que no deja sensación grasa, ideal para ser la primera elección de las pieles jóvenes o el complemento antiedad para pieles maduras.",
         "tabla": [
             {
                 "ingrediente":"Ácido hialurónico",
@@ -349,6 +444,16 @@
         ],
         "uso":"Sobre rostro limpio, aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
         "precio":550.00,
-        "imagen":""
+        "imagen": [
+            {
+                "imagen":"../imagenes/dibel_serumlumi1.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_serumlumi2.jpg"
+            },
+            {
+                "imagen":"../imagenes/dibel_serumlumi3.jpg"
+            }
+        ]
     }
 ]
