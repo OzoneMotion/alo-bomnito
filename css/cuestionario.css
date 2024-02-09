@@ -37,7 +37,7 @@
 @media only screen and (min-width:350px) and (max-width: 1280px) {
 
 body{
-    background-image: url("../imagenes/test-D-T.png");
+    background-image: url("../img/fondo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ body{
 
 .titulo-test{
     text-align: -webkit-center;
-    top: 1rem;
+    padding: 1rem;
 }
 #titulo-test{
     color: var(--text);
