@@ -45,7 +45,7 @@
 
 
 body {
-    background: url(../imagenes/fondo.jpg);
+    background: url(../img/fondo.jpg);
     display: block;
     flex-wrap: wrap;
     justify-content: center;
