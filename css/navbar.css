@@ -10,6 +10,10 @@
     --content-font: 'Lato', sans-serif;
 }
 
+.logo {
+    width: 61px;
+}
+
 body {
     background-color: var(--background);
     margin: 0%;
