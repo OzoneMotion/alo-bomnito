@@ -7,7 +7,7 @@
     --subtitles-titles-font: 'Quicksand', sans-serif;
     --title-size: 1.3rem;
     --subtitles-size: 1rem;
-    --content-font: font-family: 'Lato', sans-serif;
+    --content-font: 'Lato', sans-serif;
 }
 
 body {
@@ -28,6 +28,10 @@ body {
 
 .navbar {
     background-color: var(--primary) !important;
+    position: fixed;
+    top:0;
+    z-index:1000;
+    width:100%;
 }
 
 .nav-link {
