@@ -46,4 +46,5 @@ footer.insertAdjacentHTML("beforeend", `        <footer>
   </div>
   </div>
 </div>
-</footer>`);
+</footer>
+`);
