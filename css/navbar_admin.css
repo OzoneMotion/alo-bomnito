@@ -1,4 +1,4 @@
-/* :root {
+:root {
     --primary: #BD9870;
     --secondary: #EEAA44;
     --highlight: #767957;
@@ -8,7 +8,7 @@
     --title-size: 1.3rem;
     --subtitles-size: 1rem;
     --content-font: 'Lato', sans-serif;
-} */
+}
 
 .logo {
     width: 61px;
@@ -32,10 +32,6 @@ body {
 
 .navbar {
     background-color: var(--primary) !important;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
 }
 
 .nav-link {
@@ -54,7 +50,7 @@ body {
 
 .material-symbols-outlined:hover {
     color: var(--secondary);
-}
+} 
 
 @media screen and (min-width: 992px) {
 
@@ -65,8 +61,7 @@ body {
         width: auto;
     }
 
-    .colapsable,
-    .show1 {
+    .colapsable, .show1 {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -84,8 +79,9 @@ body {
         margin: 10px;
     }
 
-    .ocultar-carrito {
+    .ocultar-usuario {
         visibility: hidden !important;
+        position: absolute;
     }
 
     .oculto-desktop {
@@ -97,7 +93,7 @@ body {
 
 @media screen and (max-width: 992px) {
 
-    .navbar-toggler {
+    .navbar-toggler{
         border: none !important;
     }
 
@@ -116,13 +112,12 @@ body {
         justify-content: flex-end;
         border: none;
     }
-
+    
     .canvas-body {
-        background-color: #bd9870
+        background-color: #bd9870 
     }
-
-    .colapsable,
-    .show1 {
+    
+    .colapsable, .show1 {
         background-color: #bd9870;
         padding: 2%;
         list-style: none;
