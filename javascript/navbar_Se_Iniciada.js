@@ -24,7 +24,7 @@ navbar_Se_Iniciada.insertAdjacentHTML("beforeend", `<nav class="navbar navbar-ex
               <a class="nav-link" href="carrito_de_compras.html">Carrito de compras</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tipos_de_piel.html" data-bs-toggle="collapse" data-bs-target="#collapseTipos">
+                <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#collapseTipos">
                   Tipos de piel <span class="material-symbols-outlined">arrow_drop_down</span>
                 </a>
               <ul class="collapse colapsable show1" id="collapseTipos">
