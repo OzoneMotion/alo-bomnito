@@ -11,7 +11,8 @@
 
 
 body {
-    background: url(../imagenes/contacto.jpg);
+    background: var(--url-background);
+    background-size: cover;
     display: block;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,7 +21,7 @@ body {
 /* Estilos container */
 
 .container {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
     width: 350px;
@@ -29,7 +30,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 55px 43px;
-    gap: 20px;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
@@ -54,12 +54,11 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 /* Estilos input container */
 .input-container {
-    height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -70,7 +69,7 @@ body {
 input,
 textarea {
     padding: 10px;
-    width: 100%;
+    width: var(--inputsMobile-w);
     border-radius: 5px;
     border: none;
     margin: 5px 0;
@@ -89,7 +88,7 @@ textarea:focus {
 }
 
 input {
-    height: 39px;
+    height: var(--inputs-h);
 }
 
 label {
@@ -123,14 +122,14 @@ label {
 
 #btn-submit {
     width: var(--btnMedium-w);
-    height: var(--btnMedium-h);
+    height: var(--btns-h);
     background-color: var(--accent);
     border: none;
     font-size: 16px;
     font-weight: 700;
     color: var(--backgroud);
     border-radius: 10px;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    box-shadow: var(--shadow);
 }
 
 #btn-submit:hover {
@@ -162,7 +161,7 @@ label {
 .icon-state {
     position: absolute;
     right: 10px;
-    bottom: 15px;
+    bottom: 12px;
     z-index: 100;
     opacity: 0;
 }
@@ -221,12 +220,8 @@ label {
         padding: 89px;
     }
 
-    .form-validation {
-        gap: 32px;
-    }
-
     #title {
-        font-size: var(--sizeTituloDesktop);
+        font-size: var(--sizeTituloDesk-tab);
 
     }
 
@@ -251,12 +246,8 @@ label {
         padding: 109px;
     }
 
-    .form-validation {
-        gap: 32px;
-    }
-
     #title {
-        font-size: var(--sizeTituloTablet);
+        font-size: var(--sizeTituloDesk-tab);
     }
 
     .form-label {
