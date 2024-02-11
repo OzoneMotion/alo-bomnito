@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alo' Bomnito | Administrar producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/navbar_admin.css">
+    <link rel="stylesheet" href="../css/agregar_productos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script async defer src="../javascript/agregar_productos.js"></script>
+  </head>
+  <body>
+
+<!-- INICIO DE NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary subtitulo" aria-label="Thirteenth navbar example">
+      <div class="container-fluid">
+        <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+          menu
+        </span>
+        <a class="navbar-brand" href="#"><img src="/img/logo-noOficial.png" alt="logo Alo' Bomnito"> Alo' Bomnito</a>
+        <a class="navbar-brand " href="./iniciar_sesion.html"><span class="material-symbols-outlined navbar-brand ocultar-usuario">account_circle</span></a>
+        <div class="offcanvas offcanvas-start canvas-body" id="menuLateral">
+          <div class="offcanvas-header">
+            <button class="btn-cerrar-border" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
+              <span class="material-symbols-outlined">
+                close
+                </span>
+            </button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav col-lg-5 justify-content-lg-center justifyContent-desktop">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./administrar_productos.html">Administrar productos</a>
+                </li>
+                <li class="nav-item oculto-desktop">
+                    <a class="nav-link" href="./cuenta.html" data-bs-toggle="collapse" data-bs-target="#collapseCuenta">
+                      Cuenta <span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a>
+                  <ul class="collapse colapsable show1" id="collapseCuenta">
+                    <li><a class="nav-link" href="./iniciar_sesion.html">Mis datos</a></li>
+                  </ul>
+                </li>
+                <li> 
+                  <a class="nav-link" aria-current="page" href="./nosotros.html">Cerrar sesión</a>
+                </li>
+            </ul>
+          </div>
+            <div class="d-lg-none aling-self-center canvas-footer titulo">
+              <p>ALO' BOMNITO</p>
+            </div>
+        </div>
+    </div>
+          <div class="icons">
+            <a class="navbar-brand" href="./iniciar_sesion.html"><span class="material-symbols-outlined navbar-brand">account_circle</span></a>
+          </div>
+    </nav>
+<!-- FIN DE NAVBAR -->
+
+<!-- <main> -->
+    <div class="container">
+        <p class="tittle">Agregar producto</p>
+        <form class="formato" id="validation" action="/">
+            <div class="container1">
+                <div class="container_labels">
+                    <div class="container_preview">
+                        <div class="containerImg">
+                            <div id="carouselExampleControls" class="carousel">
+                                <div class="carousel-inner" id="carruselWrapper">
+                                    <img class="containerImg" src="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/addPhoto.png" alt="addPhoto">
+                                </div>
+                                <div class="container_btns">
+                                    <button class="btn_prevNext" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                </div>
+                                <div class="container_btns2">
+                                    <button class="btn_prevNext" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span class="material-symbols-outlined" >arrow_forward_ios</span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                              </div>
+                            <div class="objContainerImg">
+                                <div>
+                                    <span class="material-symbols-outlined">add_a_photo</span>
+                                    <input accept=".png, .jpg, .jpeg" name="imagenes" class="imgInput" id="imagesInput" type="file" multiple required>
+                                </div>
+                            </div>
+                            <!-- <div class="container_iDelete">
+                                <span class="material-symbols-outlined">delete</span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-cantidadProducto">
+                    <label for="cantidadProducto">Cantidad</label>
+                    <div class="containerInput">
+                        <input name="cantidadProducto" id="cantidadProducto" type="tel" placeholder="000" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>   
+                        </div>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="cantidadProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="cantidadProducto-regex">Debes poner una cantidad mayor a 0.</p>
+                    </div>
+                </div>
+                <div class="container_labels">
+                    <label for="IdProducto">ID</label>
+                    <div class="containerInput">
+                        <input disabled name="IdProducto" id="IdProducto" type="text" placeholder="000" required>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-nombreProducto">
+                    <label for="nombreProducto">Nombre</label>
+                    <div class="containerInput">
+                        <input name="nombreProducto" id="nombreProducto" type="text" placeholder=" Nombre del producto" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>
+                        </div>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="nombreProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="nombreProducto-regex">El nombre debe tener menos de 20 caracteres.</p>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-marcaProducto">
+                    <label for="marcaProducto">Marca</label>
+                    <div class="containerInput">
+                        <input name="marcaProducto" id="marcaProducto" type="text" placeholder=" Marca del producto" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>
+                        </div>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="marcaProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="marcaProducto-regex">La marca debe tener menos de 20 caracteres.</p>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-precioProducto">
+                    <label for="precioProducto">Precio</label>
+                    <div class="containerInput">
+                        <input name="precioProducto" id="precioProducto" type="text" placeholder=" $000.00" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span>
+                        </div>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="precioProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="precioProducto-regex">El espacio solo puede contener numeros, debe seguir el lineamiento de 2 decimales.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="container_labels" id="id-contenidoProducto">
+                    <label for="contenidoProducto">Contenido</label>
+                    <div class="containerInput" id="input-container-alerts">
+                        <input name="contenidoProducto" id="contenidoProducto" type="text" placeholder="000.00ml/g" required>
+                        <div class="layoutIcons">
+                            <span class="material-symbols-outlined">edit_square</span> 
+                        </div>
+                    </div>
+                    <div class="alerts-container" id="alerts-container">
+                        <p class="invalid-feedback" id="contenidoProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="contenidoProducto-regex">Se debe seguir el lineamiento de 2 decimales. 
+                            Ademas de especificar el tipo de contenido (unicamente con 2 tipos de formatos, ml o g).</p>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-descripcionProducto">
+                    <label for="descripcionProducto">Descripción</label>
+                    <div class="containerTextArea">
+                        <textarea 
+                            name="descripcionProducto" 
+                            id="descripcionProducto" 
+                            cols="53" rows="6" 
+                            placeholder="Descripcion del producto" 
+                            required>
+                        </textarea>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="descripcionProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="descripcionProducto-regex">El campo solo puede tener 300 palabras como maximo, sea breve por favor.</p>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-indicacionesUsoProducto">
+                    <label for="descripcionProducto">Indicaciones de uso</label>
+                    <div class="containerTextArea">
+                        <textarea 
+                            name="indicacionesUsoProducto" 
+                            id="indicacionesUsoProducto" 
+                            cols="53" rows="6" 
+                            placeholder="Indicaciones de uso sobre el producto" 
+                            required>
+                        </textarea>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="indicacionesUsoProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="indicacionesUsoProducto-regex">El campo solo puede tener 300 palabras como maximo, sea breve por favor.</p>
+                    </div>
+                </div>
+                <div class="container_labels" id="id-tipoPiel">
+                    <label for="selectorTipoPiel">Tipo de piel</label>
+                    <div class="select-menu">
+                        <div class="select-btndrop">
+                            <span class="sBtn-text">Selecciona el tipo de piel</span>
+                            <span class="material-symbols-outlined">arrow_drop_down</span>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Normal</span>
+                            </li>
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Mixta</span>
+                            </li>
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Grasa</span>
+                            </li>
+                            <li class="option">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="option-text">Seca</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="tipoPiel-empty">Completa este campo.</p>
+                    </div>
+                </div> 
+                <div class="container_labels" id="id-ingredientesProducto">
+                    <label>Ingredientes (6 principales)</label>
+                    <div>
+                        <div class="select-btn">
+                            <span class="btn-text">Selecciona los ingredientes.</span>
+                            <span class="material-symbols-outlined">arrow_drop_down</span>
+                        </div>
+                        <ul class="list-items">
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox"></span>
+                                <span class="item-text">HTML & CSS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="alerts-container">
+                        <p class="invalid-feedback" id="id-ingredientesProducto-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="id-ingredientesProducto-max">Solo puede seleccionar 6 ingredientes principales.</p>
+                    </div>
+                </div>
+                <div class="container_btn">
+                    <button class="btn-style">
+                        Cancelar
+                    </button>
+                    <button disabled class="btn-style" type="submit" id="btn_enviar">
+                        Agregar
+                    </button>
+                </div>   
+            </div>
+        </form>
+    </div>
+<!-- </main> -->
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
