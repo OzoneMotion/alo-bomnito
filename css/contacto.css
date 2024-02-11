@@ -1,26 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
-@import url('./default/root.css');
-
-/* :root {
-    --backgroud: #EFEBE7;
-    --primary: #BD9870;
-    --secondary: #EEAA44;
-    --accent: #767957;
-    --text: #2E2E2E;
-    --widthfull: 100vw;
-    --fontTitulo: 'Quicksand', sans-serif;
-    --fontSubtitulo: 'Quicksand', sans-serif;
-    --fontContenido: 'Lato', sans-serif;
-    --fontEtiqueta: 'Lato', sans-serif;
-    --sizeTituloDesktop: 40px;
-    --sizeTituloTablet: 40px;
-    --sizeTituloMobile: 24px;
-    --sizeSubtituloDes-Tab: 30px;
-    --sizeContenido: 16px;
-    --sizeEtiqueta: 14px;
-    --btnMedium-w: 200px;
-    --btnMedium-h: 45px;
-} */
+@import url("./default/root.css");
 
 * {
     /* border: 1px solid black; */
