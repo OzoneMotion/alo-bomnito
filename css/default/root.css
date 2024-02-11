@@ -32,7 +32,7 @@
     --textareaDeskTab-h: 129px;
     --textareaMobile-h: 194px;
     --marginTopBottom: 3rem;
-    --shadow_diagonal: 4px 4px 10.5px 0px rgba(0,0,0,0.25); 
+    --shadow: 4px 4px 10.5px 0px rgba(0,0,0,0.25); 
     --shadow_lineal: 0px 4px 10.5px 0px rgba(0,0,0,0.25);
     --url-background: url(https://github.com/Aridai-Perez/Images_Alo-Bomnito/blob/main/ImagenesElementos/fondo.png?raw=true);
 }

@@ -18,7 +18,7 @@ navbar.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg bg-
       <div class="offcanvas-body d-flex flex-column">
         <ul class="navbar-nav col-lg-5 justify-content-lg-center justifyContent-desktop">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./home.html">Home</a>
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./carrito_de_compras.html">Carrito de compras</a>
@@ -36,7 +36,7 @@ navbar.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg bg-
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./conoce_tu_tipo.html">Conoce tu tipo de piel</a>
+              <a class="nav-link" href="./cuestionario.html">Conoce tu tipo de piel</a>
             </li>
             <li class="nav-item oculto-desktop">
                 <a class="nav-link" href="./cuenta.html" data-bs-toggle="collapse" data-bs-target="#collapseCuenta">
