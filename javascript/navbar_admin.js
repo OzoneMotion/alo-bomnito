@@ -5,7 +5,7 @@ navbar_admin.insertAdjacentHTML("beforeend", `<nav class="navbar navbar-expand-l
   <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
     menu
   </span>
-  <a class="navbar-brand" href="#"><img class="logo" src="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/LogoOficial.png" alt="logo Alo' Bomnito"> Alo' Bomnito</a>
+  <a class="navbar-brand" href="#"><img class="logo" src="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/LogoOficial.png" alt="logo Alo' Bomnito"></a>
   <a class="navbar-brand " href="./iniciar_sesion.html"><span class="material-symbols-outlined navbar-brand ocultar-usuario">account_circle</span></a>
   <div class="offcanvas offcanvas-start canvas-body" id="menuLateral">
     <div class="offcanvas-header">
