@@ -1,4 +1,4 @@
-@import url(../default/root.css);
+@import url('./root.css');
 
 .logo {
     width: 61px;
