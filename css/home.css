@@ -1,38 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
 
-:root {
-    --backgroud: #EFEBE7;
-    --primary: #CFAD7C;
-    --secondary: #C38D56;
-    --accent: #7E703D;
-    --highlight: #FDA73D;
-    --text: #2E2E2E;
-    --widthfull: 100vw;
-    --font-weightTitulos: 700;
-    --fontTitulo: 'Quicksand', sans-serif;
-    --fontSubtitulo: 'Quicksand', sans-serif;
-    --fontContenido: 'Lato', sans-serif;
-    --fontEtiqueta: 'Lato', sans-serif;
-    --sizeTituloDesk-tab: 3rem;
-    --sizeSubtituloDesk-Tab: 1.9rem;
-    --sizeTituloMobile: 1.5rem;
-    --sizeSubtituloMobile: 1.3rem;
-    --sizeContenido: 1rem;
-    --sizeEtiqueta: 0.9rem;
-    --sizeErrorAlerts: 0.8rem;
-    --btnColapsable-w: 258px;
-    --btnLarge-w: 258px;
-    --btnMedium-w: 200px;
-    --btnSmall-w: 150px;
-    --btns-h: 45px;
-    --inputsDeskTab-w: 413px;
-    --inputsMobile-w: 258px;
-    --inputs-h: 39px;
-    --textareaDeskTab-h: 129px;
-    --textareaMobile-h: 194px;
-    --marginTopBottom: 3rem;
-    --shadow: 2px 4px 2.5px 0px rgba(0,0,0,0.12);
-}
+
 /*Css general */
 * {
  /*   border:0.1px solid black; */
