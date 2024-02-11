@@ -1,5 +1,7 @@
 
 function resultado() {
+    this.preventFormReload();
+    console.log('resultado');
     var p1, p2, p3, p4, p5, p6, nota;
 
     // 1a pregunta
@@ -35,28 +37,25 @@ function resultado() {
 
     nota = p1 + p2 + p3 + p4 + p5 + p6;
     if (nota >= 6 && nota < 18) {
-        alert("Tu piel es normal");
-        window.location = 'cuestionario.html'
+        this.initModal('Tu Bomnita piel es: </br>Normal');
     }
     if (nota >= 18 && nota < 30) {
-        alert("Tu piel es seca");
-        window.location = 'cuestionario.html'
+        this.initModal('Tu Bomnita piel es: </br>Seca');
     }
     if (nota >= 30 && nota < 42) {
-        alert("Tu piel es grasa");
-        window.location = 'cuestionario.html'
+        this.initModal('Tu Bomnita piel es: </br>Grasa');
     }
     if (nota >= 42 && nota < 30) {
-        alert("Tu piel es Mixta");
-        window.location = 'cuestionario.html'
+        this.initModal('Tu Bomnita piel es: </br>Mixta');
     }
     // alert(" Aciertos: " + nota);
-    window.location = 'cuestionario.html'
+   //window.location = 'cuestionario.html'
 }
 
 
 
 function validate() {
+    this.preventFormReload();
     var valid = false;
     var x = document.myform.pregunta1;
     for (var i = 0; i < x.length; i++) {
@@ -66,12 +65,35 @@ function validate() {
         }
     }
     if (valid) {
-        alert("Validación exitosa")
-        window.location = 'cuestionario.html'
+        console.log('Validación exitosa');
     } else {
-        alert("Debe seleccionar una opcion");
-        window.location = 'cuestionario.html'
+        this.initModal('¡UPS! Al parecer ha faltado alguna pregunta...');
         return false;
     }
 }
 
+
+/**
+ * This function prevents the reload of the form
+ */
+function preventFormReload() {
+    $("#myForm").submit(function(e) {
+        e.preventDefault();
+    });
+}
+
+/**
+ * @param {string} text this text can change
+ * this function opens and set a text for the modal
+ */
+function initModal(text){
+    let content = document.getElementById('modalContent')
+    content.innerHTML = text;
+    $('#modalCentro').modal('show')
+
+}
+
+/* Redirecciona el boton comprar a la pagina de productos*/
+function redirectProductos(){
+    window.location.href = "productos.html"
+}

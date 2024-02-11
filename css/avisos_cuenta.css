@@ -2,8 +2,9 @@
 
 :root {
     --backgroud: #EFEBE7;
-    --primary: #BD9870;
-    --secondary: #EEAA44;
+    --primary: #CFAD7C;
+    --secondary: #C38D56;
+    --higlight: #FDA73D;
     --accent: #767957;
     --text: #2E2E2E;
     --widthfull: 100vw;
@@ -36,7 +37,7 @@
 
 
 body {
-    background: url(../imagenes/contacto.jpg);
+    background: url(../img/fondo.jpg);
     display: block;
     flex-wrap: wrap;
     justify-content: center;
@@ -45,7 +46,7 @@ body {
 /* Estilos container */
 
 .containerRegistro {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
     width: 350px;
@@ -67,27 +68,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 69px;
-    justify-content: space-between;
+    height: 10rem;
+    justify-content: space-around;
     text-align: center;
     color: var(--text);
     margin-bottom: 46px;
-}
-
-/* Imagen*/
-.img-Tuser{
-    text-align: center;
-}
-.img-user{
-    width: 15rem;
-    height: 15rem;
-}
-
-
-/* Div de ¿tienes cuenta? */
-.content-sesion{
-    margin-top: 2rem;
-    text-align: center;
 }
 
 /* Estilos textos */
@@ -96,11 +81,34 @@ body {
     font-size: var(--sizeSubtituloDescktop);
 }
 
-#title {
-    font-family: var(--fontTitulo);
-    font-size: var(--sizeTituloMobile);
-    font-weight: 700;
+#subtitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 2.5rem;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--text);
+    font-family: var(--fontSubtitulo);
 }
+
+
+/* Imagen*/
+.img-crear,
+.img-error,
+.img-registro{
+    text-align: center;
+}
+.img-crear-cuenta,
+.img-error-correo,
+.img-error-registro{
+    width: 14rem;
+    height: 12rem;
+    border-radius: 1rem;
+}
+
+
+
 
 /* Estilos boton */
 .btn-container {
@@ -116,12 +124,12 @@ body {
     height: var(--btnMedium-h);
     background-color: var(--accent);
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--backgroud);
     border-radius: 10px;
     box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
 #btn-submit:hover {
@@ -151,6 +159,22 @@ body {
     #btn-submit{
         margin-top: 30px;
     }
+   
+    /* Imagen*/
+.img-crear,
+.img-error,
+.img-registro{
+    text-align: center;
+    margin: 3rem;
+    padding: 1rem;
+}
+.img-crear-cuenta,
+.img-error-correo,
+.img-error-registro{
+    width: 18rem;
+    height: 19rem;
+    border-radius: 1rem;
+}
 }
 
 /* Estilos desktop */
@@ -167,4 +191,19 @@ body {
     #title {
         font-size: var(--sizeTituloTablet);
     }
+    /* Imagen*/
+.img-crear,
+.img-error,
+.img-registro{
+    text-align: center;
+    margin: 3rem;
+    padding: 1rem;
+}
+.img-crear-cuenta,
+.img-error-correo,
+.img-error-registro{
+    width: 18rem;
+    height: 19rem;
+    border-radius: 1rem;
+}
 }
