@@ -1,0 +1,322 @@
+:root {
+    --backgroud: #EFEBE7;
+    --primary: #CFAD7C;
+    --secondary: #C38D56;
+    --accent: #7E703D;
+    --highlight: #FDA73D;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --font-weightTitulos: 700;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesk-tab: 3rem;
+    --sizeSubtituloDesk-Tab: 1.9rem;
+    --sizeTituloMobile: 1.5rem;
+    --sizeSubtituloMobile: 1.3rem;
+    --sizeContenido: 1rem;
+    --sizeEtiqueta: 0.9rem;
+    --sizeErrorAlerts: 0.8rem;
+    --btnColapsable-w: 258px;
+    --btnLarge-w: 258px;
+    --btnMedium-w: 200px;
+    --btnSmall-w: 150px;
+    --btns-h: 45px;
+    --inputsDeskTab-w: 413px;
+    --inputsMobile-w: 258px;
+    --inputs-h: 39px;
+    --textareaDeskTab-h: 129px;
+    --textareaMobile-h: 194px;
+    --marginTopBottom: 3rem;
+    --shadow: 2px 4px 2.5px 0px rgba(0,0,0,0.12);
+}
+
+/* responsive  Mobile*/
+
+@media only screen and (min-width:350px) and (max-width: 1280px) {
+
+body{
+    background-image: url("../imagenes/test-D-T.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*--- Titulo---*/
+
+.titulo-test{
+    text-align: -webkit-center;
+    top: 1rem;
+}
+#titulo-test{
+    color: var(--text);
+    font-size: var(--sizeTituloMobile);
+    font-family: var(--fontTitulo);
+    font-weight: var(--font-weightTitulos);
+    text-align: center;
+}
+
+/*--- card de las preguntas---*/
+.card{
+    border-radius: 1rem;
+    transition: all; 
+    width: 100%;
+    border: 0.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.card-header{
+    background-color: var(--primary);
+    font-size: var(--sizeContenido);
+    font-family: var(--fontContenido);
+    color: var(--text);
+    text-align: center;
+    
+}
+
+/*--- Diseño dentro de listas ---*/
+ol{
+    margin-bottom: 0.8rem;
+    line-height: 1rem;
+}
+ li:hover{
+    background-color: var(--accent);
+    background-size: auto;
+    color: var(--highlight);
+    cursor: pointer;
+    border: solid;
+    border-top: var(--accent);
+    border-color: var(--accent);
+    border-radius: 2rem;
+    
+ }
+ li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 30px var(--primary);
+ }
+
+ /*--- ventana flotante ---*/
+
+ .modal-content{
+    height: 34rem;
+    width: 21rem;
+    text-align: center;
+    position: absolute;
+ }
+.modal-title{
+    color: var(--text);
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeSubtituloDesk-Tab);
+    text-align: center;
+}
+.modal-header{
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--backgroud);
+    border: solid;
+    border-color: var(--backgroud);
+}
+img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+}
+
+.modal-body{
+    background-color: var(--backgroud);
+    border: solid;
+    border-color: var(--backgroud);
+    color: var(--text);
+    font-size: var(--sizeSubtituloDesk-Tab);
+    font-family: var(--fontSubtitulo);
+    text-align: center;
+}
+
+/*boton compras*/
+.modal-footer{
+    background-color: var(--backgroud);
+    display: flow-root;
+    border: solid;
+    border-color: var(--backgroud);
+}
+.compras{
+    width: var(--btnLarge-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--backgroud);
+    border-radius: 0.3rem;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    margin-top: 2rem;
+}
+
+.resultados{
+text-align: center;
+margin: 2rem;
+}
+
+#myInput{
+    width: var(--btnLarge-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--backgroud);
+    border-radius: 0.3rem;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    margin-top: 2rem;
+ }
+}
+/* ------------responsive  Tablet & desktop-----------*/
+
+@media (min-width: 1280px){
+
+    body{
+        background-image: url("../imagenes/test-D-T.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*--- Titulo---*/
+    
+    .titulo-test{
+        text-align: -webkit-center;
+        top: 1rem;
+    }
+    #titulo-test{
+        color: var(--text);
+        font-size: var(--sizeTituloDesk-tab);
+        font-family: var(--fontTitulo);
+        font-weight: var(--font-weightTitulos);
+        text-align: center;
+    }
+    
+    /*--- card de las preguntas---*/
+    .card{
+        border-radius: 1rem;
+        padding: auto;
+        transition: all;
+        margin-top: auto; 
+        width: 100%;
+        border: 0.8rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .card-header{
+        background-color: var(--primary);
+        font-size: var(--sizeContenido);
+        font-family: var(--fontContenido);
+        color: var(--text);
+        text-align: center;
+        
+    }
+    
+    /*--- Diseño dentro de listas ---*/
+    ol{
+        margin-bottom: 0.8rem;
+        line-height: 1rem;
+    }
+     li:hover{
+        background-color: var(--highlight);
+        background-size: auto;
+        color: var(--accent);
+        cursor: pointer;
+        border: solid;
+        border-top: var(--highlight);
+        border-color: var(--highlight);
+        border-radius: 2rem;
+        
+     }
+     li {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 30px var(--primary);
+     }
+    
+     /*--- ventana flotante ---*/
+     .modal-content{
+        height: 42rem;
+        width: 34rem;
+        text-align: center;
+     }
+    .modal-title{
+        color: var(--text);
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeSubtituloDesk-Tab);
+        text-align: center;
+    }
+    .modal-header{
+        height: 27rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--backgroud);
+        border: solid;
+        border-color: var(--backgroud);
+    }
+    img{
+        width: 16rem;
+        height: 16rem;
+        border-radius: 100%;
+    }
+    
+    .modal-body{
+        background-color: var(--backgroud);
+        border: solid;
+        border-color: var(--backgroud);
+        color: var(--text);
+        font-size: var(--sizeSubtituloDesk-Tab);
+        font-family: var(--fontSubtitulo);
+        text-align: center;
+    }
+    
+    /*boton compras*/
+    .modal-footer{
+        background-color: var(--backgroud);
+        display: flow-root;
+        border: solid;
+        border-color: var(--backgroud);
+    }
+    .compras{
+        width: var(--btnLarge-w);
+        height: var(--btns-h);
+        background-color: var(--accent);
+        border: none;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--backgroud);
+        border-radius: 0.3rem;
+        box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+        margin-top: 2rem;
+    }
+    
+    .resultados{
+    text-align: center;
+    margin: 2rem;
+    }
+    
+    #myInput{
+        width: var(--btnLarge-w);
+        height: var(--btns-h);
+        background-color: var(--accent);
+        border: none;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--backgroud);
+        border-radius: 0.3rem;
+        box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+        margin-top: 2rem;
+     }
+    
+}
+

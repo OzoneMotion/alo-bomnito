@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "676d",
+      "nameId": "Jorge Velazquez",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    },
+    {
+      "id": "150c",
+      "nameId": "Alan Brito",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    }
+  ],
+  "admins": [
+    {
+      "id": "502d",
+      "admnId": "ElbaLazo",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    },
+    {
+      "id": "3dee",
+      "admnId": "Changuito",
+      "emailId": "correo@mail.com",
+      "password": "contraseñaaa.",
+      "password2": "contraseñaaa."
+    }
+  ]
+}
