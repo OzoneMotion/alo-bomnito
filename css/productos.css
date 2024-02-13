@@ -132,6 +132,9 @@
 
 p.products-name{
     margin:0;
+    color: var(--text);
+    cursor: pointer;
+    display: inline;
 }
 
 p.products-mlgr{
@@ -150,6 +153,7 @@ p.products-mlgr{
     color: var(--text);
     font-size: 1.9rem;
     cursor: pointer;
+   
 }
 
 /* TABLETA */
@@ -296,12 +300,12 @@ ul.products{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         width: 100%;
-        padding-right: 20px;
-        padding-left: 20px;   
+        padding-right: 0px;
+        padding-left: 0px;   
     }
 
     .img-card{
-        width:109px;
+        width:139px;
         height: 119px;
         border-width: 50px;
         border-radius: 8px 8px 0px 0px;
@@ -311,7 +315,7 @@ ul.products{
     display:inline-block;
     height: 237.5px;
     text-align: start;
-    width: 110px;
+    width: 140px;
     margin: 10px;
     vertical-align: top;
     padding: 0px;

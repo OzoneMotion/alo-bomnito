@@ -29,7 +29,7 @@ footer.insertAdjacentHTML("beforeend", `        <footer>
   <div class="contenedor-izq-mobile">
     <ul>
       <li> <a href="./iniciar_sesion.html" class="link1 ">Inicio de sesión</a></li>
-      <li> <a href="../html/conoce_tu_tipo.html" class="link1">Conoce tu tipo de piel</a></li>
+      <li> <a href="" class="link1">Conoce tu tipo de piel</a></li>
       <li> <a href="./carrito_de_compras.html" class="link1">Carrito de compras</a></li>
      </ul>
   </div>
