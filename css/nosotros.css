@@ -1,7 +1,8 @@
-/*<uniquifier>: Use a uniquifier for the class name
-<weight>: Use a value from 300 to 700*/
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
 
-:root{
+/* :root{
   --primary: #BD9870;
   --secundary: #EEAA44;
   --highlight: #767957;
@@ -11,14 +12,13 @@
   --title-size: 3rem;
   --subtitles-desk: "Quicksand", sans-serif;
   --subtitles-size: 2rem;
-  /*MOBILE*/
   --titles-font-mobile: "Quicksand", sans-serif;
   --title-size-mobile: 2rem;
   --subtitles-mobile:"Quicksand", sans-serif;
   --subtitles-size-mobile: 1.5rem;
   --letra:"Lato", sans-serif;
   --letra-size:1rem;
-}
+} */
 
 .quicksand-Clase1 {
     font-family: "Quicksand", sans-serif;
@@ -95,8 +95,8 @@ body {
     width: 100%;
 }
 
-/*navbar*/
-.img-logo {
+/* navbar*/
+/* .img-logo {
   width: auto;
   height: auto;
 }
@@ -132,8 +132,8 @@ body {
 
 .material-symbols-outlined:hover {
   color: var(--secondary);
-} 
-/*navbar*/
+}  */
+/*navbar */
 
 .claseColumna {
     margin-top: 3rem !important;
@@ -193,15 +193,6 @@ img{
 }
 .modal-fotter{
   background-color: var(--primary) ;
-}
-.modal-content{
-  position: fixed;
-  border: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  
 }
 
 .modal-title{

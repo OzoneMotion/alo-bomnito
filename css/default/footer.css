@@ -1,0 +1,169 @@
+@import url('./root.css');
+
+/* *{
+    border:solid 1px;
+} */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.page {
+    position: relative !important;
+    min-height: 100% !important;
+}
+
+footer {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary);
+    margin-top: 50px !important;
+    font-family: var(--fontTitulo);
+}
+
+
+
+/* quita viñetas */
+footer ul {
+    list-style: none;
+}
+
+footer i {
+    margin-inline: 2rem !important;
+    font-size: 1.3rem !important;
+    color: var(--text);
+}
+
+/* quita hipervinculos */
+
+.link1 {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.link1:hover {
+    color: var(--backgroud);
+}
+
+.contenedor-base-escritorio {
+    display: grid !important;
+    grid-template-columns: 70% 30% !important;
+}
+
+.contenedor-izq ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin-top: 23px !important;
+
+}
+
+.contenedor-der ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 23px !important;
+    margin-right: 20px;
+    justify-items: end;
+
+}
+
+/* ESCRITORIO */
+
+@media only screen and (min-width:1024px) and (max-width:2560px) {
+
+
+
+    .ocultar-en-escritorio {
+        visibility: hidden;
+        position: fixed;
+    }
+}
+
+/* TABLETA */
+
+@media only screen and (min-width:745px) and (max-width:1024px) {
+
+    footer {
+        font-size: var(--sizeTituloCardMobile);
+    }
+
+    .ocultar-en-escritorio {
+        visibility: hidden;
+        position: fixed;
+    }
+
+    .contenedor-base-escritorio {
+        display: grid;
+        grid-template-columns: 70% 30%;
+
+    }
+
+    footer i {
+        margin-inline: 1.5rem !important;
+        font-size: 1rem !important;
+        color: var(--text);
+    }
+}
+
+/* MOBILE */
+
+@media only screen and (min-width:320px) and (max-width:530px) {
+    footer {
+        font-size: var(--sizeContenidoCardMobile);
+        position: relative;
+        bottom: 0px;
+
+
+
+    }
+
+    footer i {
+        margin-inline: .8rem !important;
+        font-size: 1rem !important;
+        color: var(--text);
+    }
+
+    .ocultar-en-mobile {
+        visibility: hidden;
+        position: fixed;
+    }
+
+    .contenedor-base-mobile {
+        display: grid;
+        grid-template-columns: 70% 70%;
+
+
+    }
+
+    .contenedor-izq-mobile ul {
+
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+        padding-left: 0 !important;
+        display: grid !important;
+        justify-items: center !important;
+
+
+
+    }
+
+    .contenedor-der-mobile ul {
+        margin-top: 10px !important;
+        margin-bottom: 5px;
+        padding-left: 0;
+        display: grid;
+        justify-items: center !important;
+
+
+
+    }
+
+    .contenedor-izq-mobile ul li,
+    .contenedor-der-mobile ul li {
+        margin-bottom: 10px !important;
+    }
+}

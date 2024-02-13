@@ -1,15 +1,6 @@
-:root {
-    --primary: #BD9870;
-    --secondary: #EEAA44;
-    --highlight: #767957;
-    --background: #EFEBE7;
-    --text: #2E2E2E;
-    --subtitles-titles-font: 'Quicksand', sans-serif;
-    --title-size: 1.3rem;
-    --subtitles-size: 1rem;
-    --content-font: 'Lato', sans-serif;
-    --titles-font-desk: "Quicksand", sans-serif;
-}
+@import url('/css/default/root.css');
+@import url('/css/default/footer_admin_.css');
+@import url('/css/default/navbar_admin.css');
 
 .row {
     text-align: center;
@@ -19,7 +10,7 @@
 #titulo-principal {
     margin: 1.5rem;
     font-size: 1.5rem;
-    font-family: var(--titles-font-desk);
+    font-family: var(--fontTitulo);
     font-optical-sizing: auto;
     font-weight: 100;
     font-weight: bold;
@@ -32,7 +23,7 @@
 
 #agregar {
     width: 16.125rem;
-    background-color: #2E2E2E;
+    background-color: var(--accent);
     border: 0;
     padding: .4rem;
     border-radius: .4rem;
@@ -65,7 +56,7 @@ thead {
 }
 
 tr {
-    width: 100%;
+    width: 95%;
     padding: 0.5rem;
 }
 
@@ -153,6 +144,20 @@ h1 {
     width: 100vw;
 }
 
+.mod-contenedor {
+    display: flex;
+    /*background-color: var(--background);*/
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
 .show {
     pointer-events: auto;
     opacity: 1;
@@ -170,8 +175,8 @@ h1 {
 
 }
 
-#close {
-    background-color: #2E2E2E;
+.close {
+    background-color: var(--accent);
     border: 0;
     padding: .4rem;
     border-radius: .4rem;
@@ -180,7 +185,7 @@ h1 {
 }
 
 .cerrar {
-    background-color: #2E2E2E;
+    background-color: var(--accent);
     border: 0;
     padding: .4rem;
     border-radius: .4rem;
@@ -201,7 +206,7 @@ h1 {
     margin-bottom: 1rem;
     padding: .6rem;
     border-radius: .6rem;
-    background: #2E2E2E;
+    background: var(--accent);
     color: #EFEBE7;
 }
 

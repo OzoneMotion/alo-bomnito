@@ -1,33 +1,22 @@
-:root {
-    --primary: #BD9870;
-    --secondary: #EEAA44;
-    --highlight: #767957;
-    --background: #EFEBE7;
-    --text: #2E2E2E;
-    --subtitles-titles-font: 'Quicksand', sans-serif;
-    --title-size: 1.3rem;
-    --subtitles-size: 1rem;
-    --content-font: 'Lato', sans-serif;
-}
+@import url('./root.css');
 
-body {
-    background-color: var(--background);
-    margin: 0%;
+.logo {
+    width: 61px;
 }
 
 .titulo {
-    font-family: var(--subtitles-titles-font) !important;
-    font-size: var(--title-size);
+    font-family: var(--fontTitulo) !important;
+    font-size: var(--sizeTituloMobile);
     font-weight: 700 !important;
 }
 
-.subtitulo {
-    font-family: var(--subtitles-titles-font);
-    font-size: var(--subtitles-size);
-}
-
 .navbar {
-    background-color: var(--primary) !important;
+    background-color: var(--secondary) !important;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: var(--shadow_lineal);
 }
 
 .nav-link {
@@ -37,7 +26,8 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--secondary);
+    color: var(--background);
+    transition: all 0.3s ease-in-out;
 }
 
 .material-symbols-outlined {
@@ -45,8 +35,9 @@ body {
 }
 
 .material-symbols-outlined:hover {
-    color: var(--secondary);
-} 
+    color: var(--background);
+    transition: all 0.3s ease-in-out;
+}
 
 @media screen and (min-width: 992px) {
 
@@ -63,7 +54,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #bd9870;
+        background-color: var(--secondary);
         padding: 2%;
         list-style: none;
     }
@@ -110,11 +101,11 @@ body {
     }
     
     .canvas-body {
-        background-color: #bd9870 
+        background-color: var(--secondary);
     }
     
     .colapsable, .show1 {
-        background-color: #bd9870;
+        background-color: var(--secondary);
         padding: 2%;
         list-style: none;
     }
