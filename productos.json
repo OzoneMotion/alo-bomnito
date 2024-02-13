@@ -491,6 +491,53 @@
                 "imagen3":"../imagenes/reve_bodycream3.jpg"
             }
         ]
+    },
+    {
+        "nombre":"Serum Luminiscente",
+        "marca":"Dibel",
+        "id":12,
+        "piel":"seca",
+        "contenido":"30 ml",
+        "descripcion":"Dibel Serum Luminiscente, el aliado que ayuda a recuperar la luminosidad y energía del rostro. Este suero es una magnifica opción de complemento como cuidado diario gracias a su alto valor nutritivo de absorción rápida que no deja sensación grasa, ideal para ser la primera elección de las pieles jóvenes o el complemento antiedad para pieles maduras.",
+        "tabla": [
+            {
+                "ingrediente":"Ácido hialurónico",
+                "funcion":"Proporciona suavidad y elasticidad a la piel e hidrata."
+            },
+            {
+                "ingrediente":"Ácido ferúlico",
+                "funcion":"Actúa en la revitalización cutánea y en la prevención de la formación de manchas."
+            },
+            {
+                "ingrediente":"Niacinamida",
+                "funcion":"Contribuye a unificar el tono de la piel."
+            },
+            {
+                "ingrediente":"Colágeno y elastina",
+                "funcion":"Proteínas que forman una película protectora en la piel, brindando hidratación y humectación, suave efecto lifting."
+            },
+            {
+                "ingrediente":"Extracto de opuntia",
+                "funcion":"Ayuda a suavizar y calmar la irritación de la piel."
+            }
+        ],
+        "uso":"Sobre rostro limpio, aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
+        "precio":550.00,
+        "imagen1": [
+            {
+                "imagen1":"../imagenes/dibel_serumlumi1.jpg"
+            }
+        ],
+        "imagen2":[
+            {
+                "imagen2":"../imagenes/dibel_serumlumi2.jpg"
+            }
+        ],
+        "imagen3":[
+            {
+                "imagen3":"../imagenes/dibel_serumlumi3.jpg"
+            }
+        ]
     }
    
 ]

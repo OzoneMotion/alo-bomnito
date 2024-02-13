@@ -22,8 +22,8 @@ data.forEach(element => {
       <img  class="img-card" alt="Cambiar imagen"  onmouseout="this.src='${imagenUrl1}';" onmouseover="this.src='${imagenUrl2}';" src="${imagenUrl3}" />
       </div>
       <div class="info-produc">
-        <h1>${element.marca}</h1>
-        <p class="products-name">${element.nombre}</p>
+        <h1 >${element.nombre}</h1>
+        <p class="products-name">${element.marca}</p>
         <p class="products-mlgr">${element.contenido}</p>
         <div class="container-agregar">
           <p class="card-precio">$${element.precio}</p>
