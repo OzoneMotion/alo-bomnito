@@ -20,7 +20,7 @@ cargarJSON().then(productos => {
     console.log(productos);
 
     const primerProdcuto = productos[0];
-    document.getElementById('tarjetaCarrusel-1').src = primerProdcuto.images[0];
+    /*document.getElementById('tarjetaCarrusel-1').src = primerProdcuto.images[0];*/
 
     document.getElementById('marcaProd').textContent = primerProdcuto.marca;
     document.getElementById('nombreProd').textContent = primerProdcuto.nombre;
