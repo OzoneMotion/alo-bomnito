@@ -1,0 +1,43 @@
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
+
+* {
+    /* border: 1px solid black; */
+    font-size: var(--sizeContenido);
+    font-family: var(--fontContenido);
+    color: var(--text);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: var(--url-background);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.iniciar-sesion-container {
+    position: absolute;
+    margin: 3rem 0;
+    width: 350px;
+    height: 638px;
+    background-color: var(--primary);
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
