@@ -2,38 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alo' Bomnito | Iniciar sesión</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Agregamos archivo JS -->
-    <link rel="stylesheet" href="../css/iniciar_sesion.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alo' Bomnito | Inicio sesión</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--Links de css home-->
+  <link rel="stylesheet" href="../css/iniciar_sesion.css">
+
 </head>
 
 <body>
-    <div class="iniciar-sesion-container">
-        <div class="titulo-container">
+  <!-- INICIO DE NAVBAR -->
+  <nav id="navbar"></nav>
+  <!-- FIN DE NAVBAR -->
 
-        </div>
-        <form action="">
-            <div class="inputs-container">
-                <input type="text" placeholder="correo@dominio.com">
-                <input type="text" placeholder="Contraseña">
-            </div>
-            <div class="enlaces-container">
-                <input type="checkbox"> Recuérdame
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
-            <div class="login-container">
-                <button type="submit" id="btn-submit" disabled>Enviar</button>
-            </div>
-        </form>
-
-        <div>
-            Hola
-        </div>
+  <!-- INICIO DE FORMULARIO -->
+  <div class="containerInicio">
+    <div class="title-container">
+      <h1 id="title">Iniciar sesión</h1>
+      <h2 id="content">Disfruta recorrer Alo' Bomnito</h2>
     </div>
+    <div class="form-container">
+      <form class="validacion-inicio" id="validacion-inicio" novalidate>
+        <div class="input-container">
+
+          <!-- Grupo email -->
+          <div class="input-text-container" id="id-emailId">
+            <div class="input-elements-container">
+              <input type="email" class="form-controls" id="emailId" name="emailId" placeholder="correo" required>
+              <i class="icon-state fas fa-times-circle"></i>
+            </div>
+
+            <div class="alerts-container">
+              <p class="invalid-feedbac" id="emailId-empty">Completa este campo</p>
+              <p class="invalid-feedbac" id="emailId-regex">El correo solo puede contener letras, numeros, puntos,
+                guiones y guion bajo.</p>
+            </div>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="input-text-container" id="id-password">
+            <div class="input-elements-container">
+              <input type="password" class="form-controls" name="password" id="password" placeholder="Contraseña"
+                required>
+              <i class="icon-state fas fa-eye-slash toggle-password" data-target="#password"></i>
+              <!-- Botón de alternancia para mostrar/ocultar contraseña -->
+            </div>
+
+            <div class="alerts-container">
+              <p class="invalid-feedbac" id="password-empty">Completa este campo</p>
+              <p class="invalid-feedbac" id="password-regex">min: 8 max: 14, un caracter especial: !, @, # o $.</p>
+            </div>
+          </div>
+
+          <!-- Grupo btn -->
+          <div class="input-text-container btn-container">
+            <button type="submit" value="ingresar" id="btn-crear-submit">Iniciar sesión</button>
+          </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <!-- FIN DE FORMULARIO -->
+
+  <!-- INICIO DE FOOTER -->
+  <footer id="footer"></footer>
+  <!-- FIN DE FOOTER -->
+
+  <script src="../javascript/navbar.js"></script>
+  <script src="../javascript/footer.js"></script>
+  <!-- Link de JS de inicio de sesion -->
+  <script src="../javascript/iniciar_sesion.js"></script>
+
+  <!-- API para iconos -->
+  <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
