@@ -1,6 +1,6 @@
 const navbar = document.getElementById("navbar");
 
-navbar.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Thirteenth navbar example">
+navbar.insertAdjacentHTML("afterbegin", ` <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Thirteenth navbar example">
 <div class="container-fluid ">
     <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
       menu
