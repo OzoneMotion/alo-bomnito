@@ -33,7 +33,7 @@ body {
     justify-content: center;
     align-content: flex-start;
     /*align-items: center; */
-    padding: 53px 43px;  
+    padding: 53px 43px;
     gap: 20px;
     margin-top: 8rem;
     margin-bottom: 4rem;
@@ -136,7 +136,7 @@ input {
 /* Estilos error */
 /* .formulario__input-error */
 .invalid-feedbac {
-    display: none;  
+    display: none;
     font-size: var(--sizeEtiqueta);
     font-family: var(--fontEtiqueta);
     color: red;
@@ -173,12 +173,12 @@ input {
     font-size: var(--sizeEtiqueta);
     font-family: var(--fontEtiqueta);
     color: green;
-    display: none; 
+    display: none;
     text-align: center;
 }
 
 .form-submitted-success-active {
-    display: block;   
+    display: block;
 }
 
 /* Estilos validacion */
@@ -186,6 +186,7 @@ input {
     color: green;
     opacity: 1;
 }
+
 /*revisar si si se necesita*/
 .input-text-container-incorrect .form-label {
     color: red;
@@ -206,6 +207,7 @@ input {
     cursor: not-allowed;
     box-shadow: none;
 }
+
 /* Estilos tablet */
 
 @media (min-width: 744px) {
@@ -219,7 +221,8 @@ input {
         padding-top: 90px;
         padding-bottom: 90px;
     }
-    .title-container{
+
+    .title-container {
         margin-bottom: 30px;
     }
 
@@ -242,7 +245,7 @@ input {
         height: 89px;
     }
 
-    #btn-crear-submit{
+    #btn-crear-submit {
         margin-top: 30px;
     }
 }
