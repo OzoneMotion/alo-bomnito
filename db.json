@@ -65,5 +65,41 @@
       "password": "contraseñaaa.",
       "password2": "contraseñaaa."
     }
+  ],
+  "productos": [
+    {
+      "id": "af7e",
+      "imagenes": {},
+      "cantidadProducto": "1",
+      "nombreProducto": "sadasf",
+      "marcaProducto": "asdsd",
+      "precioProducto": "0.00",
+      "contenidoProducto": "0.00ml",
+      "descripcionProducto": "a",
+      "indicacionesUsoProducto": "a"
+    },
+    {
+      "id": "9234",
+      "imagenes": {},
+      "cantidadProducto": "1",
+      "nombreProducto": "hla",
+      "marcaProducto": "asfdasfd",
+      "precioProducto": "000.00",
+      "contenidoProducto": "00.00g",
+      "descripcionProducto": "a",
+      "indicacionesUsoProducto": "a"
+    },
+    {
+      "id": "9b1d",
+      "imagenes": {},
+      "cantidadProducto": "1",
+      "nombreProducto": "asd",
+      "marcaProducto": "asdsd",
+      "precioProducto": "000.00",
+      "contenidoProducto": "0.00ml",
+      "descripcionProducto": "a",
+      "indicacionesUsoProducto": "a",
+      "pieles": "1"
+    }
   ]
 }
