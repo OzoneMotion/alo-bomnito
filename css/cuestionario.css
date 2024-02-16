@@ -1,6 +1,6 @@
+@import url('./default/root.css');
 @import url('./default/footer.css');
 @import url('./default/navbar.css');
-@import url('./default/root.css');
 
 /* responsive  Mobile*/
 
@@ -9,21 +9,18 @@
 body{
     background-image: var(--url-background);
     background-size: cover;
-    /* background-position: center;
-    background-repeat: no-repeat; */
 }
+
 /*--- Titulo---*/
 
 .titulo-test{
     text-align: -webkit-center;
-    top: 1rem;
-}
-#titulo-test{
     color: var(--text);
-    font-size: var(--sizeTituloMobile);
+    font-size: var(--sizeTituloDesk-tab);
     font-family: var(--fontTitulo);
     font-weight: var(--font-weightTitulos);
     text-align: center;
+    margin-top: var(--marginTopBottom);
 }
 
 /*--- card de las preguntas---*/
@@ -35,6 +32,7 @@ body{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
+    box-shadow: var(--shadow);
 }
 
 .card-header{
@@ -43,15 +41,20 @@ body{
     font-family: var(--fontContenido);
     color: var(--text);
     text-align: center;
-    
+    box-shadow: var(--shadow);
+}
+
+.card-header:first-child {
+    border-radius: 0px;
 }
 
 /*--- Diseño dentro de listas ---*/
-ol{
+.grupoLista{
     margin-bottom: 0.8rem;
     line-height: 1rem;
 }
- li:hover{
+
+.itemLista:hover{
     background-color: var(--accent);
     background-size: auto;
     color: var(--highlight);
@@ -62,7 +65,8 @@ ol{
     border-radius: 2rem;
     
  }
- li {
+
+.itemLista{
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 30px var(--primary);
@@ -70,7 +74,7 @@ ol{
 
  /*--- ventana flotante ---*/
 
- .modal-content{
+.modal-content{
     height: 34rem;
     width: 21rem;
     text-align: center;
@@ -80,7 +84,7 @@ ol{
     color: var(--text);
     font-family: var(--fontSubtitulo);
     font-size: var(--sizeSubtituloDesk-Tab);
-    text-align: center;
+    /* text-align: center; */
 }
 .modal-header{
     height: 17rem;
@@ -91,7 +95,7 @@ ol{
     border: solid;
     border-color: var(--backgroud);
 }
-img{
+.logoModal{
     width: 10rem;
     height: 10rem;
     border-radius: 100%;
@@ -145,6 +149,7 @@ margin: 2rem;
     margin-top: 2rem;
  }
 }
+
 /* ------------responsive  Tablet & desktop-----------*/
 
 @media (min-width: 1280px){
@@ -152,22 +157,21 @@ margin: 2rem;
     body{
         background-image: var(--url-background);
         background-size: cover;
-        /* background-position: center;
-        background-repeat: no-repeat; */
     }
     /*--- Titulo---*/
     
     .titulo-test{
         text-align: -webkit-center;
         top: 1rem;
-    }
-    #titulo-test{
         color: var(--text);
         font-size: var(--sizeTituloDesk-tab);
         font-family: var(--fontTitulo);
         font-weight: var(--font-weightTitulos);
         text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
+
     
     /*--- card de las preguntas---*/
     .card{
@@ -180,41 +184,43 @@ margin: 2rem;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
         padding: 1rem;
+        background-color: var(--primary);
+        box-shadow: var(--shadow);
     }
     
     .card-header{
-        background-color: var(--primary);
+        background-color: var(--secondary);
         font-size: var(--sizeContenido);
         font-family: var(--fontContenido);
         color: var(--text);
         text-align: center;
-        
+        border-bottom: none;
+        box-shadow: var(--shadow);
+    }
+
+    .card-header:first-child {
+        border-radius: 0px;
     }
     
     /*--- Diseño dentro de listas ---*/
-    ol{
-        margin-bottom: 0.8rem;
-        line-height: 1rem;
-    }
-     li:hover{
-        background-color: var(--highlight);
-        background-size: auto;
-        color: var(--accent);
-        cursor: pointer;
-        border: solid;
-        border-top: var(--highlight);
-        border-color: var(--highlight);
-        border-radius: 2rem;
-        
-     }
-     li {
+    .itemLista {
         margin-top: 1rem;
         margin-bottom: 1rem;
+        /* margin-left: 2px; */
         border-radius: 30px var(--primary);
+     }
+
+     .labelInput{
+        margin-left: 5px;
+     }
+
+     .labelInput:hover{
+        color: var(--background);
+        cursor: pointer;
      }
     
      /*--- ventana flotante ---*/
-     .modal-content{
+    .modal-content{
         height: 42rem;
         width: 34rem;
         text-align: center;
@@ -229,12 +235,12 @@ margin: 2rem;
         height: 27rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         background-color: var(--backgroud);
         border: solid;
         border-color: var(--backgroud);
     }
-    img{
+    .logoModal{
         width: 16rem;
         height: 16rem;
         border-radius: 100%;
@@ -282,9 +288,9 @@ margin: 2rem;
         border: none;
         font-size: 1rem;
         font-weight: 700;
-        color: var(--backgroud);
+        color: var(--background);
         border-radius: 0.3rem;
-        box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+        box-shadow: var(--shadow);
         margin-top: 2rem;
      }
     
