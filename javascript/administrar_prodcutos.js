@@ -17,10 +17,10 @@ const recuperarIngredientesProducto = (idProducto) => {
 }
 
 
-const recuperarImagenesProducto = (idProduct) => {
+const recuperarImagenesProducto = (idProducto) => {
     let imagenes = "";
 
-    productos[idProduct - 1].images.forEach(element => {
+    productos[idProducto - 1].images.forEach(element => {
         imagenes += `<img src="${element.imagen}" alt="">`;
     });
 
@@ -32,6 +32,7 @@ productos.forEach(item => {
     productosID.innerHTML += `<div class="main-container">
     <div class="col-md-4">
         <div class="card-producto" style="margin-bottom: 1.5rem;">
+        <div><img src="../imagenes/1.jpg" class="img-p-card"></div>
             <table>
                 <thead>
                     <tr>
@@ -64,8 +65,8 @@ productos.forEach(item => {
                 <tfoot>
                     <tr>
                         <th class="pie-card">
-                          <button class="open">
-                            <span class="material-symbols-outlined">
+                          <button class="open" id="btn2-${item.id}">
+                            <span class="material-symbols-outlined" id="gallery">
                             gallery_thumbnail
                             </span>
                           </button>
@@ -74,7 +75,7 @@ productos.forEach(item => {
                             contact_support
                             </span>
                           </button>
-                          <button class="delate" onclick="delateProduct">
+                          <button class="delete" onclick="deleteProduct(${item.id})">
                             <span class="material-symbols-outlined">
                             delete
                             </span>
@@ -93,6 +94,21 @@ productos.forEach(item => {
   </div>`
 });
 
+
+function deleteProduct(id) {
+
+    const index = productos.findIndex((producto) => {
+        return producto.id == id;
+    });
+
+    let validar = confirm('¿Desea eliminar el producto?');
+    console.log(validar);
+    if(validar) {
+        productos.splice(index, 1);
+        alert('El producto fue eliminado');
+    }
+}
+
 let mods = "";
 productos.forEach(producto => {
     mods += `<div class="mod-cont" id="mod_contenedor-${producto.id}">
@@ -103,9 +119,9 @@ productos.forEach(producto => {
 
         <li>
             <input type="radio" name="accordion" id="first-${producto.id}" checked>
-                <label for="first-${producto.id}">Modo de uso</label>
+                <label for="first-${producto.id}">Descripción</label>
                 <div class="content">
-                    <p>${producto.uso}</p>
+                    <p>${producto.descripcion}</p>
                 </div>
         </li>
 
@@ -121,6 +137,14 @@ productos.forEach(producto => {
                 </div>
         </li>
 
+        <li>
+            <input type="radio" name="accordion" id="third-${producto.id}" checked>
+                <label for="third-${producto.id}">Indicaciones</label>
+                <div class="content">
+                    <p>${producto.uso}</p>
+                </div>
+        </li>
+
     </ul>
 
     <button class="cerrar" id="cerrar-${producto.id}">Cerrar</button>
@@ -128,11 +152,13 @@ productos.forEach(producto => {
 </div>`
 });
 
+
+
+
+
 // console.log(mods);
 
-const openButtons = document.querySelectorAll('.open');
-const modCtenedor = document.querySelector('.mod_ctenedor');
-const closeButtons = document.querySelectorAll('.close');
+
 const abrirButtons = document.querySelectorAll('.abrir');
 const modContainer = document.querySelector('.mod-container');
 
@@ -159,21 +185,21 @@ cerrarButtons.forEach(cerrarBtn => {
 
 
 
-
-let modes = "";
-productos.forEach(product => {
-    mods += `<div class="mod-cont" id="mod_cont-${product.id}">
+let modales = "";
+productos.forEach(producto => {
+    modales += `<div class="mod-cont" id="mod_cont-${producto.id}">
     <div class="mod">
       <h1 class="cont-text">Imágenes</h1>
-      ${recuperarImagenesProducto(product.id)}
-      <button class="close" id="close-${product.id}">Cerrar</button>
+      ${recuperarImagenesProducto(producto.id)}
+      <button class="close" id="close-${producto.id}">Cerrar</button>
     </div>
   </div>`
 });
 
-// console.log(modes);
+const openButtons = document.querySelectorAll('.open');
+const modContenedor = document.querySelector('.mod-contenedor');
 
-modCtenedor.insertAdjacentHTML('beforeend', modes);
+modContenedor.insertAdjacentHTML('beforeend', modales);
 
 openButtons.forEach(openBtn => {
     const open = document.getElementById(openBtn.id);
@@ -184,11 +210,12 @@ openButtons.forEach(openBtn => {
     });
 });
 
-closeButtons.forEach(closeBtn => {
-    const close = document.getElementById(closeBtn.id);
+const closeButtons = document.querySelectorAll('.close');
 
-    close.addEventListener('click', () => {
+closeButtons.forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
         const mod_cont = document.getElementById(`mod_cont-${closeBtn.id.split('-')[1]}`)
         mod_cont.classList.remove('show');
         });
     });
+
