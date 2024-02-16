@@ -1,10 +1,13 @@
 import data from '../productos.json' assert {type: 'json'}
 
+import productos from '../productos.json' assert {type: 'json'}
+
+
 let contenedorCards = document.querySelector('#contenedor-cards');
 
 
 
-data.forEach(element => {
+data.forEach((element, index)=> {
   let imagen1 =element.imagen1[0];
   let imagenUrl1= imagen1 ? Object.values(imagen1)[0]:'';
 
@@ -23,7 +26,7 @@ data.forEach(element => {
       </div>
       <div class="info-produc">
         <h1>${element.nombre}</h1>
-        <p class="products-name">${element.marca}</p>
+        <p class="products-name" data-index="${index}">${element.marca}</p>
         <p class="products-mlgr">${element.contenido}</p>
         <div class="container-agregar">
           <p class="card-precio">$${element.precio}</p>
@@ -32,4 +35,15 @@ data.forEach(element => {
       </div>
     </li>
 </ul>`
+});
+
+document.querySelectorAll('.products-name').forEach(item => {
+  item.addEventListener('click', function() {
+      let index = parseInt(this.getAttribute('data-index'));
+      let producto = productos[index];
+      let url = '../html/producto_individual.html'; // Reemplaza 'ruta_del_archivo_del_segundo_codigo.html' por la ruta correcta del segundo código
+
+      // Abrir en una nueva pestaña
+      window.open(url, '_blank');
+  });
 });
