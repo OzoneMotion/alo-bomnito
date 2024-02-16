@@ -34,17 +34,18 @@
         ],
         "uso":"Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
         "precio": 670.00,
+      
         "imagen1": [
             {
-                "imagen1":"./imagenes/dibel_hyaluronic1.jpg"
+                "imagen1":"../imagenes/dibel_hyaluronic1.jpg"
             }
         ],
-        "imagen2": [
+        "imagen2":[
             {
                 "imagen2":"../imagenes/dibel_hyaluronic2.jpg"
             }
         ],
-        "imagen3": [
+        "imagen3":[
             {
                 "imagen3":"../imagenes/dibel_hyaluronic3.jpg"
             }
@@ -86,12 +87,12 @@
                 "imagen1":"../imagenes/dibel_serum1.jpg"
             }
         ],
-        "imagen2": [
+        "imagen2":[
             {
                 "imagen2":"../imagenes/dibel_serum2.jpg"
             }
         ],
-        "imagen3": [
+        "imagen3":[
             {
                 "imagen3":"../imagenes/dibel_serum3.jpg"
             }
@@ -129,19 +130,19 @@
                 "imagen1":"../imagenes/sunveil_solar1.jpg"
             }
         ],
-        "imagen2": [
+        "imagen2":[
             {
                 "imagen2":"../imagenes/sunveil_solar2.jpg"
             }
         ],
-        "imagen3": [
+        "imagen3":[
             {
                 "imagen3":"../imagenes/sunveil_solar3.jpg"
             }
         ]
     },
     {
-        "nombre":"Neudermic Gentle Skin Cleanser",
+        "nombre":"Gentle Skin Cleanser",
         "marca":"Réve",
         "id":4,
         "piel":"mixta",
@@ -168,12 +169,12 @@
                 "imagen1":"../imagenes/reve_dermic1.jpg"
             }
         ],
-        "imagen2": [
+        "imagen2":[
             {
                 "imagen2":"../imagenes/reve_dermic2.jpg"
             }
         ],
-        "imagen3": [
+        "imagen3":[
             {
                 "imagen3":"../imagenes/reve_dermic3.jpg"
             }
@@ -204,15 +205,15 @@
         "precio":285.00,
         "imagen1": [
             {
-                "imagen1":"../imagenes/omega-water-cream.jpg"
+                "imagen1":"../imagenes/omega-water-cream1.jpg"
             }
         ],
-        "imagen2": [
+        "imagen2":[
             {
                 "imagen2":"../imagenes/omega-water-cream2.jpg"
             }
         ],
-        "imagen3": [
+        "imagen3":[
             {
                 "imagen3":"../imagenes/omega-water-cream3.jpg"
             }
@@ -245,6 +246,16 @@
             {
                 "imagen1":"../imagenes/nuda_awaking1.jpg"
             }
+        ],
+        "imagen2": [
+            {
+                "imagen2":"../imagenes/nuda_awaking2.jpg"
+            }
+        ],
+        "imagen3": [
+            {
+                "imagen3":"../imagenes/nuda_awaking3.jpg"
+            }
         ]
     },
     {
@@ -274,6 +285,16 @@
             {
                 "imagen1":"../imagenes/nuda_purovera1.jpg"
             }
+        ],
+        "imagen2": [
+            {
+                "imagen2":"../imagenes/nuda_purovera2.jpg"
+            }
+        ],
+        "imagen3": [
+            {
+                "imagen3":"../imagenes/nuda_purovera3.jpg"
+            }
         ]
     },
     {
@@ -301,7 +322,17 @@
         "precio":360.00,
         "imagen1": [
             {
-                "imagen1":"../imagenes/nude_3blocks.jpg"
+                "imagen1":"../imagenes/nude_3blocks1.jpg"
+            }
+        ],
+        "imagen2": [
+            {
+                "imagen2":"../imagenes/nude_3blocks2.jpg"
+            }
+        ],
+        "imagen3": [
+            {
+                "imagen3":"../imagenes/nude_3blocks3.jpg"
             }
         ]
     },
@@ -340,11 +371,19 @@
             {
                 "imagen1":"../imagenes/reve_oxidermic1.jpg"
             }
+
         ],
         "imagen2": [
             {
                 "imagen2":"../imagenes/reve_oxidermic2.jpg"
             }
+
+        ],
+        "imagen3": [
+            {
+                "imagen3":"../imagenes/reve_oxidermic3.jpg"
+            }
+
         ]
     },
     {
@@ -391,23 +430,27 @@
         "uso":"Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
         "precio":840.00,
         "imagen1": [
+
             {
                 "imagen1":"../imagenes/dibel_beaute1.jpg"
             }
         ],
         "imagen2": [
+
             {
                 "imagen2":"../imagenes/dibel_beaute2.jpg"
             }
         ],
         "imagen3": [
+
             {
                 "imagen3":"../imagenes/dibel_beaute3.jpg"
             }
+  
         ]
     },
     {
-        "nombre":"Neudermic Rich Hydrating Body Cream",
+        "nombre":"Hydrating Body Cream",
         "marca":"Réve",
         "id":11,
         "piel":"seca",
@@ -435,7 +478,17 @@
         "precio":640.00,
         "imagen1": [
             {
-                "imagen1":"../imagenes/reve_bodycream.jpg"
+                "imagen1":"../imagenes/reve_bodycream1.jpg"
+            }
+        ],
+        "imagen2": [
+            {
+                "imagen2":"../imagenes/reve_bodycream2.jpg"
+            }
+        ],
+        "imagen3": [
+            {
+                "imagen3":"../imagenes/reve_bodycream3.jpg"
             }
         ]
     },
@@ -475,15 +528,16 @@
                 "imagen1":"../imagenes/dibel_serumlumi1.jpg"
             }
         ],
-        "imagen2": [
+        "imagen2":[
             {
                 "imagen2":"../imagenes/dibel_serumlumi2.jpg"
             }
         ],
-        "imagen3": [
+        "imagen3":[
             {
                 "imagen3":"../imagenes/dibel_serumlumi3.jpg"
             }
         ]
     }
+   
 ]

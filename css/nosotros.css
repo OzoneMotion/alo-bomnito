@@ -156,7 +156,7 @@ body {
 }
 
 #titulo-principal {
-    margin-top: 2rem;
+    margin-top: 10rem;
     font-size: 3rem;
     font-family: var(--titles-font-desk);
     font-optical-sizing: auto;
