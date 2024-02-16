@@ -36,11 +36,21 @@ body {
     color: var(--text);
     margin-bottom: 46px;
 }
+.subTituloRelleno{
+    width: 271px;
+    text-align: center;
+    padding: 1rem;
+}
 
 /* Estilos textos */
 #title {
     font-family: var(--fontTitulo);
     font-size: var(--sizeTituloDesk-tab);
+}
+
+.subRelleno{
+    font-family: var(--fontContenido);
+    font-size: var(--sizeContenido);
 }
 
 /* Imagen*/
@@ -82,7 +92,7 @@ body {
 }
 
 @media only screen and (min-width:320px) and (max-width:768px) {
-    
+
 .contenidoExito {
 margin-top: 7rem;
 padding: 90px 78.5px 90px 78.5;
@@ -108,11 +118,20 @@ box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
     color: var(--text);
     margin-bottom: 46px;
 }
+.subTituloRelleno{
+    width: 271px;
+    text-align: center;
+    padding: 0.5rem;
+}
 
 /* Estilos textos */
 #title {
     font-family: var(--fontTitulo);
     font-size: var(--sizeTituloMobile);
+}
+.subRelleno{
+    font-family: var(--fontContenido);
+    font-size: var(--sizeContenido);
 }
 
 /* Imagen*/
