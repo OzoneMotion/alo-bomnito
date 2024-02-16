@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+    --backgroud: #EFEBE7;
+    --primary: #CFAD7C;
+    --secondary: #C38D56;
+    --accent: #7E703D;
+    --highlight: #FDA73D;
+    --text: #2E2E2E;
+    --widthfull: 100vw;
+    --font-weightTitulos: 700;
+    --fontTitulo: 'Quicksand', sans-serif;
+    --fontSubtitulo: 'Quicksand', sans-serif;
+    --fontContenido: 'Lato', sans-serif;
+    --fontEtiqueta: 'Lato', sans-serif;
+    --sizeTituloDesk-tab: 3rem;
+    --sizeSubtituloDesk-Tab: 1.9rem;
+    --sizeTituloMobile: 1.5rem;
+    --sizeSubtituloMobile: 1.3rem;
+    --sizeContenido: 1rem;
+    --sizeEtiqueta: 0.9rem;
+    --sizeErrorAlerts: 0.8rem;
+    --btnColapsable-w: 258px;
+    --btnLarge-w: 258px;
+    --btnMedium-w: 200px;
+    --btnSmall-w: 150px;
+    --btns-h: 45px;
+    --inputsDeskTab-w: 413px;
+    --inputsMobile-w: 258px;
+    --inputs-h: 39px;
+    --textareaDeskTab-h: 129px;
+    --textareaMobile-h: 194px;
+    --marginTopBottom: 3rem;
+    --shadow: 2px 4px 2.5px 0px rgba(0,0,0,0.12);
+    --shadow_diagonal: 4px 4px 10.5px 0px rgba(0,0,0,0.25); 
+    --shadow_lineal: 0px 4px 10.5px 0px rgba(0,0,0,0.25);
+}
+
+/* Cards individuales formado de su contenedor */
+.prod-contenedor {
+    justify-content: space-around;
+    
+}
+
+.card {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1.2rem;
+    height: 35.5rem;
+    border-radius: 5px;
+    background-color: var(--primary);
+    box-shadow: var(--shadow_diagonal);
+    
+}
+
+.itemCarrusel {
+    height: 22.5rem;
+    position: relative;
+    
+}
+
+#contentItemsCarrusel {
+    height: 22.5rem;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card-img {
+    width: 100%;
+    height: 22.5rem;
+    padding: 1px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: var(--shadow_diagonal);
+}
+
+a {
+    text-decoration: none;
+}
+
+.flechasCarrusel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.card-marca {
+    font-family: var(--fontContenido);
+    font-size: var(--sizeContenido);
+    margin-bottom: .5rem;
+    margin-top: 1.25rem;
+    width: 80%;
+    padding-left: 13%;
+}
+
+.card-title{
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeTituloCardMobile);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: .25rem;
+    width: 80%;
+    padding-left: 13%;
+}
+
+.card-modelo {
+    font-family: var(--fontEtiqueta);
+    font-size: var(--sizeEtiqueta); 
+    margin-top: 0;
+    margin-bottom: .5rem;  
+    padding-left: 13%;
+}
+
+.card-precio {
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeContenido);
+    width: 100%;  
+    margin-bottom: .6rem;
+    padding-right: 15%;
+    text-align:right;
+}
+
+.footie-card {
+    height: 13em;
+    background-color: var(--primary);
+}
+
+#icon-card {
+    color: var(--text);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#icon-card i:hover {
+    opacity: 0.8;
+}
+
+.button-space {
+    text-align: center;
+    justify-content: space-around;
+}
+
+#add-carrito {
+    width: 16.125rem;
+    height: 3rem;
+    background-color: var(--accent);
+    border: 0;
+    padding: .4rem;
+    border-radius: .4rem;
+    margin-bottom: 1.25rem;
+    color: var(--background);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+}
+
+/*Desplegables accordeon*/
+
+.accordion {
+    background-color: var(--accent);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1.2rem;
+    box-shadow: var(--shadow_diagonal);
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(--background);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+}
+
+.accordion__label, .accordion__content {
+    padding: .6rem 1.25rem;
+}
+
+.accordion__label {
+    display: block;
+    color: var(--backgroud);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.accordion__label:hover {
+    background: var(--accent);
+}
+
+.accordion__label::after {
+    content: "▾";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.2rem;
+    transition: transform 0.4s;
+}
+
+.accordion__content {
+    background: var(--accent);
+    line-height: 1.6;
+    font-size: .85em;
+    display: none;
+}
+
+.accordion__content p {
+    font-family: var(--fontContenido);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+    text-align: justify;
+}
+
+#accoDescripcion {
+    font-family: var(--fontContenido);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+    text-align: justify;
+}
+
+#accoIndicaciones {
+    font-family: var(--fontContenido);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+    text-align: justify;
+}
+
+.accordion__content thead {
+    font-family: var(--fontSubtitulo);
+    font-size: var(--subtitles-size);
+    font-weight: bold;
+    text-align: justify;
+}
+
+.accordion__content td {
+    padding-right: 1.25rem;
+}
+
+.accordion__content tr {
+    border-bottom: 1px solid var(--backgroud);
+}
+
+.accordion__content tbody {
+    width: 90%;
+    font-family: var(--fontContenido);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+    text-align:left;
+}
+
+#accoIngredientes {
+    font-family: var(--fontContenido);
+    font-size: var(--subtitles-size);
+    font-weight: normal;
+    text-align:left;
+}
+
+.accordion__input {
+    display: none;
+}
+
+.accordion__input:checked ~ .accordion__content {
+    display: block;
+}
+
+.accordion__input:checked ~ .accordion__label::after {
+    transform: translate(-50%) rotate(0.5turn);
+}
+
+.text-informativo {
+    text-align: center;
+    margin: 1.5rem;
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeTituloMobile);
+    font-weight: bold;
+}
+
+/*carrusel pequeño*/
+
+.miniCarrusel {
+    position: relative;
+}
+
+#carruselPequeñoContenido {
+    height: 15.5rem;
+    overflow: hidden;
+}
+
+.carrusel-inferior {
+    width: 90%;
+    margin: 1.25rem 5%;
+}
+
+.container-envoltura {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-card {
+    width: 36%;
+    height: 15.5rem;
+    border-radius: 5px;
+    background-color: var(--primary);
+    box-shadow: var(--shadow_diagonal);
+}
+
+.imagen-mini {
+    width: 100%;
+    height: 7.8rem;
+    border-radius: 3px;
+}
+
+.cardy-title {
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: .2rem;
+    margin-left: 5%;
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeErrorAlerts);
+    font-weight: bold;
+}
+
+.cardy-marca {
+    font-family: var(--fontContenido);
+    font-size: var(--sizeErrorAlerts);
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: .2rem;
+    margin-left: 5%;
+}
+
+.cardy-modelo {
+    font-family: var(--fontContenido);
+    font-size: var(--sizeErrorAlerts);
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: .2rem;
+    margin-left: 5%;
+}
+
+.cardy-precio {
+    font-family: var(--fontContenido);
+    font-size: var(--sizeErrorAlerts);
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5%;
+}
+
+.flechasCarruselMini {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.tarjetas-max {
+    display: none;
+}
+
+/* Estilos tablet */
+
+@media (min-width: 744px) {
+    .card {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 1.2rem;
+        height: 35.5rem;
+        border-radius: 5px;
+        border:0.1px solid var(--backgroud);
+        background-color: white;
+        box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+        
+    }
+
+    .card-marca {
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        margin-bottom: .5rem;
+        margin-top: 1.25rem;
+        width: 80%;
+        padding-left: 10%;
+    }
+    
+    .card-title{
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: .25rem;
+        width: 80%;
+        padding-left: 10%;
+    }
+    
+    .card-modelo {
+        font-family: var(--fontEtiqueta);
+        font-size: var(--sizeEtiqueta); 
+        margin-top: 0;
+        margin-bottom: .5rem;  
+        padding-left: 10%;
+    }
+    
+    .card-precio {
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        width: 100%;  
+        margin-bottom: .6rem;
+        padding-right: 10%;
+        text-align:right;
+    }
+
+    .accordion {
+        background-color: var(--accent);
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 1.2rem;
+        box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+        border-radius: 5px;
+        overflow: hidden;
+        color: var(--background);
+        font-size: var(--subtitles-size);
+        font-weight: normal;
+    }
+
+    #carruselPequeñoContenido {
+        height: 18.5rem;
+        overflow: hidden;
+    }
+
+    .container-envoltura {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .mini-card {
+        width: 48%;
+        height: 18.5rem;
+        border-radius: 5px;
+        background-color: var(--primary);
+        box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+    }
+    
+    .imagen-mini {
+        width: 100%;
+        height: 12rem;
+        border-radius: 3px;
+    }
+
+    .flechasCarruselMini {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        margin-left: 15.5%;
+        margin-right: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .tarjetas-max {
+        display: none;
+    }
+}
+
+/* Estilos desktop */
+
+@media (min-width: 992px) {
+    .prod-contenedor {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .card {
+        width: 35%;
+        margin-left: 10%;
+        margin-right: 5%;
+        margin-top: 1.2rem;
+        height: 35.5rem;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: var(--shadow_diagonal);
+        
+    }
+
+    .card-marca {
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        margin-bottom: .5rem;
+        margin-top: 1.25rem;
+        width: 80%;
+        padding-left: 15%;
+    }
+    
+    .card-title{
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: .25rem;
+        width: 80%;
+        padding-left: 15%;
+    }
+    
+    .card-modelo {
+        font-family: var(--fontEtiqueta);
+        font-size: var(--sizeEtiqueta); 
+        margin-top: 0;
+        margin-bottom: .5rem;  
+        padding-left: 15%;
+    }
+    
+    .card-precio {
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        width: 100%;  
+        margin-bottom: .6rem;
+        padding-right: 15%;
+        text-align:right;
+    }
+
+    .accordion {
+        display: none;
+    }
+
+    .tarjetas-max {
+        width: 40%;
+        margin-right: 10%;
+        display: block;
+    }
+
+    #tarjetaMaxDescripcion {
+        text-align: justify;
+    }
+
+    #tarjetaMaxIndicaciones {
+        text-align: justify;
+    }
+
+    .tarjeta-example {
+        background: var(--accent);
+        color: #EFEBE7;
+        padding: 1.25rem;
+        border-radius: 1rem;
+        margin-top: 1.25rem;
+    }
+
+    .head-tarjeta h1 {
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contenido-tarjeta p {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: normal;
+        text-align: justify;
+    }
+
+    .contenido-tarjeta thead {
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    .contenido-tarjeta td {
+        padding-right: 1.25rem;
+    }
+
+    .contenido-tarjeta tr {
+        border-bottom: 1px solid var(--backgroud);
+    }
+
+    .contenido-tarjeta tbody {
+        width: 90%;
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: normal;
+        text-align: justify;
+    }
+
+    #carruselPequeñoContenido {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 26.5rem;
+        display: flex;
+    }
+
+    .container-envoltura {
+        width: 99%;
+        margin-left: 1%;
+        margin-right: 1%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mini-card {
+        width: 97%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        height: 26.5rem;
+        border-radius: 5px;
+        background-color: var(--primary);
+        box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+    }
+    
+    .imagen-mini {
+        width: 100%;
+        height: 15.6rem;
+        border-radius: 3px;
+    }
+
+    .flechasCarruselMini {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        margin-left: 15.5%;
+        margin-right: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5%;
+        display: none;
+    }
+
+    .cardy-title {
+        width: 90%;
+        margin-top: 1rem;
+        margin-bottom: .6rem;
+        margin-left: 5%;
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeTituloCardDes-Tab);
+        font-weight: bold;
+    }
+    
+    .cardy-marca {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: .6rem;
+        margin-left: 5%;
+    }
+    
+    .cardy-modelo {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: .6rem;
+        margin-left: 5%;
+    }
+    
+    .cardy-precio {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 5%;
+        text-align: end;
+    }
+}
+
+@media (min-width: 1280px) {
+    .card {
+        width: 30%;
+        margin-left: 10%;
+        margin-right: 2%;
+        margin-top: 1.2rem;
+        height: 49rem;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+    }
+
+    .itemCarrusel {
+        height: 36rem;
+        position: relative;
+        
+    }
+    
+    #contentItemsCarrusel {
+        height: 36rem;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    
+    .card-img {
+        width: 100%;
+        height: 36rem;
+        padding: 1px;
+        border-radius: 5px;
+        object-fit: cover;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    }
+
+    #carruselPequeñoContenido {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 26.5rem;
+        justify-content: space-between;
+    }
+
+    .container-envoltura {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .mini-card {
+        width: 100%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        height: 26.5rem;
+        border-radius: 5px;
+        background-color: var(--primary);
+        box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+        justify-content: space-between;
+    }
+    
+    .imagen-mini {
+        width: 100%;
+        height: 15.6rem;
+        border-radius: 3px;
+    }
+
+    .flechasCarruselMini {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        margin-left: 15.5%;
+        margin-right: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5%;
+        display: none;
+    }
+
+    .cardy-title {
+        width: 90%;
+        margin-top: 1rem;
+        margin-bottom: .6rem;
+        margin-left: 5%;
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeTituloCardDes-Tab);
+        font-weight: bold;
+    }
+    
+    .cardy-marca {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: .6rem;
+        margin-left: 5%;
+    }
+    
+    .cardy-modelo {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: .6rem;
+        margin-left: 5%;
+    }
+    
+    .cardy-precio {
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 5%;
+        text-align: end;
+    }
+}
