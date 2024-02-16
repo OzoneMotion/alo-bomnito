@@ -39,7 +39,7 @@
 /* Cards individuales formado de su contenedor */
 .prod-contenedor {
     justify-content: space-around;
-    
+
 }
 
 .card {
@@ -73,10 +73,6 @@
     border-radius: 5px;
     object-fit: cover;
     box-shadow: var(--shadow_diagonal);
-}
-
-a {
-    text-decoration: none;
 }
 
 .flechasCarrusel {
