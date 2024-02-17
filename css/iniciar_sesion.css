@@ -282,3 +282,12 @@ input {
     }
 
 }
+
+
+
+/* Estilos mensaje de error */
+.invalid-feedback {
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+    color: red;
+}

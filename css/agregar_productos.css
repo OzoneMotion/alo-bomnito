@@ -1,6 +1,18 @@
 @import url('/css/default/root.css');
 @import url('/css/default/footer_admin_.css');
-@import url('/css/default/navbar_admin.css');
+@import url('/css/default/navbar.css');
+
+/* .form-submitted-success {
+    font-size: var(--sizeEtiqueta);
+    font-family: var(--fontEtiqueta);
+    color: green;
+    display: none;
+    text-align: center;
+} */
+
+.form-submitted-success-active {
+    display: block;
+}
 
 .carousel-item {
     position: relative;
@@ -114,6 +126,7 @@ input, textarea {
 .container_labels {
     margin-top: 15px;
     font-size: var(--etiquetas);
+    width: 413px;
 }
 
 .container_btn {
