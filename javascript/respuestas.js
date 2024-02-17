@@ -89,8 +89,8 @@ function preventFormReload() {
 function initModal(text){
     let content = document.getElementById('modalContent')
     content.innerHTML = text;
-    $('#modalCentro').modal('show')
-
+    $('#modalCentro').on('show.bs.modal')
+    $('#myInput').focus()
 }
 
 /* Redirecciona el boton comprar a la pagina de productos*/
