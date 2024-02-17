@@ -25,14 +25,14 @@
 
       <div class="small-container">
         <!-- TARJETA PARA PREVIO -->
-        <div class="cart-info">
-          <div class="row-product">
+        <div class="cart-info" id="cartInfo">
+          <div class="row-product" id="row-product">
             <img src="../imagenes/aloBomnito.jpg">
-            <div class="product-info">
+            <div class="product-info" id="productContainer">
               <p>Nombre de producto</p>
               <p>Marca</p>
               <!-- CONTADOR -->
-              <div class="contador-carrito">
+              <div class="contador-carrito" id="contador">
                 <div class="restar" id="boty" onClick="clickME2();"> <span class="material-symbols-outlined">
                     remove
                   </span></div>
@@ -44,9 +44,9 @@
             </div>
           </div>
 
-          <div class="product-specs">
+          <div class="product-specs" id="productSpecs">
             <div class="row-specs">
-              <p>Precio</p>
+              <p id="precioRow">Precio</p>
               <div class="btn-container">
                 <button type="submit" id="btn-delete"> Eliminar </button>
               </div>

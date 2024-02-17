@@ -227,7 +227,41 @@ p {
 /* responsive  Mobile*/
 @media only screen and (min-width:350px) and (max-width: 1200px) {
     .total-price {
-        margin-left: 0;
+        margin-left: 25%;
         margin-bottom: 0;
     }
+
+    .cart-info{
+        width: 350px;
+        height: 217px;
+        display: block;
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+    }
+
+    .row-product {
+        margin-top: 20px;
+    }
+    .row-product img {
+        width: 140px;
+        height: 140px;
+        margin: 0 24px 24px 24px;
+    }
+
+    .contador-carrito{
+        position: relative;
+        right: 150px;
+        margin-top: 50px;
+    }
+
+    #precioRow{
+        visibility: hidden;
+    }
+
+    .product-specs{
+        display: block;
+        position: relative;
+        bottom: 50px;
+    }
+
 }
