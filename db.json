@@ -13,6 +13,41 @@
       "emailId": "mail@gmail.com",
       "password": "contraseña.",
       "password2": "contraseña."
+    },
+    {
+      "id": "02ab",
+      "nameId": "denisse",
+      "emailId": "arq.denisse@muretto.com",
+      "password": "denisse1",
+      "password2": "denisse1"
+    },
+    {
+      "id": "18e0",
+      "nameId": "hola",
+      "emailId": "arq.denisse@muretto.com",
+      "password": "paola1234",
+      "password2": "paola1234"
+    },
+    {
+      "id": "f406",
+      "nameId": "hola",
+      "emailId": "holamundo@como.com",
+      "password": "denisse1",
+      "password2": "denisse1"
+    },
+    {
+      "id": "c6ff",
+      "nameId": "denisse",
+      "emailId": "paola@si.com",
+      "password": "denisse1",
+      "password2": "denisse1"
+    },
+    {
+      "id": "7128",
+      "nameId": "paola",
+      "emailId": "sisisi@hotmail.com",
+      "password": "denisse1",
+      "password2": "denisse1"
     }
   ],
   "admins": [
