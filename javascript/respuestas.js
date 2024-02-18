@@ -91,9 +91,14 @@ function initModal(text){
     content.innerHTML = text;
     $('#modalCentro').on('show.bs.modal')
     $('#myInput').focus()
+    modal.showModal();
 }
 
 /* Redirecciona el boton comprar a la pagina de productos*/
 function redirectProductos(){
     window.location.href = "productos.html"
+}
+
+function closeModal(){
+    modal.close();
 }
