@@ -41,9 +41,9 @@ document.querySelectorAll('.products-name').forEach(item => {
   item.addEventListener('click', function() {
       let index = parseInt(this.getAttribute('data-index'));
       let producto = productos[index];
-      let url = '../html/producto_individual.html'; // Reemplaza 'ruta_del_archivo_del_segundo_codigo.html' por la ruta correcta del segundo código
+      let url = '../html/producto_individual.html?index=${index}'; // Reemplaza 'ruta_del_archivo_del_segundo_codigo.html' por la ruta correcta del segundo código
 
       // Abrir en una nueva pestaña
-      window.open(url, '_blank');
+      window.location.href = url;
   });
 });

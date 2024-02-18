@@ -25,7 +25,7 @@ const recuperarIngredProducto = (producto) => {
 };
 
 function actualizarImagen() {
-    let element = productos[actual,0];
+    let element = productos[actual,1];
     let imagen1 =element.imagen1[0];
     let imagenUrl1= imagen1 ? Object.values(imagen1)[0]:'';
   
