@@ -1,3 +1,6 @@
+
+//localStorage.setItem("#row-product")
+
 // Contador de Stock
 var clicks = 0;
 
@@ -19,13 +22,15 @@ function clickME2() {
  * para hacer operaciones de insercion dinamica de los elementos de html
  */
 this.controlDinamico();
+this.guardarStorage();
+// this.getJson();
 
 /**
  * Funciona para dar inicio a la regla de mediaquery y agregar un listener para realizar 
  * los cambios de la estructura html
  */
 function controlDinamico() {
-    var areaMovs = window.matchMedia("(min-width: 350px) and (max-width: 1200px)");
+    var areaMovs = window.matchMedia("(min-width: 330px) and (max-width: 1200px)");
     areaMovs.addListener(listenerDimensions)
     this.modificador(areaMovs);
 }
@@ -65,3 +70,23 @@ function modificador(regla) {
         productContainer.style.display = "flex";
     }
 }
+
+// function getJson() {
+//     const obtenerJsonUrl = "http://127.0.0.1:5502/pro2.json";
+//     const request = new XMLHttpRequest();
+//     request.open("GET", obtenerJsonUrl);
+
+//     request.responseType = "json";
+//     request.send();
+
+//     request.onload = function () {
+//     const miJson2 = request.response;
+//     console.log("miJson2", miJson2);
+//   };
+// }
+
+// function guardarStorage(){
+//     var miStorage = window.localStorage;
+//     miStorage.setItem("Producto", "{}");
+// }
+
