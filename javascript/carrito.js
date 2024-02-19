@@ -2,37 +2,40 @@
 //localStorage.setItem("#row-product")
 
 // Contador de Stock
-var clicks = 0;
 
-function clickME() {
-    clicks += 1;
-    document.getElementById("clicks").value = clicks;
-    document.getElementById("bote").value = "0";
+const PRODUCTOS = self.obtenerProductos();
+
+function clickME(index) {
+    let elementosSeleccionados = parseInt(document.getElementById(`clicks${index}`).value);
+    elementosSeleccionados += 1;
+    document.getElementById(`clicks${index}`).value = elementosSeleccionados;
+    document.getElementById(`bote${index}`).value = "0";
+    self.obtenerSubTotal();
 }
 
-function clickME2() {
-    if (clicks > 0) {
-        clicks -= 1;
-        document.getElementById("clicks").value = clicks;
+function clickME2(index) {
+    let elementosSeleccionados = parseInt(document.getElementById(`clicks${index}`).value);
+    if (elementosSeleccionados > 0) {
+        elementosSeleccionados -= 1;
+        document.getElementById(`clicks${index}`).value = elementosSeleccionados;
     }
+    self.obtenerSubTotal();
 }
 
 /**
  * se llama a controlDinamico al inicio de la pagina 
  * para hacer operaciones de insercion dinamica de los elementos de html
  */
-this.controlDinamico();
-this.guardarStorage();
-// this.getJson();
+this.inicio();
 
 /**
  * Funciona para dar inicio a la regla de mediaquery y agregar un listener para realizar 
  * los cambios de la estructura html
  */
-function controlDinamico() {
+function controlDinamico(productos) {
     var areaMovs = window.matchMedia("(min-width: 330px) and (max-width: 1200px)");
     areaMovs.addListener(listenerDimensions)
-    this.modificador(areaMovs);
+    this.modificador(areaMovs, productos);
 }
 
 /**
@@ -41,52 +44,103 @@ function controlDinamico() {
  * @param {Event} e // evento de cambios en la pantalla 
  */
 function listenerDimensions(e) {
-    self.modificador(e);
+    const productos = self.obtenerProductos();
+    self.modificador(e, productos);
 }
 
 /**
  * Modifica el html de forma dinamica en funcion de la regla de mediaquery
  * @param {Event} regla // Evento recibido cuando se cumple o no la regla de mediaquery
  */
-function modificador(regla) {
-    var precio = document.getElementById('precioRow');
-    var productContainer = document.getElementById('productContainer');
-    if (regla.matches) {
-        var nodoReferencia = document.getElementById('contador');
-
-        precio.style.display = "none";
-        productContainer.style.display = "block";
-        
-        var precioMov = document.createElement('p');
-        precioMov.setAttribute('id', 'precioMovil');
-        precioMov.textContent = "precio";
-        productContainer.insertBefore(precioMov,nodoReferencia)
-    } else {
-        console.log('else');
-        if(document.getElementById('precioMovil')){
-            document.getElementById('precioMovil').remove();
-        }
-        precio.style.display = "block";
-        productContainer.style.display = "flex";
-    }
+function modificador(regla, productos) {
+    productos.forEach((producto, index) => {
+        var precio = document.getElementById(`precioRow${index}`);
+        var productContainer = document.getElementById(`productContainer${index}`);
+        if (regla.matches) {
+            var nodoReferencia = document.getElementById(`contador${index}`);
+    
+            precio.style.display = "none";
+            productContainer.style.display = "block";
+            
+            var precioMov = document.createElement('p');
+            precioMov.setAttribute('id', `precioMovil${index}`);
+            precioMov.textContent = producto.precio;
+            productContainer.insertBefore(precioMov,nodoReferencia)
+        } else {
+            console.log('else');
+            if(document.getElementById(`precioMovil${index}`)){
+                document.getElementById(`precioMovil${index}`).remove();
+            }
+            precio.style.display = "block";
+            productContainer.style.display = "flex";
+        }    
+    });
 }
 
-// function getJson() {
-//     const obtenerJsonUrl = "http://127.0.0.1:5502/pro2.json";
-//     const request = new XMLHttpRequest();
-//     request.open("GET", obtenerJsonUrl);
+function obtenerProductos() {
+    const productos = window.localStorage.getItem('productosCarrito');
+    return JSON.parse(productos);
+}
 
-//     request.responseType = "json";
-//     request.send();
+function agregarProductosCarrito(productos) {
+    // let p = [];
+    //p.push(productos);
+    //console.log(p);
+    const wrapper = document.getElementById('contenedorVacio');
+    productos.forEach((producto, index)=> {
+        
+          wrapper.innerHTML += `
+          <div class="cart-info" id="cartInfo">
+          <div class="row-product" id="row-product">
+            <img src="${producto.imagen.imagen1}">
+            <div class="product-info" id="productContainer${index}">
+              <p>${producto.nombre}</p>
+              <p>${producto.marca}</p>
+              <!-- CONTADOR -->
+              <div class="contador-carrito" id="contador${index}">
+                <div class="restar" id="boty${index}" onClick="clickME2(${index});"> <span class="material-symbols-outlined">
+                    remove
+                  </span></div>
+                <input type="text" value="0" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
+                <div class="sumar" id="bote${index}" onClick="clickME(${index});"> <span class="material-symbols-outlined">
+                    add
+                  </span></div>
+              </div>
+            </div>
+          </div>
 
-//     request.onload = function () {
-//     const miJson2 = request.response;
-//     console.log("miJson2", miJson2);
-//   };
-// }
+          <div class="product-specs" id="productSpecs">
+            <div class="row-specs">
+              <p id="precioRow${index}">${producto.precio}</p>
+              <div class="btn-container">
+                <button type="submit" id="btn-delete"> Eliminar </button>
+              </div>
+            </div>
+          </div>
 
-// function guardarStorage(){
-//     var miStorage = window.localStorage;
-//     miStorage.setItem("Producto", "{}");
-// }
+        </div>`
+      
+      });
+}
+
+function inicio() {
+   // const productos = self.obtenerProductos();
+    self.agregarProductosCarrito(PRODUCTOS);
+    self.controlDinamico(PRODUCTOS);
+}
+
+function obtenerSubTotal() {
+    let subtotal = 0;
+    PRODUCTOS.forEach((producto, index) => {
+        let elementosSeleccionados = parseInt(document.getElementById(`clicks${index}`).value);
+        let precioElemento = producto.precio;
+        subtotal = subtotal + (elementosSeleccionados * precioElemento);
+    });
+    
+    //console.log('subtotal', subtotal);
+    let subTotal2 = document.getElementById("subTotal");
+    subTotal2.textContent = ( " $ " + subtotal +  ".00 MXN "); 
+    const guardarLocal = window.localStorage;
+    guardarLocal.setItem("subTotal", subtotal);
+}
 

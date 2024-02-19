@@ -77,12 +77,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index: 1;
 }
 
 /* CONTADOR */
 .contador-carrito {
     display: flex;
     flex-wrap: wrap;
+    z-index: 2;
 }
 
 .restar {
