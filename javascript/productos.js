@@ -69,6 +69,11 @@ document.querySelectorAll('.productoNombre').forEach(item => {
   });
 });
 
+const boton = document.getElementById("add-car")
+//document.querySelectorAll('#add-car').forEach(boton => {
+  boton.addEventListener('click', function() {
+    alert("hola")
+  });
 
 
 let img = document.getElementById('img');
@@ -129,7 +134,7 @@ function producto(ides){
   <p class="parrafo">${data[ides].contenido}</p>
   <p class="precio parrafo">$${data[ides].precio}.00</p>
   <div class="button-carrito">
-  <button id="add-car" class="${data[ides].id}"">Agregar al carrito</button>
+  <button type="button" id="add-car" class="${data[ides].id}" onclick="agregarAlCarrito(${data[ides].id - 1})"">Agregar al carrito</button>
   </div>`;
   
   tarjetaDescripcion.innerHTML = 
@@ -163,13 +168,7 @@ const recuperarIngredProducto = (producto) => {
   return ingredientes;
 };
 
-document.querySelectorAll('#add-car').forEach(item => {
-  item.addEventListener('click', function() {
-    //let indexProducto = item.className - 1
-    console.log("hola")
-    //agregarAlCarrito(indexProducto)
-  });
-});
+//});
 
 
 const btnClose = document.getElementById("btnClose")
