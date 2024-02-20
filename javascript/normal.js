@@ -1,16 +1,11 @@
 import data from '../productos.json' assert {type: 'json'}
 
-//import productos from '../productos.json' assert {type: 'json'}
-
-
 let contenedorCards = document.querySelector('#contenedor-cards');
-// let miniCarrusel = document.querySelector('#mini-carrusel');
-// let miniBack = document.getElementById('miniBack');
-// let miniForward = document.getElementById('miniForward');
-// let miniProductos = [];
 
 
 data.forEach((element, index)=> {
+
+if (element.piel && element.piel.toLowerCase() === 'normal') {
   let imagen1 =element.imagen1[0];
   let imagenUrl1= imagen1 ? Object.values(imagen1)[0]:'';
 
@@ -37,105 +32,19 @@ data.forEach((element, index)=> {
         </div>
       </div>
     </li>
-</ul>`
-
-//producto(imagenUrl1,imagenUrl2,imagenUrl3, element)
-
-// let mini = document.createElement('div');
-// mini.classList.add('mini-mini');
-// mini.innerHTML +=
-// `<div class="tarjeta-mini">
-// <div id="image">
-// <img class="image-mini" alt="Imagen mini" onmouseout="this.src='${imagenUrl1}';" onmouseover="this.src='${imagenUrl2}';" src="${imagenUrl3}"/>
-// </div>
-// <div id="information" class="information-text">
-//     <p class="mini-nombre">${element.nombre}</p>
-//     <p class="mini-texty">${element.marca}</p>
-//     <p class="mini-contenido">${element.contenido}</p>
-//     <p class="mini-texty">$${element.precio}.00</p>
-// </div>
-// </div>`;
-// miniProductos.push(mini);
+</ul>`;
+}
 });
-
-
-// let inicio = 0;
-
-// function actualizarProducto() {
-//     miniCarrusel.innerHTML = '';
-//     let cantidadAMostrar;
-
-//     if (window.innerWidth < 744) {
-//         cantidadAMostrar = 2;
-//     } else if (window.innerWidth < 992) {
-//         cantidadAMostrar = 2;
-//     } else {
-//         cantidadAMostrar = 4;
-//     }
-//     for (let i = 0; i < cantidadAMostrar; i++) {
-//         let index = (inicio + i) % miniProductos.length;
-//         miniCarrusel.appendChild(miniProductos[index]);
-//     }
-// }
-
-// function ajustarInicio(desplazamiento) {
-//     let cantidadAMostrar;
-
-//     if (window.innerWidth < 744) {
-//         cantidadAMostrar = 2;
-//     } else if (window.innerWidth <992) {
-//         cantidadAMostrar = 2;
-//     } else {
-//         cantidadAMostrar = 4;
-//     }
-
-//     inicio = (inicio + desplazamiento + miniProductos.length) % miniProductos.length;
-
-//     while (inicio > miniProductos.length - cantidadAMostrar) {
-//         inicio -= cantidadAMostrar;
-//     }
-// }
-
-// miniBack.addEventListener('click', function() {
-//     ajustarInicio(-1);
-//     actualizarProducto();
-// });
-
-// miniForward.addEventListener('click', function() {
-//     ajustarInicio(1);
-//     actualizarProducto();
-// });
-
-// window.addEventListener('resize', function() {
-//     ajustarInicio(0);
-//     actualizarProducto();
-// });
-
-// ajustarInicio(0);
-// actualizarProducto();
-
-
 
 document.querySelectorAll('.products-name').forEach(item => {
   item.addEventListener('click', function() {
-    //alert("hola")
+    
     console.log("hola")
     let ides = item.id -1;
     console.log(ides)
     producto(ides)
-    //const aidi = document.getElementById("document")
-    
-    //console.log(produc)
-    
-    //const modal = document.getElementById("modal")
-    
+
     modal.showModal();
-    // let index = parseInt(this.getAttribute('data-index'));
-    // let producto = productos[index];
-    // let url = '../html/producto_individual.html'; // Reemplaza 'ruta_del_archivo_del_segundo_codigo.html' por la ruta correcta del segundo código
-    
-    // // Abrir en una nueva pestaña
-    // window.open(url, '_blank');
   });
 });
 
@@ -207,23 +116,3 @@ const recuperarIngredProducto = (producto) => {
   });
   return ingredientes;
 };
-
-
-// back.addEventListener('click', function() {
-//   actual -= 1;
-
-//   if (actual === -1) {
-//       actual = 2;
-//   }
-//   producto();
-// });
-
-// forward.addEventListener('click', function() {
-//   actual += 1;
-
-//   if (actual === 3) {
-//       actual = 0;
-//   }
-//   actualizarImagen();
-// });
-// actualizarImagen();

@@ -1,0 +1,124 @@
+@import url('./root.css');
+
+.logo {
+    width: 60px;
+}
+
+.icons {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+.titulo {
+    font-family: var(--fontTitulo) !important;
+    font-size: var(--sizeTituloMobile);
+    font-weight: 700 !important;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: var(--shadow_lineal);
+}
+
+.navbar {
+    background-color: var(--secondary) !important;
+    font-family: var(--fontContenido);
+    padding: 2.5px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+}
+
+.nav-link:hover {
+    color: var(--background);
+    transition: all 0.3s ease-in-out;
+}
+
+.material-symbols-outlined {
+    color: var(--text);
+    font-size: 25px;
+}
+
+.material-symbols-outlined:hover {
+    color: var(--background);
+    transition: all 0.3s ease-in-out;
+}
+
+.desactive {
+    position: absolute;
+    visibility: hidden;
+}
+
+@media screen and (min-width: 992px) {
+
+    .justifyContent-desktop {
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .colapsable,
+    .show1 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary);
+        padding: 2%;
+        list-style: none;
+    }
+
+    .desactive_desktop {
+        visibility: hidden;
+        position: absolute;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .navbar-toggler {
+        border: none !important;
+    }
+
+    .btn-cerrar-border {
+        border: none;
+        background-color: rgba(255, 235, 205, 0);
+    }
+
+    .icons {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .offcanvas-header {
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+    }
+
+    .canvas-body {
+        background-color: var(--secondary);
+    }
+
+    .colapsable,
+    .show1 {
+        background-color: var(--secondary);
+        padding: 2%;
+        list-style: none;
+    }
+
+    .canvas-footer {
+        display: flex;
+        justify-content: center;
+    }
+}

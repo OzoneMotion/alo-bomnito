@@ -1,0 +1,156 @@
+@import url("./default/footer.css");
+@import url("./default/navbar.css");
+
+body {
+    background-image: var(--url-background);
+    background-size: cover;
+}
+
+.principal {
+    max-width: 650px;
+    min-width: 350px;
+    height: 700px;
+    background-color: var(--primary);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-top: var(--marginTopBottom);
+    margin-bottom: var(--marginTopBottom);
+    font-family: var(--fontContenido);
+    font-size: var(--sizeContenido);
+    color: var(--text);
+}
+
+.tituloMicuenta {
+    font-family: var(--fontTitulo);
+    font-weight: var(--font-weightTitulos);
+    font-size: var(--sizeTituloDesk-tab);
+}
+
+.co-principal {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contenedoresDeInfo {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.inputUsuario {
+    background-color: var(--background);
+    width: var(--inputsDeskTab-w);
+    height: var(--inputs-h);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border-radius: 5px;
+}
+
+.inputUsuarioContra {
+    background-color: var(--background);
+    width: var(--inputsDeskTab-w);
+    height: var(--inputs-h);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.datoUsuario {
+    margin: 0px;
+    margin-left: 5px;
+    color: #2e2e2ec9;
+}
+
+.datoContra {
+    margin: 0px 5px 0 0px;
+    color: #2e2e2ec9;
+}
+
+.datoContra:hover {
+    margin: 0px 5px 0 0px;
+    color: var(--highlight);
+    cursor: pointer;
+}
+
+.etiquetaUsuario {
+    margin-bottom: 2px;
+    margin-top: 15px;
+    font-size: var(--sizeEtiqueta);
+}
+
+.infoParaUsuario {
+    max-width: 413px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.contenedorBtn {
+    text-align: center;
+}
+
+.style_Btn {
+    width: var(--btnLarge-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    color: var(--background);
+    border: 0px;
+    border-radius: 5px;
+    font-weight: var(--font-weightTitulos);
+}
+
+@media screen and (max-width: 774px) {
+
+    .tituloMicuenta {
+        font-family: var(--fontTitulo);
+        font-weight: var(--font-weightTitulos);
+        font-size: var(--sizeTituloMobile);
+    }
+
+    .inputUsuario {
+        background-color: var(--background);
+        width: var(--inputsMobile-w);
+        height: var(--inputs-h);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        border-radius: 5px;
+    }
+
+    .inputUsuarioContra {
+        background-color: var(--background);
+        width: var(--inputsMobile-w);
+        height: var(--inputs-h);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        border-radius: 5px;
+    }
+
+    .infoParaUsuario {
+        max-width: var(--inputsMobile-w);
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .principal {
+        width: 350px;
+        height: 670px;
+        background-color: var(--primary);
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        margin-top: var(--marginTopBottom);
+        margin-bottom: var(--marginTopBottom);
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+        color: var(--text);
+    }
+}
