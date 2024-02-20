@@ -112,6 +112,10 @@ input:focus {
 }
 
 /* APARTADO DE LA PARTE DE PAGO */
+#subtotal{
+    column-count: 2;
+}
+.total,
 .total-price {
     display: flex;
     flex-direction: column;
@@ -134,18 +138,17 @@ input:focus {
     margin-top: 30px;
 }
 
-.taxes {
+.totalT{
+    margin-top: 16px;
+}
+.total2{
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2E2E2E;
+    border-top: 1px solid #2E2E2E;
 }
-
-.shipping {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #2E2E2E;
-}
-
-
 .total {
     display: flex;
     justify-content: space-between;

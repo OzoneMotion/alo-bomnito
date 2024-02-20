@@ -144,3 +144,35 @@ function obtenerSubTotal() {
     guardarLocal.setItem("subTotal", subtotal);
 }
 
+const button = document.getElementById("procederPago")
+
+
+ button.onclick = function procederPago() {
+  PRODUCTOS.forEach((producto, index) => {
+    producto.cantidad = parseInt(document.getElementById(`clicks${index}`).value);
+  });
+
+  console.log(PRODUCTOS);
+  localStorage.setItem('productosPago', JSON.stringify(PRODUCTOS));
+  window.location.href = "carrito_de_pago.html";
+  /*button.innerHTML = `
+  <div class="total-price">
+  <div id="subtotal">
+      <p >Subtotal</p> 
+      <p>Impuestos</p>
+      <p>Envío</p>
+      <p id="subTotal">${obtenerSubTotal}</p>
+      <p id="Impuestos">$0.00 MXN</p>
+      <p id="Envio">$150.00 MXN</p>
+  </div>
+<div class="total2">
+  <p class="totalT">Total</p>
+  <p class="totalT">$0.00 MXN </p>
+</div>
+
+  <div class="btn-container">
+      <button type="submit" id="btn-go-toPayment"><a href="./avisoExitoCarrito.html">Ir a pagar</a></button>
+  </div>
+</div>
+  `*/
+}
