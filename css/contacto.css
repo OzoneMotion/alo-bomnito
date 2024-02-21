@@ -129,7 +129,7 @@ label {
     border: none;
     font-size: 16px;
     font-weight: 700;
-    color: var(--backgroud);
+    color: var(--background);
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
