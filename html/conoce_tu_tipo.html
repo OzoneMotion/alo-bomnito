@@ -1,96 +1,172 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alo' Bomnito | Conoce tu tipo de piel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<html lang="es-MX">
 
-<!-- INICIO DE NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded subtitulo" aria-label="Thirteenth navbar example">
-      <div class="container-fluid ">
-          <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-            menu
-          </span>
-        <a class="navbar-brand" href="#"><img src="/img/logo-noOficial.png" alt="logo Alo' Bomnito"> Alo' Bomnito</a>
-        <a class="navbar-brand ocultar-carrito" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
-          <div class="offcanvas offcanvas-start canvas-body" id="menuLateral">
-            <div class="offcanvas-header">
-              <button class="btn-cerrar-border" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
-                <span class="material-symbols-outlined">
-                  close
-                  </span>
-              </button>
-            </div>
-            <div class="offcanvas-body d-flex flex-column">
-              <ul class="navbar-nav col-lg-5 justify-content-lg-center justifyContent-desktop">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./home.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./carrito_de_compras.html">Carrito de compras</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="./tipos_de_piel.html" data-bs-toggle="collapse" data-bs-target="#collapseTipos">
-                        Tipos de piel <span class="material-symbols-outlined">arrow_drop_down</span>
-                      </a>
-                    <ul class="collapse colapsable show1" id="collapseTipos">
-                      <li><a class="nav-link" href="./mixta.html">Mixta</a></li>
-                      <li><a class="nav-link" href="./grasa.html">Grasa</a></li>
-                      <li><a class="nav-link" href="./seca.html">Seca</a></li>
-                      <li><a class="nav-link" href="./normal.html">Normal</a></li>
-                      <li><a class="nav-link" href="./productos.html">Productos</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../html/conoce_tu_tipo.html">Conoce tu tipo de piel</a>
-                  </li>
-                  <li class="nav-item oculto-desktop">
-                      <a class="nav-link" href="./cuenta.html" data-bs-toggle="collapse" data-bs-target="#collapseCuenta">
-                        Cuenta <span class="material-symbols-outlined">arrow_drop_down</span>
-                      </a>
-                    <ul class="collapse colapsable show1" id="collapseCuenta">
-                      <li><a class="nav-link" href="./iniciar_sesion.html">Iniciar sesión</a></li>
-                      <li><a class="nav-link" href="./crear_mi_cuenta.html">Crear mi cuenta</a></li>
-                    </ul>
-                  </li>
-                  <li> 
-                    <a class="nav-link" aria-current="page" href="./nosotros.html">Sobre nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                  </li>
-              </ul>
-            </div>
-              <div class="d-lg-none aling-self-center canvas-footer titulo">
-                <p>ALO' BOMNITO</p>
-              </div>
-          </div>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+    integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/cuestionario.css">
+  <!--fuentes-->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap"
+    rel="stylesheet">
+  <title> Tipo de piel </title>
+
+</head>
+
+<body>
+  <!--titulo-->
+  <div class="container">
+    <div class="row">
+      <div class="col  titulo-test">
+        <h1 id="titulo-test" style="text-align: center;">Tipos de piel </h1>
       </div>
-        <div class="icons">
-          <a class="navbar-brand" href="./iniciar_sesion.html"><span class="material-symbols-outlined navbar-brand">account_circle</span></a>
-          <a class="navbar-brand" href="./carrito_de_compras.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+    </div>
+  </div>
+
+  <!--Preguntas-->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form name="myform" onsubmit="return validate()" id="myForm">
+          <!-- Cuestionario -->
+          <div class="card">
+            <div class="card-header">
+              1. ¿Cómo se ve tu piel en este momento?
+            </div>
+            <ol type="A">
+              <li><input type="radio" name="pregunta1" id="p11"> Lisa y con brillo natural, no oleoso
+              </li>
+              <li><input type="radio" name="pregunta1" id="p12"> Algo opaca y seca </li>
+              <li><input type="radio" name="pregunta1" id="p13"> Me brilla toda la cara</li>
+              <li><input type="radio" name="pregunta1" id="p14"> Algunas zonas están brillosas y otras
+                secas.
+              </li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              2. ¿Cómo son tus poros?
+            </div>
+            <ol type="A">
+              <li><input type="radio" name="pregunta2" id="p21"> Finos y poco visibles</li>
+              <li><input type="radio" name="pregunta2" id="p23"> Casi imperceptibles </li>
+              <li><input type="radio" name="pregunta2" id="p22"> Son grandes y visibles en todas partes
+              </li>
+              <li><input type="radio" name="pregunta2" id="p24"> Son grandes en el mentón, nariz y/o
+                frente
+              </li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              3. Al tocar tu cara ¿Cómo es la textura de tu piel?
+            </div>
+            <ol type="A">
+              <li><input type="radio" name="pregunta3" id="p31"> Suave y lisa </li>
+              <li><input type="radio" name="pregunta3" id="p32"> Áspera. A veces se descama en algunas
+                zonas
+              </li>
+              <li><input type="radio" name="pregunta3" id="p33"> Gruesa. De vez en cuando tengo algunos
+                granitos </li>
+              <li><input type="radio" name="pregunta3" id="p34"> En ciertas partes está lisa e hidratada y
+                en
+                otras hay brotes o partes de resequedad </li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              4. ¿Cómo se comporta tu piel durante el día?
+            </div>
+            <ol type="A">
+              <li><input type="radio" name="pregunta4" id="p41"> Puede que tenga algo de brillo al
+                finalizar
+                el día </li>
+              <li><input type="radio" name="pregunta4" id="p42"> Poco brillo durante el día. De hecho,
+                llega a
+                verse opaca. </li>
+              <li><input type="radio" name="pregunta4" id="p43"> Brilla mucho desde temprano y es grasa
+                durante todo el día </li>
+              <li><input type="radio" name="pregunta4" id="p44"> Mi zona T brilla demasiado con el paso de
+                las
+                horas </li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              5. ¿Tienes brotes como granitos, puntos negros, espinillas y/o barros?
+            </div>
+            <ol type="A">
+              <li><input type="radio" name="pregunta5" id="p51"> Muy pocos </li>
+              <li><input type="radio" name="pregunta5" id="p52"> Nunca </li>
+              <li><input type="radio" name="pregunta5" id="p53"> Siempre </li>
+              <li><input type="radio" name="pregunta5" id="p54"> De vez en cuando </li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              6. Para tu edad ¿consideras que tienes arrugas?
+            </div>
+            <ol type="A">
+              <li><input type="radio" name="pregunta6" id="p61"> Muy pocas </li>
+              <li><input type="radio" name="pregunta6" id="p62"> Sí y muy marcadas </li>
+              <li><input type="radio" name="pregunta6" id="p63"> Nada de arrugas </li>
+              <li><input type="radio" name="pregunta6" id="p64"> Alguna que otra línea de expresión,
+                especialmente al sonreir o al fruncir el seño </li>
+            </ol>
+          </div>
+
+
+          <div class="resultados">
+            <input type="submit" value="Resultado" onclick="resultado()" id="myInput" />
+          </div>
+          <!-- <button type="button" id="btn" class="btn btn-primary" onclick="resultado()">RESULTADO</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Alert-->
+  <div class="modal fade flotante" id="modalCentro" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="exampleModalCenterTitle">!Hola Bomnitx¡</h4> <br>
+          <h5> <img src="../imagenes/LogoOficial (1).png" alt="logo Alo"> </h5>
         </div>
-    </nav>
-<!-- FIN DE NAVBAR -->
+        <div class="modal-body" id="modalContent"> texto dentro del cuadro </div>
+        <div class="modal-footer">
+          <button type="button" class="compras" onclick="redirectProductos()"> Ir a comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="page"></div>
+  <!-- Optional JavaScript -->
+  <!--Llamada al script de respuestas-->
+  <script src="../javascript/respuestas.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
+    integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+    crossorigin="anonymous"></script>
+</body>
 
-<footer id="footer"></footer>
-
-
-      <script src="../javascript/footer.js"></script>
-      <!-- API para iconos -->
-      <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
 </html>

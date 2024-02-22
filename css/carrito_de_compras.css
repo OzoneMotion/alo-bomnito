@@ -1,0 +1,272 @@
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
+
+/* CONTENEDORES PRINCIPALES */
+body {
+    background-color: var(--background);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.small-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    margin: 30px auto;
+}
+
+.total-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD DE PRODUCTO A PAGAR*/
+img {
+    width: 220px;
+    height: 190px;
+    margin: 24px 24px 24px 24px;
+    border-radius: 10px;
+}
+
+.cart-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    width: 700px;
+    height: 240px;
+    border-radius: 17px;
+}
+
+.row-specs {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 24px;
+    gap: 32px;
+}
+
+.row-product {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* Este es el container donde tengo el botón y el precio, que no funciona*/
+.product-specs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+/* CONTADOR */
+.contador-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.restar {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.sumar {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+input {
+    width: 78px;
+    height: 39px;
+    text-align: center;
+    border-style: hidden;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* APARTADO DE LA PARTE DE PAGO */
+#subtotal{
+    column-count: 2;
+}
+.total,
+.total-price {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    border-top: 2px solid #2E2E2E;
+    width: 305px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+.compras {
+    border-bottom: 2px solid #2E2E2E;
+    margin-bottom: 30px;
+}
+
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.totalT{
+    margin-top: 16px;
+}
+.total2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2E2E2E;
+    border-top: 1px solid #2E2E2E;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+
+/* BOTONES */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-go-toPayment {
+    cursor: pointer;
+    text-align: center;
+    width: var(--btnLarge-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--background);
+    border-radius: 0.3rem;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    /* margin-top: 2rem; */
+}
+
+#btn-delete {
+    cursor: pointer;
+    text-align: center;
+    width: var(--btnSmall-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--background);
+    border-radius: 0.3rem;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    /* margin-top: 2rem; */
+}
+
+
+p {
+    font-family: var(--fontContenido);
+    size: var(--sizeContenido);
+}
+
+/* ICONOS USADOS */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
+
+/* Responsive Tablet*/
+@media screen and (min-width:1200px) and (max-width: 1440px) {
+    .cart-info {
+        height: 17.125rem;
+    }
+
+    img {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .total-price {
+        width: 18.4rem;
+    }
+
+}
+
+/* responsive  Mobile*/
+@media only screen and (min-width:350px) and (max-width: 1200px) {
+    .total-price {
+        margin-left: 25%;
+        margin-bottom: 0;
+    }
+
+    .cart-info{
+        width: 350px;
+        height: 217px;
+        display: block;
+        font-family: var(--fontContenido);
+        font-size: var(--sizeContenido);
+    }
+
+    .row-product {
+        margin-top: 20px;
+    }
+    .row-product img {
+        width: 140px;
+        height: 140px;
+        margin: 0 24px 24px 24px;
+    }
+
+    .contador-carrito{
+        position: relative;
+        right: 150px;
+        margin-top: 50px;
+    }
+
+    #precioRow{
+        visibility: hidden;
+    }
+
+    .product-specs{
+        display: block;
+        position: relative;
+        bottom: 50px;
+    }
+
+}

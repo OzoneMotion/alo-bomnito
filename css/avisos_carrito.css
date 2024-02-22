@@ -1,0 +1,177 @@
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
+
+/*Css general */
+
+body {
+    background-color: var(--backgroud);
+    
+}
+
+/* Estilos container */
+
+.contenidoExito {
+    margin-top: 7rem;
+    padding: 90px 78.5px 90px 78.5;
+    width: 522px;
+    height: 701px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 17px;
+    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
+
+}
+
+/* Estilos title container */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 48px;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 46px;
+}
+.subTituloRelleno{
+    width: 271px;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos textos */
+#title {
+    font-family: var(--fontTitulo);
+    font-size: var(--sizeTituloDesk-tab);
+}
+
+.subRelleno{
+    font-family: var(--fontContenido);
+    font-size: var(--sizeContenido);
+}
+
+/* Imagen*/
+
+.exito{
+    text-align: center;
+}
+.exitoPerrito{
+    width: 264px;
+    height: 264px;
+    border-radius: 10px;
+}
+
+/* Estilos boton */
+.btn-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+#btn-submit {
+    width: var(--btnMedium-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    margin-top: 2rem;
+    color: var(--primary);
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+    color: var(--highlight);
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+
+.contenidoExito {
+margin-top: 7rem;
+padding: 90px 78.5px 90px 78.5;
+width: 300px;
+height: 551px;
+gap: 24px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: var(--primary);
+border-radius: 17px;
+box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
+
+}
+
+/* Estilos title container */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 48px;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 46px;
+}
+.subTituloRelleno{
+    width: 271px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Estilos textos */
+#title {
+    font-family: var(--fontTitulo);
+    font-size: var(--sizeTituloMobile);
+}
+.subRelleno{
+    font-family: var(--fontContenido);
+    font-size: var(--sizeContenido);
+}
+
+/* Imagen*/
+
+.exito{
+    text-align: center;
+}
+.exitoPerrito{
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Estilos boton */
+.btn-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+#btn-submit {
+    width: var(--btnMedium-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    margin-top: 2rem;
+    color: var(--primary);
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+    color: var(--highlight);
+}
+}
