@@ -1,4 +1,4 @@
-import productos from '../productos.json' assert {type: 'json'};
+import productos from '../productos2.json' assert {type: 'json'};
 
 let productosID = document.querySelector('.main-container');
 const modContenedor = document.querySelector('.mod-contenedor');
