@@ -4,7 +4,7 @@ let contenedorCards = document.querySelector('#contenedor-cards');
 
 
 data.forEach((element, index)=> {
-  if (element.piel === 'grasa') {
+  if (element.piel === 'normal') {
 
   let imagen1 =element.imagen1[0];
   let imagenUrl1= imagen1 ? Object.values(imagen1)[0]:'';

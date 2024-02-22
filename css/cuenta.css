@@ -1,5 +1,6 @@
-@import url("./default/footer.css");
 @import url("./default/navbar.css");
+@import url("./default/footer.css");
+@import url("./default/root.css");
 
 body {
     background-image: var(--url-background);

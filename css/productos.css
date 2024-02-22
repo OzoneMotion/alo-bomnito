@@ -447,7 +447,7 @@ td {
 
 /* MOBILE DOBLE CARD*/
 
-@media screen and (max-width: 774px){
+@media only screen and (min-width:320px) and (max-width:530px){
 
     .title-products{
         margin-top: var(--marginTopBottom);

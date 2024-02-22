@@ -1,4 +1,5 @@
-@import url('./root.css');
+@import url('./default/navbar.css');
+
 
 /* *{
     border:solid 1px;
@@ -41,6 +42,10 @@ footer i {
 
 /* quita hipervinculos */
 
+.contenedor-izq a:hover {
+    color: var(--background); /* Cambia el color al hacer hover */
+}
+
 .link1 {
     text-decoration: none;
     color: var(--text);
@@ -59,7 +64,6 @@ footer i {
     display: grid;
     grid-template-columns: repeat(5, auto);
     margin-top: 23px !important;
-
 }
 
 .contenedor-der ul {
@@ -69,6 +73,12 @@ footer i {
     margin-right: 20px;
     justify-items: end;
 
+}
+.contenedor-der i {
+    color: var(--text); 
+}
+.contenedor-der i:hover {
+    color: var(--background); 
 }
 
 /* ESCRITORIO */
