@@ -43,7 +43,7 @@
     font-family: var(--fontContenido);
     color: var(--text);
     box-sizing: border-box;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .body-con-fondo {
