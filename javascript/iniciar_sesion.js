@@ -13,6 +13,7 @@ formInicio.addEventListener('submit', async (e) => {
     //const password = document.querySelector('#password').value;
 
     //const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    
     const Usuarios = await getData();
 
     const validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
