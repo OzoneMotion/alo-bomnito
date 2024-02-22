@@ -63,7 +63,6 @@ body{
     border-top: var(--accent);
     border-color: var(--accent);
     border-radius: 2rem;
-    
  }
 
 .itemLista{
@@ -295,4 +294,3 @@ margin: 2rem;
      }
     
 }
-

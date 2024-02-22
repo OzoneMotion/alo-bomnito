@@ -1,9 +1,9 @@
 @import url('./default/navbar.css');
 
-
-/* *{
+/* 
+*{
     border:solid 1px;
-} */
+}  */
 
 html,
 body {
@@ -97,8 +97,8 @@ footer i {
 
 @media only screen and (min-width:745px) and (max-width:1024px) {
 
-    footer {
-        font-size: var(--sizeTituloCardMobile);
+    a.link1{
+        font-size:.8rem;
     }
 
     .ocultar-en-escritorio {

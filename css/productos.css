@@ -14,7 +14,7 @@
 .products{
     width: 270px;
     padding: 0px;
-    height: 450px;
+    height: auto;
     box-shadow: var(--shadow);
     margin-bottom: 30px;
     border-radius: 10px;
@@ -34,6 +34,8 @@
 .contenedor-img {
     height: auto;
     width: auto;
+    object-fit: cover;
+    box-sizing: border-box;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -46,7 +48,7 @@
 .info-produc{
     padding: 0px 15px 0px 15px;
     background-color: var(--primary);
-    height: 180px;
+    height: 130px;
     border-radius: 0px 0px 10px 10px;
     display: flex;
     flex-direction: column;
@@ -68,7 +70,7 @@
 
 .producto {
     display:inline-block;
-    height: 410px;
+    height: 380px;
     text-align: start;
     vertical-align: top;
     padding: 0px;
@@ -290,16 +292,19 @@ td {
 
 
     #contenedor-cards{
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         width: 100%;
-        padding-right: 60px;
-        padding-left: 60px;   
+        gap: 20px;
+        width: 100%;
+        
+   
     }
 
     .products{
-        width: 250px;
+      
+        width: 230px;
         padding: 0px;
         height: 450px;
         box-shadow: var(--shadow);
@@ -308,7 +313,7 @@ td {
     }
 
     .img-card{
-        width:250px;
+        width:230px;
         height: 250px;
         border-radius: 10px 10px 0px 0px;
     }
@@ -321,7 +326,7 @@ td {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 250px;
+        width: 230px;
     }
 
     .container-agregar {
@@ -453,13 +458,13 @@ td {
         margin-top: var(--marginTopBottom);
         margin-bottom: 0rem;
         font-family: var(--fontTitulo);
-        font-size: var(--sizeTituloDesk-tab);
+        font-size: var(--sizeSubtituloMobile);
         padding-left: 5%; 
         font-weight: bold;
     }
 
     .frase p{
-        font-size: var(--sizeSubtituloMobile);
+        font-size: var(--sizeContenido);
         font-family: var(--fontTitulo);
         font-weight: bold;
     }
@@ -497,6 +502,7 @@ td {
         flex-direction: column;
         justify-content: center;
         width: 160px;
+        font-size: var(--sizeContenido);
     }
 
     .container-agregar {
