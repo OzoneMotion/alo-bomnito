@@ -82,6 +82,11 @@ function obtenerProductos() {
     return JSON.parse(productos);
 }
 
+function eliminarProductosCarrito(index){
+  let productos = window.localStorage.removeItem('productosCarrito')
+  return JSON.parse(productos);
+}
+
 function agregarProductosCarrito(productos) {
     // let p = [];
     //p.push(productos);
@@ -92,7 +97,7 @@ function agregarProductosCarrito(productos) {
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo">
           <div class="row-product" id="row-product">
-            <img src="${producto.imagen.imagen1}">
+            <img class="imagenes" src="${producto.imagen.imagen1}">
             <div class="product-info" id="productContainer${index}">
               <p>${producto.nombre}</p>
               <p>${producto.marca}</p>
@@ -113,7 +118,7 @@ function agregarProductosCarrito(productos) {
             <div class="row-specs">
               <p id="precioRow${index}">${producto.precio}</p>
               <div class="btn-container">
-                <button type="submit" id="btn-delete"> Eliminar </button>
+                <button type="submit" id="btn-delete" onClick="eliminarProductosCarrito(${index});"> Eliminar </button>
               </div>
             </div>
           </div>
