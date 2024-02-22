@@ -2,28 +2,10 @@
 @import url('./default/navbar.css');
 @import url('./default/root.css');
 
-/*Css general */
-* {
-    /* border: 1px solid black; */
-    font-size: var(--sizeContenido);
-    font-family: var(--fontContenido);
-    color: var(--text);
-    box-sizing: border-box;
-    margin: 0;
-}
-
-
-body {
-    background: url(../imagenes/contacto.jpg);
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Estilos container */
 
 .containerRegistro {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
     width: 350px;
@@ -53,19 +35,13 @@ body {
 }
 
 /* Imagen*/
-.img-Tuser{
+.img-Tuser {
     text-align: center;
 }
-.img-user{
+
+.img-user {
     width: 15rem;
     height: 15rem;
-}
-
-
-/* Div de ¿tienes cuenta? */
-.content-sesion{
-    margin-top: 2rem;
-    text-align: center;
 }
 
 /* Estilos textos */
@@ -80,31 +56,14 @@ body {
     font-weight: 700;
 }
 
+
 /* Estilos boton */
-.btn-container {
+.containerBotones {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#btn-submit {
-    width: var(--btnMedium-w);
-    height: var(--btnMedium-h);
-    background-color: var(--accent);
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--backgroud);
-    border-radius: 10px;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-    margin-top: 30px;
-}
-
-#btn-submit:hover {
-    cursor: pointer;
-}
 
 /* Estilos tablet */
 
@@ -126,7 +85,7 @@ body {
         height: 85px;
     }
 
-    #btn-submit{
+    #btn-submit {
         margin-top: 30px;
     }
 }
