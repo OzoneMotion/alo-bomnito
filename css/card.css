@@ -1,0 +1,95 @@
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
+
+p {
+    margin-bottom: 0;
+}
+
+.card-container {
+    width: 90vw;
+    min-width: 320px;
+    max-width: 450px;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.datos-producto {
+    display: grid;
+    gap: 1rem;
+}
+
+.header-producto-container {
+    display: grid;
+    grid-template-columns: 35% auto;
+}
+
+.main-producto-container div {
+    display: grid;
+    grid-template-columns: 35% auto;
+}
+
+.id-container p,
+.main-producto-container div>p:first-child {
+    text-align: left;
+}
+
+.nombre-container p,
+.main-producto-container div>p:nth-child(2) {
+    text-align: right;
+}
+
+.botones-producto-footer {
+    all: unset;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botones-producto-footer button,
+.botones-producto-footer button span {
+    padding: 0;
+    background-color: var(--primary);
+}
+
+.carrusel-imgs {
+    display: none;
+}
+
+@media(min-width:744px) {
+    .card-container {
+        min-width: 500px;
+        max-width: 600px;
+    }
+}
+
+@media(min-width: 990px) {
+    .card-container {
+        min-width: 650px;
+        max-width: 750px;
+        grid-template-columns: 250px auto;
+    }
+
+    .carrusel-imgs {
+        width: 100%;
+        display: block;
+    }
+
+    .abrir-imagen {
+        display: none;
+    }
+
+    /* Botones next y prev más oscuros */
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23COLOR' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        position: absolute;
+        z-index: -1;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23COLOR' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+}

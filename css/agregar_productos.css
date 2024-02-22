@@ -21,7 +21,7 @@
     width: 100%;
     margin-right: -100%;
     backface-visibility: hidden;
-  }
+}
 
 .invalid-feedback {
     display: none;
@@ -65,7 +65,7 @@ body {
     font-size: var(--sizeTituloDesk-tab);
 }
 
-.container{
+.container {
     background-color: var(--primary);
     margin-top: var(--marginTopBottom);
     margin-bottom: var(--marginTopBottom);
@@ -98,7 +98,8 @@ body {
     border-radius: 5px;
 }
 
-input, textarea {
+input,
+textarea {
     background-color: var(--background);
     border-radius: 5px;
     width: 410px;
@@ -190,7 +191,7 @@ input, textarea {
 
 .btn_prevNext {
     border: none;
-    background-color:rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .container_iDelete {
@@ -201,7 +202,7 @@ input, textarea {
 
 
 
-.select-btn{
+.select-btn {
     display: flex;
     height: 39px;
     align-items: center;
@@ -212,7 +213,7 @@ input, textarea {
     background-color: var(--background);
 }
 
-.list-items{
+.list-items {
     position: absolute;
     margin-top: 5px;
     padding: 5px;
@@ -234,10 +235,11 @@ input, textarea {
     border-radius: 10px;
 }
 
-.select-btn.open ~ .list-items{
+.select-btn.open~.list-items {
     display: block;
 }
-.item{
+
+.item {
     display: flex;
     align-items: center;
     list-style: none;
@@ -247,11 +249,11 @@ input, textarea {
     padding: 0 10px;
 }
 
-.list-items .item-text:hover{
+.list-items .item-text:hover {
     color: var(--secondary);
 }
 
-.item .checkbox{
+.item .checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -262,14 +264,14 @@ input, textarea {
     border: 1.5px solid var(--highlight);
 }
 
-.item.checked .checkbox{
+.item.checked .checkbox {
     background-color: var(--highlight);
 }
 
 
 
 
-.select-menu .select-btndrop{
+.select-menu .select-btndrop {
     display: flex;
     height: 39px;
     background: var(--background);
@@ -280,7 +282,7 @@ input, textarea {
     justify-content: space-between;
 }
 
-.select-menu .options{
+.select-menu .options {
     position: absolute;
     height: auto;
     width: 413px;
@@ -291,11 +293,11 @@ input, textarea {
     display: none;
 }
 
-.select-menu.active .options{
+.select-menu.active .options {
     display: block;
 }
 
-.options .option{
+.options .option {
     display: flex;
     height: 30px;
     cursor: pointer;
@@ -303,12 +305,13 @@ input, textarea {
     border-radius: 8px;
     align-items: center;
 }
-.options .option:hover{
-   color: var(--secondary);
+
+.options .option:hover {
+    color: var(--secondary);
 }
 
 
-@media  screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .formato {
         display: flex;
         flex-direction: column;
@@ -326,7 +329,7 @@ input, textarea {
 
 @media screen and (max-width: 774px) {
 
-    .container{
+    .container {
         background-color: #EBBC8A;
         margin: 30px auto;
         width: 350px;
@@ -364,7 +367,7 @@ input, textarea {
         background-color: var(--background);
         border-radius: 5px;
     }
-    
+
     .containerTextArea {
         width: 258px;
         height: 129px;
@@ -373,8 +376,9 @@ input, textarea {
         background-color: var(--background);
         border-radius: 5px;
     }
-    
-    input, textarea {
+
+    input,
+    textarea {
         background-color: var(--background);
         border-radius: 5px;
         width: 258px;
@@ -389,7 +393,7 @@ input, textarea {
         align-items: center;
     }
 
-    .list-items{
+    .list-items {
         position: absolute;
         margin-top: 5px;
         padding: 5px;
@@ -402,7 +406,7 @@ input, textarea {
         border-radius: 5px;
     }
 
-    .select-menu .options{
+    .select-menu .options {
         position: absolute;
         height: auto;
         width: 258px;

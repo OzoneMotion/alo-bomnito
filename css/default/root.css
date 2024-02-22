@@ -44,6 +44,12 @@
     color: var(--text);
     box-sizing: border-box;
     margin: 0;
+    text-align: center;
+}
+
+.body {
+    background-color: var(--background);
+    width: 100%;
 }
 
 .body-con-fondo {
@@ -65,7 +71,7 @@
     font-weight: 700;
     color: var(--background);
     border-radius: 5px;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    box-shadow: var(--shadow);
 }
 
 .btn-alo-a {
@@ -90,4 +96,10 @@
 
 .estilo-a {
     color: var(--text);
+}
+
+.hr {
+    height: 0px;
+    background-color: var(--text);
+    opacity: 1;
 }
