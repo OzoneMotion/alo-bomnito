@@ -63,6 +63,7 @@
 .btn-alo,
 .btn-alo-submit,
 .btn-alo-a {
+    margin-top: 10px;
     width: var(--btnMedium-w);
     height: var(--btns-h);
     background-color: var(--accent);

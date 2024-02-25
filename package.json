@@ -4,7 +4,7 @@
   "description": "servidor para pruebas",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch db.json"
+    "json:server": "json-server --watch producto.json"
   },
   "author": "",
   "license": "ISC"

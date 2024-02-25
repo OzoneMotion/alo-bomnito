@@ -1,75 +1,75 @@
-import data from '../productos.json' assert {type: 'json'}
+import data from '../productos2.json' assert {type: 'json'}
 
-let contenedorCards = document.querySelector('#contenedor-cards');
+let productosContainer = document.querySelector('.productos-container');
+productosContainer.innerHTML += `<div class="producto frase">
+                <p> ¡Tod@s merecen sentirse bien en su propia piel!</p>
+            </div>`;
 
+data.forEach((element, index) => {
+    let imagen1 = element.imagenes[0];
+    let imagenUrl1 = imagen1 ? imagen1.url : '';
 
-data.forEach((element, index)=> {
+    let imagen2 = element.imagenes[1];
+    let imagenUrl2 = imagen2 ? imagen1.url : '';
 
-  let imagen1 =element.imagen1[0];
-  let imagenUrl1= imagen1 ? Object.values(imagen1)[0]:'';
+    let imagen3 = element.imagenes[2];
+    let imagenUrl3 = imagen3 ? imagen1.url : '';
 
-  let imagen2 =element.imagen2[0];
-  let imagenUrl2= imagen2 ? Object.values(imagen2)[0]:'';
-
-  let imagen3 =element.imagen3[0];
-  let imagenUrl3= imagen3 ? Object.values(imagen3)[0]:'';
-  
-  //Crear la card con el html correspondiente
-    contenedorCards.innerHTML += `
-    <ul class="products">
-    <li class="producto">
-      <div class="contenedor-img">
+    //Crear la card con el html correspondiente
+    productosContainer.innerHTML += `
+    <div class="producto">
+      <div class="producto__imgs">
       <img class="img-card" alt="Cambiar imagen"  onmouseout="this.src='${imagenUrl1}';" onmouseover="this.src='${imagenUrl2}';" src="${imagenUrl3}" />
       </div>
-      <div class="info-produc">
-        <p class="productoNombre" id="${element.id}">${element.nombre}</p>
-        <p class="products-name" data-index="${index}">${element.marca}</p>
-        <p class="products-mlgr">${element.contenido}</p>
-        <div class="container-agregar">
-          <p class="card-precio">$${element.precio}</p>
-          <div class="${element.id}" id="addElement"><i class="fa-solid fa-plus" id="icon-card"></i></div>
+      <div class="producto__info">
+        <p class="producto__nombre" id="${element.id}">${element.nombre}</p>
+        <p class="producto__marca" data-index="${index}">${element.marca}</p>
+        <p class="producto__contenido">${element.contenido}</p>
+        <div class="producto__agregar">
+          <p class="producto__precio">$${element.precio}</p>
+          <div class="addElement" id="${element.id}"><i class="fa-solid fa-plus" id="icon-card"></i></div>
         </div>
       </div>
-    </li>
-</ul>`
-
+    </div>`
 });
 
-
-document.querySelectorAll('#addElement').forEach(item => {
-  item.addEventListener('click', function() {
-    let indexProducto = item.className - 1
-    agregarAlCarrito(indexProducto)
-  });
+document.querySelectorAll('.addElement').forEach(item => {
+    item.addEventListener('click', function () {
+        let indexProducto = parseInt(item.id)
+        const producto = data.find(producto => producto.id === indexProducto);
+        agregarAlCarrito(producto);
+    });
 });
 
-function agregarAlCarrito(indexProducto){
-
-  const nombre = data[indexProducto].nombre;
-  const marca = data[indexProducto].marca;
-  const precio = data[indexProducto].precio;
-  const imagen = data[indexProducto].imagen1[0]
-  let cantidad = 1
-
-  const productosCarrito = JSON.parse(localStorage.getItem('productosCarrito')) || []
-
-  productosCarrito.push({nombre : nombre, marca : marca, precio : precio, imagen : imagen, cantidad : cantidad})
-  localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
-  alert("Se agrego el producto al carrito")
-
+const agregarAlCarrito = (producto) => {
+    const datosProducto = {
+        "nombre": producto.nombre,
+        "nombre": producto.nombre,
+        "marca": producto.marca,
+        "precio": producto.precio,
+        "imagenes": producto.imagenes,
+        "cantidad": 1
+    }
+    const productosCarrito = JSON.parse(localStorage.getItem('productosCarrito')) || []
+    productosCarrito.push(datosProducto)
+    localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
+    alert("Se agrego el producto al carrito")
 }
 
-document.querySelectorAll('.productoNombre').forEach(item => {
-  item.addEventListener('click', function() {
-    let ides = item.id -1;
-    console.log(ides)
-    producto(ides)
-    
-    modal.showModal();
-  });
+document.querySelectorAll('.producto__nombre').forEach(item => {
+    item.addEventListener('click', function () {
+        let indexProducto = parseInt(item.id)
+        const producto = data.find(producto => producto.id === indexProducto);
+
+        crearProductoModal(producto, () => {
+            document.getElementById(`add-car-${producto.id}`).addEventListener('click', () => {
+                agregarAlCarrito(producto);
+            });
+        });
+        modal.showModal();
+    });
+
 });
-
-
 
 let img = document.getElementById('img');
 let information = document.querySelector('#info');
@@ -80,23 +80,17 @@ let tarjetaDescripcion = document.querySelector('#tarjetaDescripcion');
 let tarjetaIndicaciones = document.querySelector('#tarjetaIndicaciones');
 let tarjetaIngredientes = document.querySelector('#tarjetaIngredientes');
 
-function producto(ides){
+const crearProductoModal = (producto, callback) => {
+    let imagen1 = producto.imagenes[0];
+    let imagenUrl1 = imagen1 ? imagen1.url : '';
 
-  console.log(ides)
-  console.log(data[ides])
+    let imagen2 = producto.imagenes[1];
+    let imagenUrl2 = imagen2 ? imagen2.url : '';
 
-  let imagen1 =data[ides].imagen1[0];
-  let imagenUrl1= imagen1 ? Object.values(imagen1)[0]:'';
-  
-  let imagen2 =data[ides].imagen2[0];
-  let imagenUrl2= imagen2 ? Object.values(imagen2)[0]:'';
-  
-  let imagen3 =data[ides].imagen3[0];
-  let imagenUrl3= imagen3 ? Object.values(imagen3)[0]:'';
+    let imagen3 = producto.imagenes[2];
+    let imagenUrl3 = imagen3 ? imagen3.url : '';
 
-
-
-  img.innerHTML = `<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    img.innerHTML = `<div id="carouselExampleDark" class="carousel carousel-dark slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -122,58 +116,50 @@ function producto(ides){
     <span class="visually-hidden">Next</span>
   </button>
 </div>`;
-  
-  information.innerHTML = 
-  `<p class="nombre parrafo">${data[ides].nombre}</p>
-  <p class="parrafo">${data[ides].marca}</p>
-  <p class="parrafo">${data[ides].contenido}</p>
-  <p class="precio parrafo">$${data[ides].precio}.00</p>
-  <div class="button-carrito">
-  <button id="add-car" class="${data[ides].id}"">Agregar al carrito</button>
-  </div>`;
-  
-  tarjetaDescripcion.innerHTML = 
-  `<p class="parrafo">${data[ides].descripcion}</p>`;
-  
-              tarjetaIndicaciones.innerHTML = 
-              `<p class="parrafo">${data[ides].uso}</p>`;
-              
-              tarjetaIngredientes.innerHTML = 
-              recuperarIngredProducto(data[ides]);
-              
-              accordionDesc.innerHTML = 
-              `<p class="parrafo">${data[ides].descripcion}</p>`;
 
-  accordionIndica.innerHTML = 
-  `<p class="parrafo">${data[ides].uso}</p>`;
-  
-  accordionIngred.innerHTML = 
-  recuperarIngredProducto(data[ides]);
+    information.innerHTML =
+        `<p class="nombre parrafo">${producto.nombre}</p>
+  <p class="parrafo">${producto.marca}</p>
+  <p class="parrafo">${producto.contenido}</p>
+  <p class="precio parrafo">$${producto.precio}.00</p>
+  <div class="button-carrito">
+  <button id="add-car-${producto.id}" class="add-car">Agregar al carrito</button>
+  </div>`;
+
+    tarjetaDescripcion.innerHTML =
+        `<p class="parrafo">${producto.descripcion}</p>`;
+
+    tarjetaIndicaciones.innerHTML =
+        `<p class="parrafo">${producto.uso}</p>`;
+
+    tarjetaIngredientes.innerHTML =
+        recuperarIngredProducto(producto);
+
+    accordionDesc.innerHTML =
+        `<p class="parrafo">${producto.descripcion}</p>`;
+
+    accordionIndica.innerHTML =
+        `<p class="parrafo">${producto.uso}</p>`;
+
+    accordionIngred.innerHTML =
+        recuperarIngredProducto(producto);
+
+    callback();
 }
 
 const recuperarIngredProducto = (producto) => {
-  let ingredientes = "";
+    let ingredientes = "";
 
-  producto.tabla.forEach(producto => {
-      ingredientes += `<tr>
+    producto.tabla.forEach(producto => {
+        ingredientes += `<tr>
       <td>${producto.ingrediente}</td>
       <td>${producto.funcion}</td>
   </tr>`;
-  });
-  return ingredientes;
+    });
+    return ingredientes;
 };
 
-document.querySelectorAll('#add-car').forEach(item => {
-  item.addEventListener('click', function() {
-    //let indexProducto = item.className - 1
-    console.log("hola")
-    //agregarAlCarrito(indexProducto)
-  });
-});
-
-
 const btnClose = document.getElementById("btnClose")
-
 btnClose.addEventListener("click", function () {
-  modal.close();
+    modal.close();
 });

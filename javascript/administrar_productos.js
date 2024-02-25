@@ -25,7 +25,7 @@ const recuperarImagenesProducto = (productos, idProducto) => {
             // Agrega la clase 'active' solo si es la primera imagen
             const activeClass = index === 0 ? 'active' : '';
             imagenes += `<div class="carousel-item ${activeClass}">
-                    <img src="${imagen}" class="d-block w-100">
+                    <img src="${imagen.url}" class="d-block w-100">
                 </div>`;
         });
     }
@@ -64,15 +64,15 @@ productos.forEach(item => {
             <aside id="carrusel-p${item.id}" class="carousel slide carrusel-imgs" data-bs-touch="true">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="${item.imagenes[0]}"
+                        <img src="${item.imagenes[0].url}"
                             class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="${item.imagenes[1]}"
+                        <img src="${item.imagenes[1].url}"
                             class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="${item.imagenes[2]}"
+                        <img src="${item.imagenes[2].url}"
                             class="d-block w-100">
                     </div>
                 </div>
