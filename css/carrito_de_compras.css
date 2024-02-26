@@ -34,7 +34,7 @@ body {
 }
 
 /* CARD DE PRODUCTO A PAGAR*/
-img {
+.imagenes {
     width: 220px;
     height: 190px;
     margin: 24px 24px 24px 24px;
@@ -218,7 +218,7 @@ p {
         height: 17.125rem;
     }
 
-    img {
+    .imagenes {
         width: 14rem;
         height: 14rem;
     }
@@ -247,7 +247,8 @@ p {
     .row-product {
         margin-top: 20px;
     }
-    .row-product img {
+    .imagenes,
+    .row-product  {
         width: 140px;
         height: 140px;
         margin: 0 24px 24px 24px;

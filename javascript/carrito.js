@@ -82,6 +82,23 @@ function obtenerProductos() {
     return JSON.parse(productos);
 }
 
+function eliminarProductosCarrito(index){
+ //let productos = window.localStorage.removeItem('productosCarrito')
+ // return JSON.parse(productos);
+  const elementoEliminar = document.getElementById(`cartInfo${index}`);
+  const nombreDeProducto = document.getElementById(`productName${index}`).innerText;
+  let productosActualizados = [];
+  productosActualizados.push(...PRODUCTOS);
+  productosActualizados = productosActualizados.filter((producto) => producto.nombre != nombreDeProducto);
+  localStorage.setItem('productosCarrito', JSON.stringify(productosActualizados));
+  elementoEliminar.remove();
+  debugger;
+}
+
+function productoParaEliminar(producto) {
+  return producto.nombre === "cherries";
+}
+
 function agregarProductosCarrito(productos) {
     // let p = [];
     //p.push(productos);
@@ -90,18 +107,18 @@ function agregarProductosCarrito(productos) {
     productos.forEach((producto, index)=> {
         
           wrapper.innerHTML += `
-          <div class="cart-info" id="cartInfo">
+          <div class="cart-info" id="cartInfo${index}">
           <div class="row-product" id="row-product">
-            <img src="${producto.imagen.imagen1}">
+            <img class="imagenes" src="${producto.imagen.imagen1}">
             <div class="product-info" id="productContainer${index}">
-              <p>${producto.nombre}</p>
+              <p id="productName${index}" value="${producto.nombre}">${producto.nombre}</p>
               <p>${producto.marca}</p>
               <!-- CONTADOR -->
               <div class="contador-carrito" id="contador${index}">
                 <div class="restar" id="boty${index}" onClick="clickME2(${index});"> <span class="material-symbols-outlined">
                     remove
                   </span></div>
-                <input type="text" value="0" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
+                <input type="text" value="${producto.cantidad}" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
                 <div class="sumar" id="bote${index}" onClick="clickME(${index});"> <span class="material-symbols-outlined">
                     add
                   </span></div>
@@ -113,7 +130,7 @@ function agregarProductosCarrito(productos) {
             <div class="row-specs">
               <p id="precioRow${index}">${producto.precio}</p>
               <div class="btn-container">
-                <button type="submit" id="btn-delete"> Eliminar </button>
+                <button type="submit" id="btn-delete" onClick="eliminarProductosCarrito(${index});"> Eliminar </button>
               </div>
             </div>
           </div>
@@ -155,24 +172,4 @@ const button = document.getElementById("procederPago")
   console.log(PRODUCTOS);
   localStorage.setItem('productosPago', JSON.stringify(PRODUCTOS));
   window.location.href = "carrito_de_pago.html";
-  /*button.innerHTML = `
-  <div class="total-price">
-  <div id="subtotal">
-      <p >Subtotal</p> 
-      <p>Impuestos</p>
-      <p>Envío</p>
-      <p id="subTotal">${obtenerSubTotal}</p>
-      <p id="Impuestos">$0.00 MXN</p>
-      <p id="Envio">$150.00 MXN</p>
-  </div>
-<div class="total2">
-  <p class="totalT">Total</p>
-  <p class="totalT">$0.00 MXN </p>
-</div>
-
-  <div class="btn-container">
-      <button type="submit" id="btn-go-toPayment"><a href="./avisoExitoCarrito.html">Ir a pagar</a></button>
-  </div>
-</div>
-  `*/
 }
