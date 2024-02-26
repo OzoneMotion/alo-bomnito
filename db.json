@@ -1,53 +1,36 @@
 {
   "users": [
     {
-      "id": "676d",
-      "nameId": "Jorge Velazquez",
-      "emailId": "mail@gmail.com",
-      "password": "contraseña.",
-      "password2": "contraseña."
+      "idCliente": 1,
+      "nombre": "Cheems",
+      "correo": "cheems@alobomnito.com",
+      "contrasenia": "1234Cheemsito",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678"
     },
     {
-      "id": "150c",
-      "nameId": "Alan Brito",
-      "emailId": "mail@gmail.com",
-      "password": "contraseña.",
-      "password2": "contraseña."
+      "idCliente": 2,
+      "nombre": "Alan Brito",
+      "correo": "mail@gmail.com",
+      "contrasenia": "contraseña.",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678"
     },
     {
-      "id": "02ab",
-      "nameId": "denisse",
-      "emailId": "arq.denisse@muretto.com",
-      "password": "denisse1",
-      "password2": "denisse1"
+      "idCliente": 3,
+      "nombre": "denisse",
+      "correo": "arq.denisse@muretto.com",
+      "contrasenia": "denisse1",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678"
     },
     {
-      "id": "18e0",
-      "nameId": "hola",
-      "emailId": "arq.denisse@muretto.com",
-      "password": "paola1234",
-      "password2": "paola1234"
-    },
-    {
-      "id": "f406",
-      "nameId": "hola",
-      "emailId": "holamundo@como.com",
-      "password": "denisse1",
-      "password2": "denisse1"
-    },
-    {
-      "id": "c6ff",
-      "nameId": "denisse",
-      "emailId": "paola@si.com",
-      "password": "denisse1",
-      "password2": "denisse1"
-    },
-    {
-      "id": "7128",
-      "nameId": "paola",
-      "emailId": "sisisi@hotmail.com",
-      "password": "denisse1",
-      "password2": "denisse1"
+      "idCliente": 4,
+      "nombre": "hola",
+      "correo": "holamundo@como.com",
+      "contrasenia": "denisse1",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678"
     }
   ],
   "admins": [

@@ -12,14 +12,6 @@
     margin: 0;
 }
 
-
-body {
-    background: url(../img/fondo.jpg);
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Estilos container */
 
 .containerRegistro {
@@ -58,7 +50,7 @@ body {
     font-size: var(--sizeSubtituloDescktop);
 }
 
-#subtitle{
+#subtitle {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -73,14 +65,14 @@ body {
 /* Imagen*/
 .img-crear,
 .img-error,
-.img-registro{
+.img-registro {
     text-align: center;
 }
+
 .img-crear-cuenta,
 .img-error-correo,
-.img-error-registro{
-    width: 14rem;
-    height: 12rem;
+.img-error-registro {
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -133,25 +125,26 @@ body {
         height: 85px;
     }
 
-    #btn-submit{
+    #btn-submit {
         margin-top: 30px;
     }
-   
+
     /* Imagen*/
-.img-crear,
-.img-error,
-.img-registro{
-    text-align: center;
-    margin: 3rem;
-    padding: 1rem;
-}
-.img-crear-cuenta,
-.img-error-correo,
-.img-error-registro{
-    width: 18rem;
-    height: 19rem;
-    border-radius: 1rem;
-}
+    .img-crear,
+    .img-error,
+    .img-registro {
+        text-align: center;
+        margin: 3rem;
+        padding: 1rem;
+    }
+
+    .img-crear-cuenta,
+    .img-error-correo,
+    .img-error-registro {
+        width: 18rem;
+        height: 19rem;
+        border-radius: 1rem;
+    }
 }
 
 /* Estilos desktop */
@@ -168,19 +161,21 @@ body {
     #title {
         font-size: var(--sizeTituloTablet);
     }
+
     /* Imagen*/
-.img-crear,
-.img-error,
-.img-registro{
-    text-align: center;
-    margin: 3rem;
-    padding: 1rem;
-}
-.img-crear-cuenta,
-.img-error-correo,
-.img-error-registro{
-    width: 18rem;
-    height: 19rem;
-    border-radius: 1rem;
-}
+    .img-crear,
+    .img-error,
+    .img-registro {
+        text-align: center;
+        margin: 3rem;
+        padding: 1rem;
+    }
+
+    .img-crear-cuenta,
+    .img-error-correo,
+    .img-error-registro {
+        width: 18rem;
+        height: 19rem;
+        border-radius: 1rem;
+    }
 }

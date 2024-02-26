@@ -104,3 +104,23 @@
     background-color: var(--text);
     opacity: 1;
 }
+
+.contenedor-form {
+    width: 90vw;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+@media (min-width: 744px) {
+    .contenedor-form {
+        min-width: 500px;
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor-form {
+        min-width: 650px;
+        max-width: 750px;
+    }
+}

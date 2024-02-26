@@ -115,19 +115,23 @@ textarea {
     padding-right: 5px;
 }
 
-.btn-style {
+/* .btn-style {
     width: 258px;
     height: 45px;
     border: none;
     border-radius: 5px;
     margin-top: 20px;
     background-color: var(--accent);
-}
+} */
 
 .container_labels {
     margin-top: 15px;
     font-size: var(--etiquetas);
-    width: 413px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .container_btn {
