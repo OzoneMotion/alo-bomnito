@@ -1,4 +1,20 @@
-import productos from '../productos2.json' assert {type: 'json'};
+// import productos from '../productos2.json' assert {type: 'json'};
+
+const obtenerProductos = async () => {
+    try {
+        // Cambiar la url con el endpoint final para productos
+        const respuesta = await fetch('http://localhost:3000/productos');
+        if (!respuesta.ok) {
+            throw new Error('Error al obtener los productos. Código de estado: ' + respuesta.status);
+        }
+        const productos = await respuesta.json();
+        return productos;
+    } catch (error) {
+        console.error('Error:', error.message);
+    }
+};
+
+const productos = await obtenerProductos();
 
 let productosID = document.querySelector('.main-container');
 const modContenedor = document.querySelector('.mod-contenedor');
