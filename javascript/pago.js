@@ -56,7 +56,7 @@ function modificador(regla) {
             precioMov.textContent = "$" + producto.precio + ".00 MXN";
             productContainer.insertBefore(precioMov,nodoReferencia);
             precioMov.style.position = "relative";
-            precioMov.style.left = "50px";
+            precioMov.style.left = "30px";
 
             let nodoReferencia2 = document.getElementById(`precioMovil${index}`);
             let cantidad = document.createElement('p');
@@ -64,7 +64,7 @@ function modificador(regla) {
             cantidad.textContent = producto.cantidad;
             productContainer.insertBefore(cantidad, nodoReferencia2);
             cantidad.style.position = "relative";
-            cantidad.style.left = "130px";
+            cantidad.style.left = "80px";
         } else {
             if(document.getElementById(`precioMovil${index}`)){
                 document.getElementById(`precioMovil${index}`).remove();
@@ -83,7 +83,7 @@ function agregarProductosCarrito() {
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo">
           <div class="row-product" id="row-product">
-            <img class="imagenes"src="${producto.imagenes[0].url}">
+            <img class="imagenes" src="${producto.imagenes[0].url}">
             <div class="product-info" id="productContainer${index}">
               <p>${producto.nombre}</p>
               <p id="marca${index}">${producto.marca}</p>

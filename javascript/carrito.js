@@ -95,9 +95,9 @@ function eliminarProductosCarrito(index){
   debugger;
 }
 
-function productoParaEliminar(producto) {
-  return producto.nombre === "cherries";
-}
+// function productoParaEliminar(producto) {
+//   return producto.nombre === "cherries";
+// }
 
 function agregarProductosCarrito(productos) {
     // let p = [];

@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: fit-content;
+    width: fit-content ;
 }
 
 .small-container {
@@ -115,6 +115,7 @@ input:focus {
 #subtotal{
     column-count: 2;
 }
+
 .total,
 .total-price {
     display: flex;
@@ -215,7 +216,7 @@ p {
 /* Responsive Tablet*/
 @media screen and (min-width:1200px) and (max-width: 1440px) {
     .cart-info {
-        height: 17.125rem;
+        height: 17rem;
     }
 
     .imagenes {
@@ -232,7 +233,8 @@ p {
 /* responsive  Mobile*/
 @media only screen and (min-width:350px) and (max-width: 1200px) {
     .total-price {
-        margin-left: 25%;
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: 0;
     }
 
@@ -247,8 +249,10 @@ p {
     .row-product {
         margin-top: 20px;
     }
+
+    /*aqui se rompe al poner la clase de la imagen*/ 
     .imagenes,
-    .row-product  {
+    .row-product img{
         width: 140px;
         height: 140px;
         margin: 0 24px 24px 24px;
