@@ -82,18 +82,34 @@
 }
 
 /*--- ventana flotante ---*/
-
-.modal-content {
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    padding: 1px;
+    border: 1px solid var(--backgroud);
     height: 34rem;
     width: 21rem;
     text-align: center;
+    border-radius: 10px;
+    /* border-radius: 5px;*/
+}
+
+.cerrar_flotante{
     position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary);
+    border: none;
 }
 
 .modal-title {
     color: var(--text);
     font-family: var(--fontSubtitulo);
     font-size: var(--sizeSubtituloDesk-Tab);
+    margin-top: 30px;
     /* text-align: center; */
 }
 
@@ -102,9 +118,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--backgroud);
-    border: solid;
-    border-color: var(--backgroud);
 }
 
 .logoModal {
@@ -114,34 +127,30 @@
 }
 
 .modal-body {
-    background-color: var(--backgroud);
-    border: solid;
-    border-color: var(--backgroud);
     color: var(--text);
     font-size: var(--sizeSubtituloDesk-Tab);
     font-family: var(--fontSubtitulo);
     text-align: center;
+    margin: 15px;
 }
 
 /*boton compras*/
 .modal-footer {
-    background-color: var(--backgroud);
     display: flow-root;
-    border: solid;
-    border-color: var(--backgroud);
+   
 }
 
 .compras {
-    width: var(--btnLarge-w);
+    width: var(--btnMedium-w);
     height: var(--btns-h);
     background-color: var(--accent);
     border: none;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
-    color: var(--backgroud);
-    border-radius: 0.3rem;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-    margin-top: 2rem;
+    color: var(--background);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-top: 24px 
 }
 
 .resultados {
@@ -220,64 +229,75 @@
     }
 
     /*--- ventana flotante ---*/
-    .modal-content {
-        height: 42rem;
-        width: 34rem;
+    #modal{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--primary);
+        padding: 1px;
+        border: 1px solid var(--backgroud);
+        height: 34rem;
+        width: 21rem;
         text-align: center;
+        border-radius: 10px;
+        /* border-radius: 5px;*/
     }
-
+    
+    .cerrar_flotante{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: var(--primary);
+        border: none;
+    }
+    
     .modal-title {
         color: var(--text);
         font-family: var(--fontSubtitulo);
         font-size: var(--sizeSubtituloDesk-Tab);
-        text-align: center;
+        margin-top: 50px;
+        /* text-align: center; */
     }
-
+    
     .modal-header {
-        height: 27rem;
+        height: 17rem;
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        background-color: var(--backgroud);
-        border: solid;
-        border-color: var(--backgroud);
+        align-items: center;
     }
-
+    
     .logoModal {
-        width: 16rem;
-        height: 16rem;
+        width: 10rem;
+        height: 10rem;
         border-radius: 100%;
     }
-
+    
     .modal-body {
-        background-color: var(--backgroud);
-        border: solid;
-        border-color: var(--backgroud);
         color: var(--text);
         font-size: var(--sizeSubtituloDesk-Tab);
         font-family: var(--fontSubtitulo);
         text-align: center;
+        margin: 15px;
     }
-
+    
     /*boton compras*/
     .modal-footer {
-        background-color: var(--backgroud);
         display: flow-root;
-        border: solid;
-        border-color: var(--backgroud);
+       
     }
-
+    
     .compras {
-        width: var(--btnLarge-w);
+        width: var(--btnMedium-w);
         height: var(--btns-h);
         background-color: var(--accent);
         border: none;
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 700;
-        color: var(--backgroud);
-        border-radius: 0.3rem;
-        box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-        margin-top: 2rem;
+        color: var(--background);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        margin-top: 24px 
     }
 
     .resultados {

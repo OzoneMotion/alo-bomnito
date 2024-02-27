@@ -79,11 +79,11 @@ function modificador(regla) {
 function agregarProductosCarrito() {
     const wrapper = document.getElementById('contenedorVacio');
     PRODUCTOS.forEach((producto, index)=> {
-        
+         console.log(producto)
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo">
           <div class="row-product" id="row-product">
-            <img class="imagenes"src="${producto.imagen.imagen1}">
+            <img class="imagenes"src="${producto.imagenes[0].url}">
             <div class="product-info" id="productContainer${index}">
               <p>${producto.nombre}</p>
               <p id="marca${index}">${producto.marca}</p>

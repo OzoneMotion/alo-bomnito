@@ -105,11 +105,11 @@ function agregarProductosCarrito(productos) {
     //console.log(p);
     const wrapper = document.getElementById('contenedorVacio');
     productos.forEach((producto, index)=> {
-        
+          console.log(producto);
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo${index}">
           <div class="row-product" id="row-product">
-            <img class="imagenes" src="${producto.imagen.imagen1}">
+            <img class="imagenes" src="${producto.imagenes[0].url}">
             <div class="product-info" id="productContainer${index}">
               <p id="productName${index}" value="${producto.nombre}">${producto.nombre}</p>
               <p>${producto.marca}</p>
