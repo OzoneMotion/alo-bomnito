@@ -5,17 +5,16 @@ productosContainer.innerHTML += `<div class="producto frase">
                 <p> ¡Tod@s merecen sentirse bien en su propia piel!</p>
             </div>`;
 
-// data = data.filter(element => element.piel === "seca")
-data.forEach((element, index) => {
+// const seca = data.filter(element => element.piel === "seca")
+// const mixta = data.filter(element => element.piel === "mixta")
 
+data.forEach((element, index) => {
   let imagen1 = element.imagenes[0];
   let imagenUrl1 = imagen1 ? imagen1.url : '';
-
   let imagen2 = element.imagenes[1];
-  let imagenUrl2 = imagen2 ? imagen1.url : '';
-
+  let imagenUrl2 = imagen2 ? imagen2.url : '';
   let imagen3 = element.imagenes[2];
-  let imagenUrl3 = imagen3 ? imagen1.url : '';
+  let imagenUrl3 = imagen3 ? imagen3.url : '';
 
   //Crear la card con el html correspondiente
   productosContainer.innerHTML += `
