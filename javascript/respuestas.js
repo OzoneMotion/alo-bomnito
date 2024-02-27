@@ -112,7 +112,7 @@ function initModal(text){
 function irCompras(){
     let piel = tipo;
     console.log(piel)
-    window.location.href = `${tipo}.html`
+    window.location.href = `productos.html`
 }
 
 
