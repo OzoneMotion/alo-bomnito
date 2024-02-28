@@ -53,8 +53,8 @@
     {
       "nombre": "Hyaluronic Vit. B5",
       "marca": "Dibel",
-      "id": 1,
-      "piel": "normal",
+      "id_producto": 1,
+      "tipo_piel": "normal",
       "contenido": "30 ml",
       "descripcion": "Este suero está enriquecido con Ácido Hialurónico de bajo peso molecular, activo que penetra en las capas más profundas de la piel, proporcionando una profunda humectación, ayudando a mejorar la firmeza de la misma. Con la finalidad de reforzar sus dotes hidratantes, también incluye Ácido Hialurónico de alto peso molecular, componente encargado de crear una fina película protectora en la superficie de la piel, con la finalidad de mantener una suave textura y elasticidad.",
       "tabla": [
@@ -83,9 +83,9 @@
           "funcion": "Proporciona humedad a la piel y crea una sensación fresca."
         }
       ],
-      "uso": "Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
+      "modo_uso": "Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
       "precio": 670.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -103,8 +103,8 @@
     {
       "nombre": "VIT C Booster Serum",
       "marca": "Dibel",
-      "id": 2,
-      "piel": "normal",
+      "id_producto": 2,
+      "tipo_piel": "normal",
       "contenido": "30 ml",
       "descripcion": "La singularidad del nuevo VIT C Booster Serum viene dada por su textura ligera que evita dejar sensación grasa, sin olor y de rápida absorción, logrando revitalizar e iluminar la piel, previniendo la sensación de sequedad gracias a sus increíbles dotes hidratantes.",
       "tabla": [
@@ -129,9 +129,9 @@
           "funcion": "Activo que proporciona una hidratación duradera favoreciendo la regeneración de la piel."
         }
       ],
-      "uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
+      "modo_uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
       "precio": 950.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -149,8 +149,8 @@
     {
       "nombre": "SOIE Couleur",
       "marca": "SunVeil",
-      "id": 3,
-      "piel": "normal",
+      "id_producto": 3,
+      "tipo_piel": "normal",
       "contenido": "50 ml",
       "descripcion": "SunVeil SOIE Couleur combina una textura sedosa con la protección contra los rayos solares. Contiene filtros solares físicos que no se absorben, ya que forman una capa superior en la piel, la cual actúa como un espejo desviando la luz UV. Además, su textura elegante y delicada proporcionará sedosidad a la piel.",
       "tabla": [
@@ -171,9 +171,9 @@
           "funcion": "Aceite natural ligero que proporciona emoliencia e hidratación."
         }
       ],
-      "uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol. Reaplique después de transpirar, nadar o secarse. Se recomienda reaplicar cada 3 o 4 horas.",
+      "modo_uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol. Reaplique después de transpirar, nadar o secarse. Se recomienda reaplicar cada 3 o 4 horas.",
       "precio": 680.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -191,8 +191,8 @@
     {
       "nombre": "Gentle Skin Cleanser",
       "marca": "Réve",
-      "id": 4,
-      "piel": "mixta",
+      "id_producto": 4,
+      "tipo_piel": "mixta",
       "contenido": "240 ml",
       "descripcion": "El suave y delicado gel dermolimpiador Neudermic Gentle Skin Cleanser es la opción ideal para todo tipo de pieles, además de que su mezcla de activos se ha elegido para ser tolerada hasta por las pieles más sensibles. Este gel tiene la función de limpiar con delicadeza, retirando la suciedad sin resecar ni irritar, respetando la capa hidrolipídica y el equilibrio natural de la piel por su pH. Puede ser utilizado tanto en el rostro como en el cuerpo.",
       "tabla": [
@@ -209,9 +209,9 @@
           "funcion": "Contiene propiedades calmantes."
         }
       ],
-      "uso": "Aplique por la mañana y noche sobre la piel húmeda. Masajee con suaves movimientos circulares. Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
+      "modo_uso": "Aplique por la mañana y noche sobre la piel húmeda. Masajee con suaves movimientos circulares. Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
       "precio": 300.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -229,8 +229,8 @@
     {
       "nombre": "Omega Water Cream",
       "marca": "The inkey list",
-      "id": 5,
-      "piel": "mixta",
+      "id_producto": 5,
+      "tipo_piel": "mixta",
       "contenido": "50 ml",
       "descripcion": "Gel humectante ligero que hidrata instantáneamente sin dejar la piel grasosa. Contiene glicerina, complejo de ácidos grasos, niacinamida y betaína que trabajan juntos para brindar una hidratación duradera, controlan los niveles de grasa en el rostro y ayudan a emparejar el tono de la piel.",
       "tabla": [
@@ -247,9 +247,9 @@
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
       ],
-      "uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
+      "modo_uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
       "precio": 285.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -267,8 +267,8 @@
     {
       "nombre": "Awaking Klotho",
       "marca": "Nudaest",
-      "id": 6,
-      "piel": "mixta",
+      "id_producto": 6,
+      "tipo_piel": "mixta",
       "contenido": "30 gr",
       "descripcion": "Ayuda a estimular las células para reparar daños causado por la edad y factores externos como contaminación y luz.",
       "tabla": [
@@ -285,9 +285,9 @@
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
       ],
-      "uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
+      "modo_uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
       "precio": 440.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -305,8 +305,8 @@
     {
       "nombre": "Puro Vera",
       "marca": "Nudaest",
-      "id": 7,
-      "piel": "grasa",
+      "id_producto": 7,
+      "tipo_piel": "grasa",
       "contenido": "75 gr",
       "descripcion": "Limpiador natural de rostro con extracto de Aloe Vera y suaves esferas de carbón activado, que al romperse hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel. Piel más equilibrada desde la primera aplicación. Contiene potentes extractos de raíces, semillas y frutos antioxidantes, antiinflamatorios, regenerativos. Es una formulación que limpia a profundidad sin sensación de sequedad.",
       "tabla": [
@@ -323,9 +323,9 @@
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
       ],
-      "uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón. Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
+      "modo_uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón. Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
       "precio": 300.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -343,8 +343,8 @@
     {
       "nombre": "3 Blocks",
       "marca": "Nudaest",
-      "id": 8,
-      "piel": "grasa",
+      "id_producto": 8,
+      "tipo_piel": "grasa",
       "contenido": "29 gr",
       "descripcion": "Fórmula avanzada para quienes están en constante exposición a la luz de dispositivos electrónicos y luz artificial.Protege de partículas contaminantes y radicales libres presentes en el medio ambiente. Evita la aparición de manchas y de envejecimiento prematuro en la piel.",
       "tabla": [
@@ -361,9 +361,9 @@
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
       ],
-      "uso": "Úsalo como último paso a tu rutina de belleza. Esparce en el rostro suavemente y con pequeños toques hasta su total absorción. Mantén el producto en un lugar fresco.",
+      "modo_uso": "Úsalo como último paso a tu rutina de belleza. Esparce en el rostro suavemente y con pequeños toques hasta su total absorción. Mantén el producto en un lugar fresco.",
       "precio": 360.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -381,8 +381,8 @@
     {
       "nombre": "Oxidermic Foamer G5",
       "marca": "Réve",
-      "id": 9,
-      "piel": "grasa",
+      "id_producto": 9,
+      "tipo_piel": "grasa",
       "contenido": "200 ml",
       "descripcion": "El dermolimpiador Oxidermic Foamer G5 está enriquecido con componentes naturales como el Extracto de Corteza de Salix alba, mismo que funciona como un excelente exfoliante, devolviendo la vitalidad y luminosidad facial. También contiene Extracto de Opuntia Ficus-indica, activo encargado de brindar suavidad y calmar irritaciones en el rostro, dando propiedades hidratantes que, a su vez, dejan una agradable sensación en la piel.",
       "tabla": [
@@ -407,9 +407,9 @@
           "funcion": "Ayuda a regular la producción de sebo."
         }
       ],
-      "uso": "Humedezca su rostro y aplique la espuma. Permita actuar al producto de 30 segundos hasta 1 minuto. Enjuague con abundante agua. Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
+      "modo_uso": "Humedezca su rostro y aplique la espuma. Permita actuar al producto de 30 segundos hasta 1 minuto. Enjuague con abundante agua. Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
       "precio": 340.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -427,8 +427,8 @@
     {
       "nombre": "Dibel Beauté",
       "marca": "Dibel",
-      "id": 10,
-      "piel": "seca",
+      "id_producto": 10,
+      "tipo_piel": "seca",
       "contenido": "50 ml",
       "descripcion": "Esta crema contiene ingredientes activos para ayudar a la piel a brin-dar una profunda hidratación y lograr un efecto sedoso con poder antioxidante, brindando suavidad, elasticidad y firmeza.",
       "tabla": [
@@ -465,9 +465,9 @@
           "funcion": "Poderoso hidratante rico en ácidos grasos insaturados, es un regenerador celular natural con grandes propiedades suavizantes y reestructurantes."
         }
       ],
-      "uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
+      "modo_uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
       "precio": 840.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -485,8 +485,8 @@
     {
       "nombre": "Hydrating Body Cream",
       "marca": "Réve",
-      "id": 11,
-      "piel": "seca",
+      "id_producto": 11,
+      "tipo_piel": "seca",
       "contenido": "360 ml",
       "descripcion": "Su fórmula contiene Fibra de Avena, ingrediente clave con propiedades suavizantes, relajantes, hidratantes y emolientes. Uno de los mayores beneficios que brinda a la piel es que evita la deshidratación de la misma, manteniendo la barrera hidrolipídica estable.",
       "tabla": [
@@ -507,9 +507,9 @@
           "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible."
         }
       ],
-      "uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
+      "modo_uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
       "precio": 640.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
@@ -527,8 +527,8 @@
     {
       "nombre": "Serum Luminiscente",
       "marca": "Dibel",
-      "id": 12,
-      "piel": "seca",
+      "id_producto": 12,
+      "tipo_piel": "seca",
       "contenido": "30 ml",
       "descripcion": "Dibel Serum Luminiscente, el aliado que ayuda a recuperar la luminosidad y energía del rostro. Este suero es una magnifica opción de complemento como cuidado diario gracias a su alto valor nutritivo de absorción rápida que no deja sensación grasa, ideal para ser la primera elección de las pieles jóvenes o el complemento antiedad para pieles maduras.",
       "tabla": [
@@ -553,9 +553,9 @@
           "funcion": "Ayuda a suavizar y calmar la irritación de la piel."
         }
       ],
-      "uso": "Sobre rostro limpio, aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
+      "modo_uso": "Sobre rostro limpio, aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
       "precio": 550.00,
-      "imagenes": [
+      "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"

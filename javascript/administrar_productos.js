@@ -15,6 +15,7 @@ const obtenerProductos = async () => {
 };
 
 const productos = await obtenerProductos();
+console.log(productos);
 
 let productosID = document.querySelector('.main-container');
 const modContenedor = document.querySelector('.mod-contenedor');

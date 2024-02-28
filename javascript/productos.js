@@ -52,7 +52,7 @@ data.forEach((element, index) => {
 
 document.querySelectorAll('.addElement').forEach(item => {
   item.addEventListener('click', function () {
-    let indexProducto = parseInt(item.id_producto)
+    let indexProducto = parseInt(item.id)
     const producto = data.find(producto => producto.id_producto === indexProducto);
     agregarAlCarrito(producto);
   });
@@ -75,7 +75,7 @@ const agregarAlCarrito = (producto) => {
 
 document.querySelectorAll('.producto__nombre').forEach(item => {
   item.addEventListener('click', function () {
-    let indexProducto = parseInt(item.id_producto)
+    let indexProducto = parseInt(item.id);
     const producto = data.find(producto => producto.id_producto === indexProducto);
 
     crearProductoModal(producto, () => {
