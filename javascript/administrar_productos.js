@@ -15,30 +15,28 @@ const obtenerProductos = async () => {
 };
 
 const productos = await obtenerProductos();
-console.log(productos);
-
 let productosID = document.querySelector('.main-container');
 const modContenedor = document.querySelector('.mod-contenedor');
 
 const recuperarIngredientesProducto = (productos, idProducto) => {
-    let ingrendientes = "";
+    let ingredientes = "";
     const jsonProducto = productos.find(producto => producto.id_producto === idProducto);
-
-    jsonProducto.tabla.forEach(elemento => {
-        ingrendientes += `<tr>
+    jsonProducto.ingrediente.forEach(elemento => {
+        ingredientes += `<tr>
                             <th class="tabl">${elemento.nombre}</th>
                             <th class="tabr">${elemento.funcion}</th>
                         </tr>`;
     });
 
-    return ingrendientes;
+    return ingredientes;
 }
 
 const recuperarImagenesProducto = (productos, idProducto) => {
     let imagenes = "";
-    const jsonProducto = productos.find(producto => producto.id === idProducto);
+    const jsonProducto = productos.find(producto => producto.id_producto === idProducto);
     if (jsonProducto && jsonProducto.imagenesProductos) {
         jsonProducto.imagenesProductos.forEach((imagen, index) => {
+
             // Agrega la clase 'active' solo si es la primera imagen
             const activeClass = index === 0 ? 'active' : '';
             imagenes += `<div class="carousel-item ${activeClass}">
@@ -115,7 +113,7 @@ productos.forEach(item => {
             <main class="main-producto-container">
                 <div class="tipo-piel-container">
                     <p class="etiqueta-producto">Tipo de piel</p>
-                    <p class="tipo-piel" id="tipo-piel-producto-${item.id_producto}">${item.piel}</p>
+                    <p class="tipo-piel" id="tipo-piel-producto-${item.id_producto}">${item.tipo_piel}</p>
                 </div>
                 <div class="precio-container">
                     <p class="etiqueta-producto">Precio</p>
@@ -238,7 +236,6 @@ abrirImgBtns.forEach(abrirImgBtn => {
         const idBtn = id.charAt(id.length - 1);
         const mod_cont = document.getElementById(`mod_cont-${idBtn}`);
         mod_cont.classList.add('show');
-        console.log(mod_cont);
     });
 });
 
