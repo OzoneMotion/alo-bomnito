@@ -3,7 +3,7 @@
 
 // Contador de Stock
 
-const PRODUCTOS = self.obtenerProductos();
+let PRODUCTOS = self.obtenerProductos();
 
 function clickME(index) {
     let elementosSeleccionados = parseInt(document.getElementById(`clicks${index}`).value);
@@ -27,6 +27,7 @@ function clickME2(index) {
  * para hacer operaciones de insercion dinamica de los elementos de html
  */
 this.inicio();
+
 
 /**
  * Funciona para dar inicio a la regla de mediaquery y agregar un listener para realizar 
@@ -92,7 +93,12 @@ function eliminarProductosCarrito(index){
   productosActualizados = productosActualizados.filter((producto) => producto.nombre != nombreDeProducto);
   localStorage.setItem('productosCarrito', JSON.stringify(productosActualizados));
   elementoEliminar.remove();
-  debugger;
+  PRODUCTOS = productosActualizados;
+  const element = document.getElementById("contenedorVacio");
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+  self.inicio();
 }
 
 // function productoParaEliminar(producto) {
@@ -105,7 +111,6 @@ function agregarProductosCarrito(productos) {
     //console.log(p);
     const wrapper = document.getElementById('contenedorVacio');
     productos.forEach((producto, index)=> {
-          console.log(producto);
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo${index}">
           <div class="row-product" id="row-product">
@@ -144,6 +149,7 @@ function inicio() {
    // const productos = self.obtenerProductos();
     self.agregarProductosCarrito(PRODUCTOS);
     self.controlDinamico(PRODUCTOS);
+    self.obtenerSubTotal();
 }
 
 function obtenerSubTotal() {
@@ -155,8 +161,8 @@ function obtenerSubTotal() {
     });
     
     //console.log('subtotal', subtotal);
-    let subTotal2 = document.getElementById("subTotal");
-    subTotal2.textContent = ( " $ " + subtotal +  ".00 MXN "); 
+    let subTotalActualizado = document.getElementById("subTotal");
+    subTotalActualizado.textContent = ( " $ " + subtotal +  ".00 MXN "); 
     const guardarLocal = window.localStorage;
     guardarLocal.setItem("subTotal", subtotal);
 }
@@ -172,4 +178,9 @@ const button = document.getElementById("procederPago")
   console.log(PRODUCTOS);
   localStorage.setItem('productosPago', JSON.stringify(PRODUCTOS));
   window.location.href = "carrito_de_pago.html";
+}
+
+function obtenerDatosSub(){
+  const inputSubtotal = document.getElementById("subTotal")
+  inputSubtotal.textContent = "$" + subtotal + ".00 MXN"
 }
