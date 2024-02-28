@@ -40,19 +40,19 @@ function resultado() {
     nota = p1 + p2 + p3 + p4 + p5 + p6;
     if (nota >= 6 && nota < 18) {
         this.initModal('Tu Bomnita piel es: </br>Normal');
-        return tipo = "normal";
+        //return tipo = "Normal";
     }
-    if (nota >= 18 && nota < 30) {
+    if (nota >= 18 && nota < 28) {
         this.initModal('Tu Bomnita piel es: </br>Seca');
-        return tipo = "normal", console.log(tipo);
+        //return tipo = "Seca", console.log(tipo);
     }
-    if (nota >= 30 && nota < 42) {
+    if (nota >= 28 && nota < 33) {
         this.initModal('Tu Bomnita piel es: </br>Grasa');
-        return tipo = "normal", console.log(tipo);
+        //return tipo = "Grasa", console.log(tipo);
     }
-    if (nota >= 42 && nota < 30) {
+    if( nota >= 34 ){
         this.initModal('Tu Bomnita piel es: </br>Mixta');
-        return tipo = "normal", console.log(tipo);
+        //return tipo = "Mixta", console.log(tipo);
     }
 
     // function irCompras(tipo){
@@ -112,7 +112,7 @@ function initModal(text){
 function irCompras(){
     let piel = tipo;
     console.log(piel)
-    window.location.href = `${tipo}.html`
+    window.location.href = `productos.html`
 }
 
 

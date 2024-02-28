@@ -117,7 +117,8 @@
     }
 
     #title {
-        font-size: var(--sizeTituloDesktop);
+        font-size: var(--sizeTituloDesk-tab);
+        font-family: var(--fontSubtitulo);
 
     }
 
@@ -159,7 +160,8 @@
     }
 
     #title {
-        font-size: var(--sizeTituloTablet);
+        font-size: var(--sizeTituloDesk-tab);
+        font-family: var(--fontTitulo);
     }
 
     /* Imagen*/

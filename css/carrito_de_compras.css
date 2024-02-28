@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: fit-content;
+    width: fit-content ;
 }
 
 .small-container {
@@ -115,6 +115,7 @@ input:focus {
 #subtotal{
     column-count: 2;
 }
+
 .total,
 .total-price {
     display: flex;
@@ -180,6 +181,14 @@ input:focus {
     /* margin-top: 2rem; */
 }
 
+.link{
+    color: var(--background);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+#btn-go-toPayment,
+#procederPago,
 #btn-delete {
     cursor: pointer;
     text-align: center;
@@ -187,8 +196,7 @@ input:focus {
     height: var(--btns-h);
     background-color: var(--accent);
     border: none;
-    font-size: 1rem;
-    font-weight: 700;
+    
     color: var(--background);
     border-radius: 0.3rem;
     box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
@@ -215,7 +223,7 @@ p {
 /* Responsive Tablet*/
 @media screen and (min-width:1200px) and (max-width: 1440px) {
     .cart-info {
-        height: 17.125rem;
+        height: 17rem;
     }
 
     .imagenes {
@@ -232,7 +240,8 @@ p {
 /* responsive  Mobile*/
 @media only screen and (min-width:350px) and (max-width: 1200px) {
     .total-price {
-        margin-left: 25%;
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: 0;
     }
 
@@ -247,8 +256,10 @@ p {
     .row-product {
         margin-top: 20px;
     }
+
+    /*aqui se rompe al poner la clase de la imagen*/ 
     .imagenes,
-    .row-product  {
+    .row-product img{
         width: 140px;
         height: 140px;
         margin: 0 24px 24px 24px;
