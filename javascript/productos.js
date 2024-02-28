@@ -167,7 +167,7 @@ const crearProductoModal = (producto, callback) => {
 const recuperarIngredProducto = (producto) => {
   let ingredientes = "";
 
-  producto.tabla.forEach(producto => {
+  producto.ingrediente.forEach(producto => {
     ingredientes += `<tr>
       <td>${producto.nombre}</td>
       <td>${producto.funcion}</td>
