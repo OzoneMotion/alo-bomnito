@@ -6,7 +6,7 @@ const inputPassword = document.getElementById('password');
 const btnSubmit = document.getElementById('btn-crear-submit');
 const elements = [...inputs];
 
-let regex ={
+let regex = {
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^(?=.*[!@#$%^&*()-_=+{};:,<.>]).{8,14}$/, // 8 a 14 numeros y con caracteres especiales.
 }
@@ -60,7 +60,7 @@ formInicio.addEventListener('submit', async (e) => {
 
     if (validations[name]) {
         inputValidation(validations[name], input, name);
-        if (name === 'password') { 
+        if (name === 'password') {
             validarPasswords();
         }
     }
@@ -68,72 +68,72 @@ formInicio.addEventListener('submit', async (e) => {
 
 elements.forEach((element) => {
     element.addEventListener('keyup', formNamesValidation);
-    element.addEventListener('blur', formNamesValidation);    
+    element.addEventListener('blur', formNamesValidation);
 });
 
 
-    const inputValidation = (regex, input, name) => {
-        const idElement = document.getElementById(`id-${name}`);
-        const iconElement = document.querySelector(`#id-${name} i`);
+const inputValidation = (regex, input, name) => {
+    const idElement = document.getElementById(`id-${name}`);
+    const iconElement = document.querySelector(`#id-${name} i`);
 
-        const feedbacEmptyElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-empty`);
-        const feedbacRegexElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-regex`);
-        // console.log(feedbacEmptyElement);
-    
-        if (input.value.trim() === "") {
-            feedbacEmptyElement.classList.add('invalid-feedbac-active');
-            feedbacRegexElement.classList.remove('invalid-feedbac-active');
-            names[name] = false;
-        } else if (!regex.test(input.value)) {
-            feedbacEmptyElement.classList.remove('invalid-feedbac-active');
-            feedbacRegexElement.classList.add('invalid-feedbac-active');
-            names[name] = false;
-        } else {
-            feedbacEmptyElement.classList.remove('invalid-feedbac-active');
-            feedbacRegexElement.classList.remove('invalid-feedbac-active');
-            names[name] = true;
-        }
-    
-        idElement.classList.toggle('input-text-container-incorrect', !names[name]);
-        idElement.classList.toggle('input-text-container-correct', names[name]);
-        iconElement.classList.toggle('fa-times-circle', !names[name]);
-        iconElement.classList.toggle('fa-check-circle', names[name]);
-    
-        btnSubmit.disabled = !Object.values(names).every(state => state);
-    }
-    //const email = document.querySelector('#emailId').value;
-    //const password = document.querySelector('#password').value;
+    const feedbacEmptyElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-empty`);
+    const feedbacRegexElement = document.querySelector(`#id-${name} .invalid-feedbac#${name}-regex`);
+    // console.log(feedbacEmptyElement);
 
-    //const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    
-    
-   let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
-   
-    if (!validarUsuario) {
-        mensajeError.style.display = 'block';
-        // return;
+    if (input.value.trim() === "") {
+        feedbacEmptyElement.classList.add('invalid-feedbac-active');
+        feedbacRegexElement.classList.remove('invalid-feedbac-active');
+        names[name] = false;
+    } else if (!regex.test(input.value)) {
+        feedbacEmptyElement.classList.remove('invalid-feedbac-active');
+        feedbacRegexElement.classList.add('invalid-feedbac-active');
+        names[name] = false;
     } else {
-        localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
-         window.location.href = 'index.html';
-     }
-    inputEmail.addEventListener('input', () => {
-      mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
-    });
+        feedbacEmptyElement.classList.remove('invalid-feedbac-active');
+        feedbacRegexElement.classList.remove('invalid-feedbac-active');
+        names[name] = true;
+    }
 
-    inputPassword.addEventListener('input', () => {
-       mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
-    });
+    idElement.classList.toggle('input-text-container-incorrect', !names[name]);
+    idElement.classList.toggle('input-text-container-correct', names[name]);
+    iconElement.classList.toggle('fa-times-circle', !names[name]);
+    iconElement.classList.toggle('fa-check-circle', names[name]);
+
+    btnSubmit.disabled = !Object.values(names).every(state => state);
+}
+//const email = document.querySelector('#emailId').value;
+//const password = document.querySelector('#password').value;
+
+//const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+
+let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
+
+if (!validarUsuario) {
+    mensajeError.style.display = 'block';
+    // return;
+} else {
+    localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
+    window.location.href = 'index.html';
+}
+inputEmail.addEventListener('input', () => {
+    mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
+});
+
+inputPassword.addEventListener('input', () => {
+    mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
+});
 
 // Función para obtener los datos del archivo JSON
 let getData = async () => {
     try {
-        const response = await fetch("http://localhost:3000/users", { 
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
+        const response = await fetch("http://localhost:3000/users", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
             }
         });
-        console.log (response);
+        console.log(response);
         if (response.ok) {
             return await response.json();
         } else {
