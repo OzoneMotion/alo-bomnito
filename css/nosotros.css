@@ -85,11 +85,11 @@ body {
 }
 
 /* navbar*/
-/* .img-logo {
+.img-logo {
   width: auto;
   height: auto;
 }
-
+/*
 .titulo {
   font-family: var(--subtitles-titles-font) !important;
   font-size: var(--title-size);
