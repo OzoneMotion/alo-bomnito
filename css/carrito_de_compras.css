@@ -181,6 +181,14 @@ input:focus {
     /* margin-top: 2rem; */
 }
 
+.link{
+    color: var(--background);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+#btn-go-toPayment,
+#procederPago,
 #btn-delete {
     cursor: pointer;
     text-align: center;
@@ -188,8 +196,7 @@ input:focus {
     height: var(--btns-h);
     background-color: var(--accent);
     border: none;
-    font-size: 1rem;
-    font-weight: 700;
+    
     color: var(--background);
     border-radius: 0.3rem;
     box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
