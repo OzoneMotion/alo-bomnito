@@ -1,0 +1,2 @@
+UPDATE imagenproducto
+SET url
