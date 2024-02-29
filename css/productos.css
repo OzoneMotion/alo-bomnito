@@ -591,6 +591,14 @@ td {
 /* MOBILE DOBLE CARD*/
 
 @media only screen and (min-width:320px) and (max-width:530px) {
+    .title-products {
+        margin-top: var(--marginTopBottom);
+        margin-bottom: 0rem;
+        font-family: var(--fontTitulo);
+        font-size: var(--sizeSubtituloMobile);
+        font-weight: bold;
+    }
+
     .productos-container {
         grid-template-columns: repeat(auto-fill, minmax(var(--min-width-card), var(--max-width-card-mobile)));
         gap: 1rem;

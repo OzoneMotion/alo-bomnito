@@ -1,18 +1,38 @@
-import data from '../productos2.json' assert {type: 'json'}
+
+
+const obtenerProductos = async () => {
+  try {
+    // Cambiar la url con el endpoint final para productos
+    const respuesta = await fetch('http://localhost:3000/productos');
+    if (!respuesta.ok) {
+      throw new Error('Error al obtener los productos. Código de estado: ' + respuesta.status);
+    }
+    const productos = await respuesta.json();
+    return productos;
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+};
+
+const data = await obtenerProductos();
 
 let productosContainer = document.querySelector('.productos-container');
 productosContainer.innerHTML += `<div class="producto frase">
                 <p> ¡Tod@s merecen sentirse bien en su propia piel!</p>
             </div>`;
 
-const grasa = data.filter(element => element.piel === "grasa")
+// const seca = data.filter(element => element.piel === "seca")
+// const mixta = data.filter(element => element.piel === "mixta")
 
-grasa.forEach((element, index) => {
-  let imagen1 = element.imagenes[0];
+const pielGrasa = data.filter(element => element.tipo_piel === "grasa");
+
+
+pielGrasa.forEach((element, index) => {
+  let imagen1 = element.imagenesProductos[0];
   let imagenUrl1 = imagen1 ? imagen1.url : '';
-  let imagen2 = element.imagenes[1];
+  let imagen2 = element.imagenesProductos[1];
   let imagenUrl2 = imagen2 ? imagen2.url : '';
-  let imagen3 = element.imagenes[2];
+  let imagen3 = element.imagenesProductos[2];
   let imagenUrl3 = imagen3 ? imagen3.url : '';
 
   //Crear la card con el html correspondiente
@@ -22,12 +42,12 @@ grasa.forEach((element, index) => {
       <img class="img-card" alt="Cambiar imagen"  onmouseout="this.src='${imagenUrl1}';" onmouseover="this.src='${imagenUrl2}';" src="${imagenUrl3}" />
       </div>
       <div class="producto__info">
-        <p class="producto__nombre" id="${element.id}">${element.nombre}</p>
+        <p class="producto__nombre" id="${element.id_producto}">${element.nombre}</p>
         <p class="producto__marca" data-index="${index}">${element.marca}</p>
         <p class="producto__contenido">${element.contenido}</p>
         <div class="producto__agregar">
           <p class="producto__precio">$${element.precio}</p>
-          <div class="addElement" id="${element.id}"><i class="fa-solid fa-plus" id="icon-card"></i></div>
+          <div class="addElement" id="${element.id_producto}"><i class="fa-solid fa-plus" id="icon-card"></i></div>
         </div>
       </div>
     </div>`
@@ -36,7 +56,7 @@ grasa.forEach((element, index) => {
 document.querySelectorAll('.addElement').forEach(item => {
   item.addEventListener('click', function () {
     let indexProducto = parseInt(item.id)
-    const producto = grasa.find(producto => producto.id === indexProducto);
+    const producto = data.find(producto => producto.id_producto === indexProducto);
     agregarAlCarrito(producto);
   });
 });
@@ -47,8 +67,8 @@ const agregarAlCarrito = (producto) => {
     "nombre": producto.nombre,
     "marca": producto.marca,
     "precio": producto.precio,
-    "imagenes": producto.imagenes,
-    "cantidad": 1
+    "imagenesProductos": producto.imagenesProductos,
+    "cantidad_existencia": 1
   }
   const productosCarrito = JSON.parse(localStorage.getItem('productosCarrito')) || []
   productosCarrito.push(datosProducto)
@@ -58,11 +78,11 @@ const agregarAlCarrito = (producto) => {
 
 document.querySelectorAll('.producto__nombre').forEach(item => {
   item.addEventListener('click', function () {
-    let indexProducto = parseInt(item.id)
-    const producto = grasa.find(producto => producto.id === indexProducto);
+    let indexProducto = parseInt(item.id);
+    const producto = data.find(producto => producto.id_producto === indexProducto);
 
     crearProductoModal(producto, () => {
-      document.getElementById(`add-car-${producto.id}`).addEventListener('click', () => {
+      document.getElementById(`add-car-${producto.id_producto}`).addEventListener('click', () => {
         agregarAlCarrito(producto);
       });
     });
@@ -81,13 +101,13 @@ let tarjetaIndicaciones = document.querySelector('#tarjetaIndicaciones');
 let tarjetaIngredientes = document.querySelector('#tarjetaIngredientes');
 
 const crearProductoModal = (producto, callback) => {
-  let imagen1 = producto.imagenes[0];
+  let imagen1 = producto.imagenesProductos[0];
   let imagenUrl1 = imagen1 ? imagen1.url : '';
 
-  let imagen2 = producto.imagenes[1];
+  let imagen2 = producto.imagenesProductos[1];
   let imagenUrl2 = imagen2 ? imagen2.url : '';
 
-  let imagen3 = producto.imagenes[2];
+  let imagen3 = producto.imagenesProductos[2];
   let imagenUrl3 = imagen3 ? imagen3.url : '';
 
   img.innerHTML = `<div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -123,14 +143,14 @@ const crearProductoModal = (producto, callback) => {
   <p class="parrafo">${producto.contenido}</p>
   <p class="precio parrafo">$${producto.precio}.00</p>
   <div class="button-carrito">
-  <button id="add-car-${producto.id}" class="add-car">Agregar al carrito</button>
+  <button id="add-car-${producto.id_producto}" class="add-car">Agregar al carrito</button>
   </div>`;
 
   tarjetaDescripcion.innerHTML =
     `<p class="parrafo">${producto.descripcion}</p>`;
 
   tarjetaIndicaciones.innerHTML =
-    `<p class="parrafo">${producto.uso}</p>`;
+    `<p class="parrafo">${producto.modo_uso}</p>`;
 
   tarjetaIngredientes.innerHTML =
     recuperarIngredProducto(producto);
@@ -139,7 +159,7 @@ const crearProductoModal = (producto, callback) => {
     `<p class="parrafo">${producto.descripcion}</p>`;
 
   accordionIndica.innerHTML =
-    `<p class="parrafo">${producto.uso}</p>`;
+    `<p class="parrafo">${producto.modo_uso}</p>`;
 
   accordionIngred.innerHTML =
     recuperarIngredProducto(producto);
@@ -150,9 +170,9 @@ const crearProductoModal = (producto, callback) => {
 const recuperarIngredProducto = (producto) => {
   let ingredientes = "";
 
-  producto.tabla.forEach(producto => {
+  producto.ingrediente.forEach(producto => {
     ingredientes += `<tr>
-      <td>${producto.ingrediente}</td>
+      <td>${producto.nombre}</td>
       <td>${producto.funcion}</td>
   </tr>`;
   });
