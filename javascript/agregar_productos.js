@@ -2,7 +2,7 @@
 const file = document.getElementById('imagesInput');
 
 file.addEventListener('change', e => {
-
+    // console.log(e);
     const reader = new FileReader();
 
     reader.onload = function (e) {
@@ -10,7 +10,7 @@ file.addEventListener('change', e => {
     }
     reader.readAsDataURL(e.target.files[0])
 
-    console.log(e.target.files)
+    // console.log(e.target.files)
 
 })
 
@@ -44,8 +44,8 @@ const eliminar = document.getElementById("cancelar");
 const regex = {
     descripcionProducto: /^(?!\s*$)[\s\S]{1,300}$/,
     indicacionesUsoProducto: /^(?!\s*$)[\s\S]{1,300}$/,
-    contenidoProducto: /^[0-9]+(\.[0-9]{2})+ml|[0-9]+(\.[0-9]{2})+g$/,
-    precioProducto: /^([0-9]{1,3})+(\.[0-9]{2})|[0-9]+(\,[0-9]{1,3})+(\.[0-9]{2})$/,
+    contenidoProducto: /^[0-9]+ ml|[0-9]+ g$/,
+    precioProducto: /^([0-9]{1,3})+|[0-9]+(\,[0-9]{1,3})+$/,
     cantidadProducto: /^(0*[1-9][0-9]*|0+\.[0-9]*[1-9][0-9]*)$/,
     nombreProducto: /^(?!\s*$)[\s\S]{1,20}$/,
     marcaProducto: /^(?!\s*$)[\s\S]{1,20}$/
@@ -91,7 +91,7 @@ const inputValidation = (regex, input, name) => {
 
     if (input.value.trim() === "") {
         names[name] = false;
-        console.log(names[name])
+        // console.log(names[name])
         feedbackEmptyElement.classList.add('invalid-feedback-active');
         feedbackRegexElement.classList.remove('invalid-feedback-active');
         feddbackValidate.classList.remove('valid-feedback-active');
@@ -117,51 +117,107 @@ const inputValidation = (regex, input, name) => {
 
 }
 
-formValidation.addEventListener('submit', (e) => {
+formValidation.addEventListener('submit', async (e) => {
     e.preventDefault();
-    console.log(Object.values(names).every(state => state))
+    console.log(Object.values(names).every(state => state));
+    const imageInput = document.getElementById('imagesInput');
+    const files = imageInput.files;
 
-    const datos = new FormData(e.target);
+    // if (files.length > 0) {
+    //     try {
+    //         // const formData = new FormData();
+    //         for (const file of files) {
+    //             const fileName = file.name;
+    //             const base64Content = await readFileAsBase64(file);
+    //             const response = await uploadImageToGitHub(base64Content, fileName);
+    //             const data = await response.json();
+    //             const url = data.content.download_url;
+    //             console.log(url);
+    //         }
 
-    const datosCompletos = Object.fromEntries(datos.entries());
-    console.log(datosCompletos)
+    //         alert('Imágenes subidas exitosamente a GitHub.');
+    //     } catch (error) {
+    //         console.error('Error al subir la imagen:', error);
+    //     }
+    // } else {
+    //     alert('Selecciona una imagen antes de enviarla.');
+    // }
+
+    // console.log(e.target);
+
+
+    const datosProcesados = obtenerJsonDatos(e.target);
+    console.log(datosProcesados);
+});
+
+
+// eliminar.addEventListener('click', (e) => {
+//     console.log("hola")
+
+// })
+
+
+const obtenerJsonDatos = (eTarget) => {
+    const datos = new FormData(eTarget);
+    // const datos = new FormData(formValidation);
+    const datosProcesados = Object.fromEntries(datos.entries());
 
     if (Object.values(names).every(state => state)) {
         formValidation.reset();
     }
 
-});
-
-
-eliminar.addEventListener('click', (e) => {
-    console.log("hola")
-
-})
-
-
-const getData = () => {
-    const datos = new FormData(formValidation);
-    console.log(datos);
-    const datosProcesados = Object.fromEntries(datos.entries())
-
-    formValidation.reset();
     return datosProcesados;
 }
 
-const postData = async () => {
-    const newUser = getData();
+// const postData = async () => {
+//     const newUser = getData();
+
+//     try {
+//         const response = await fetch("http://localhost:3000/productos", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify(newUser)
+//         })
+//         if (response.ok) {
+//             const jsonResponse = await response.json()
+//         }
+//     }
+//     catch (error) { console.log(error) }
+// }
+
+async function readFileAsBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = (error) => reject(error);
+        reader.readAsDataURL(file);
+    });
+}
+
+async function uploadImageToGitHub(base64Content, fileName) {
+    const apiUrl = `https://api.github.com/repos/ChrisMHM/Github-API-test/contents/ImagenesProductos/${fileName}`;
+    const token = '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';
 
     try {
-        const response = await fetch("http://localhost:3000/productos", {
-            method: "POST",
+        const response = await fetch(apiUrl, {
+            method: 'PUT',
             headers: {
-                "Content-Type": "application/json"
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newUser)
-        })
-        if (response.ok) {
-            const jsonResponse = await response.json()
+            body: JSON.stringify({
+                message: 'Agregando mi imagen',
+                content: base64Content
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al subir la imagen a GitHub.');
         }
+        return response;
+    } catch (error) {
+        throw error;
     }
-    catch (error) { console.log(error) }
 }
