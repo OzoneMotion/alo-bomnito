@@ -171,6 +171,11 @@ const button = document.getElementById("procederPago")
 
 
  button.onclick = function procederPago() {
+  const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'))
+  if (!usuarioActivo) {
+    window.alert('Debes iniciar sesion para continuar')
+    return;
+  }
   PRODUCTOS.forEach((producto, index) => {
     producto.cantidad = parseInt(document.getElementById(`clicks${index}`).value);
   });
