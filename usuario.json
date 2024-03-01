@@ -1,6 +1,6 @@
 [
     {
-        "idCliente": 1,
+        "id_cliente": 1,
         "nombre": "Cheems",
         "correo": "cheems@alobomnito.com",
         "contrasenia": "1234Cheemsito",

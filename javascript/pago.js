@@ -83,7 +83,7 @@ function agregarProductosCarrito() {
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo">
           <div class="row-product" id="row-product">
-            <img class="imagenes" src="${producto.imagenes[0].url}">
+            <img class="imagenes" src="${producto.imagenesProductos[0]}">
             <div class="product-info" id="productContainer${index}">
               <p>${producto.nombre}</p>
               <p id="marca${index}">${producto.marca}</p>
@@ -118,7 +118,7 @@ function agregarProductosCarrito() {
 
 function obtenerDatosDePago() {
     const cantidadSubTotal = localStorage.getItem('subTotal');
-    const cantidadImpuestos = Math.floor(cantidadSubTotal * .16);
+    const cantidadImpuestos = Math.floor(cantidadSubTotal * .10);
 
     const inputSubtotal = document.getElementById('subTotal');
     const inputImpuesto = document.getElementById('Impuestos');

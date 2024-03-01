@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alo' Bomnito | Agregar producto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="../css/agregar_productos.css">
-    <script async defer src="../javascript/agregar_productos.js"></script>
+    <!-- <script async defer src="../javascript/agregar_productos.js"></script> -->
 </head>
 
 <body>
     <!-- INICIO DE NAVBAR -->
-    <nav id="navbar"></nav>
+    <!-- <nav id="navbar"></nav> -->
     <!-- FIN DE NAVBAR -->
 
     <!-- <main> -->
-    <div class="container">
+    <!-- <div class="container">
         <p class="tittle">Agregar producto</p>
         <form class="formato" id="validation" action="/">
             <div class="container1">
@@ -52,9 +52,9 @@
                                         type="file" multiple>
                                 </div>
                             </div>
-                            <!-- <div class="container_iDelete">
+                            <div class="container_iDelete">
                                 <span class="material-symbols-outlined">delete</span>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,8 +108,7 @@
                 <div class="container_labels" id="id-precioProducto">
                     <label for="precioProducto">Precio</label>
                     <div class="containerInput">
-                        <input value="precioProducto" name="precioProducto" id="precioProducto" type="text"
-                            placeholder=" $000.00">
+                        <input name="precioProducto" id="precioProducto" type="text" placeholder=" $000.00">
                         <div class="layoutIcons">
                             <span class="material-symbols-outlined">edit_square</span>
                         </div>
@@ -178,38 +177,7 @@
                     <div class="alerts-container">
                         <p class="invalid-feedback" id="tipoPiel-empty">Completa este campo.</p>
                     </div>
-                </div>
-                <div class="container_labels" id="id-ingredientes">
-                    <label for="selectorIngredientes">Ingredientes (6 max)</label>
-                    <div class="containerInput">
-                        <select class="containerInput" name="ingredientes" id="">
-                            <option>Selecciona una opción</option>
-                            <option value="ingrediente-1">Mixta</option>
-                            <option value="ingrediente-2">Normal</option>
-                            <option value="ingrediente-3">Seca</option>
-                            <option value="ingrediente-4">Grasa</option>
-                        </select>
-                    </div>
-                    <div class="alerts-container">
-                        <p class="invalid-feedback" id="tipoPiel-empty">Completa este campo.</p>
-                    </div>
-                </div>
-                <!-- <div class="container_labels" id="id-ingredientesProducto">
-                    <label>Ingredientes (maximo 6 principales, si no esta en la lista, omitalo por favor).</label>
-                    <div>
-                        <input name="ingredientees" type="email" list="emails" multiple>
-                        <datalist id="emails">
-                            <option value="first@example.com">
-                            <option value="second@example.com">
-                            <option value="third@example.com">
-                            <option value="last@example.com">
-                        </datalist>
-                    </div>
-                    <div class="alerts-container">
-                        <p class="invalid-feedback" id="id-ingredientesProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="id-ingredientesProducto-max">Solo puede seleccionar 6 ingredientes principales.</p>
-                    </div>
-                </div> -->
+                </div>               
                 <div class="container_btn">
                     <button class="btn-style btn-alo" id="cancelar">
                         Cancelar
@@ -220,17 +188,75 @@
                 </div>
             </div>
         </form>
+    </div> -->
+    <!-- <div class="container_labels" id="id-ingredientesProducto">
+        <label>Ingredientes (máximo 6).</label>
+        <div>
+            <div class="containerInput" id="miFormulario">
+                <label for="ingredientes">Selecciona un ingrediente:<label>
+            </div>
+            <div id="ingredientesNuevos"></div>
+            <input type="button" value="Agregar nuevo ingrediente" id="agregarIngrediente">
+        </div>
+        <div class="alerts-container">
+            <p class="invalid-feedback" id="id-ingredientesProducto-empty">Completa este campo.</p>
+            <p class="invalid-feedback" id="id-ingredientesProducto-max">Solo puede seleccionar 6
+                ingredientes principales.</p>
+        </div>
     </div>
+    <div id="modalNuevoIngrediente" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <form id="formularioNuevoIngrediente">
+                Campos para el nuevo ingrediente (nombre, función,etc.)
+                <label for="nombreIngrediente">Nombre de ingrediente<label>
+                        <input type="text" name="nombreIngrediente" id="nombreIngrediente">
+                        <label for="funcionIngrediente">Función del ingrediente<label>
+                                <textarea name="funcionIngrediente" id="funcionIngrediente" cols="30"
+                                    rows="10"></textarea>
+                                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div> -->
+    <div class="container_labels" id="id-ingredientesProducto">
+        <label>Ingredientes (maximo 6 principales, si no esta en la lista, omitalo por favor).</label>
+        <div>
+            <div class="containerInput" id="miFormulario">
+                <label for="ingredientes">Selecciona un ingrediente:</label>
+            </div>
+            <div id="ingredientesNuevos"></div>
+            <input type="button" value="Agregar nuevo ingrediente" id="agregarIngrediente">
+        </div>
+        <div class="alerts-container">
+            <p class="invalid-feedback" id="id-ingredientesProducto-empty">Completa este campo.</p>
+            <p class="invalid-feedback" id="id-ingredientesProducto-max">Solo puede seleccionar 6
+                ingredientes principales.</p>
+        </div>
+    </div>
+    <div id="modalNuevoIngrediente" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <form id="formularioNuevoIngrediente">
+                <!-- Campos para el nuevo ingrediente (nombre, función, etc.) -->
+                <label for="nombreIngrediente">Nombre de ingrediente</label>
+                <input type="text" name="nombreIngrediente" id="nombreIngrediente">
+                <label for="funcionIngrediente">Función del ingrediente</label>
+                <textarea name="funcionIngrediente" id="funcionIngrediente" cols="30" rows="10"></textarea>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../javascript/script.js"></script>
     <!-- </main> -->
 
-    <footer id="footer"></footer>
+    <!-- <footer id="footer"></footer>
 
     <script src="../javascript/footer.js"></script>
-    <script src="../javascript/navbar.js"></script>
+    <script src="../javascript/navbar.js"></script> -->
     <!-- //<script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 </body>
 
 </html>

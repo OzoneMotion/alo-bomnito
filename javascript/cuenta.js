@@ -30,7 +30,8 @@ async function mostrarContrasenia(usuario) {
 
 const getData = async () => {
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        // const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

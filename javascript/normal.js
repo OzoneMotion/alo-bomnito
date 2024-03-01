@@ -4,6 +4,7 @@ const obtenerProductos = async () => {
   try {
     // Cambiar la url con el endpoint final para productos
     const respuesta = await fetch('http://localhost:3000/productos');
+    // const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Productos');
     if (!respuesta.ok) {
       throw new Error('Error al obtener los productos. Código de estado: ' + respuesta.status);
     }
@@ -24,7 +25,7 @@ productosContainer.innerHTML += `<div class="producto frase">
 // const seca = data.filter(element => element.piel === "seca")
 // const mixta = data.filter(element => element.piel === "mixta")
 
-const pielNormal = data.filter(element => element.tipo_piel === "normal");
+const pielNormal = data.filter(element => element.tipo_piel === "Normal");
 
 
 pielNormal.forEach((element, index) => {

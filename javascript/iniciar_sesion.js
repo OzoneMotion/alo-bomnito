@@ -24,7 +24,7 @@ const getDataForm = () => {
     const datosProcesados = Object.fromEntries(datos.entries())
 
     formulario.reset();
-    debugger
+
     return datosProcesados;
 }
 
@@ -125,23 +125,33 @@ inputPassword.addEventListener('input', () => {
 });
 
 // Función para obtener los datos del archivo JSON
-let getData = async () => {
+async function getData() {
     try {
-        const response = await fetch("http://localhost:3000/users", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        console.log(response);
-        if (response.ok) {
-            return await response.json();
-        } else {
-            console.log('Error al obtener los datos del archivo db.json:', response.statusText);
-            return [];
-        }
+        // const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const users = await response.json();
+        return users;
     } catch (error) {
         console.log('Error:', error);
         return [];
     }
 };
+
+function login() {
+    const usuarioActual = document.getElementById('emailId').value;
+    const passwordActual = document.getElementById('password').value;
+    self.getData().then((users) => {
+        console.log('usuarios', users);
+        const misUsuarios = users;
+        let usuarioEncontrado = misUsuarios.find((usuario) => (usuario.correo === usuarioActual && usuario.contrasenia === passwordActual));
+        if (usuarioEncontrado) {
+            localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
+            window.location.href = "productos.html"
+        } else {
+            window.alert('credenciales invalidas, intenta de nuevo');
+        }
+    }, (err) => {
+        console.log('algo salio mal', err)
+    })
+    console.log('mis usuarios', misUsuarios);
+}
