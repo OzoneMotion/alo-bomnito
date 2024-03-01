@@ -107,22 +107,22 @@ const inputValidation = (regex, input, name) => {
 //const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 
-let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
+// let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
 
-if (!validarUsuario) {
-    mensajeError.style.display = 'block';
-    // return;
-} else {
-    localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
-    window.location.href = 'index.html';
-}
-inputEmail.addEventListener('input', () => {
-    mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
-});
+// if (!validarUsuario) {
+//     mensajeError.style.display = 'block';
+//     // return;
+// } else {
+//     localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
+//     window.location.href = 'index.html';
+// }
+// inputEmail.addEventListener('input', () => {
+//     mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
+// });
 
-inputPassword.addEventListener('input', () => {
-    mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
-});
+// inputPassword.addEventListener('input', () => {
+//     mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
+// });
 
 // Función para obtener los datos del archivo JSON
 async function getData() {
@@ -139,10 +139,6 @@ async function getData() {
 
 
 function login() {
-    const cuentitaIniciada = document.getElementById("cuentitaIniciada")
-    const cuentita = document.getElementById("cuentita")
-    const cerrarSesion = document.getElementById("cerrarSesion")
-    const cuentaIconDesktop = document.getElementById("cuentaIconDesktop")
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
@@ -150,22 +146,18 @@ function login() {
     // si hay usuarios en local storage
     if (usuariosLocales) {
         usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
+        
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-            console.log("hola")
-            cuentitaIniciada.classList.remove("desactive")
-            cuentita.classList.remove("desactive_desktop")
-            cerrarSesion.classList.remove("desactive")
-            cuentaIconDesktop.href = "./cuenta.html"
-            cuentitaIniciada.classList.add("desactive_desktop")
-            cuentita.classList.add("desactive")
-            if(cuentita.classList[1] == "desactive"){
-                //window.location = "index.html"
+            if (usuarioEncontrado.nameId == "ABC"){
+                window.location = "administrar_productos.html"
+            }else {
+                window.location = "index.html"
             }
-
         } else {
             window.alert('credenciales invalidas, intenta de nuevo');
         }
+
     } else {
         // si no hay usuarios en localStorage trata de obtenerlos de la api
         self.getData().then((users) => {
