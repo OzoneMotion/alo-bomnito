@@ -8,5 +8,11 @@
   },
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "keywords": []
+=======
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+>>>>>>> e73dc5ca0018feb51af8631de1302dea80521e10
 }
