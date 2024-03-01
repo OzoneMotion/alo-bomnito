@@ -150,12 +150,14 @@ function login() {
     // si hay usuarios en local storage
     if (usuariosLocales) {
         usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
+        
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
             window.location = "index.html"
         } else {
             window.alert('credenciales invalidas, intenta de nuevo');
         }
+        
     } else {
         // si no hay usuarios en localStorage trata de obtenerlos de la api
         self.getData().then((users) => {

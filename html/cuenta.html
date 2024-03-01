@@ -13,64 +13,67 @@
     <link rel="stylesheet" href="../css/cuenta.css">
 </head>
 
-<body onload="verificar()" onload="imprimirUsuario()">
-    <nav id="navbar"></nav>
+<body onload="imprimirUsuario()">
+    <div>
 
-    <div class="container principal">
-        <div class="co-principal">
-            <div class="tituloMicuenta">
-                <p>Mi cuenta</p>
-            </div>
-            <div class="contenedoresDeInfo">
-                <div class="infoUsuario">
-                    <p class="etiquetaUsuario">Nombre completo</p>
-                    <div class="inputUsuario">
-                        <p class="datoUsuario" id="nameId">
-                            Datos
-                        </p>
+        <nav id="navbar"></nav>
+        <div class="container principal">
+            <div class="co-principal">
+                <div class="tituloMicuenta">
+                    <p>Mi cuenta</p>
+                </div>
+                <div class="contenedoresDeInfo">
+                    <div class="infoUsuario">
+                        <p class="etiquetaUsuario">Nombre completo</p>
+                        <div class="inputUsuario">
+                            <p class="datoUsuario" id="nameId">
+                                Datos
+                            </p>
+                        </div>
+                    </div>
+                    <div class="infoUsuario">
+                        <p class="etiquetaUsuario">Correo</p>
+                        <div class="inputUsuario">
+                            <p class="datoUsuario" id="emailId">
+                                Datos
+                            </p>
+                        </div>
+                    </div>
+                    <div class="infoUsuario">
+                        <p class="etiquetaUsuario">Contraseña</p>
+                        <div class="inputUsuarioContra">
+                            <p class="datoUsuario" id="password">
+                            </p>
+                            <span class="material-symbols-outlined datoContra" onclick="Visibility()">
+                                visibility
+                            </span>
+                        </div>
+                    </div>
+                    <div class="infoUsuario">
+                        <p class="etiquetaUsuario">Direcccion</p>
+                        <div class="inputUsuario">
+                            <p class="datoUsuario">
+                                Generation, 3, Bomnitolandia, CH36
+                            </p>
+                        </div>
+                    </div>
+                    <div class="infoUsuario">
+                        <p class="etiquetaUsuario">Tarjeta de crédito</p>
+                        <div class="inputUsuario">
+                            <p class="datoUsuario">
+                                **** **** **** 2701
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="infoUsuario">
-                    <p class="etiquetaUsuario">Correo</p>
-                    <div class="inputUsuario">
-                        <p class="datoUsuario" id="emailId">
-                            Datos
-                        </p>
-                    </div>
+                <div>
+                    <p class="infoParaUsuario">La dirección y tarjeta de crédito de esta pagina son ficticios, con el
+                        propósito de simular una compra en linea. <br> Esta página es creada con fines educativos.</p>
                 </div>
-                <div class="infoUsuario">
-                    <p class="etiquetaUsuario">Contraseña</p>
-                    <div class="inputUsuarioContra">
-                        <p class="datoUsuario" id="password">
-                        </p>
-                        <span class="material-symbols-outlined datoContra" onclick="Visibility()">
-                            visibility
-                        </span>
-                    </div>
+                <div class="contenedorBtn">
+                    <button class="style_Btn" id="cerrarSes"><a class="nav-link" href="./index.html">Cerrar
+                            sesión</a></button>
                 </div>
-                <div class="infoUsuario">
-                    <p class="etiquetaUsuario">Direcccion</p>
-                    <div class="inputUsuario">
-                        <p class="datoUsuario">
-                            Generation, 3, Bomnitolandia, CH36
-                        </p>
-                    </div>
-                </div>
-                <div class="infoUsuario">
-                    <p class="etiquetaUsuario">Tarjeta de crédito</p>
-                    <div class="inputUsuario">
-                        <p class="datoUsuario">
-                            **** **** **** 2701
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="infoParaUsuario">La dirección y tarjeta de crédito de esta pagina son ficticios, con el
-                    propósito de simular una compra en linea. <br> Esta página es creada con fines educativos.</p>
-            </div>
-            <div class="contenedorBtn">
-                <button class="style_Btn">Cerrar sesión</button>
             </div>
         </div>
     </div>
