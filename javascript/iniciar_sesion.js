@@ -140,18 +140,35 @@ async function getData() {
 function login() {
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
-    self.getData().then((users) => {
-        console.log('usuarios', users);
-        const misUsuarios = users;
-        let usuarioEncontrado = misUsuarios.find((usuario) => (usuario.correo === usuarioActual && usuario.contrasenia === passwordActual));
+    const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
+
+    // si hay usuarios en local storage
+    if (usuariosLocales) {
+        usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
             window.location.href = "productos.html"
         } else {
             window.alert('credenciales invalidas, intenta de nuevo');
         }
-    }, (err) => {
-        console.log('algo salio mal', err)
-    })
-    console.log('mis usuarios', misUsuarios);
+    } else {
+        // si no hay usuarios en localStorage trata de obtenerlos de la api
+        self.getData().then((users) => {
+            console.log('usuarios', users);
+            const misUsuarios = users;
+            let usuarioEncontrado;
+             
+            usuarioEncontrado = misUsuarios.find((usuario) => (usuario.correo === usuarioActual && usuario.contrasenia === passwordActual));
+            
+            if (usuarioEncontrado) {
+                localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
+                window.location.href = "productos.html"
+            } else {
+                window.alert('credenciales invalidas, intenta de nuevo');
+            }
+        }, (err) => {
+            console.log('algo salio mal', err)
+        })
+    }
+
 }
