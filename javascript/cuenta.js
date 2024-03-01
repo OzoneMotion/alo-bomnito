@@ -30,7 +30,8 @@ async function mostrarContrasenia(usuario) {
 
 const getData = async () => {
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        // const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

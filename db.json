@@ -751,28 +751,10 @@
       "id": "07e9"
     },
     {
-      "id": "4505",
-      "id_ingrediente": 0,
-      "nombre": "Aceite",
-      "funcion": "Probando enviar datos"
-    },
-    {
-      "id": "9a9e",
-      "id_ingrediente": 0,
-      "nombre": "Cheems",
-      "funcion": "El más suavecito"
-    },
-    {
-      "id": "4b10",
-      "id_ingrediente": 0,
-      "nombre": "Cheems2",
-      "funcion": "Más suavecito"
-    },
-    {
-      "id": "5873",
-      "id_ingrediente": 0,
-      "nombre": "Cheems3",
-      "funcion": "Más suavecito"
+      "id": "49f7",
+      "id_ingrediente": 28,
+      "nombre": "Cheems4",
+      "funcion": "Prueba"
     }
   ]
 }

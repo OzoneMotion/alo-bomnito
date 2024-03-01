@@ -135,7 +135,7 @@ togglePasswordVisibility('password2', 'togglePassword2');
 //Almacenamiento de los datos introducidos en el formulario en la base de datos
 
 const formRegistro = document.querySelector('#validation-registro');
-formRegistro .addEventListener('submit', (e) =>{
+formRegistro.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const name = document.querySelector('#nameId').value
@@ -145,12 +145,12 @@ formRegistro .addEventListener('submit', (e) =>{
 
     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
     const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    if (usuarioRegistrado){
-    //redireccion a html de error de correo
+    if (usuarioRegistrado) {
+        //redireccion a html de error de correo
         return window.location.href = 'error_correo.html'
-    }   
+    }
 
-    Usuarios.push({nameId : name, emailId : email, password : password, password2 : password2})
+    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
     localStorage.setItem('usuarios', JSON.stringify(Usuarios))
     //redireccion a html de exito haz creado tu cuenta
     window.location.href = 'aviso_creado_cuenta.html'
@@ -174,7 +174,8 @@ const postData = async () => {
     const newUser = getData();
 
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        // const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
