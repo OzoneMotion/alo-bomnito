@@ -128,7 +128,7 @@ inputPassword.addEventListener('input', () => {
 async function getData() {
     try {
         // const response = await fetch("http://localhost:3000/users");
-        const response = await fetch("");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
         const users = await response.json();
         return users;
     } catch (error) {

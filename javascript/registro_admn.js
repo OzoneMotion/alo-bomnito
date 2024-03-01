@@ -150,7 +150,7 @@ const postData = async () => {
     console.log(newUser);
     try {
         // const response = await fetch("http://localhost:3000/admins", {
-        const response = await fetch("", {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
