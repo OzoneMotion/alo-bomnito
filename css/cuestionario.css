@@ -137,20 +137,15 @@
 /*boton compras*/
 .modal-footer {
     display: flow-root;
+    padding: 0px;
+    margin: 0px;
    
 }
 
 .compras {
-    width: var(--btnMedium-w);
-    height: var(--btns-h);
-    background-color: var(--accent);
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--backrgound);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    margin-top: 24px 
+   
+    margin-top: 0px;
+    padding: 0px 0px;
     
 }
 
