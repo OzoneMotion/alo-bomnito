@@ -54,26 +54,59 @@ function Visibility(){
 }
 
 function verificar() {
-    const cerrarSes = document.getElementById("cerrarSes")
-    const cerrarSesion = document.getElementById("cerrarSesion")
-    const cuentitaIniciada = document.getElementById("cuentitaIniciada")
-    const cuentita = document.getElementById("cuentita")
-    const cuentaIconDesktop = document.getElementById("cuentaIconDesktop")
+    function verificar() {
+        const cerrarSesion = document.getElementById("cerrarSesion")
+        const cuentitaIniciada = document.getElementById("cuentitaIniciada")
+        const cuentita = document.getElementById("cuentita")
+        const cuentaIconDesktop = document.getElementById("cuentaIconDesktop")
+        let admin = JSON.parse(localStorage.getItem('usuarioActivo'))
 
-    if (localStorage.getItem('usuarioActivo') == null){
-
-     } else{
-        cuentitaIniciada.classList.remove("desactive")
-        cuentita.classList.remove("desactive_desktop")
-        cerrarSesion.classList.remove("desactive")
-        cuentaIconDesktop.href = "./cuenta.html"
-        cuentitaIniciada.classList.add("desactive_desktop")
-        cuentita.classList.add("desactive")
-     }
-
-    cerrarSesion.addEventListener('click', () => {
-        localStorage.clear();
-    });
+        if (localStorage.getItem('usuarioActivo') == null){
+    
+        } else if (admin.nameId == "cheems"){
+            const cuentaIconMobile = document.getElementById("cuentaIconMobile")
+            const carritoIconMobile = document.getElementById("carritoIconMobile")
+            const homecito = document.getElementById("homecito")
+            const pielecitas = document.getElementById( "pielecitas" )
+            const conoce_TuPiel = document.getElementById( 'conoce_TuPiel' )
+            const nosotres = document.getElementById("nosotres")
+            const contactito = document.getElementById("contactito")
+            const carritoIconDesktop = document.getElementById("carritoIconDesktop")
+            const adminPage = document.getElementById("adminPage")
+    
+            cuentaIconMobile.classList.remove("desactive")
+            cuentaIconMobile.classList.add("desactive_desktop")
+            carritoIconMobile.classList.remove("desactive_desktop")
+            carritoIconMobile.classList.add("desactive")
+            homecito.classList.add("desactive")
+            pielecitas.classList.add("desactive")
+            conoce_TuPiel.classList.add("desactive")
+            cuentitaIniciada.classList.remove("desactive")
+            cuentitaIniciada.classList.add("desactive_desktop")
+            cuentita.classList.remove("desactive_desktop")
+            cuentita.classList.add("desactive")
+            nosotres.classList.add("desactive")
+            contactito.classList.add("desactive")
+            adminPage.classList.remove("desactive")
+            cerrarSesion.classList.remove("desactive")
+            cuentaIconDesktop.href = "./cuenta_admin.html"
+            carritoIconDesktop.classList.add("desactive")
+        } else {
+            cuentitaIniciada.classList.remove("desactive")
+            cuentita.classList.remove("desactive_desktop")
+            cerrarSesion.classList.remove("desactive")
+            cuentaIconDesktop.href = "./cuenta.html"
+            cuentitaIniciada.classList.add("desactive_desktop")
+            cuentita.classList.add("desactive")
+         }
+    
+        console.log(cerrarSesion)
+        cerrarSesion.addEventListener('click', () => {
+            localStorage.clear();
+            window.location = "index.html"
+        });
+    
+    }
     
     cerrarSes.addEventListener('click', () => {
         localStorage.clear();
