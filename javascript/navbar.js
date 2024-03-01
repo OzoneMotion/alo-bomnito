@@ -5,7 +5,7 @@ navbar.insertAdjacentHTML("afterbegin", ` <nav class="navbar navbar-expand-lg bg
     <span class="navbar-toggler material-symbols-outlined" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
       menu
     </span>
-  <a class="navbar-brand img-logo" href="#top"><img class="logo" src="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/LogoOficial.png" alt="logo Alo' Bomnito"></a>
+  <a class="navbar-brand img-logo" href="./index.html"><img class="logo" src="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/LogoOficial.png" alt="logo Alo' Bomnito"></a>
   <a class="navbar-brand desactive" href="./iniciar_sesion.html" id="cuentaIconMobile"><span class="material-symbols-outlined navbar-brand">account_circle</span></a>
   <a class="navbar-brand desactive_desktop" href="./carrito_de_compras.html" id="carritoIconMobile"><span class="material-symbols-outlined">shopping_cart</span></a>
     <div class="offcanvas offcanvas-start canvas-body" id="menuLateral">
@@ -65,7 +65,7 @@ navbar.insertAdjacentHTML("afterbegin", ` <nav class="navbar navbar-expand-lg bg
               <a class="nav-link" href="./administrar_productos.html">Administrar productos</a>
             </li>
             <li class="nav-item desactive" id="cerrarSesion">
-              <a class="nav-link" href="./cerrar_sesion.html">Cerrar sesión</a>
+              <a class="nav-link" href="./index.html" >Cerrar sesión</a>
             </li>
         </ul>
       </div>
