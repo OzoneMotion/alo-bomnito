@@ -6,7 +6,8 @@
       "correo": "cheems@alobomnito.com",
       "contrasenia": "1234Cheemsito",
       "direccion": "Generation 3, Bomnitolandia, CH36, México",
-      "tdc": "1234123412345678"
+      "tdc": "1234123412345678",
+      "id": "7f70"
     },
     {
       "idCliente": 2,
@@ -14,7 +15,8 @@
       "correo": "mail@gmail.com",
       "contrasenia": "contraseña.",
       "direccion": "Generation 3, Bomnitolandia, CH36, México",
-      "tdc": "1234123412345678"
+      "tdc": "1234123412345678",
+      "id": "a343"
     },
     {
       "idCliente": 3,
@@ -22,7 +24,8 @@
       "correo": "arq.denisse@muretto.com",
       "contrasenia": "denisse1",
       "direccion": "Generation 3, Bomnitolandia, CH36, México",
-      "tdc": "1234123412345678"
+      "tdc": "1234123412345678",
+      "id": "cd0b"
     },
     {
       "idCliente": 4,
@@ -30,7 +33,15 @@
       "correo": "holamundo@como.com",
       "contrasenia": "denisse1",
       "direccion": "Generation 3, Bomnitolandia, CH36, México",
-      "tdc": "1234123412345678"
+      "tdc": "1234123412345678",
+      "id": "3bff"
+    },
+    {
+      "id": "5c6c",
+      "nameId": "Alondra Nayeli",
+      "emailId": "alondra@gmail.com",
+      "password": "123456aA",
+      "password2": "123456aA"
     }
   ],
   "admins": [
@@ -84,7 +95,7 @@
         }
       ],
       "modo_uso": "Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
-      "precio": 670.00,
+      "precio": 670,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -98,7 +109,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "f9ea"
     },
     {
       "nombre": "VIT C Booster Serum",
@@ -130,7 +142,7 @@
         }
       ],
       "modo_uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
-      "precio": 950.00,
+      "precio": 950,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -144,7 +156,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "2e89"
     },
     {
       "nombre": "SOIE Couleur",
@@ -172,7 +185,7 @@
         }
       ],
       "modo_uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol. Reaplique después de transpirar, nadar o secarse. Se recomienda reaplicar cada 3 o 4 horas.",
-      "precio": 680.00,
+      "precio": 680,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -186,7 +199,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "1984"
     },
     {
       "nombre": "Gentle Skin Cleanser",
@@ -210,7 +224,7 @@
         }
       ],
       "modo_uso": "Aplique por la mañana y noche sobre la piel húmeda. Masajee con suaves movimientos circulares. Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
-      "precio": 300.00,
+      "precio": 300,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -224,7 +238,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "693d"
     },
     {
       "nombre": "Omega Water Cream",
@@ -248,7 +263,7 @@
         }
       ],
       "modo_uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
-      "precio": 285.00,
+      "precio": 285,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -262,7 +277,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "b4d6"
     },
     {
       "nombre": "Awaking Klotho",
@@ -286,7 +302,7 @@
         }
       ],
       "modo_uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
-      "precio": 440.00,
+      "precio": 440,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -300,7 +316,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "305e"
     },
     {
       "nombre": "Puro Vera",
@@ -324,7 +341,7 @@
         }
       ],
       "modo_uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón. Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
-      "precio": 300.00,
+      "precio": 300,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -338,7 +355,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "a29d"
     },
     {
       "nombre": "3 Blocks",
@@ -362,7 +380,7 @@
         }
       ],
       "modo_uso": "Úsalo como último paso a tu rutina de belleza. Esparce en el rostro suavemente y con pequeños toques hasta su total absorción. Mantén el producto en un lugar fresco.",
-      "precio": 360.00,
+      "precio": 360,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -376,7 +394,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "8868"
     },
     {
       "nombre": "Oxidermic Foamer G5",
@@ -408,7 +427,7 @@
         }
       ],
       "modo_uso": "Humedezca su rostro y aplique la espuma. Permita actuar al producto de 30 segundos hasta 1 minuto. Enjuague con abundante agua. Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
-      "precio": 340.00,
+      "precio": 340,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -422,7 +441,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "25fa"
     },
     {
       "nombre": "Dibel Beauté",
@@ -466,7 +486,7 @@
         }
       ],
       "modo_uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
-      "precio": 840.00,
+      "precio": 840,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -480,7 +500,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "2d09"
     },
     {
       "nombre": "Hydrating Body Cream",
@@ -508,7 +529,7 @@
         }
       ],
       "modo_uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
-      "precio": 640.00,
+      "precio": 640,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -522,7 +543,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "4dec"
     },
     {
       "nombre": "Serum Luminiscente",
@@ -554,7 +576,7 @@
         }
       ],
       "modo_uso": "Sobre rostro limpio, aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
-      "precio": 550.00,
+      "precio": 550,
       "imagenesProductos": [
         {
           "nombre": "D_DB_1.jpg",
@@ -568,7 +590,8 @@
           "nombre": "D_DB_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
         }
-      ]
+      ],
+      "id": "b8f1"
     }
   ]
 }
