@@ -8,7 +8,7 @@ function verificar() {
     let count = 1
     if (localStorage.getItem('usuarioActivo') == null){
 
-    } else if (admin.nameId == "cheems"){
+    } else if (admin.nameId == "Cheems"){
         const cuentaIconMobile = document.getElementById("cuentaIconMobile")
         const carritoIconMobile = document.getElementById("carritoIconMobile")
         const homecito = document.getElementById("homecito")
