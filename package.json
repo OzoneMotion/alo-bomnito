@@ -7,5 +7,6 @@
     "server": "json-server --watch db.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": []
 }
