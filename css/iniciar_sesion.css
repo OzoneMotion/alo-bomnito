@@ -134,11 +134,15 @@ input {
 }
 
 .icon-state {
-    position: absolute;
+    /* position: absolute;
     right: 10px;
     bottom: 11px;
     z-index: 100;
-    opacity: 0;
+    opacity: 0; */
+    color: #2e2e2ec9;
+    position: absolute;
+    margin: 15px 0 0 10px;
+    visibility: hidden;
 }
 
 /* Estilos exito */
@@ -163,6 +167,9 @@ input {
 .input-text-container-correct .icon-state {
     color: green;
     opacity: 1;
+    position: absolute;
+    margin: 15px 0 0 10px;
+    visibility: inherit;
 }
 
 /*revisar si si se necesita*/
