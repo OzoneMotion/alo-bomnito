@@ -80,14 +80,8 @@
       ],
       "ingrediente": [
         {
-          "id_ingrediente": 8,
-          "nombre": "Aceite de babassú",
-          "funcion": "Es un excelente emoliente."
-        },
-        {
-          "id_ingrediente": 26,
-          "nombre": "Manteca de karité",
-          "funcion": "Poderoso hidratante rico en ácidos grasos insaturados, es un regenerador celular natural con grandes propiedades suavizantes y reestructurantes."
+          "nombre": "Glicerina",
+          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         },
         {
           "id_ingrediente": 27,
@@ -250,6 +244,8 @@
       "id_producto": 17,
       "nombre": "Omega Water Cream",
       "marca": "The inkey list",
+      "id_producto": 5,
+      "tipo_piel": "mixta",
       "contenido": "50 ml",
       "descripcion": "Gel humectante ligero que hidrata instantáneamente sin dejar la piel grasosa.Contiene glicerina, complejo de ácidos grasos, niacinamida y betaína que trabajan juntos para brindar una hidratación duradera, controlan los niveles de grasa en el rostro y ayudan a emparejar el tono de la piel.",
       "modo_uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
@@ -272,17 +268,14 @@
       ],
       "ingrediente": [
         {
-          "id_ingrediente": 13,
           "nombre": "Carbonato de dicaprililo",
           "funcion": "Mantiene la piel suave y flexible."
         },
         {
-          "id_ingrediente": 14,
           "nombre": "Niacinamida",
           "funcion": "Contribuye a unificar el tono de la piel."
         },
         {
-          "id_ingrediente": 10,
           "nombre": "Glicerina",
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
@@ -290,9 +283,10 @@
       "id": "553a"
     },
     {
-      "id_producto": 18,
       "nombre": "Awaking Klotho",
       "marca": "Nudaest",
+      "id_producto": 6,
+      "tipo_piel": "mixta",
       "contenido": "30 gr",
       "descripcion": "Ayuda a estimular las células para reparar daños causado por la edad y factores externos como contaminación y luz.",
       "modo_uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
@@ -315,12 +309,6 @@
       ],
       "ingrediente": [
         {
-          "id_ingrediente": 10,
-          "nombre": "Glicerina",
-          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
-        },
-        {
-          "id_ingrediente": 15,
           "nombre": "Pistacia Lentiscus",
           "funcion": "Aceite graso esencial que mantiene la piel suave y flexible."
         },
@@ -336,6 +324,8 @@
       "id_producto": 19,
       "nombre": "Puro Vera",
       "marca": "Nudaest",
+      "id_producto": 7,
+      "tipo_piel": "grasa",
       "contenido": "75 gr",
       "descripcion": "Limpiador natural de rostro con extracto de Aloe Vera y suaves esferas de carbón activado, que al romperse hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel.Piel más equilibrada desde la primera aplicación.Contiene potentes extractos de raíces, semillas y frutos antioxidantes, antiinflamatorios, regenerativos.Es una formulación que limpia a profundidad sin sensación de sequedad.",
       "modo_uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón.Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
@@ -358,17 +348,14 @@
       ],
       "ingrediente": [
         {
-          "id_ingrediente": 17,
           "nombre": "Aloe vera",
           "funcion": "Mantiene la piel en buenas condiciones."
         },
         {
-          "id_ingrediente": 18,
           "nombre": "Carbón activado",
           "funcion": "Hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel."
         },
         {
-          "id_ingrediente": 10,
           "nombre": "Glicerina",
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
@@ -376,9 +363,10 @@
       "id": "b489"
     },
     {
-      "id_producto": 20,
       "nombre": "3 Blocks",
       "marca": "Nudaest",
+      "id_producto": 8,
+      "tipo_piel": "grasa",
       "contenido": "29 gr",
       "descripcion": "Fórmula avanzada para quienes están en constante exposición a la luz de dispositivos electrónicos y luz artificial.Protege de partículas contaminantes y radicales libres presentes en el medio ambiente.Evita la aparición de manchas y de envejecimiento prematuro en la piel.",
       "modo_uso": "Úsalo como último paso a tu rutina de belleza.Esparce en el rostro suavemente y con pequeños toques hasta su total absorción.Mantén el producto en un lugar fresco.",
@@ -401,12 +389,10 @@
       ],
       "ingrediente": [
         {
-          "id_ingrediente": 4,
           "nombre": "Ácido hialurónico",
           "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
         },
         {
-          "id_ingrediente": 19,
           "nombre": "Sanguinaria",
           "funcion": "Ayuda a eliminar las células muertas de la superficie de la piel."
         },
@@ -419,7 +405,6 @@
       "id": "d501"
     },
     {
-      "id_producto": 21,
       "nombre": "Oxidermic Foamer G5",
       "marca": "Réve",
       "contenido": "20 ml",
@@ -430,36 +415,18 @@
       "precio": 340,
       "imagenesProductos": [
         {
-          "nombre_imagen": "TIL_OWC_1.jpg",
-          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_1.jpg"
+          "nombre": "Ácido glicólico",
+          "funcion": "Brinda una progresiva exfoliación a la piel. Incrementa la hidratación cutánea."
         },
         {
-          "nombre_imagen": "TIL_OWC_3.jpg",
-          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_3.jpg"
-        },
-        {
-          "nombre_imagen": "TIL_OWC_2.jpg",
-          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_2.jpg"
-        }
-      ],
-      "ingrediente": [
-        {
-          "id_ingrediente": 14,
           "nombre": "Niacinamida",
           "funcion": "Contribuye a unificar el tono de la piel."
         },
         {
-          "id_ingrediente": 20,
-          "nombre": "Ácido glicólico",
-          "funcion": "Brinda una progresiva exfoliación a la piel.Incrementa la hidratación cutánea."
+          "nombre": "Alantoína",
+          "funcion": "Ayuda a favorecer la cicatrización cutánea."
         },
         {
-          "id_ingrediente": 23,
-          "nombre": "Extracto de corteza de salix alba",
-          "funcion": "Ayuda a regular la producción de sebo."
-        },
-        {
-          "id_ingrediente": 22,
           "nombre": "Extracto de opuntia",
           "funcion": "Ayuda a suavizar y calmar la irritación de la piel."
         },
@@ -472,9 +439,10 @@
       "id": "a967"
     },
     {
-      "id_producto": 22,
       "nombre": "Dibel Beauté",
       "marca": "Dibel",
+      "id_producto": 10,
+      "tipo_piel": "seca",
       "contenido": "50 ml",
       "descripcion": "Esta crema contiene ingredientes activos para ayudar a la piel a brin - dar una profunda hidratación y lograr un efecto sedoso con poder antioxidante, brindando suavidad, elasticidad y firmeza.",
       "modo_uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo.Evite el contacto con los ojos.Se recomienda su uso día y noche.",
@@ -483,12 +451,8 @@
       "precio": 840,
       "imagenesProductos": [
         {
-          "nombre_imagen": "Img_4.jpg",
-          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_4.jpg"
-        },
-        {
-          "nombre_imagen": "N_3B_1.jpg",
-          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_3B_1.jpg"
+          "nombre": "Ácido hialurónico",
+          "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
         },
         {
           "nombre_imagen": "Img_3.jpg",
@@ -502,14 +466,12 @@
           "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
         },
         {
-          "id_ingrediente": 8,
-          "nombre": "Aceite de babassú",
-          "funcion": "Es un excelente emoliente."
+          "nombre": "Ácido ferúlico",
+          "funcion": "Actúa en la revitalización cutánea y en la prevención de la formación de manchas."
         },
         {
-          "id_ingrediente": 26,
-          "nombre": "Manteca de karité",
-          "funcion": "Poderoso hidratante rico en ácidos grasos insaturados, es un regenerador celular natural con grandes propiedades suavizantes y reestructurantes."
+          "nombre": "Niacinamida",
+          "funcion": "Contribuye a unificar el tono de la piel."
         },
         {
           "id_ingrediente": 1,
