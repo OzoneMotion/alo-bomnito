@@ -152,17 +152,7 @@ function login() {
         usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-            console.log("hola")
-            cuentitaIniciada.classList.remove("desactive")
-            cuentita.classList.remove("desactive_desktop")
-            cerrarSesion.classList.remove("desactive")
-            cuentaIconDesktop.href = "./cuenta.html"
-            cuentitaIniciada.classList.add("desactive_desktop")
-            cuentita.classList.add("desactive")
-            if(cuentita.classList[1] == "desactive"){
-                //window.location = "index.html"
-            }
-
+            window.location = "index.html"
         } else {
             window.alert('credenciales invalidas, intenta de nuevo');
         }
