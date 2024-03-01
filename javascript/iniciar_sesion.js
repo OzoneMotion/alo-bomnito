@@ -153,11 +153,16 @@ function login() {
         
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-            window.location = "index.html"
+            if (usuarioEncontrado.nameId == "Cheems"){
+                window.location = "administrar_productos.html"
+            }else {
+                usuar
+                window.location = "index.html"
+            }
         } else {
             window.alert('credenciales invalidas, intenta de nuevo');
         }
-        
+
     } else {
         // si no hay usuarios en localStorage trata de obtenerlos de la api
         self.getData().then((users) => {
