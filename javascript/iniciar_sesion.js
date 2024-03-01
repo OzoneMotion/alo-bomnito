@@ -137,7 +137,12 @@ async function getData() {
     }
 };
 
+
 function login() {
+    const cuentitaIniciada = document.getElementById("cuentitaIniciada")
+    const cuentita = document.getElementById("cuentita")
+    const cerrarSesion = document.getElementById("cerrarSesion")
+    const cuentaIconDesktop = document.getElementById("cuentaIconDesktop")
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
@@ -147,7 +152,17 @@ function login() {
         usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-            window.location.href = "productos.html"
+            console.log("hola")
+            cuentitaIniciada.classList.remove("desactive")
+            cuentita.classList.remove("desactive_desktop")
+            cerrarSesion.classList.remove("desactive")
+            cuentaIconDesktop.href = "./cuenta.html"
+            cuentitaIniciada.classList.add("desactive_desktop")
+            cuentita.classList.add("desactive")
+            if(cuentita.classList[1] == "desactive"){
+                //window.location = "index.html"
+            }
+
         } else {
             window.alert('credenciales invalidas, intenta de nuevo');
         }
@@ -162,6 +177,7 @@ function login() {
             
             if (usuarioEncontrado) {
                 localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
+                console.log("hola")
                 window.location.href = "productos.html"
             } else {
                 window.alert('credenciales invalidas, intenta de nuevo');
