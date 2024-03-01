@@ -314,6 +314,12 @@ textarea {
     color: var(--secondary);
 }
 
+#ingredientesNuevos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
 
 @media screen and (max-width: 992px) {
     .formato {
