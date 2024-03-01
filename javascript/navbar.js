@@ -65,7 +65,7 @@ navbar.insertAdjacentHTML("afterbegin", ` <nav class="navbar navbar-expand-lg bg
               <a class="nav-link" href="./administrar_productos.html">Administrar productos</a>
             </li>
             <li class="nav-item desactive" id="cerrarSesion">
-              <a class="nav-link" href="./cerrar_sesion.html">Cerrar sesión</a>
+              <a class="nav-link" href="./index.html" >Cerrar sesión</a>
             </li>
         </ul>
       </div>

@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="body-con-fondo">
+<body class="body-con-fondo" onload="verificar()">
   <!-- INICIO DE NAVBAR -->
   <nav id="navbar"></nav>
   <!-- FIN DE NAVBAR -->
@@ -45,7 +45,7 @@
           <div class="input-elements-container">
             <input type="password" class="form-controls" name="password" id="password" placeholder="Contraseña"
               required>
-            <i class="icon-state fas fa-eye-slash toggle-password" data-target="#password"></i>
+           <i class="icon-state fas fa-eye-slash toggle-password" data-target="#password"></i>
             <!-- Botón de alternancia para mostrar/ocultar contraseña -->
           </div>
 
@@ -75,6 +75,7 @@
   <footer id="footer"></footer>
   <!-- FIN DE FOOTER -->
 
+  <script src="../javascript/verificarSesion.js"></script>
   <script src="../javascript/navbar.js"></script>
   <script src="../javascript/footer.js"></script>
   <!-- Link de JS de inicio de sesion -->

@@ -21,7 +21,7 @@ body {
     color: var(--text);
 }
 
-.tituloMicuenta {
+.tituloMicuenta p {
     font-family: var(--fontTitulo);
     font-weight: var(--font-weightTitulos);
     font-size: var(--sizeTituloDesk-tab);

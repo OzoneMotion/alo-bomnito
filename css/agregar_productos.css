@@ -71,6 +71,7 @@ body {
     margin-bottom: var(--marginTopBottom);
     padding: 0px;
     border-radius: 10px;
+    box-shadow: var(--shadow);
 }
 
 .formato {
@@ -204,8 +205,6 @@ textarea {
     left: 310px;
 }
 
-
-
 .select-btn {
     display: flex;
     height: 39px;
@@ -272,9 +271,6 @@ textarea {
     background-color: var(--highlight);
 }
 
-
-
-
 .select-menu .select-btndrop {
     display: flex;
     height: 39px;
@@ -321,6 +317,14 @@ textarea {
     gap: 10px;
 }
 
+#miFormulario {
+    margin-bottom: 10px;
+}
+
+#agregarIngrediente {
+    margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 992px) {
     .formato {
         display: flex;
@@ -336,6 +340,43 @@ textarea {
     }
 }
 
+.modal-content {
+    width: 50%;
+    border: 0px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--primary);
+    color: var(--text);
+    font-size: var(--sizeContenido);
+    font-family: var(--fontContenido);
+    margin: auto;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.btnCloseEstilos {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+
+}
+
+#btnClose {
+    border: none;
+    /* background-color: var(--background); */
+}
+
+#formularioNuevoIngrediente {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tituloNuevoIngrediente {
+    font-size: var(--sizeTituloMobile);
+}
 
 @media screen and (max-width: 774px) {
 
@@ -366,7 +407,7 @@ textarea {
         padding-top: 20px;
         font-family: var(--subtitles-titles-font);
         font-weight: 700;
-        font-size: var(--title-size-cel);
+        font-size: var(--sizeTituloMobile);
     }
 
     .containerInput {
@@ -430,5 +471,11 @@ textarea {
     .invalid-feedback-active {
         display: block;
         width: 250px;
+    }
+
+    .modal-content {
+        width: 90vw;
+        min-height: 350px;
+        max-width: 450px;
     }
 }

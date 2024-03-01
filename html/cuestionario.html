@@ -6,13 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alo' Bomnito | Conoce tu tipo de piel </title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/LogoOficial.png"
+        type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/cuestionario.css">
 </head>
 
-<body class="body">
+<body onload="verificar()" class="body">
 
     <nav id="navbar"></nav>
 
@@ -183,7 +186,7 @@
 
     </div>
 
-  <dialog id="modal">
+    <dialog id="modal">
         <div class="modal-content" id="modalCentro" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle">
             <div class="modal-header">
                 <button type="button" class="cerrar_flotante" onclick="closeModal()">
@@ -196,11 +199,8 @@
             </div>
             <div class="modal-body" id="modalContent"> texto dentro del cuadro </div>
             <div class="modal-footer">
-<<<<<<< HEAD
-                <button type="button" class="compras" onclick="irCompras()"><a class="btn-alo-a" href="./productos.html">Ir a comprar</a> </button>
-=======
-                <button type="button" class="compras" onclick="irCompras()"><a class="fondobtn" href="./productos.html">Ir a comprar</a> </button>
->>>>>>> d3666f493c8f003f8af5cef9e57054d90466c4ca
+                <button type="button" class="compras" onclick="irCompras()"><a class="fondobtn"
+                        href="./productos.html">Ir a comprar</a> </button>
             </div>
         </div>
     </dialog>
@@ -226,11 +226,11 @@
     </div> -->
 
     <footer id="footer"></footer>
-
+    <script src="../javascript/verificarSesion.js"></script>
     <script src="../javascript/respuestas.js"></script>
     <script src="../javascript/footer.js"></script>
     <script src="../javascript/navbar.js"></script>
-    
+
     <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
     <!--Llamada al script de respuestas-->
     <!-- <script src="../javascript/respuestas.js"></script> -->
