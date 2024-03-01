@@ -83,7 +83,7 @@ function agregarProductosCarrito() {
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo">
           <div class="row-product" id="row-product">
-            <img class="imagenes" src="${producto.imagenesProductos[0]}">
+            <img class="imagenes" src="${producto.imagenesProductos[0].url}">
             <div class="product-info" id="productContainer${index}">
               <p>${producto.nombre}</p>
               <p id="marca${index}">${producto.marca}</p>
