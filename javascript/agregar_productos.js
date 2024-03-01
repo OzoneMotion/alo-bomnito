@@ -130,7 +130,7 @@ formValidation.addEventListener('submit', async (e) => {
     const inputMarca = document.getElementById('marca');
     const nombreProducto = inputNombre.value;
     const marcaProducto = inputMarca.value;
-    const nombreArchivos = nombreProducto[0] + marcaProducto[0];
+    const nombreArchivos = nombreProducto[0] + nombreProducto[1] + marcaProducto[0] + marcaProducto[1];
     let index = 1;
     const archivos = imageInput.files;
     console.log(archivos);
