@@ -24,7 +24,7 @@ const getDataForm = () => {
     const datosProcesados = Object.fromEntries(datos.entries())
 
     formulario.reset();
-   
+
     return datosProcesados;
 }
 
@@ -125,9 +125,10 @@ inputPassword.addEventListener('input', () => {
 });
 
 // Función para obtener los datos del archivo JSON
-async function getData () {
+async function getData() {
     try {
-        const response = await fetch("http://localhost:3000/users");
+        // const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
         const users = await response.json();
         return users;
     } catch (error) {
@@ -139,10 +140,10 @@ async function getData () {
 function login() {
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
-    self.getData().then( (users) => {
+    self.getData().then((users) => {
         console.log('usuarios', users);
         const misUsuarios = users;
-        let usuarioEncontrado = misUsuarios.find( (usuario) => (usuario.correo === usuarioActual && usuario.contrasenia === passwordActual));
+        let usuarioEncontrado = misUsuarios.find((usuario) => (usuario.correo === usuarioActual && usuario.contrasenia === passwordActual));
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
             window.location.href = "productos.html"

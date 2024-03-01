@@ -87,7 +87,7 @@
 }---*/
 
 /*--- ventana flotante ---*/
-#modal{
+#modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -102,7 +102,7 @@
     /* border-radius: 5px;*/
 }
 
-.cerrar_flotante{
+.cerrar_flotante {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -142,7 +142,7 @@
 /*boton compras*/
 .modal-footer {
     display: flow-root;
-   
+
 }
 
 .compras {
@@ -155,8 +155,7 @@
     color: var(--backrgound);
     border-radius: 10px;
     box-shadow: var(--shadow);
-    margin-top: 24px 
-    
+    margin-top: 24px
 }
 
 .resultados {
@@ -179,6 +178,7 @@
 
     .body {
         background: var(--url-background);
+        background-size: cover;
     }
 }
 
@@ -235,7 +235,7 @@
     }
 
     /*--- ventana flotante ---*/
-    #modal{
+    #modal {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -249,15 +249,15 @@
         border-radius: 10px;
         /* border-radius: 5px;*/
     }
-    
-    .cerrar_flotante{
+
+    .cerrar_flotante {
         position: absolute;
         top: 15px;
         right: 15px;
         background-color: var(--primary);
         border: none;
     }
-    
+
     .modal-title {
         color: var(--text);
         font-family: var(--fontSubtitulo);
@@ -265,20 +265,20 @@
         margin-top: 50px;
         /* text-align: center; */
     }
-    
+
     .modal-header {
         height: 17rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .logoModal {
         width: 10rem;
         height: 10rem;
         border-radius: 100%;
     }
-    
+
     .modal-body {
         color: var(--text);
         font-size: var(--sizeSubtituloDesk-Tab);
@@ -286,13 +286,12 @@
         text-align: center;
         margin: 15px;
     }
-    
+
     /*boton compras*/
     .modal-footer {
         display: flow-root;
-       
     }
-    
+
     .compras {
         width: var(--btnMedium-w);
         height: var(--btns-h);
@@ -303,7 +302,7 @@
         color: var(--background);
         border-radius: 10px;
         box-shadow: var(--shadow);
-        margin-top: 24px 
+        margin-top: 24px
     }
 
     .resultados {
@@ -326,6 +325,6 @@
 
     .body {
         background: var(--url-background);
+        background-size: cover;
     }
-
 }
