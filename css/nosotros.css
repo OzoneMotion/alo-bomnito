@@ -146,8 +146,8 @@ body {
 
 #titulo-principal {
   margin-top: 2rem;
-  font-size: 3rem;
-  font-family: var(--titles-font-desk);
+  font-size: var(--sizeTituloDesk-tab);
+  font-family: var(--fontTitulo);
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
@@ -170,8 +170,8 @@ body {
 }
 
 .row {
-  text-align: center;
-  justify-content: space-around;
+  text-align: center !important;
+  justify-content: space-around !important;
 }
 
 .modal-header {

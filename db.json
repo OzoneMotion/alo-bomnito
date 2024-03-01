@@ -99,7 +99,8 @@
           "nombre": "Aceite de babassú",
           "funcion": "Es un excelente emoliente."
         }
-      ]
+      ],
+      "id": "f9ea"
     },
     {
       "id_producto": 13,
@@ -151,7 +152,8 @@
           "nombre": "Éster de vitamina E",
           "funcion": "Acción antioxidante que protege a los tejidos de los efectos nocivos de las toxinas ambientales."
         }
-      ]
+      ],
+      "id": "2e89"
     },
     {
       "id_producto": 14,
@@ -198,7 +200,8 @@
           "nombre": "Aceite de babassú",
           "funcion": "Es un excelente emoliente."
         }
-      ]
+      ],
+      "id": "1984"
     },
     {
       "id_producto": 16,
@@ -274,7 +277,8 @@
           "nombre": "Niacinamida",
           "funcion": "Contribuye a unificar el tono de la piel."
         }
-      ]
+      ],
+      "id": "b4d6"
     },
     {
       "id_producto": 18,
@@ -316,7 +320,8 @@
           "nombre": "Dicaprilato",
           "funcion": "Hace que la piel sea suave y flexible."
         }
-      ]
+      ],
+      "id": "305e"
     },
     {
       "id_producto": 19,
@@ -358,7 +363,8 @@
           "nombre": "Carbón activado",
           "funcion": "Hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel."
         }
-      ]
+      ],
+      "id": "a29d"
     },
     {
       "id_producto": 20,
@@ -400,7 +406,8 @@
           "nombre": "Ácido hialurónico",
           "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
         }
-      ]
+      ],
+      "id": "8868"
     },
     {
       "id_producto": 21,

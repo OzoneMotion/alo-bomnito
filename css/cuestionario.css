@@ -71,6 +71,11 @@
     /* margin: 0.5rem; */
 }
 
+.fondobtn{
+    color: var(--backgroud);
+    text-decoration: none;
+}
+/*--- hover de test
 .itemLista:hover {
     background-color: var(--highlight);
     background-size: auto;
@@ -79,7 +84,7 @@
     border: none;
     box-shadow: var(--shadow);
     transition: all 0.3s ease-in-out;
-}
+}---*/
 
 /*--- ventana flotante ---*/
 #modal {
