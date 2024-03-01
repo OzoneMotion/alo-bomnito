@@ -4,19 +4,18 @@
 
 /* responsive  Mobile*/
 
-@media only screen and (min-width:350px) and (max-width: 1280px) {
 
-body{
-    background-image: var(--url-background);
-    background-size: cover;
-}
+/* body {
+        background-image: var(--url-background);
+        background-size: cover;
+    } */
 
 /*--- Titulo---*/
 
-.titulo-test{
+.titulo-test {
     text-align: -webkit-center;
     color: var(--text);
-    font-size: var(--sizeTituloDesk-tab);
+    font-size: var(--sizeTituloMobile);
     font-family: var(--fontTitulo);
     font-weight: var(--font-weightTitulos);
     text-align: center;
@@ -24,24 +23,29 @@ body{
 }
 
 /*--- card de las preguntas---*/
-.card{
-    border-radius: 1rem;
-    transition: all; 
-    width: 100%;
-    border: 0.8rem;
+.card {
+    border-radius: 10px;
+    transition: all;
+    width: 90vw;
+    min-width: 320px;
+    max-width: 450px;
+    border: none;
+    margin: auto;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
     box-shadow: var(--shadow);
+    background-color: var(--primary);
 }
 
-.card-header{
-    background-color: var(--primary);
+.card-header {
+    background-color: var(--secondary);
     font-size: var(--sizeContenido);
     font-family: var(--fontContenido);
     color: var(--text);
     text-align: center;
     box-shadow: var(--shadow);
+    margin-bottom: 1rem;
 }
 
 .card-header:first-child {
@@ -49,238 +53,259 @@ body{
 }
 
 /*--- Diseño dentro de listas ---*/
-.grupoLista{
-    margin-bottom: 0.8rem;
-    line-height: 1rem;
+.grupoLista,
+.grupoLista label {
+    text-align: left;
+    width: 100%;
+    margin-left: 0.5rem;
 }
 
-.itemLista:hover{
-    background-color: var(--accent);
+.grupoLista label input {
+    margin-right: 5px;
+}
+
+.grupoLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* margin: 0.5rem; */
+}
+
+.itemLista:hover {
+    background-color: var(--highlight);
     background-size: auto;
-    color: var(--highlight);
+    color: var(--back);
     cursor: pointer;
-    border: solid;
-    border-top: var(--accent);
-    border-color: var(--accent);
-    border-radius: 2rem;
- }
+    border: none;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease-in-out;
+}
 
-.itemLista{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 30px var(--primary);
- }
-
- /*--- ventana flotante ---*/
-
-.modal-content{
+/*--- ventana flotante ---*/
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    padding: 1px;
+    border: 1px solid var(--backgroud);
     height: 34rem;
     width: 21rem;
     text-align: center;
+    border-radius: 10px;
+    /* border-radius: 5px;*/
+}
+
+.cerrar_flotante {
     position: absolute;
- }
-.modal-title{
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary);
+    border: none;
+}
+
+.modal-title {
     color: var(--text);
     font-family: var(--fontSubtitulo);
     font-size: var(--sizeSubtituloDesk-Tab);
+    margin-top: 30px;
     /* text-align: center; */
 }
-.modal-header{
+
+.modal-header {
     height: 17rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--backgroud);
-    border: solid;
-    border-color: var(--backgroud);
 }
-.logoModal{
+
+.logoModal {
     width: 10rem;
     height: 10rem;
     border-radius: 100%;
 }
 
-.modal-body{
-    background-color: var(--backgroud);
-    border: solid;
-    border-color: var(--backgroud);
+.modal-body {
     color: var(--text);
     font-size: var(--sizeSubtituloDesk-Tab);
     font-family: var(--fontSubtitulo);
     text-align: center;
+    margin: 15px;
 }
 
 /*boton compras*/
-.modal-footer{
-    background-color: var(--backgroud);
+.modal-footer {
     display: flow-root;
-    border: solid;
-    border-color: var(--backgroud);
+
 }
-.compras{
-    width: var(--btnLarge-w);
+
+.compras {
+    width: var(--btnMedium-w);
     height: var(--btns-h);
     background-color: var(--accent);
     border: none;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
-    color: var(--backgroud);
-    border-radius: 0.3rem;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-    margin-top: 2rem;
+    color: var(--backrgound);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-top: 24px
 }
 
-.resultados{
-text-align: center;
-margin: 2rem;
+.resultados {
+    text-align: center;
+    margin: 2rem;
 }
 
-#myInput{
-    width: var(--btnLarge-w);
-    height: var(--btns-h);
-    background-color: var(--accent);
-    border: none;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--backgroud);
-    border-radius: 0.3rem;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-    margin-top: 2rem;
- }
+
+
+@media (min-width: 744px) {
+    .titulo-test {
+        color: var(--text);
+        font-size: var(--sizeTituloDesk-tab);
+    }
+
+    .card {
+        min-width: 500px;
+        max-width: 600px;
+    }
+
+    .body {
+        background: var(--url-background);
+        background-size: cover;
+    }
 }
 
 /* ------------responsive  Tablet & desktop-----------*/
 
-@media (min-width: 1200px){
-
-    body{
+@media (min-width: 1280px) {
+    /* 
+    body {
         background-image: var(--url-background);
         background-size: cover;
-    }
+    } */
+
     /*--- Titulo---*/
-    
-    .titulo-test{
-        text-align: -webkit-center;
+
+    .titulo-test {
         top: 1rem;
         color: var(--text);
         font-size: var(--sizeTituloDesk-tab);
-        font-family: var(--fontTitulo);
-        font-weight: var(--font-weightTitulos);
-        text-align: center;
         margin-top: 20px;
         margin-bottom: 30px;
     }
 
-    
+
     /*--- card de las preguntas---*/
-    .card{
+    .card {
         border-radius: 1rem;
-        padding: auto;
         transition: all;
-        margin-top: auto; 
-        width: 100%;
+        margin-top: auto;
+        min-width: 650px;
+        max-width: 750px;
         border: 0.8rem;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
         padding: 1rem;
-        background-color: var(--primary);
         box-shadow: var(--shadow);
     }
-    
-    .card-header{
-        background-color: var(--secondary);
+
+    .card-header {
         font-size: var(--sizeContenido);
-        font-family: var(--fontContenido);
-        color: var(--text);
         text-align: center;
-        border-bottom: none;
         box-shadow: var(--shadow);
     }
 
     .card-header:first-child {
         border-radius: 0px;
     }
-    
+
     /*--- Diseño dentro de listas ---*/
     .itemLista {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        /* margin-top: 1rem;
+        margin-bottom: 1rem; */
         /* margin-left: 2px; */
         border-radius: 30px var(--primary);
-     }
+    }
 
-     .labelInput{
-        margin-left: 5px;
-     }
-
-     .labelInput:hover{
-        color: var(--background);
-        cursor: pointer;
-     }
-    
-     /*--- ventana flotante ---*/
-    .modal-content{
-        height: 42rem;
-        width: 34rem;
+    /*--- ventana flotante ---*/
+    #modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--primary);
+        padding: 1px;
+        border: 1px solid var(--backgroud);
+        height: 34rem;
+        width: 21rem;
         text-align: center;
-     }
-    .modal-title{
+        border-radius: 10px;
+        /* border-radius: 5px;*/
+    }
+
+    .cerrar_flotante {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: var(--primary);
+        border: none;
+    }
+
+    .modal-title {
         color: var(--text);
         font-family: var(--fontSubtitulo);
         font-size: var(--sizeSubtituloDesk-Tab);
-        text-align: center;
+        margin-top: 50px;
+        /* text-align: center; */
     }
-    .modal-header{
-        height: 27rem;
+
+    .modal-header {
+        height: 17rem;
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        background-color: var(--backgroud);
-        border: solid;
-        border-color: var(--backgroud);
+        align-items: center;
     }
-    .logoModal{
-        width: 16rem;
-        height: 16rem;
+
+    .logoModal {
+        width: 10rem;
+        height: 10rem;
         border-radius: 100%;
     }
-    
-    .modal-body{
-        background-color: var(--backgroud);
-        border: solid;
-        border-color: var(--backgroud);
+
+    .modal-body {
         color: var(--text);
         font-size: var(--sizeSubtituloDesk-Tab);
         font-family: var(--fontSubtitulo);
         text-align: center;
+        margin: 15px;
     }
-    
+
     /*boton compras*/
-    .modal-footer{
-        background-color: var(--backgroud);
+    .modal-footer {
         display: flow-root;
-        border: solid;
-        border-color: var(--backgroud);
     }
-    .compras{
-        width: var(--btnLarge-w);
+
+    .compras {
+        width: var(--btnMedium-w);
         height: var(--btns-h);
         background-color: var(--accent);
         border: none;
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 700;
-        color: var(--backgroud);
-        border-radius: 0.3rem;
-        box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-        margin-top: 2rem;
+        color: var(--background);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        margin-top: 24px
     }
-    
-    .resultados{
-    text-align: center;
-    margin: 2rem;
+
+    .resultados {
+        text-align: center;
+        margin: 2rem;
     }
-    
-    #myInput{
+
+    #myInput {
         width: var(--btnLarge-w);
         height: var(--btns-h);
         background-color: var(--accent);
@@ -291,7 +316,10 @@ margin: 2rem;
         border-radius: 0.3rem;
         box-shadow: var(--shadow);
         margin-top: 2rem;
-     }
-    
-}
+    }
 
+    .body {
+        background: var(--url-background);
+        background-size: cover;
+    }
+}

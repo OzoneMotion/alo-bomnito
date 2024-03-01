@@ -3,7 +3,7 @@
 
 // Contador de Stock
 
-const PRODUCTOS = self.obtenerProductos();
+let PRODUCTOS = self.obtenerProductos();
 
 function clickME(index) {
     let elementosSeleccionados = parseInt(document.getElementById(`clicks${index}`).value);
@@ -28,12 +28,13 @@ function clickME2(index) {
  */
 this.inicio();
 
+
 /**
  * Funciona para dar inicio a la regla de mediaquery y agregar un listener para realizar 
  * los cambios de la estructura html
  */
 function controlDinamico(productos) {
-    var areaMovs = window.matchMedia("(min-width: 330px) and (max-width: 1200px)");
+    var areaMovs = window.matchMedia("(min-width: 320px) and (max-width: 1200px)");
     areaMovs.addListener(listenerDimensions)
     this.modificador(areaMovs, productos);
 }
@@ -82,26 +83,47 @@ function obtenerProductos() {
     return JSON.parse(productos);
 }
 
+function eliminarProductosCarrito(index){
+ //let productos = window.localStorage.removeItem('productosCarrito')
+ // return JSON.parse(productos);
+  const elementoEliminar = document.getElementById(`cartInfo${index}`);
+  const nombreDeProducto = document.getElementById(`productName${index}`).innerText;
+  let productosActualizados = [];
+  productosActualizados.push(...PRODUCTOS);
+  productosActualizados = productosActualizados.filter((producto) => producto.nombre != nombreDeProducto);
+  localStorage.setItem('productosCarrito', JSON.stringify(productosActualizados));
+  elementoEliminar.remove();
+  PRODUCTOS = productosActualizados;
+  const element = document.getElementById("contenedorVacio");
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+  self.inicio();
+}
+
+// function productoParaEliminar(producto) {
+//   return producto.nombre === "cherries";
+// }
+
 function agregarProductosCarrito(productos) {
     // let p = [];
     //p.push(productos);
     //console.log(p);
     const wrapper = document.getElementById('contenedorVacio');
     productos.forEach((producto, index)=> {
-        
           wrapper.innerHTML += `
-          <div class="cart-info" id="cartInfo">
+          <div class="cart-info" id="cartInfo${index}">
           <div class="row-product" id="row-product">
-            <img src="${producto.imagen.imagen1}">
+            <img class="imagenes" id="imagenesProductos" src="${producto.imagenesProductos[0]}">
             <div class="product-info" id="productContainer${index}">
-              <p>${producto.nombre}</p>
+              <p id="productName${index}" value="${producto.nombre}">${producto.nombre}</p>
               <p>${producto.marca}</p>
               <!-- CONTADOR -->
               <div class="contador-carrito" id="contador${index}">
                 <div class="restar" id="boty${index}" onClick="clickME2(${index});"> <span class="material-symbols-outlined">
                     remove
                   </span></div>
-                <input type="text" value="0" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
+                <input type="text" value="${producto.cantidad_existencia}" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
                 <div class="sumar" id="bote${index}" onClick="clickME(${index});"> <span class="material-symbols-outlined">
                     add
                   </span></div>
@@ -113,7 +135,7 @@ function agregarProductosCarrito(productos) {
             <div class="row-specs">
               <p id="precioRow${index}">${producto.precio}</p>
               <div class="btn-container">
-                <button type="submit" id="btn-delete"> Eliminar </button>
+                <button type="submit" id="btn-delete" onClick="eliminarProductosCarrito(${index});"> Eliminar </button>
               </div>
             </div>
           </div>
@@ -127,6 +149,7 @@ function inicio() {
    // const productos = self.obtenerProductos();
     self.agregarProductosCarrito(PRODUCTOS);
     self.controlDinamico(PRODUCTOS);
+    self.obtenerSubTotal();
 }
 
 function obtenerSubTotal() {
@@ -138,8 +161,8 @@ function obtenerSubTotal() {
     });
     
     //console.log('subtotal', subtotal);
-    let subTotal2 = document.getElementById("subTotal");
-    subTotal2.textContent = ( " $ " + subtotal +  ".00 MXN "); 
+    let subTotalActualizado = document.getElementById("subTotal");
+    subTotalActualizado.textContent = ( " $ " + subtotal +  ".00 MXN "); 
     const guardarLocal = window.localStorage;
     guardarLocal.setItem("subTotal", subtotal);
 }
@@ -148,6 +171,11 @@ const button = document.getElementById("procederPago")
 
 
  button.onclick = function procederPago() {
+  const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'))
+  if (!usuarioActivo) {
+    window.alert('Debes iniciar sesion para continuar')
+    return;
+  }
   PRODUCTOS.forEach((producto, index) => {
     producto.cantidad = parseInt(document.getElementById(`clicks${index}`).value);
   });
@@ -155,24 +183,18 @@ const button = document.getElementById("procederPago")
   console.log(PRODUCTOS);
   localStorage.setItem('productosPago', JSON.stringify(PRODUCTOS));
   window.location.href = "carrito_de_pago.html";
-  /*button.innerHTML = `
-  <div class="total-price">
-  <div id="subtotal">
-      <p >Subtotal</p> 
-      <p>Impuestos</p>
-      <p>Envío</p>
-      <p id="subTotal">${obtenerSubTotal}</p>
-      <p id="Impuestos">$0.00 MXN</p>
-      <p id="Envio">$150.00 MXN</p>
-  </div>
-<div class="total2">
-  <p class="totalT">Total</p>
-  <p class="totalT">$0.00 MXN </p>
-</div>
-
-  <div class="btn-container">
-      <button type="submit" id="btn-go-toPayment"><a href="./avisoExitoCarrito.html">Ir a pagar</a></button>
-  </div>
-</div>
-  `*/
 }
+
+function obtenerDatosSub(){
+  const inputSubtotal = document.getElementById("subTotal")
+  inputSubtotal.textContent = "$" + subtotal + ".00 MXN"
+}
+
+
+// let carrito = async () => {
+//   const precio = getElementById('precioRow')
+//   const marca = getElementById('marca')
+//   const imagenes = getElementById("imagenesProductos")
+
+//   const productosBd = 
+// }

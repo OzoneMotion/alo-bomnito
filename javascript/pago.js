@@ -56,7 +56,7 @@ function modificador(regla) {
             precioMov.textContent = "$" + producto.precio + ".00 MXN";
             productContainer.insertBefore(precioMov,nodoReferencia);
             precioMov.style.position = "relative";
-            precioMov.style.left = "50px";
+            precioMov.style.left = "30px";
 
             let nodoReferencia2 = document.getElementById(`precioMovil${index}`);
             let cantidad = document.createElement('p');
@@ -64,7 +64,7 @@ function modificador(regla) {
             cantidad.textContent = producto.cantidad;
             productContainer.insertBefore(cantidad, nodoReferencia2);
             cantidad.style.position = "relative";
-            cantidad.style.left = "130px";
+            cantidad.style.left = "80px";
         } else {
             if(document.getElementById(`precioMovil${index}`)){
                 document.getElementById(`precioMovil${index}`).remove();
@@ -79,11 +79,11 @@ function modificador(regla) {
 function agregarProductosCarrito() {
     const wrapper = document.getElementById('contenedorVacio');
     PRODUCTOS.forEach((producto, index)=> {
-        
+         console.log(producto)
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo">
           <div class="row-product" id="row-product">
-            <img src="${producto.imagen.imagen1}">
+            <img class="imagenes" src="${producto.imagenesProductos[0]}">
             <div class="product-info" id="productContainer${index}">
               <p>${producto.nombre}</p>
               <p id="marca${index}">${producto.marca}</p>
@@ -118,7 +118,7 @@ function agregarProductosCarrito() {
 
 function obtenerDatosDePago() {
     const cantidadSubTotal = localStorage.getItem('subTotal');
-    const cantidadImpuestos = Math.floor(cantidadSubTotal * .16);
+    const cantidadImpuestos = Math.floor(cantidadSubTotal * .10);
 
     const inputSubtotal = document.getElementById('subTotal');
     const inputImpuesto = document.getElementById('Impuestos');

@@ -12,21 +12,13 @@
     margin: 0;
 }
 
-
-body {
-    background: url(../img/fondo.jpg);
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Estilos container */
 
 .containerRegistro {
     background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
-    width: 350px;
+    width: 300px;
     height: 700px;
     /* display: flex;  */
     flex-wrap: wrap;
@@ -58,7 +50,7 @@ body {
     font-size: var(--sizeSubtituloDescktop);
 }
 
-#subtitle{
+#subtitle {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -73,14 +65,14 @@ body {
 /* Imagen*/
 .img-crear,
 .img-error,
-.img-registro{
+.img-registro {
     text-align: center;
 }
+
 .img-crear-cuenta,
 .img-error-correo,
-.img-error-registro{
-    width: 14rem;
-    height: 12rem;
+.img-error-registro {
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -125,7 +117,8 @@ body {
     }
 
     #title {
-        font-size: var(--sizeTituloDesktop);
+        font-size: var(--sizeTituloDesk-tab);
+        font-family: var(--fontSubtitulo);
 
     }
 
@@ -133,25 +126,26 @@ body {
         height: 85px;
     }
 
-    #btn-submit{
+    #btn-submit {
         margin-top: 30px;
     }
-   
+
     /* Imagen*/
-.img-crear,
-.img-error,
-.img-registro{
-    text-align: center;
-    margin: 3rem;
-    padding: 1rem;
-}
-.img-crear-cuenta,
-.img-error-correo,
-.img-error-registro{
-    width: 18rem;
-    height: 19rem;
-    border-radius: 1rem;
-}
+    .img-crear,
+    .img-error,
+    .img-registro {
+        text-align: center;
+        margin: 3rem;
+        padding: 1rem;
+    }
+
+    .img-crear-cuenta,
+    .img-error-correo,
+    .img-error-registro {
+        width: 18rem;
+        height: 19rem;
+        border-radius: 1rem;
+    }
 }
 
 /* Estilos desktop */
@@ -166,21 +160,24 @@ body {
     }
 
     #title {
-        font-size: var(--sizeTituloTablet);
+        font-size: var(--sizeTituloDesk-tab);
+        font-family: var(--fontTitulo);
     }
+
     /* Imagen*/
-.img-crear,
-.img-error,
-.img-registro{
-    text-align: center;
-    margin: 3rem;
-    padding: 1rem;
-}
-.img-crear-cuenta,
-.img-error-correo,
-.img-error-registro{
-    width: 18rem;
-    height: 19rem;
-    border-radius: 1rem;
-}
+    .img-crear,
+    .img-error,
+    .img-registro {
+        text-align: center;
+        margin: 3rem;
+        padding: 1rem;
+    }
+
+    .img-crear-cuenta,
+    .img-error-correo,
+    .img-error-registro {
+        width: 18rem;
+        height: 19rem;
+        border-radius: 1rem;
+    }
 }

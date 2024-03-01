@@ -1,4 +1,4 @@
-// import data from '../productos2.json' assert {type: 'json'}
+
 
 const obtenerProductos = async () => {
   try {
@@ -25,7 +25,10 @@ productosContainer.innerHTML += `<div class="producto frase">
 // const seca = data.filter(element => element.piel === "seca")
 // const mixta = data.filter(element => element.piel === "mixta")
 
-data.forEach((element, index) => {
+const pielMixta = data.filter(element => element.tipo_piel === "mixta");
+
+
+pielMixta.forEach((element, index) => {
   let imagen1 = element.imagenesProductos[0];
   let imagenUrl1 = imagen1 ? imagen1.url : '';
   let imagen2 = element.imagenesProductos[1];

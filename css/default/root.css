@@ -43,7 +43,13 @@
     font-family: var(--fontContenido);
     color: var(--text);
     box-sizing: border-box;
-    /* margin: 0; */
+    margin: 0;
+    text-align: center;
+}
+
+.body {
+    background-color: var(--background);
+    width: 100%;
 }
 
 .body-con-fondo {
@@ -57,6 +63,7 @@
 .btn-alo,
 .btn-alo-submit,
 .btn-alo-a {
+    margin-top: 10px;
     width: var(--btnMedium-w);
     height: var(--btns-h);
     background-color: var(--accent);
@@ -65,7 +72,7 @@
     font-weight: 700;
     color: var(--background);
     border-radius: 5px;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
+    box-shadow: var(--shadow);
 }
 
 .btn-alo-a {
@@ -90,4 +97,30 @@
 
 .estilo-a {
     color: var(--text);
+}
+
+.hr {
+    height: 0px;
+    background-color: var(--text);
+    opacity: 1;
+}
+
+.contenedor-form {
+    width: 90vw;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+@media (min-width: 744px) {
+    .contenedor-form {
+        min-width: 500px;
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor-form {
+        min-width: 650px;
+        max-width: 750px;
+    }
 }

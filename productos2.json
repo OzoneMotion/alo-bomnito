@@ -34,19 +34,18 @@
         ],
         "uso": "Aplicar sobre rostro limpio de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos.",
         "precio": 670.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -81,19 +80,18 @@
         ],
         "uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
         "precio": 950.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -124,19 +122,18 @@
         ],
         "uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol. Reaplique después de transpirar, nadar o secarse. Se recomienda reaplicar cada 3 o 4 horas.",
         "precio": 680.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -163,19 +160,18 @@
         ],
         "uso": "Aplique por la mañana y noche sobre la piel húmeda. Masajee con suaves movimientos circulares. Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
         "precio": 300.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -202,19 +198,18 @@
         ],
         "uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
         "precio": 285.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -241,19 +236,18 @@
         ],
         "uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
         "precio": 440.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -280,19 +274,18 @@
         ],
         "uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón. Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
         "precio": 300.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/S_SC_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/S_SC_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/S_SC_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -319,19 +312,18 @@
         ],
         "uso": "Úsalo como último paso a tu rutina de belleza. Esparce en el rostro suavemente y con pequeños toques hasta su total absorción. Mantén el producto en un lugar fresco.",
         "precio": 360.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_OFG_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_OFG_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_OFG_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -366,19 +358,18 @@
         ],
         "uso": "Humedezca su rostro y aplique la espuma. Permita actuar al producto de 30 segundos hasta 1 minuto. Enjuague con abundante agua. Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
         "precio": 340.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_NGSC_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_NGSC_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_NGSC_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -425,19 +416,18 @@
         ],
         "uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
         "precio": 840.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_3B_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_AK_1.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_PV_1.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -468,19 +458,18 @@
         ],
         "uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
         "precio": 640.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     },
@@ -515,19 +504,18 @@
         ],
         "uso": "Sobre rostro limpio, aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo. Evite el contacto con los ojos. Se recomienda su uso día y noche.",
         "precio": 550.00,
-        "imagen1": [
+        "imagenes": [
             {
-                "imagen1": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_1.jpg"
-            }
-        ],
-        "imagen2": [
+                "nombre": "D_DB_1.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+            },
             {
-                "imagen2": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_2.jpg"
-            }
-        ],
-        "imagen3": [
+                "nombre": "D_DB_2.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+            },
             {
-                "imagen3": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_3.jpg"
+                "nombre": "D_DB_3.jpg",
+                "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
             }
         ]
     }

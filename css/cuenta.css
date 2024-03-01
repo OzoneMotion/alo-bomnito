@@ -1,5 +1,6 @@
-@import url("./default/footer.css");
 @import url("./default/navbar.css");
+@import url("./default/footer.css");
+@import url("./default/root.css");
 
 body {
     background-image: var(--url-background);
@@ -8,7 +9,7 @@ body {
 
 .principal {
     max-width: 650px;
-    min-width: 350px;
+    min-width: 300px;
     height: 800px;
     background-color: var(--primary);
     border-radius: 15px;
@@ -30,9 +31,9 @@ body {
     padding-top: 90px;
     padding-bottom: 90px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-
 }
 
 .contenedoresDeInfo {
@@ -52,7 +53,7 @@ body {
 
 .inputUsuarioContra {
     background-color: var(--background);
-    width: var(--inputsDeskTab-w);
+    width: 100%;
     height: var(--inputs-h);
     display: flex;
     flex-wrap: wrap;

@@ -2,55 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alo' Bomnito | Administrar productos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/administrar_prodcutos.css">
-  <script async defer type="module" src="../javascript/administrar_prodcutos.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alo' Bomnito | Administrar productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/administrar_productos.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <script async defer type="module" src="../javascript/administrar_productos.js"></script>
 </head>
 
-<body>
+<body class="body">
 
-  <!-- INICIO DE NAVBAR -->
+    <!-- INICIO DE NAVBAR -->
     <nav id="navbar"></nav>
-  <!-- FIN DE NAVBAR -->
+    <!-- FIN DE NAVBAR -->
 
-  <div class="container admin_prod">
-    <div class="row">
-      <header id="titulo-principal" class="column">Administrar productos</header>
-    </div>
-  </div>
+    <header class="header">
+        <h1 id="titulo-principal" class="column">Administrar productos</h1>
+    </header>
 
-  <div class="button-row">
-    <button id="agregar" onclick="location.href='/agregar_productos.html'">Agregar producto</button>
-  </div>
+    <main class="main">
+        <div class="btn-agregar-producto">
+            <button class="btn-alo" onclick="location.href='./agregar_productos.html'">Agregar
+                producto</button>
+        </div>
 
-  <div class="main-container">
+        <div class="main-container">
+        </div>
+        <div class="mod-contenedor">
 
-  </div>
+        </div>
 
-  <div class="new-cont">
-    <div class="mod-contenedor">
-    <!--<div class="mod-cont" id="mod_cont">
-    </div>-->
-  </div>
+    </main>
 
-    <div class="mod-container">
-      <!-- <div class="mod-cont" id="mod_contenedor">
-      </div> -->
-    </div>
-  </div>
 
-  <footer id="footer"></footer>
+    <footer id="footer"></footer>
 
-  <script src="../javascript/footer.js"></script>
-  <script src="../javascript/navbar.js"></script>
-  <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    <script src="../javascript/footer.js"></script>
+    <script src="../javascript/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
