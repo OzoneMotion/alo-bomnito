@@ -1,19 +1,20 @@
+const nameId = document.getElementById("nameId");
+const emailId = document.getElementById("emailId");
+const passwordId =  document.getElementById("password")
+
 async function imprimirUsuario(idCliente) {
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
     //usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
     console.log(usuariosLocales)
 
-    const nameId = document.getElementById("nameId");
-    const emailId = document.getElementById("emailId");
-    const usuarios = await getData();
-    const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
+    // const usuarios = await getData();
+    // const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
     nameId.innerHTML = `${usuariosLocales.nameId}`;
     emailId.innerHTML = `${usuariosLocales.nameId}`;
     mostrarContrasenia(usuariosLocales)
 }
 
-async function mostrarContrasenia(usuario) {
-    const passwordId = document.getElementById("password")
+function mostrarContrasenia(usuario) {
     const contrasenia = usuario.password;
     const contraseniaLenght = contrasenia.length;
     let passwordAst = "";
@@ -22,18 +23,31 @@ async function mostrarContrasenia(usuario) {
         passwordAst = passwordAst + '*';
     }
 
-    if (passwordId.innerText == `${contrasenia}`) {
-        passwordId.innerHTML = `${passwordAst}`;
-    } else if (passwordId.innerText == passwordAst) {
-        passwordId.innerHTML = `${contrasenia}`;
-    } else if (passwordId.innerText == "") {
+    if (passwordId.innerText == "") {
         passwordId.innerHTML = `${passwordAst}`;
     }
 
 }
 
-function Visibility() {
-    
+function Visibility(){
+    //const Usuarios = await getData();
+    const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
+    const password = usuariosLocales.password;
+    const passwordLenght = `${usuariosLocales.password}`.length;
+    let passwordAst = ""
+
+    for(let i = 1; i < passwordLenght; i++) {
+        passwordAst = passwordAst + '*'
+    }
+
+    if(passwordId.innerText == `${password}`){
+        passwordId.innerHTML = `${passwordAst}`;
+    } else if(passwordId.innerText == passwordAst) {
+        passwordId.innerHTML = `${password}`;
+    } else if(passwordId.innerText == ""){
+        passwordId.innerHTML = `${passwordAst}`;
+    }
+
 }
 
 const getData = async () => {
