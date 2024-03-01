@@ -35,6 +35,27 @@
       "direccion": "Generation 3, Bomnitolandia, CH36, México",
       "tdc": "1234123412345678",
       "id": "537a"
+    },
+    {
+      "id": "95d9",
+      "nameId": "panchita",
+      "emailId": "panchitaaa@gmail.com",
+      "password": "panchita123",
+      "password2": "panchita123"
+    },
+    {
+      "id": "398e",
+      "nameId": "laBoss",
+      "emailId": "ari@gmail.com",
+      "password": "chicharron123",
+      "password2": "chicharron123"
+    },
+    {
+      "id": "70f1",
+      "nameId": "luis",
+      "emailId": "luis@gmail.com",
+      "password": "luisito123",
+      "password2": "luisito123"
     }
   ],
   "admins": [
@@ -63,7 +84,7 @@
       "modo_uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
       "tipo_piel": "Seca",
       "cantidad_existencia": "50",
-      "precio": 640.0,
+      "precio": 640,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_DB_1.jpg",
@@ -99,7 +120,8 @@
           "nombre": "Extracto de globularia alypum",
           "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible."
         }
-      ]
+      ],
+      "id": "3e5d"
     },
     {
       "id_producto": 13,
@@ -110,7 +132,7 @@
       "modo_uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
       "tipo_piel": "Normal",
       "cantidad_existencia": "50",
-      "precio": 950.0,
+      "precio": 950,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_HVB_1.jpg",
@@ -151,7 +173,8 @@
           "nombre": "Éster de vitamina E",
           "funcion": "Acción antioxidante que protege a los tejidos de los efectos nocivos de las toxinas ambientales."
         }
-      ]
+      ],
+      "id": "aeb0"
     },
     {
       "id_producto": 14,
@@ -162,7 +185,7 @@
       "modo_uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol.Reaplique después de transpirar,\r\nnadar o secarse.Se recomienda reaplicar cada 3 o 4 horas.",
       "tipo_piel": "Normal",
       "cantidad_existencia": "50",
-      "precio": 680.0,
+      "precio": 680,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_SL_1.jpg",
@@ -198,7 +221,8 @@
           "nombre": "Triglicéridos caprílico",
           "funcion": "Aceite natural ligero que proporciona emoliencia e hidratación."
         }
-      ]
+      ],
+      "id": "b7f7"
     },
     {
       "id_producto": 16,
@@ -209,7 +233,7 @@
       "modo_uso": "Aplique por la mañana y noche sobre la piel húmeda.Masajee con suaves movimientos circulares.Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 300.0,
+      "precio": 300,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_VCBS_2.jpg",
@@ -240,7 +264,8 @@
           "nombre": "Extracto de globularia alypum",
           "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible."
         }
-      ]
+      ],
+      "id": "f67e"
     },
     {
       "id_producto": 17,
@@ -251,7 +276,7 @@
       "modo_uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 285.0,
+      "precio": 285,
       "imagenesProductos": [
         {
           "nombre_imagen": "N_AK_1.jpg",
@@ -282,7 +307,8 @@
           "nombre": "Glicerina",
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
-      ]
+      ],
+      "id": "1fa5"
     },
     {
       "id_producto": 18,
@@ -293,7 +319,7 @@
       "modo_uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 440.0,
+      "precio": 440,
       "imagenesProductos": [
         {
           "nombre_imagen": "R_NGSC_2.jpg",
@@ -324,7 +350,8 @@
           "nombre": "Dicaprilato",
           "funcion": "Hace que la piel sea suave y flexible."
         }
-      ]
+      ],
+      "id": "2248"
     },
     {
       "id_producto": 19,
@@ -335,7 +362,7 @@
       "modo_uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón.Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 300.0,
+      "precio": 300,
       "imagenesProductos": [
         {
           "nombre_imagen": "R_OFG_1.jpg",
@@ -366,7 +393,8 @@
           "nombre": "Glicerina",
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
-      ]
+      ],
+      "id": "9f02"
     },
     {
       "id_producto": 20,
@@ -377,7 +405,7 @@
       "modo_uso": "Úsalo como último paso a tu rutina de belleza.Esparce en el rostro suavemente y con pequeños toques hasta su total absorción.Mantén el producto en un lugar fresco.",
       "tipo_piel": "Grasa",
       "cantidad_existencia": "50",
-      "precio": 360.0,
+      "precio": 360,
       "imagenesProductos": [
         {
           "nombre_imagen": "S_SC_2.jpg",
@@ -408,7 +436,8 @@
           "nombre": "Glicerina",
           "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
         }
-      ]
+      ],
+      "id": "b189"
     },
     {
       "id_producto": 21,
@@ -419,7 +448,7 @@
       "modo_uso": "Humedezca su rostro y aplique la espuma.Permita actuar al producto de 30 segundos hasta 1 minuto.Enjuague con abundante agua.Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
       "tipo_piel": "Grasa",
       "cantidad_existencia": "50",
-      "precio": 340.0,
+      "precio": 340,
       "imagenesProductos": [
         {
           "nombre_imagen": "TIL_OWC_1.jpg",
@@ -460,7 +489,8 @@
           "nombre": "Alantoína",
           "funcion": "Ayuda a favorecer la cicatrización cutánea."
         }
-      ]
+      ],
+      "id": "70c7"
     },
     {
       "id_producto": 22,
@@ -471,7 +501,7 @@
       "modo_uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo.Evite el contacto con los ojos.Se recomienda su uso día y noche.",
       "tipo_piel": "Seca",
       "cantidad_existencia": "50",
-      "precio": 840.0,
+      "precio": 840,
       "imagenesProductos": [
         {
           "nombre_imagen": "Img_4.jpg",
@@ -527,7 +557,8 @@
           "nombre": "Éster de vitamina E",
           "funcion": "Acción antioxidante que protege a los tejidos de los efectos nocivos de las toxinas ambientales."
         }
-      ]
+      ],
+      "id": "20f6"
     }
   ],
   "ingrediente": [

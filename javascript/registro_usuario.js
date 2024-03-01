@@ -174,8 +174,8 @@ const postData = async () => {
     const newUser = getData();
 
     try {
-        // const response = await fetch("http://localhost:3000/users", {
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
+        //  const response = await fetch("http://localhost:3000/users", {
+         const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -185,7 +185,7 @@ const postData = async () => {
         if (response.ok) {
             const jsonResponse = await response.json()
             //const { username, password } = jsonResponse;
-            const { email, password } = jsonResponse;
+            const { correo, contrasenia } = jsonResponse;
 
         }
     }
@@ -198,43 +198,46 @@ formulario.addEventListener("submit", event => {
 })
 
 //Almacenamiento de datos en localStore
-/*
-const formRegistro = document.querySelector('#validation-registro');
-console.log();
-formRegistro.addEventListener('submit', async (e) =>{
-    e.preventDefault();
 
-    const emailId = document.querySelector('#emailId').value;
-    const password = document.querySelector('#password').value;
+// const formRegistro = document.querySelector('#validation-registro');
+// console.log();
+// formRegistro.addEventListener('submit', async (e) =>{
+//     e.preventDefault();
 
-    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    console.log('Datos almacenados en localStorage:', Usuarios);
-});
+//     const emailId = document.querySelector('#emailId').value;
+//     const password = document.querySelector('#password').value;
 
-    try {
-        const response = await fetch("http://localhost:3000/users", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ emailId: emailId, password: password })
-        });
+//     console.log(emailId)
+//     console.log(password)
 
-        if (response.ok) {
-            const jsonResponse = await response.json();
-            const { emailId, password } = jsonResponse;
+//     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+//     console.log('Datos almacenados en localStorage:', Usuarios);
 
-            const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === emailId);
-            if (usuarioRegistrado){
-                return alert ('El usuario ya está registrado');
-            }
+//     try {
+//         const response = await fetch("http://localhost:8080/api/v1/Clientes", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({ emailId : emailId, password: password })
+//         });
 
-            Usuarios.push({ emailId: emailId, password: password });
-            localStorage.setItem('usuarios', JSON.stringify(Usuarios));
-            alert('Registro exitoso');
-        }
-    } catch (error) {
-        console.log(error);
-    }
-});
-*/
+//         if (response.ok) {
+//             const jsonResponse = await response.json();
+//             const { emailId, password } = jsonResponse;
+
+//             const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === emailId);
+//             if (usuarioRegistrado){
+//                 return alert ('El usuario ya está registrado');
+//             }
+
+//             Usuarios.push({ emailId: emailId, password: password });
+//             localStorage.setItem('usuarios', JSON.stringify(Usuarios));
+//             alert('Registro exitoso');
+//         }
+//     } catch (error) {
+//         console.log(emailId + password);
+//     }
+
+// });
+
