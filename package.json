@@ -4,8 +4,11 @@
   "description": "servidor para pruebas",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch db.json"
+    "server": "json-server --watch db.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }

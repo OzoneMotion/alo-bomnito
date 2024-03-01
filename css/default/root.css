@@ -32,7 +32,95 @@
     --textareaDeskTab-h: 129px;
     --textareaMobile-h: 194px;
     --marginTopBottom: 3rem;
-    --shadow: 4px 4px 10.5px 0px rgba(0,0,0,0.25); 
-    --shadow_lineal: 0px 4px 10.5px 0px rgba(0,0,0,0.25);
+    --shadow: 4px 4px 10.5px 0px rgba(0, 0, 0, 0.25);
+    --shadow_lineal: 0px 4px 10.5px 0px rgba(0, 0, 0, 0.25);
     --url-background: url(https://github.com/Aridai-Perez/Images_Alo-Bomnito/blob/main/ImagenesElementos/fondo.png?raw=true);
+}
+
+* {
+    /* border: 0.1px solid black; */
+    font-size: var(--sizeContenido);
+    font-family: var(--fontContenido);
+    color: var(--text);
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+
+.body {
+    background-color: var(--background);
+    width: 100%;
+}
+
+.body-con-fondo {
+    background: var(--url-background);
+    background-size: cover;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-alo,
+.btn-alo-submit,
+.btn-alo-a {
+    margin-top: 10px;
+    width: var(--btnMedium-w);
+    height: var(--btns-h);
+    background-color: var(--accent);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--background);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.btn-alo-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-alo:hover,
+.btn-alo-a:hover {
+    cursor: pointer;
+}
+
+.btn-alo-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.estilo-a {
+    color: var(--text);
+}
+
+.hr {
+    height: 0px;
+    background-color: var(--text);
+    opacity: 1;
+}
+
+.contenedor-form {
+    width: 90vw;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+@media (min-width: 744px) {
+    .contenedor-form {
+        min-width: 500px;
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor-form {
+        min-width: 650px;
+        max-width: 750px;
+    }
 }

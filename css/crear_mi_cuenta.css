@@ -2,32 +2,16 @@
 @import url('./default/navbar.css');
 @import url('./default/root.css');
 
-/*Css general */
-* {
-    /* border: 1px solid black; */
-    font-size: var(--sizeContenido);
-    font-family: var(--fontContenido);
-    color: var(--text);
-    box-sizing: border-box;
-    margin: 0;
-}
-
-
-body {
-    background: url(../imagenes/contacto.jpg);
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Estilos container */
 
 .containerRegistro {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
-    width: 350px;
-    height: 700px;
+    width: 90vw;
+    min-width: 300px;
+    max-width: 450px;
+    /* height: 700px; */
     /* display: flex;  */
     flex-wrap: wrap;
     justify-content: center;
@@ -45,7 +29,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 69px;
     justify-content: space-between;
     text-align: center;
     color: var(--text);
@@ -53,19 +36,18 @@ body {
 }
 
 /* Imagen*/
-.img-Tuser{
+.img-Tuser {
     text-align: center;
 }
-.img-user{
-    width: 15rem;
-    height: 15rem;
+
+.img-user {
+    width: 100%;
+    max-width: 192px;
 }
 
-
-/* Div de ¿tienes cuenta? */
-.content-sesion{
-    margin-top: 2rem;
-    text-align: center;
+.estilo-a:hover {
+    color: var(--background);
+    transition: all 0.3s ease-in-out;
 }
 
 /* Estilos textos */
@@ -80,30 +62,16 @@ body {
     font-weight: 700;
 }
 
+
 /* Estilos boton */
-.btn-container {
+.containerBotones {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
-    gap: 10px;
+    align-items: center;
 }
 
-#btn-submit {
-    width: var(--btnMedium-w);
-    height: var(--btnMedium-h);
-    background-color: var(--accent);
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--backgroud);
-    border-radius: 10px;
-    box-shadow: 8px 1px 20px 1px rgba(0, 0, 0, 0.40);
-    margin-top: 30px;
-}
-
-#btn-submit:hover {
-    cursor: pointer;
+.btn-container {
+    margin: 10px 0;
 }
 
 /* Estilos tablet */
@@ -112,22 +80,18 @@ body {
 
     /* Estilos para pantallas de tamaño 'xl' y superiores */
     .containerRegistro {
-        width: 590px;
-        height: 800px;
+        min-width: 500px;
+        max-width: 600px;
+        /* height: 800px; */
         padding: 89px;
     }
 
     #title {
-        font-size: var(--sizeTituloDesktop);
-
+        font-size: var(--sizeTituloDesk-tab);
     }
 
-    .title-container {
-        height: 85px;
-    }
-
-    #btn-submit{
-        margin-top: 30px;
+    .img-user {
+        max-width: 258px;
     }
 }
 
@@ -136,13 +100,18 @@ body {
 @media (min-width: 992px) {
 
     /* Estilos para pantallas de tamaño 'xxl' y superiores */
+    #title {
+        font-size: var(--sizeTituloDesk-tab);
+    }
+
     .containerRegistro {
-        width: 630px;
-        height: 830px;
+        min-width: 650px;
+        max-width: 750px;
+        /* height: 830px; */
         padding: 109px;
     }
 
-    #title {
-        font-size: var(--sizeTituloTablet);
+    .img-user {
+        max-width: 264px;
     }
 }

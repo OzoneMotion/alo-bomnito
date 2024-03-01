@@ -134,6 +134,30 @@ togglePasswordVisibility('password2', 'togglePassword2');
 
 //Almacenamiento de los datos introducidos en el formulario en la base de datos
 
+const formRegistro = document.querySelector('#validation-registro');
+formRegistro.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const name = document.querySelector('#nameId').value
+    const email = document.querySelector('#emailId').value
+    const password = document.querySelector('#password').value
+    const password2 = document.querySelector('#password2').value
+
+    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
+    if (usuarioRegistrado) {
+        //redireccion a html de error de correo
+        return window.location.href = 'error_correo.html'
+    }
+
+    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
+    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
+    //redireccion a html de exito haz creado tu cuenta
+    window.location.href = 'aviso_creado_cuenta.html'
+
+})
+
+
 const formulario = document.querySelector(".validation-registro");
 
 const getData = () => {
@@ -143,13 +167,15 @@ const getData = () => {
 
     formulario.reset();
     return datosProcesados;
+
 }
 
 const postData = async () => {
     const newUser = getData();
 
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        //  const response = await fetch("http://localhost:3000/users", {
+         const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -158,7 +184,9 @@ const postData = async () => {
         })
         if (response.ok) {
             const jsonResponse = await response.json()
-            const { username, password } = jsonResponse;
+            //const { username, password } = jsonResponse;
+            const { correo, contrasenia } = jsonResponse;
+
         }
     }
     catch (error) { console.log(error) }
@@ -168,3 +196,48 @@ formulario.addEventListener("submit", event => {
     event.preventDefault();
     postData();
 })
+
+//Almacenamiento de datos en localStore
+
+// const formRegistro = document.querySelector('#validation-registro');
+// console.log();
+// formRegistro.addEventListener('submit', async (e) =>{
+//     e.preventDefault();
+
+//     const emailId = document.querySelector('#emailId').value;
+//     const password = document.querySelector('#password').value;
+
+//     console.log(emailId)
+//     console.log(password)
+
+//     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+//     console.log('Datos almacenados en localStorage:', Usuarios);
+
+//     try {
+//         const response = await fetch("http://localhost:8080/api/v1/Clientes", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({ emailId : emailId, password: password })
+//         });
+
+//         if (response.ok) {
+//             const jsonResponse = await response.json();
+//             const { emailId, password } = jsonResponse;
+
+//             const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === emailId);
+//             if (usuarioRegistrado){
+//                 return alert ('El usuario ya está registrado');
+//             }
+
+//             Usuarios.push({ emailId: emailId, password: password });
+//             localStorage.setItem('usuarios', JSON.stringify(Usuarios));
+//             alert('Registro exitoso');
+//         }
+//     } catch (error) {
+//         console.log(emailId + password);
+//     }
+
+// });
+

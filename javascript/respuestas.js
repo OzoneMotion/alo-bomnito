@@ -1,3 +1,4 @@
+//let tipo = ""
 
 function resultado() {
     this.preventFormReload();
@@ -35,24 +36,37 @@ function resultado() {
     else if (document.getElementById('p63').checked == true) { p6 = 5 }
     else if (document.getElementById('p64').checked == true) { p6 = 7 }
 
+
     nota = p1 + p2 + p3 + p4 + p5 + p6;
     if (nota >= 6 && nota < 18) {
         this.initModal('Tu Bomnita piel es: </br>Normal');
+        //return tipo = "Normal";
     }
-    if (nota >= 18 && nota < 30) {
+    if (nota >= 18 && nota < 28) {
         this.initModal('Tu Bomnita piel es: </br>Seca');
+        //return tipo = "Seca", console.log(tipo);
     }
-    if (nota >= 30 && nota < 42) {
+    if (nota >= 28 && nota < 33) {
         this.initModal('Tu Bomnita piel es: </br>Grasa');
+        //return tipo = "Grasa", console.log(tipo);
     }
-    if (nota >= 42 && nota < 30) {
+    if( nota >= 34 ){
         this.initModal('Tu Bomnita piel es: </br>Mixta');
+        //return tipo = "Mixta", console.log(tipo);
     }
+
+    // function irCompras(tipo){
+    //     let piel = tipo;
+    //     console.log(piel)
+    //     window.location.href = `${tipo}.html`
+    // }
+
     // alert(" Aciertos: " + nota);
    //window.location = 'cuestionario.html'
 }
 
-
+// let tipo = tipo;
+// console.log(tipo)
 
 function validate() {
     this.preventFormReload();
@@ -94,9 +108,17 @@ function initModal(text){
     modal.showModal();
 }
 
+
+function irCompras(){
+    let piel = tipo;
+    console.log(piel)
+    window.location.href = `productos.html`
+}
+
+
 /* Redirecciona el boton comprar a la pagina de productos*/
 function redirectProductos(){
-    window.location.href = "productos.html"
+    
 }
 
 function closeModal(){

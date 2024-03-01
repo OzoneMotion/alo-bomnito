@@ -2,31 +2,13 @@
 @import url('./default/navbar.css');
 @import url('./default/root.css');
 
-* {
-    /* border: 1px solid black; */
-    font-size: var(--sizeContenido);
-    font-family: var(--fontContenido);
-    color: var(--text);
-    box-sizing: border-box;
-    margin: 0;
-}
-
-
-body {
-    background: var(--url-background);
-    background-size: cover;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Estilos container */
 
 .container {
     background-color: var(--primary);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
-    width: 350px;
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,6 +59,7 @@ textarea {
     margin: 5px 0;
     font-size: var(--sizeEtiqueta);
     font-family: var(--fontEtiqueta);
+    text-align: justify;
 }
 
 label {
@@ -129,7 +112,7 @@ label {
     border: none;
     font-size: 16px;
     font-weight: 700;
-    color: var(--backgroud);
+    color: var(--background);
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
