@@ -220,6 +220,10 @@
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_2.jpg"
         },
         {
+          "nombre_imagen": "Img_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_1.jpg"
+        },
+        {
           "nombre_imagen": "D_VCBS_3.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_3.jpg"
         }
@@ -254,12 +258,16 @@
       "precio": 285.0,
       "imagenesProductos": [
         {
-          "nombre_imagen": "N_PV_1.jpg",
-          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_PV_1.jpg"
-        },
-        {
           "nombre_imagen": "N_AK_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_AK_1.jpg"
+        },
+        {
+          "nombre_imagen": "Img_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_2.jpg"
+        },
+        {
+          "nombre_imagen": "N_PV_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_PV_1.jpg"
         }
       ],
       "ingrediente": [
@@ -470,8 +478,16 @@
       "precio": 840.0,
       "imagenesProductos": [
         {
+          "nombre_imagen": "Img_4.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_4.jpg"
+        },
+        {
           "nombre_imagen": "N_3B_1.jpg",
           "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_3B_1.jpg"
+        },
+        {
+          "nombre_imagen": "Img_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_3.jpg"
         }
       ],
       "ingrediente": [
@@ -766,13 +782,7 @@
       "id_ingrediente": 27,
       "nombre": "Fibra de avena",
       "funcion": "Tiene propiedades suavizantes, relajantes, hidratantes y emolientes.Evita la deshidratación de la piel manteniendo una barrera protectora.",
-      "id": "3f62"
-    },
-    {
-      "id": "67e0",
-      "id_ingrediente": 28,
-      "nombre": "Cheems",
-      "funcion": "Prueba"
+      "id": "07e9"
     }
   ]
 }
