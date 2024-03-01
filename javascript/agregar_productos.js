@@ -1,5 +1,6 @@
 const maxIngredientes = 6;
 const ingredientesSeleccionados = [];
+const imagenesSeleccionadas = [];
 const formularioIngredientes = document.getElementById('miFormulario');
 
 // Seleccion de imagenes y visualizacion
@@ -123,22 +124,34 @@ const inputValidation = (regex, input, name) => {
 
 formValidation.addEventListener('submit', async (e) => {
     e.preventDefault();
-    console.log(Object.values(names).every(state => state));
+    // console.log(Object.values(names).every(state => state));
     const imageInput = document.getElementById('imagesInput');
-    const files = imageInput.files;
+    const inputNombre = document.getElementById('nombre');
+    const inputMarca = document.getElementById('marca');
+    const nombreProducto = inputNombre.value;
+    const marcaProducto = inputMarca.value;
+    const nombreArchivos = nombreProducto[0] + marcaProducto[0];
+    let index = 1;
+    const archivos = imageInput.files;
+    console.log(archivos);
 
-    if (files.length > 0) {
+    if (archivos.length > 0) {
         try {
-            // const formData = new FormData();
-            for (const file of files) {
-                const fileName = file.name;
-                const base64Content = await cambiarABase64(file);
-                const response = await subirImagen(base64Content, fileName);
-                const data = await response.json();
-                const url = data.content.download_url;
-                console.log(url);
+            for (const archivo of archivos) {
+                const extension = archivo.name.split('.').pop();
+                const nombreArchivo = `aloBomnito_${nombreArchivos.toLowerCase()}_${index}.${extension}`;
+                console.log(nombreArchivo);
+                const conenidoBase64 = await cambiarABase64(archivo);
+                const respuesta = await subirImagen(conenidoBase64, nombreArchivo);
+                if (respuesta.ok) {
+                    const datos = await respuesta.json();
+                    const imagen = crearJsonImagenes(datos);
+                    imagenesSeleccionadas.push(imagen);
+                } else {
+                    console.error("Error: ", respuesta.status);
+                }
+                index++;
             }
-
             alert('Imágenes subidas exitosamente a GitHub.');
         } catch (error) {
             console.error('Error al subir la imagen:', error);
@@ -147,7 +160,11 @@ formValidation.addEventListener('submit', async (e) => {
         alert('Selecciona una imagen antes de enviarla.');
     }
 
-    const datosProcesados = obtenerJsonDatos(e.target);
+    const datosProcesados = await obtenerJsonDatos(e.target);
+    console.log(datosProcesados);
+    // Enviar los datos al servidor
+    enviarDatosProducto(datosProcesados);
+    alert('Producto dado de alta')
 });
 
 
@@ -157,11 +174,15 @@ formValidation.addEventListener('submit', async (e) => {
 // })
 
 
-const obtenerJsonDatos = (eTarget) => {
+const obtenerJsonDatos = async (eTarget) => {
     const datos = new FormData(eTarget);
     // const datos = new FormData(formValidation);
     const datosProcesados = Object.fromEntries(datos.entries());
+    datosProcesados['ingrediente'] = ingredientesSeleccionados;
+    datosProcesados['imagenesProductos'] = imagenesSeleccionadas;
+    datosProcesados['id_producto'] = await ultimoIdProductos() + 1;
     console.log(datosProcesados);
+    console.log(datosProcesados['id_producto']);
 
     if (Object.values(names).every(state => state)) {
         formValidation.reset();
@@ -170,23 +191,30 @@ const obtenerJsonDatos = (eTarget) => {
     return datosProcesados;
 }
 
-// const postData = async () => {
-//     const newUser = getData();
+const enviarDatosProducto = async (producto) => {
+    const url = 'http://localhost:3000/productos';
+    try {
+        const respuesta = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(producto),
+        });
 
-//     try {
-//         const response = await fetch("http://localhost:3000/productos", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(newUser)
-//         })
-//         if (response.ok) {
-//             const jsonResponse = await response.json()
-//         }
-//     }
-//     catch (error) { console.log(error) }
-// }
+        if (respuesta.ok) {
+            const data = await respuesta.json();
+            console.log('Datos enviados correctamente:', data);
+            return respuesta;
+        } else if (respuesta.status === 500) {
+            alert('Error de servidor');
+        } else {
+            console.error('Error al enviar los datos:', respuesta.status);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 const cambiarABase64 = async (file) => {
     return new Promise((resolve, reject) => {
@@ -197,29 +225,61 @@ const cambiarABase64 = async (file) => {
     });
 }
 
-const subirImagenasync = async (base64Content, fileName) => {
-    const apiUrl = `https://api.github.com/repos/ChrisMHM/Github-API-test/contents/ImagenesProductos/${fileName}`;
-    const token = '';
-
+const subirImagen = async (contenidoBase64, nombreArchivo) => {
     try {
-        const response = await fetch(apiUrl, {
-            method: 'PUT',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                message: 'Agregando mi imagen',
-                content: base64Content
-            }),
-        });
+        // Obtener el token
+        const respuestaToken = await fetch('http://localhost:3000/token');
+        if (respuestaToken.ok) {
+            const dato = await respuestaToken.json();
+            const token = dato.gh_token;
+            // console.log(token);
 
-        if (!response.ok) {
-            throw new Error('Error al subir la imagen a GitHub.');
+            // Subir la imagen a GitHub
+            const apiUrl = `https://api.github.com/repos/ChrisMHM/Images_Alo-Bomnito/contents/ImagenesProductos/${nombreArchivo}`;
+            const respuesta = await fetch(apiUrl, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: `Agregando mi imagen ${nombreArchivo}`,
+                    content: contenidoBase64,
+                }),
+            });
+
+            if (!respuesta.ok) {
+                throw new Error('Error al subir la imagen a GitHub.');
+            }
+            return respuesta;
+        } else {
+            throw new Error('Error al obtener el token.');
         }
-        return response;
     } catch (error) {
+        console.error('Error:', error.message);
         throw error;
+    }
+};
+
+const crearJsonImagenes = (datos) => {
+    return {
+        nombre_imagen: datos.content.name,
+        url: datos.content.download_url
+    }
+}
+
+const ultimoIdProductos = async () => {
+    try {
+        const respuesta = await fetch('http://localhost:3000/productos');
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            const idProductos = datos.map(producto => producto.id_producto);
+            return Math.max(...idProductos);
+        } else {
+            console.error(respuesta.status);
+        }
+    } catch (error) {
+        console.error(error);
     }
 }
 
@@ -243,7 +303,7 @@ const obtenerDatos = async () => {
     }
 }
 
-const enviarDatos = async (ingrediente) => {
+const enviarDatosIngrediente = async (ingrediente) => {
     // const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
     const url = 'http://localhost:3000/ingrediente';
     try {
@@ -275,6 +335,7 @@ const crearMenu = async (contenedor, atributosIdName) => {
         const select = document.createElement('select');
         select.name = atributosIdName;
         select.id = atributosIdName;
+        select.classList.add('containerInput');
         let option = document.createElement('option');
         option.textContent = "Selecciona un ingrediente";
         select.appendChild(option);
@@ -291,7 +352,7 @@ const crearMenu = async (contenedor, atributosIdName) => {
             const selectedValue = select.value;
             datos = await obtenerDatos();
             const ingredienteSeleccionado = datos.find(ingrediente => ingrediente.id_ingrediente === parseInt(selectedValue));
-            console.log(ingredienteSeleccionado);
+            // console.log(ingredienteSeleccionado);
             ingredientesSeleccionados.push(ingredienteSeleccionado);
             if (ingredientesSeleccionados.length < maxIngredientes) {
                 console.log(ingredientesSeleccionados);
@@ -322,7 +383,7 @@ btnAgregarIngrediente.addEventListener('click', () => {
 });
 
 // Agrega evento al botón de cierre de la ventana modal
-const btnCerrarModal = document.querySelector('.close');
+const btnCerrarModal = document.getElementById("btnClose");
 btnCerrarModal.addEventListener('click', () => {
     const modal = document.getElementById('modalNuevoIngrediente');
     modal.style.display = 'none';
@@ -340,7 +401,7 @@ formularioNuevoIngrediente.addEventListener('submit', async (e) => {
 
     if (!ingredienteEncontrado) {
         const ingrediente = crearJsonIngrediente(nombreNuevoIngrediente, funcionNuevoIngrediente, datos);
-        const respuesta = await enviarDatos(ingrediente);
+        const respuesta = await enviarDatosIngrediente(ingrediente);
         if (respuesta.ok) {
             // console.log(ingrediente);
             e.preventDefault();
@@ -359,7 +420,7 @@ formularioNuevoIngrediente.addEventListener('submit', async (e) => {
 
 const ultimoIdIngredientes = (datos) => {
     const idIngredientes = datos.map(ingrediente => ingrediente.id_ingrediente);
-    return Math.max(...idIngredientes) + 1;
+    return Math.max(...idIngredientes);
 }
 
 const idAdminIngrediente = (datos) => {
@@ -373,7 +434,5 @@ const crearJsonIngrediente = (nombreIngrediente, funcionIngrediente, datos) => {
         id_ingrediente: ultimoIdIngredientes(datos) + 1,
         nombre: nombreIngrediente,
         funcion: funcionIngrediente
-        // ,
-        // id: idAdminIngrediente(datos)
     }
 }

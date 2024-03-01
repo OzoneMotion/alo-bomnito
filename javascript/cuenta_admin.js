@@ -10,9 +10,9 @@ async function imprimirUsuario(idCliente) {
 
     // const usuarios = await getData();
     // const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
-    nameId.innerHTML = `${usuariosLocales.nameId}`;
-    emailId.innerHTML = `${usuariosLocales.nameId}`;
-    admnId.innerHTML = "001B"
+    nameId.innerHTML = "Cheems"
+    emailId.innerHTML = `${usuariosLocales.emailId}`;
+    admnId.innerHTML = `${usuariosLocales.nameId}`;
     mostrarContrasenia(usuariosLocales)
     verificar()
 }
@@ -53,8 +53,9 @@ function Visibility(){
 
 }
 
-function verificar() {
+
     function verificar() {
+        const cerrarSes = document.getElementById("cerrarSes")
         const cerrarSesion = document.getElementById("cerrarSesion")
         const cuentitaIniciada = document.getElementById("cuentitaIniciada")
         const cuentita = document.getElementById("cuentita")
@@ -63,7 +64,7 @@ function verificar() {
 
         if (localStorage.getItem('usuarioActivo') == null){
     
-        } else if (admin.nameId == "Cheems"){
+        } else if (admin.nameId == "ABC"){
             const cuentaIconMobile = document.getElementById("cuentaIconMobile")
             const carritoIconMobile = document.getElementById("carritoIconMobile")
             const homecito = document.getElementById("homecito")
@@ -106,11 +107,10 @@ function verificar() {
             window.location = "index.html"
         });
     
+        cerrarSes.addEventListener('click', () => {
+            localStorage.clear();
+            window.location = "index.html"    
+        });
     }
     
-    cerrarSes.addEventListener('click', () => {
-        localStorage.clear();
-        window.location = "index.html"    
-    });
 
-}

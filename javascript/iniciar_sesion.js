@@ -107,22 +107,22 @@ const inputValidation = (regex, input, name) => {
 //const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 
-let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
+// let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
 
-if (!validarUsuario) {
-    mensajeError.style.display = 'block';
-    // return;
-} else {
-    localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
-    window.location.href = 'index.html';
-}
-inputEmail.addEventListener('input', () => {
-    mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
-});
+// if (!validarUsuario) {
+//     mensajeError.style.display = 'block';
+//     // return;
+// } else {
+//     localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
+//     window.location.href = 'index.html';
+// }
+// inputEmail.addEventListener('input', () => {
+//     mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
+// });
 
-inputPassword.addEventListener('input', () => {
-    mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
-});
+// inputPassword.addEventListener('input', () => {
+//     mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
+// });
 
 // Función para obtener los datos del archivo JSON
 async function getData() {
@@ -139,10 +139,6 @@ async function getData() {
 
 
 function login() {
-    const cuentitaIniciada = document.getElementById("cuentitaIniciada")
-    const cuentita = document.getElementById("cuentita")
-    const cerrarSesion = document.getElementById("cerrarSesion")
-    const cuentaIconDesktop = document.getElementById("cuentaIconDesktop")
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
@@ -153,10 +149,9 @@ function login() {
         
         if (usuarioEncontrado) {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-            if (usuarioEncontrado.nameId == "Cheems"){
+            if (usuarioEncontrado.nameId == "ABC"){
                 window.location = "administrar_productos.html"
             }else {
-                usuar
                 window.location = "index.html"
             }
         } else {

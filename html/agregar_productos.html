@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alo' Bomnito | Agregar producto</title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesElementos/LogoOficial.png"
+        type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/agregar_productos.css">
@@ -12,15 +15,14 @@
     <script async defer src="../javascript/agregar_productos.js"></script>
 </head>
 
-<body>
+<body onload="verificar()">
     <!-- INICIO DE NAVBAR -->
     <nav id="navbar"></nav>
     <!-- FIN DE NAVBAR -->
 
-    <!-- <main> -->
     <div class="container">
         <p class="tittle">Agregar producto</p>
-        <form class="formato" id="validation" onsubmit="enviarFormulario(event)">
+        <form class="formato" id="validation">
             <div class="container1">
                 <div class="container_labels">
                     <div class="container_preview">
@@ -49,8 +51,8 @@
                             <div class="objContainerImg">
                                 <div>
                                     <span class="material-symbols-outlined">add_a_photo</span>
-                                    <input accept=".png, .jpg, .jpeg" name="imagenes" class="imgInput" id="imagesInput"
-                                        type="file" multiple>
+                                    <input accept=".png, .jpg, .jpeg" name="imagenesProductos" class="imgInput"
+                                        id="imagesInput" type="file" multiple>
                                 </div>
                             </div>
                             <!-- <div class="container_iDelete">
@@ -70,12 +72,6 @@
                     <div class="alerts-container">
                         <p class="invalid-feedback" id="cantidadProducto-empty">Completa este campo.</p>
                         <p class="invalid-feedback" id="cantidadProducto-regex">Debes poner una cantidad mayor a 0.</p>
-                    </div>
-                </div>
-                <div class="container_labels">
-                    <label for="IdProducto">ID</label>
-                    <div class="containerInput">
-                        <input disabled name="IdProducto" id="IdProducto" type="text" placeholder="000">
                     </div>
                 </div>
                 <div class="container_labels" id="id-nombreProducto">
@@ -142,21 +138,19 @@
                     <label for="descripcion">Descripción</label>
                     <div class="containerTextArea">
                         <textarea name="descripcion" id="descripcion" cols="53" rows="6"
-                            placeholder="Descripcion del producto">
-                        </textarea>
+                            placeholder="Descripcion del producto">Prueba</textarea>
                     </div>
                     <div class="alerts-container">
                         <p class="invalid-feedback" id="descripcionProducto-empty">Completa este campo.</p>
                         <p class="invalid-feedback" id="descripcionProducto-regex">El campo solo puede tener 300
-                            palabras como maximo, sea breve por favor.</p>
+                            palabras como máximo.</p>
                     </div>
                 </div>
                 <div class="container_labels" id="id-indicacionesUsoProducto">
                     <label for="modo_uso">Indicaciones de uso</label>
                     <div class="containerTextArea">
                         <textarea name="modo_uso" id="modo_uso" cols="53" rows="6"
-                            placeholder="Indicaciones de uso sobre el producto">
-                        </textarea>
+                            placeholder="Indicaciones de uso sobre el producto">Prueba</textarea>
                     </div>
                     <div class="alerts-container">
                         <p class="invalid-feedback" id="indicacionesUsoProducto-empty">Completa este campo.</p>
@@ -203,54 +197,26 @@
                 </div>
             </div>
         </form>
-        <input type="button" value="Agregar nuevo ingrediente" id="agregarIngrediente">
+        <input type="button" value="Agregar ingrediente" id="agregarIngrediente" class="btn-alo">
         <div id="modalNuevoIngrediente" class="modal" style="display: none;">
             <div class="modal-content">
-                <span class="close">×</span>
+                <div class="btnCloseEstilos" id="btnClose">
+                    <span class="material-symbols-outlined iconito">close</span>
+                </div>
                 <form id="formularioNuevoIngrediente" onsubmit="enviarFormulario(event)">
+                    <h2 class="tituloNuevoIngrediente">Agregar nuevo producto</h2>
                     <label for="nombreIngrediente">Nombre de ingrediente</label>
                     <input type="text" name="nombreIngrediente" id="nombreIngrediente">
                     <label for="funcionIngrediente">Función del ingrediente</label>
                     <textarea name="funcionIngrediente" id="funcionIngrediente" cols="30" rows="10"></textarea>
-                    <button type="submit">Guardar</button>
+                    <button type="submit" class="btn-alo">Guardar</button>
                 </form>
             </div>
         </div>
     </div>
-    <!-- <div class="container_labels" id="id-ingredientesProducto">
-        <label>Ingredientes (máximo 6).</label>
-        <div>
-            <div class="containerInput" id="miFormulario">
-                <label for="ingredientes">Selecciona un ingrediente:<label>
-            </div>
-            <div id="ingredientesNuevos"></div>
-            <input type="button" value="Agregar nuevo ingrediente" id="agregarIngrediente">
-        </div>
-        <div class="alerts-container">
-            <p class="invalid-feedback" id="id-ingredientesProducto-empty">Completa este campo.</p>
-            <p class="invalid-feedback" id="id-ingredientesProducto-max">Solo puede seleccionar 6
-                ingredientes principales.</p>
-        </div>
-    </div>
-    <div id="modalNuevoIngrediente" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <form id="formularioNuevoIngrediente">
-                Campos para el nuevo ingrediente (nombre, función,etc.)
-                <label for="nombreIngrediente">Nombre de ingrediente<label>
-                        <input type="text" name="nombreIngrediente" id="nombreIngrediente">
-                        <label for="funcionIngrediente">Función del ingrediente<label>
-                                <textarea name="funcionIngrediente" id="funcionIngrediente" cols="30"
-                                    rows="10"></textarea>
-                                <button type="submit">Guardar</button>
-            </form>
-        </div>
-    </div> -->
-
-    <!-- </main> -->
 
     <footer id="footer"></footer>
-
+    <script src="../javascript/verificarSesion.js"></script>
     <script src="../javascript/footer.js"></script>
     <script src="../javascript/navbar.js"></script>
     <!-- //<script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script> -->
