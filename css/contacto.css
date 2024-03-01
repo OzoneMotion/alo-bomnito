@@ -59,6 +59,7 @@ textarea {
     margin: 5px 0;
     font-size: var(--sizeEtiqueta);
     font-family: var(--fontEtiqueta);
+    text-align: justify;
 }
 
 label {

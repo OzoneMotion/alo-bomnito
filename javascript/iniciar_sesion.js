@@ -148,7 +148,7 @@ function login() {
             localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
             window.location.href = "productos.html"
         } else {
-            window.alert('credenciales invalidad, intenta de nuevo');
+            window.alert('credenciales invalidas, intenta de nuevo');
         }
     }, (err) => {
         console.log('algo salio mal', err)

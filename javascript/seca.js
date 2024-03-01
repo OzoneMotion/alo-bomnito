@@ -25,7 +25,7 @@ productosContainer.innerHTML += `<div class="producto frase">
 // const seca = data.filter(element => element.piel === "seca")
 // const mixta = data.filter(element => element.piel === "mixta")
 
-const pielSeca = data.filter(element => element.tipo_piel === "seca");
+const pielSeca = data.filter(element => element.tipo_piel === "Seca");
 
 
 pielSeca.forEach((element, index) => {

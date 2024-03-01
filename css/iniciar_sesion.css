@@ -71,7 +71,8 @@ input:focus {
 }
 
 input {
-    height: 39px;
+    height: 39px; 
+    text-align: justify;
 }
 
 /* Estilos textos */
