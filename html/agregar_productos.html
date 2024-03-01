@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container_labels" id="id-cantidadProducto">
+                <div class="container_labels" id="id-cantidad_existencia">
                     <label for="cantidad_existencia">Cantidad</label>
                     <div class="containerInput">
                         <input name="cantidad_existencia" id="cantidad_existencia" type="tel" placeholder="000">
@@ -70,11 +70,12 @@
                         </div>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="cantidadProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="cantidadProducto-regex">Debes poner una cantidad mayor a 0.</p>
+                        <p class="invalid-feedback" id="cantidad_existencia-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="cantidad_existencia-regex">Debes poner una cantidad mayor a 0.
+                        </p>
                     </div>
                 </div>
-                <div class="container_labels" id="id-nombreProducto">
+                <div class="container_labels" id="id-nombre">
                     <label for="nombre">Nombre</label>
                     <div class="containerInput">
                         <input name="nombre" id="nombre" type="text" placeholder=" Nombre del producto">
@@ -83,12 +84,12 @@
                         </div>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="nombreProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="nombreProducto-regex">El nombre debe tener menos de 20
+                        <p class="invalid-feedback" id="nombre-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="nombre-regex">El nombre debe tener menos de 20
                             caracteres.</p>
                     </div>
                 </div>
-                <div class="container_labels" id="id-marcaProducto">
+                <div class="container_labels" id="id-marca">
                     <label for="marca">Marca</label>
                     <div class="containerInput">
                         <input name="marca" id="marca" type="text" placeholder=" Marca del producto">
@@ -97,12 +98,12 @@
                         </div>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="marcaProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="marcaProducto-regex">La marca debe tener menos de 20 caracteres.
+                        <p class="invalid-feedback" id="marca-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="marca-regex">La marca debe tener menos de 20 caracteres.
                         </p>
                     </div>
                 </div>
-                <div class="container_labels" id="id-precioProducto">
+                <div class="container_labels" id="id-precio">
                     <label for="precio">Precio</label>
                     <div class="containerInput">
                         <input name="precio" id="precio" type="text" placeholder=" $000.00">
@@ -111,15 +112,15 @@
                         </div>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="precioProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="precioProducto-regex">El espacio solo puede contener numeros,
+                        <p class="invalid-feedback" id="precio-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="precio-regex">El espacio solo puede contener numeros,
                             debe seguir el lineamiento de 2 decimales.</p>
                     </div>
                 </div>
             </div>
 
             <div>
-                <div class="container_labels" id="id-contenidoProducto">
+                <div class="container_labels" id="id-contenido">
                     <label for="contenido">Contenido</label>
                     <div class="containerInput" id="input-container-alerts">
                         <input name="contenido" id="contenido" type="text" placeholder="000.00ml/g">
@@ -128,33 +129,33 @@
                         </div>
                     </div>
                     <div class="alerts-container" id="alerts-container">
-                        <p class="invalid-feedback" id="contenidoProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="contenidoProducto-regex">Se debe seguir el lineamiento de 2
+                        <p class="invalid-feedback" id="contenido-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="contenido-regex">Se debe seguir el lineamiento de 2
                             decimales.
                             Ademas de especificar el tipo de contenido (unicamente con 2 tipos de formatos, ml o g).</p>
                     </div>
                 </div>
-                <div class="container_labels" id="id-descripcionProducto">
+                <div class="container_labels" id="id-descripcion">
                     <label for="descripcion">Descripción</label>
                     <div class="containerTextArea">
                         <textarea name="descripcion" id="descripcion" cols="53" rows="6"
                             placeholder="Descripcion del producto">Prueba</textarea>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="descripcionProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="descripcionProducto-regex">El campo solo puede tener 300
+                        <p class="invalid-feedback" id="descripcion-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="descripcion-regex">El campo solo puede tener 300
                             palabras como máximo.</p>
                     </div>
                 </div>
-                <div class="container_labels" id="id-indicacionesUsoProducto">
+                <div class="container_labels" id="id-modo_uso">
                     <label for="modo_uso">Indicaciones de uso</label>
                     <div class="containerTextArea">
                         <textarea name="modo_uso" id="modo_uso" cols="53" rows="6"
                             placeholder="Indicaciones de uso sobre el producto">Prueba</textarea>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="indicacionesUsoProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="indicacionesUsoProducto-regex">El campo solo puede tener 300
+                        <p class="invalid-feedback" id="modo_uso-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="modo_uso-regex">El campo solo puede tener 300
                             palabras como maximo, sea breve por favor.</p>
                     </div>
                 </div>
@@ -170,7 +171,7 @@
                         </select>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="tipoPiel-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="tipo_piel-empty">Completa este campo.</p>
                     </div>
                 </div>
                 <div class="container_labels" id="id-ingredientesProducto">
@@ -182,8 +183,8 @@
                         <div id="ingredientesNuevos"></div>
                     </div>
                     <div class="alerts-container">
-                        <p class="invalid-feedback" id="id-ingredientesProducto-empty">Completa este campo.</p>
-                        <p class="invalid-feedback" id="id-ingredientesProducto-max">Solo puede seleccionar 6
+                        <p class="invalid-feedback" id="id-ingrediente-empty">Completa este campo.</p>
+                        <p class="invalid-feedback" id="id-ingrediente-max">Solo puede seleccionar 6
                             ingredientes principales.</p>
                     </div>
                 </div>
