@@ -1,10 +1,11 @@
-const nameId = document.getElementById("nameId")
-const emailId = document.getElementById("emailId")
-const passwordId = document.getElementById("password")
-const admnId = document.getElementById("admnId")
 
-async function imprimirUsuario() {
+async function imprimirUsuario(idUsuario) {
     const Usuarios = await getData();
+
+    const nameId = document.getElementById("nameId")
+    const emailId = document.getElementById("emailId")
+    const passwordId = document.getElementById("password")
+    const admnId = document.getElementById("admnId")
 
     nameId.innerHTML = `${Usuarios[1].nameId}`;
     nameId.innerHTML = `${Usuarios[1].nameId}`;
