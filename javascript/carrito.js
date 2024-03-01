@@ -34,7 +34,7 @@ this.inicio();
  * los cambios de la estructura html
  */
 function controlDinamico(productos) {
-    var areaMovs = window.matchMedia("(min-width: 330px) and (max-width: 1200px)");
+    var areaMovs = window.matchMedia("(min-width: 320px) and (max-width: 1200px)");
     areaMovs.addListener(listenerDimensions)
     this.modificador(areaMovs, productos);
 }
@@ -114,7 +114,7 @@ function agregarProductosCarrito(productos) {
           wrapper.innerHTML += `
           <div class="cart-info" id="cartInfo${index}">
           <div class="row-product" id="row-product">
-            <img class="imagenes" src="${producto.imagenes[0].url}">
+            <img class="imagenes" id="imagenesProductos" src="${producto.imagenesProductos[0]}">
             <div class="product-info" id="productContainer${index}">
               <p id="productName${index}" value="${producto.nombre}">${producto.nombre}</p>
               <p>${producto.marca}</p>
@@ -123,7 +123,7 @@ function agregarProductosCarrito(productos) {
                 <div class="restar" id="boty${index}" onClick="clickME2(${index});"> <span class="material-symbols-outlined">
                     remove
                   </span></div>
-                <input type="text" value="${producto.cantidad}" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
+                <input type="text" value="${producto.cantidad_existencia}" id="clicks${index}" name="clicks" minlength="1" maxlength="3000" required>
                 <div class="sumar" id="bote${index}" onClick="clickME(${index});"> <span class="material-symbols-outlined">
                     add
                   </span></div>
@@ -171,6 +171,11 @@ const button = document.getElementById("procederPago")
 
 
  button.onclick = function procederPago() {
+  const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'))
+  if (!usuarioActivo) {
+    window.alert('Debes iniciar sesion para continuar')
+    return;
+  }
   PRODUCTOS.forEach((producto, index) => {
     producto.cantidad = parseInt(document.getElementById(`clicks${index}`).value);
   });
@@ -184,3 +189,12 @@ function obtenerDatosSub(){
   const inputSubtotal = document.getElementById("subTotal")
   inputSubtotal.textContent = "$" + subtotal + ".00 MXN"
 }
+
+
+// let carrito = async () => {
+//   const precio = getElementById('precioRow')
+//   const marca = getElementById('marca')
+//   const imagenes = getElementById("imagenesProductos")
+
+//   const productosBd = 
+// }
