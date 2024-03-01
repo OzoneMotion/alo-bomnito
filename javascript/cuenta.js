@@ -1,16 +1,20 @@
 async function imprimirUsuario(idCliente) {
+    const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
+    //usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
+    console.log(usuariosLocales)
+
     const nameId = document.getElementById("nameId");
     const emailId = document.getElementById("emailId");
     const usuarios = await getData();
     const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
-    nameId.innerHTML = `${usuario.nombre}`;
-    emailId.innerHTML = `${usuario.correo}`;
-    mostrarContrasenia(usuario);
+    nameId.innerHTML = `${usuariosLocales.nameId}`;
+    emailId.innerHTML = `${usuariosLocales.nameId}`;
+    mostrarContrasenia(usuariosLocales)
 }
 
 async function mostrarContrasenia(usuario) {
     const passwordId = document.getElementById("password")
-    const contrasenia = usuario.contrasenia;
+    const contrasenia = usuario.password;
     const contraseniaLenght = contrasenia.length;
     let passwordAst = "";
 
@@ -28,10 +32,14 @@ async function mostrarContrasenia(usuario) {
 
 }
 
+function Visibility() {
+    
+}
+
 const getData = async () => {
     try {
-        // const response = await fetch("http://localhost:3000/users", {
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
+         const response = await fetch("http://localhost:3000/users", {
+        // const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -48,5 +56,6 @@ const getData = async () => {
         return [];
     }
 };
+
 
 imprimirUsuario(1);
