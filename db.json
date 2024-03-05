@@ -1,0 +1,788 @@
+{
+  "token": {
+    "gh_token": "",
+    "id": "d23a"
+  },
+  "users": [
+    {
+      "idCliente": 1,
+      "nombre": "Cheems",
+      "correo": "cheems@alobomnito.com",
+      "contrasenia": "1234Cheemsito",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678",
+      "id": "a4f4"
+    },
+    {
+      "idCliente": 2,
+      "nombre": "Alan Brito",
+      "correo": "mail@gmail.com",
+      "contrasenia": "contraseña.",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678",
+      "id": "f085"
+    },
+    {
+      "idCliente": 3,
+      "nombre": "denisse",
+      "correo": "arq.denisse@muretto.com",
+      "contrasenia": "denisse1",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678",
+      "id": "61e5"
+    },
+    {
+      "idCliente": 4,
+      "nombre": "hola",
+      "correo": "holamundo@como.com",
+      "contrasenia": "denisse1",
+      "direccion": "Generation 3, Bomnitolandia, CH36, México",
+      "tdc": "1234123412345678",
+      "id": "537a"
+    }
+  ],
+  "admins": [
+    {
+      "id": "502d",
+      "admnId": "ElbaLazo",
+      "emailId": "mail@gmail.com",
+      "password": "contraseña.",
+      "password2": "contraseña."
+    },
+    {
+      "id": "3dee",
+      "admnId": "Changuito",
+      "emailId": "correo@mail.com",
+      "password": "contraseñaaa.",
+      "password2": "contraseñaaa."
+    }
+  ],
+  "productos": [
+    {
+      "id_producto": 12,
+      "nombre": "Neudermic Rich Hydrating Body Cream",
+      "marca": "Réve",
+      "contenido": "360 ml",
+      "descripcion": "Su fórmula contiene Fibra de Avena, ingrediente clave con propiedades suavizantes, relajantes, hidratantes y emolientes. Uno de los mayores beneficios que brinda a la piel es que evita la deshidratación de la misma, manteniendo la barrera hidrolipídica estable.",
+      "modo_uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
+      "tipo_piel": "Seca",
+      "cantidad_existencia": "50",
+      "precio": 640.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "D_DB_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_3.jpg"
+        },
+        {
+          "nombre_imagen": "D_DB_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_1.jpg"
+        },
+        {
+          "nombre_imagen": "D_DB_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_DB_2.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 26,
+          "nombre": "Manteca de karité",
+          "funcion": "Poderoso hidratante rico en ácidos grasos insaturados, es un regenerador celular natural con grandes propiedades suavizantes y reestructurantes."
+        },
+        {
+          "id_ingrediente": 11,
+          "nombre": "Extracto de globularia alypum",
+          "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible."
+        },
+        {
+          "id_ingrediente": 27,
+          "nombre": "Fibra de avena",
+          "funcion": "Tiene propiedades suavizantes, relajantes, hidratantes y emolientes.Evita la deshidratación de la piel manteniendo una barrera protectora."
+        },
+        {
+          "id_ingrediente": 8,
+          "nombre": "Aceite de babassú",
+          "funcion": "Es un excelente emoliente."
+        }
+      ]
+    },
+    {
+      "id_producto": 13,
+      "nombre": "VIT C Booster Serum",
+      "marca": "Dibel",
+      "contenido": "30 ml",
+      "descripcion": "La singularidad del nuevo VIT C Booster Serum viene dada por su textura ligera que evita dejar sensación grasa, sin olor y de rápida absorción, logrando revitalizar e iluminar la piel, previniendo la sensación de sequedad gracias a sus increíbles dotes hidratantes.",
+      "modo_uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
+      "tipo_piel": "Normal",
+      "cantidad_existencia": "50",
+      "precio": 950.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "D_HVB_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_2.jpg"
+        },
+        {
+          "nombre_imagen": "D_HVB_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_1.jpg"
+        },
+        {
+          "nombre_imagen": "D_HVB_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_HVB_3.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 2,
+          "nombre": "Ácido ferúlico",
+          "funcion": "Actúa en la revitalización cutánea y en la prevención de la formación de manchas."
+        },
+        {
+          "id_ingrediente": 1,
+          "nombre": "Vitamina C",
+          "funcion": "Ayuda al control de manchas e hiperpigmentaciones de la piel."
+        },
+        {
+          "id_ingrediente": 4,
+          "nombre": "Ácido hialurónico",
+          "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
+        },
+        {
+          "id_ingrediente": 5,
+          "nombre": "Extracto de microalga",
+          "funcion": "Activo que proporciona una hidratación duradera favoreciendo la regeneración de la piel."
+        },
+        {
+          "id_ingrediente": 3,
+          "nombre": "Éster de vitamina E",
+          "funcion": "Acción antioxidante que protege a los tejidos de los efectos nocivos de las toxinas ambientales."
+        }
+      ]
+    },
+    {
+      "id_producto": 14,
+      "nombre": "SOIE Couleur",
+      "marca": "SunVeil",
+      "contenido": "50 ml",
+      "descripcion": "SunVeil SOIE Couleur combina una textura sedosa con la protección contra los rayos solares.Contiene filtros solares físicos que no se absorben, ya que forman una capa superior en la piel, la cual actúa como un espejo desviando la luz UV.Además, su textura elegante y delicada proporcionará sedosidad a la piel.",
+      "modo_uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol.Reaplique después de transpirar,\r\nnadar o secarse.Se recomienda reaplicar cada 3 o 4 horas.",
+      "tipo_piel": "Normal",
+      "cantidad_existencia": "50",
+      "precio": 680.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "D_SL_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_2.jpg"
+        },
+        {
+          "nombre_imagen": "D_SL_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_1.jpg"
+        },
+        {
+          "nombre_imagen": "D_SL_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_SL_3.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 6,
+          "nombre": "Dióxido de titanio",
+          "funcion": "Filtro inorgánico de amplio espectro que proporciona protección UVA / UVB con bajo potencial de irritación."
+        },
+        {
+          "id_ingrediente": 9,
+          "nombre": "Triglicéridos caprílico",
+          "funcion": "Aceite natural ligero que proporciona emoliencia e hidratación."
+        },
+        {
+          "id_ingrediente": 7,
+          "nombre": "Óxido de zinc",
+          "funcion": "Filtro inorgánico de amplio espectro que proporciona protección UVA / UVB con bajo potencial de irritación."
+        },
+        {
+          "id_ingrediente": 8,
+          "nombre": "Aceite de babassú",
+          "funcion": "Es un excelente emoliente."
+        }
+      ]
+    },
+    {
+      "id_producto": 16,
+      "nombre": "Neudermic Gentle Skin Cleanser",
+      "marca": "Réve",
+      "contenido": "240 ml",
+      "descripcion": "El suave y delicado gel dermolimpiador Neudermic Gentle Skin Cleanser es la opción ideal para todo tipo de pieles, además de que su mezcla de activos se ha elegido para ser tolerada hasta por las pieles más sensibles.Este gel tiene la función de limpiar con delicadeza, retirando la suciedad sin resecar ni irritar, respetando la capa hidrolipídica y el equilibrio natural de la piel por su pH.Puede ser utilizado tanto en el rostro como en el cuerpo.",
+      "modo_uso": "Aplique por la mañana y noche sobre la piel húmeda.Masajee con suaves movimientos circulares.Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
+      "tipo_piel": "Mixta",
+      "cantidad_existencia": "50",
+      "precio": 300.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "D_VCBS_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_2.jpg"
+        },
+        {
+          "nombre_imagen": "Img_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_1.jpg"
+        },
+        {
+          "nombre_imagen": "D_VCBS_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/D_VCBS_3.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 10,
+          "nombre": "Glicerina",
+          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
+        },
+        {
+          "id_ingrediente": 11,
+          "nombre": "Extracto de globularia alypum",
+          "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible."
+        },
+        {
+          "id_ingrediente": 12,
+          "nombre": "Extracto de caléndula",
+          "funcion": "Contiene propiedades calmantes."
+        }
+      ]
+    },
+    {
+      "id_producto": 17,
+      "nombre": "Omega Water Cream",
+      "marca": "The inkey list",
+      "contenido": "50 ml",
+      "descripcion": "Gel humectante ligero que hidrata instantáneamente sin dejar la piel grasosa.Contiene glicerina, complejo de ácidos grasos, niacinamida y betaína que trabajan juntos para brindar una hidratación duradera, controlan los niveles de grasa en el rostro y ayudan a emparejar el tono de la piel.",
+      "modo_uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
+      "tipo_piel": "Mixta",
+      "cantidad_existencia": "50",
+      "precio": 285.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "N_AK_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_AK_1.jpg"
+        },
+        {
+          "nombre_imagen": "Img_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_2.jpg"
+        },
+        {
+          "nombre_imagen": "N_PV_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_PV_1.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 10,
+          "nombre": "Glicerina",
+          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
+        },
+        {
+          "id_ingrediente": 13,
+          "nombre": "Carbonato de dicaprililo",
+          "funcion": "Mantiene la piel suave y flexible."
+        },
+        {
+          "id_ingrediente": 14,
+          "nombre": "Niacinamida",
+          "funcion": "Contribuye a unificar el tono de la piel."
+        }
+      ]
+    },
+    {
+      "id_producto": 18,
+      "nombre": "Awaking Klotho",
+      "marca": "Nudaest",
+      "contenido": "30 gr",
+      "descripcion": "Ayuda a estimular las células para reparar daños causado por la edad y factores externos como contaminación y luz.",
+      "modo_uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
+      "tipo_piel": "Mixta",
+      "cantidad_existencia": "50",
+      "precio": 440.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "R_NGSC_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_NGSC_1.jpg"
+        },
+        {
+          "nombre_imagen": "R_NGSC_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_NGSC_3.jpg"
+        },
+        {
+          "nombre_imagen": "R_NGSC_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_NGSC_2.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 15,
+          "nombre": "Pistacia Lentiscus",
+          "funcion": "Aceite graso esencial que mantiene la piel suave y flexible."
+        },
+        {
+          "id_ingrediente": 10,
+          "nombre": "Glicerina",
+          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
+        },
+        {
+          "id_ingrediente": 16,
+          "nombre": "Dicaprilato",
+          "funcion": "Hace que la piel sea suave y flexible."
+        }
+      ]
+    },
+    {
+      "id_producto": 19,
+      "nombre": "Puro Vera",
+      "marca": "Nudaest",
+      "contenido": "75 gr",
+      "descripcion": "Limpiador natural de rostro con extracto de Aloe Vera y suaves esferas de carbón activado, que al romperse hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel.Piel más equilibrada desde la primera aplicación.Contiene potentes extractos de raíces, semillas y frutos antioxidantes, antiinflamatorios, regenerativos.Es una formulación que limpia a profundidad sin sensación de sequedad.",
+      "modo_uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón.Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
+      "tipo_piel": "Mixta",
+      "cantidad_existencia": "50",
+      "precio": 300.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "R_OFG_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_OFG_1.jpg"
+        },
+        {
+          "nombre_imagen": "R_OFG_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_OFG_2.jpg"
+        },
+        {
+          "nombre_imagen": "R_OFG_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/R_OFG_3.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 10,
+          "nombre": "Glicerina",
+          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
+        },
+        {
+          "id_ingrediente": 17,
+          "nombre": "Aloe vera",
+          "funcion": "Mantiene la piel en buenas condiciones."
+        },
+        {
+          "id_ingrediente": 18,
+          "nombre": "Carbón activado",
+          "funcion": "Hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel."
+        }
+      ]
+    },
+    {
+      "id_producto": 20,
+      "nombre": "3 Blocks",
+      "marca": "Nudaest",
+      "contenido": "29 gr",
+      "descripcion": "Fórmula avanzada para quienes están en constante exposición a la luz de dispositivos electrónicos y luz artificial.Protege de partículas contaminantes y radicales libres presentes en el medio ambiente.Evita la aparición de manchas y de envejecimiento prematuro en la piel.",
+      "modo_uso": "Úsalo como último paso a tu rutina de belleza.Esparce en el rostro suavemente y con pequeños toques hasta su total absorción.Mantén el producto en un lugar fresco.",
+      "tipo_piel": "Grasa",
+      "cantidad_existencia": "50",
+      "precio": 360.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "S_SC_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/S_SC_1.jpg"
+        },
+        {
+          "nombre_imagen": "S_SC_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/S_SC_2.jpg"
+        },
+        {
+          "nombre_imagen": "S_SC_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/S_SC_3.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 10,
+          "nombre": "Glicerina",
+          "funcion": "Otorga a la piel una agradable sensación de profunda hidratación."
+        },
+        {
+          "id_ingrediente": 19,
+          "nombre": "Sanguinaria",
+          "funcion": "Ayuda a eliminar las células muertas de la superficie de la piel."
+        },
+        {
+          "id_ingrediente": 4,
+          "nombre": "Ácido hialurónico",
+          "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
+        }
+      ]
+    },
+    {
+      "id_producto": 21,
+      "nombre": "Oxidermic Foamer G5",
+      "marca": "Réve",
+      "contenido": "20 ml",
+      "descripcion": "El dermolimpiador Oxidermic Foamer G5 está enriquecido con componentes naturales como el Extracto de Corteza de Salix alba, mismo que funciona como un excelente exfoliante, devolviendo la vitalidad y luminosidad facial.También contiene Extracto de Opuntia Ficus - indica, activo encargado de brindar suavidad y calmar irritaciones en el rostro, dando propiedades hidratantes que, a su vez, dejan una agradable sensación en la piel.",
+      "modo_uso": "Humedezca su rostro y aplique la espuma.Permita actuar al producto de 30 segundos hasta 1 minuto.Enjuague con abundante agua.Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
+      "tipo_piel": "Grasa",
+      "cantidad_existencia": "50",
+      "precio": 340.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "TIL_OWC_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_3.jpg"
+        },
+        {
+          "nombre_imagen": "TIL_OWC_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_1.jpg"
+        },
+        {
+          "nombre_imagen": "TIL_OWC_2.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/TIL_OWC_2.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 23,
+          "nombre": "Extracto de corteza de salix alba",
+          "funcion": "Ayuda a regular la producción de sebo."
+        },
+        {
+          "id_ingrediente": 21,
+          "nombre": "Alantoína",
+          "funcion": "Ayuda a favorecer la cicatrización cutánea."
+        },
+        {
+          "id_ingrediente": 22,
+          "nombre": "Extracto de opuntia",
+          "funcion": "Ayuda a suavizar y calmar la irritación de la piel."
+        },
+        {
+          "id_ingrediente": 20,
+          "nombre": "Ácido glicólico",
+          "funcion": "Brinda una progresiva exfoliación a la piel.Incrementa la hidratación cutánea."
+        },
+        {
+          "id_ingrediente": 14,
+          "nombre": "Niacinamida",
+          "funcion": "Contribuye a unificar el tono de la piel."
+        }
+      ]
+    },
+    {
+      "id_producto": 22,
+      "nombre": "Dibel Beauté",
+      "marca": "Dibel",
+      "contenido": "50 ml",
+      "descripcion": "Esta crema contiene ingredientes activos para ayudar a la piel a brin - dar una profunda hidratación y lograr un efecto sedoso con poder antioxidante, brindando suavidad, elasticidad y firmeza.",
+      "modo_uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo.Evite el contacto con los ojos.Se recomienda su uso día y noche.",
+      "tipo_piel": "Seca",
+      "cantidad_existencia": "50",
+      "precio": 840.0,
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "Img_4.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_4.jpg"
+        },
+        {
+          "nombre_imagen": "N_3B_1.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/N_3B_1.jpg"
+        },
+        {
+          "nombre_imagen": "Img_3.jpg",
+          "url": "https://raw.githubusercontent.com/Aridai-Perez/Images_Alo-Bomnito/main/ImagenesProductos/Img_3.jpg"
+        }
+      ],
+      "ingrediente": [
+        {
+          "id_ingrediente": 24,
+          "nombre": "Oligopéptidos",
+          "funcion": "Reconstruye la matriz extracelular por lo que disminuye la profundidad de las arrugas."
+        },
+        {
+          "id_ingrediente": 1,
+          "nombre": "Vitamina C",
+          "funcion": "Ayuda al control de manchas e hiperpigmentaciones de la piel."
+        },
+        {
+          "id_ingrediente": 26,
+          "nombre": "Manteca de karité",
+          "funcion": "Poderoso hidratante rico en ácidos grasos insaturados, es un regenerador celular natural con grandes propiedades suavizantes y reestructurantes."
+        },
+        {
+          "id_ingrediente": 11,
+          "nombre": "Extracto de globularia alypum",
+          "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible."
+        },
+        {
+          "id_ingrediente": 4,
+          "nombre": "Ácido hialurónico",
+          "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata."
+        },
+        {
+          "id_ingrediente": 8,
+          "nombre": "Aceite de babassú",
+          "funcion": "Es un excelente emoliente."
+        },
+        {
+          "id_ingrediente": 3,
+          "nombre": "Éster de vitamina E",
+          "funcion": "Acción antioxidante que protege a los tejidos de los efectos nocivos de las toxinas ambientales."
+        },
+        {
+          "id_ingrediente": 25,
+          "nombre": "Aceite de jojoba",
+          "funcion": "Se encuentra constituido principalmente por ceramidas, actúa como regulador de la humedad."
+        }
+      ],
+      "id": "0833"
+    },
+    {
+      "id": "5a7a",
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "aloBomnito_pe_1.jpg",
+          "url": "https://raw.githubusercontent.com/ChrisMHM/Images_Alo-Bomnito/main/ImagenesProductos/aloBomnito_pe_1.jpg"
+        },
+        {
+          "nombre_imagen": "aloBomnito_pe_2.jpg",
+          "url": "https://raw.githubusercontent.com/ChrisMHM/Images_Alo-Bomnito/main/ImagenesProductos/aloBomnito_pe_2.jpg"
+        },
+        {
+          "nombre_imagen": "aloBomnito_pe_3.jpg",
+          "url": "https://raw.githubusercontent.com/ChrisMHM/Images_Alo-Bomnito/main/ImagenesProductos/aloBomnito_pe_3.jpg"
+        }
+      ],
+      "cantidad_existencia": "10",
+      "nombre": "Prueba",
+      "marca": "El Cheems",
+      "precio": "990",
+      "contenido": "50 g",
+      "descripcion": "Prueba",
+      "modo_uso": "Prueba",
+      "tipo_piel": "Seca",
+      "ingrediente": [
+        {
+          "id": "3989",
+          "id_ingrediente": 29,
+          "nombre": "Cheems5",
+          "funcion": "Otra funcion"
+        },
+        {
+          "id_ingrediente": 22,
+          "nombre": "Extracto de opuntia",
+          "funcion": "Ayuda a suavizar y calmar la irritación de la piel.",
+          "id": "e665"
+        }
+      ],
+      "id_producto": 23
+    },
+    {
+      "id": "9c8f",
+      "imagenesProductos": [
+        {
+          "nombre_imagen": "aloBomnito_pa_1.jpg",
+          "url": "https://raw.githubusercontent.com/ChrisMHM/Images_Alo-Bomnito/main/ImagenesProductos/aloBomnito_pa_1.jpg"
+        },
+        {
+          "nombre_imagen": "aloBomnito_pa_2.jpg",
+          "url": "https://raw.githubusercontent.com/ChrisMHM/Images_Alo-Bomnito/main/ImagenesProductos/aloBomnito_pa_2.jpg"
+        },
+        {
+          "nombre_imagen": "aloBomnito_pa_3.jpg",
+          "url": "https://raw.githubusercontent.com/ChrisMHM/Images_Alo-Bomnito/main/ImagenesProductos/aloBomnito_pa_3.jpg"
+        }
+      ],
+      "cantidad_existencia": "10",
+      "nombre": "Prueba",
+      "marca": "Alo Bomnito",
+      "precio": "990",
+      "contenido": "50 g",
+      "descripcion": "Prueba",
+      "modo_uso": "Prueba",
+      "tipo_piel": "Normal",
+      "ingrediente": [
+        {
+          "id": "67e0",
+          "id_ingrediente": 28,
+          "nombre": "Cheems",
+          "funcion": "Prueba"
+        },
+        {
+          "id_ingrediente": 25,
+          "nombre": "Aceite de jojoba",
+          "funcion": "Se encuentra constituido principalmente por ceramidas, actúa como regulador de la humedad.",
+          "id": "159d"
+        },
+        {
+          "id_ingrediente": 4,
+          "nombre": "Ácido hialurónico",
+          "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata.",
+          "id": "83fa"
+        }
+      ],
+      "id_producto": 24
+    }
+  ],
+  "ingrediente": [
+    {
+      "id_ingrediente": 1,
+      "nombre": "Vitamina C",
+      "funcion": "Ayuda al control de manchas e hiperpigmentaciones de la piel.",
+      "id": "9cf4"
+    },
+    {
+      "id_ingrediente": 2,
+      "nombre": "Ácido ferúlico",
+      "funcion": "Actúa en la revitalización cutánea y en la prevención de la formación de manchas.",
+      "id": "787e"
+    },
+    {
+      "id_ingrediente": 3,
+      "nombre": "Éster de vitamina E",
+      "funcion": "Acción antioxidante que protege a los tejidos de los efectos nocivos de las toxinas ambientales.",
+      "id": "0901"
+    },
+    {
+      "id_ingrediente": 4,
+      "nombre": "Ácido hialurónico",
+      "funcion": "Proporciona suavidad y elasticidad a la piel e hidrata.",
+      "id": "83fa"
+    },
+    {
+      "id_ingrediente": 5,
+      "nombre": "Extracto de microalga",
+      "funcion": "Activo que proporciona una hidratación duradera favoreciendo la regeneración de la piel.",
+      "id": "4043"
+    },
+    {
+      "id_ingrediente": 6,
+      "nombre": "Dióxido de titanio",
+      "funcion": "Filtro inorgánico de amplio espectro que proporciona protección UVA / UVB con bajo potencial de irritación.",
+      "id": "57af"
+    },
+    {
+      "id_ingrediente": 7,
+      "nombre": "Óxido de zinc",
+      "funcion": "Filtro inorgánico de amplio espectro que proporciona protección UVA / UVB con bajo potencial de irritación.",
+      "id": "2bf0"
+    },
+    {
+      "id_ingrediente": 8,
+      "nombre": "Aceite de babassú",
+      "funcion": "Es un excelente emoliente.",
+      "id": "3dd8"
+    },
+    {
+      "id_ingrediente": 9,
+      "nombre": "Triglicéridos caprílico",
+      "funcion": "Aceite natural ligero que proporciona emoliencia e hidratación.",
+      "id": "4b4a"
+    },
+    {
+      "id_ingrediente": 10,
+      "nombre": "Glicerina",
+      "funcion": "Otorga a la piel una agradable sensación de profunda hidratación.",
+      "id": "ec21"
+    },
+    {
+      "id_ingrediente": 11,
+      "nombre": "Extracto de globularia alypum",
+      "funcion": "Calma la piel agredida y retarda el envejecimiento cutáneo, sirve de apoyo para disminuir la molestia y la reacción de la piel sensible.",
+      "id": "e6e1"
+    },
+    {
+      "id_ingrediente": 12,
+      "nombre": "Extracto de caléndula",
+      "funcion": "Contiene propiedades calmantes.",
+      "id": "9ec4"
+    },
+    {
+      "id_ingrediente": 13,
+      "nombre": "Carbonato de dicaprililo",
+      "funcion": "Mantiene la piel suave y flexible.",
+      "id": "f12d"
+    },
+    {
+      "id_ingrediente": 14,
+      "nombre": "Niacinamida",
+      "funcion": "Contribuye a unificar el tono de la piel.",
+      "id": "f294"
+    },
+    {
+      "id_ingrediente": 15,
+      "nombre": "Pistacia Lentiscus",
+      "funcion": "Aceite graso esencial que mantiene la piel suave y flexible.",
+      "id": "7cc6"
+    },
+    {
+      "id_ingrediente": 16,
+      "nombre": "Dicaprilato",
+      "funcion": "Hace que la piel sea suave y flexible.",
+      "id": "d3b7"
+    },
+    {
+      "id_ingrediente": 17,
+      "nombre": "Aloe vera",
+      "funcion": "Mantiene la piel en buenas condiciones.",
+      "id": "ec4e"
+    },
+    {
+      "id_ingrediente": 18,
+      "nombre": "Carbón activado",
+      "funcion": "Hacen la función de un imán atrapando suciedad, toxinas y grasa de tu piel.",
+      "id": "5378"
+    },
+    {
+      "id_ingrediente": 19,
+      "nombre": "Sanguinaria",
+      "funcion": "Ayuda a eliminar las células muertas de la superficie de la piel.",
+      "id": "5a31"
+    },
+    {
+      "id_ingrediente": 20,
+      "nombre": "Ácido glicólico",
+      "funcion": "Brinda una progresiva exfoliación a la piel.Incrementa la hidratación cutánea.",
+      "id": "0328"
+    },
+    {
+      "id_ingrediente": 21,
+      "nombre": "Alantoína",
+      "funcion": "Ayuda a favorecer la cicatrización cutánea.",
+      "id": "0e9e"
+    },
+    {
+      "id_ingrediente": 22,
+      "nombre": "Extracto de opuntia",
+      "funcion": "Ayuda a suavizar y calmar la irritación de la piel.",
+      "id": "e665"
+    },
+    {
+      "id_ingrediente": 23,
+      "nombre": "Extracto de corteza de salix alba",
+      "funcion": "Ayuda a regular la producción de sebo.",
+      "id": "3d29"
+    },
+    {
+      "id_ingrediente": 24,
+      "nombre": "Oligopéptidos",
+      "funcion": "Reconstruye la matriz extracelular por lo que disminuye la profundidad de las arrugas.",
+      "id": "a67f"
+    },
+    {
+      "id_ingrediente": 25,
+      "nombre": "Aceite de jojoba",
+      "funcion": "Se encuentra constituido principalmente por ceramidas, actúa como regulador de la humedad.",
+      "id": "159d"
+    },
+    {
+      "id_ingrediente": 26,
+      "nombre": "Manteca de karité",
+      "funcion": "Poderoso hidratante rico en ácidos grasos insaturados, es un regenerador celular natural con grandes propiedades suavizantes y reestructurantes.",
+      "id": "1e75"
+    },
+    {
+      "id_ingrediente": 27,
+      "nombre": "Fibra de avena",
+      "funcion": "Tiene propiedades suavizantes, relajantes, hidratantes y emolientes.Evita la deshidratación de la piel manteniendo una barrera protectora.",
+      "id": "07e9"
+    }
+  ]
+}

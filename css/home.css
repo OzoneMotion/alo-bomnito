@@ -1,0 +1,388 @@
+@import url('./default/footer.css');
+@import url('./default/navbar.css');
+@import url('./default/root.css');
+
+
+* {
+    color: var(--text);
+}
+
+.container-general { 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container-envoltura {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 280px;
+    margin-top: 30px;
+}
+
+#carousel-principal {
+    position: relative;
+    top: 0px;
+}
+
+.img-principal {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;  /* Para que la imagen respete la medida asignada y esta salga al tamaño sin deformar*/
+  /*  object-fit: fill;  */ /* esto es para que la imagen no se deforme, pero que si respete la medida general */
+}
+
+/* Cards individuales formado de su contenedor */
+.card {
+    width: 141px;
+    height: auto;
+    border-radius: 5px;
+    background-color: var(--primary);
+    box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+    margin: 0 8px;
+    border: none;
+}
+
+.card-img {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 141px;
+    height: auto;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
+}
+
+.card-title{
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeTituloCardMobile);
+    font-weight: bold;
+    margin: 12px;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:  nowrap;
+}
+
+.card-marca, .card-modelo, .card-precio {
+    font-family: var(--fontEtiqueta);
+    font-size: var(--sizeSubtituloCardMobile);
+    margin: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 80%;
+}
+.card-modelo {
+    font-size: var(--sizeContenidoCardMobile);   
+}
+
+.card-precio {
+    margin-left: 0; 
+}
+
+.container-agregar {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 12px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    margin-right: 12px;
+    align-items: center;
+}
+
+#icon-card {
+    color: var(--text);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#icon-card i:hover {
+    opacity: 0.8;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    /*background-color: var(--backgroud); */
+    top: 48%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 24px;
+}
+
+#btn-movil-prev {
+    display: flex;
+    justify-content: flex-start;
+    top: 48%;
+    margin: 0;
+}
+
+#btn-movil-next {
+    display: flex;
+    justify-content: flex-end;
+    top: 48%;
+    margin: 0;
+}
+
+/* Inicia Css de carrusel su contenedor*/
+.container-card-text{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid: template rows 30% 70%;
+    align-items: center;
+}
+.frase-derecha {
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeSubtituloMobile);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 48px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.container-frases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Inicia Css de 2 parte su contenedor*/
+.container-img-text {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    align-items: center;
+    height: auto;
+    justify-items: center;
+}
+.img-parte-dos {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    box-shadow: 2px 2px 6px 3px rgba(22, 22, 26, 0.18);
+ /*  object-fit: cover;    *//*      en caso de que la imagen sea rectangular  */
+}
+.frase-izquierda {
+    font-family: var(--fontSubtitulo);
+    font-size: var(--sizeContenido);
+    text-align: center;
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+/* Estilos tablet */
+@media  screen and (min-width: 744px) {
+   
+    .container-general{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .img-principal {
+        width: 100%;
+        height: 100%;
+    }
+    .container-card-text{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 100%;
+        margin-top: 120px;
+    }
+    .frase-derecha {
+        width: 70%;
+    }
+    .container-envoltura {
+        height: 300px;
+        
+    }
+    .card {
+        width: 150px;
+        height:max-content;
+    }
+    .card-img {
+        width: 150px;
+        height: 150px;
+    }
+    .card-title{
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .card-marca, .card-modelo, .card-precio {
+        font-size: var(--sizeEtiqueta);
+        margin-bottom: 5px;
+    }
+    .card-modelo{
+        font-size: var(--sizeSubtituloCardMobile);
+    }
+    .card-precio { 
+        margin-top: 5px;
+        width: 90px;
+    }
+    #icon-card {
+        font-size: 25px;
+    }
+    .container-img-text {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        margin-top: 120px;
+    }
+    .img-parte-dos {
+        width: 350px;
+        height: 350px;
+    }
+    .frase-derecha {
+        width: 100%;
+        font-size: var(--sizeSubtituloMobile);
+    }
+    .frase-izquierda {
+        width: 90%;
+        font-size: var(--sizeSubtituloMobile);
+    }
+
+}
+
+/* Estilos desktop */
+@media screen and (min-width: 992px) {
+
+    .container-general{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .container-card-text {
+        height: auto;
+        grid-template-columns: 45% 55%;
+        /* margin-top: 150px; */
+    }
+    .container-img-text {
+        margin-top: 150px;
+    }
+    .frase-derecha {
+        width: 100%;
+        font-size: var(--sizeSubtituloDesk-Tab);
+    }
+    .container-envoltura {
+        height: 400px;
+    }
+    .card {
+        width: 200px;
+        height: auto;
+    }
+    .card-img {
+        width: 200px;
+        height: auto;
+    }
+    .card-title{
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeContenido);
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .card-marca, .card-modelo, .card-precio {
+        font-size: var(--sizeContenido);
+        margin-bottom: 5px;
+    }
+    .card-modelo{
+        font-size: var(--sizeEtiqueta);
+    }
+    .card-precio { 
+        margin-top: 5px;
+        width: 120px;
+    }
+    #icon-card {
+        font-size: 30px;
+    }
+    .frase-derecha{
+        font-size: var(--sizeSubtituloDesk-Tab);
+    }
+    .frase-izquierda {
+        width: 90%;
+        font-size: var(--sizeSubtituloDesk-Tab);
+    }
+    .img-parte-dos {
+        width: 400px;
+        height: 400px;
+        border-radius: 10px;
+    }
+
+    #btn-movil-prev {
+        display: flex;
+        justify-content: flex-end;
+        top: 48%;
+        margin: 0;
+    }
+    
+    #btn-movil-next {
+        display: flex;
+        justify-content: flex-start;
+        top: 48%;
+        margin: 0;
+    }
+}
+
+/* Descktop grande*/
+/* @media (min-width: 1440px) {
+    
+    .container-general{
+        margin-left: 80px;
+        margin-right: 200px;
+    }
+    .container-card-text {
+        margin-top: 170px;
+        grid-template-columns: 50% 50%;
+    }
+    .container-img-text {
+        margin-top: 170px;
+    }
+    .container-envoltura {
+        height: 440px;
+    }
+    .card {
+        width: 250px;
+        height: 423px;
+        margin: 0 20px;
+    }
+    .card-img {
+        width: 248px;
+        height: 248px;
+    }
+    .card-title{
+        font-family: var(--fontSubtitulo);
+        font-size: var(--sizeTituloMobile);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .card-marca, .card-modelo, .card-precio {
+        font-size: var(--sizeTituloMobile);
+        margin-bottom: 5px;
+    }
+    .card-modelo{
+        font-size: var(--sizeContenido);
+    }
+    .card-precio { 
+        margin-top: 5px;
+        width: 150px;
+    }
+    .frase-derecha {
+        font-size: var(--sizeTituloDesk-tab);
+        width: 100%;
+    }
+    .frase-izquierda {
+        font-size: var(--sizeTituloDesk-tab);
+        width: 100%;
+    }
+    .img-parte-dos {
+        width: 650px;
+        height: 650px;
+    }
+} */

@@ -1,0 +1,10 @@
+[
+    {
+        "id_cliente": 1,
+        "nombre": "Cheems",
+        "correo": "cheems@alobomnito.com",
+        "contrasenia": "1234Cheemsito",
+        "direccion": "Generation 3, Bomnitolandia, CH36, México",
+        "tdc": "1234123412345678"
+    }
+]
