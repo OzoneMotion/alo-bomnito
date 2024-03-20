@@ -7,7 +7,7 @@
 .container {
     background-color: var(--primary);
     border-radius: 20px;
-    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
+    box-shadow: var(--shadow);
     width: 300px;
     display: flex;
     flex-wrap: wrap;

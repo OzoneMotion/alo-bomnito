@@ -17,7 +17,7 @@
 .containerRegistro {
     background-color: var(--primary);
     border-radius: 20px;
-    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.40);
+    box-shadow: var(--shadow);
     width: 300px;
     height: 700px;
     /* display: flex;  */
@@ -88,7 +88,7 @@
     gap: 10px;
 }
 
-#btn-submit {
+/* #btn-submit {
     width: var(--btnMedium-w);
     height: var(--btnMedium-h);
     background-color: var(--accent);
@@ -103,7 +103,7 @@
 
 #btn-submit:hover {
     cursor: pointer;
-}
+} */
 
 /* Estilos tablet */
 

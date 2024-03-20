@@ -214,7 +214,10 @@ const abrirInfoButtons = document.querySelectorAll('.abrir-info');
 abrirInfoButtons.forEach(abrirInfoBtn => {
     abrirInfoBtn.addEventListener('click', () => {
         const id = abrirInfoBtn.id;
-        const idBtn = id.charAt(id.length - 1);
+        // console.log(id);
+        // const idBtn = id.charAt(id.length - 2) + id.charAt(id.length - 1); 
+        const idBtn = obtenerUltimosNumeros(id);
+        console.log(idBtn);
         const mod_contenedor = document.getElementById(`mod_contenedor-${idBtn}`);
         mod_contenedor.classList.add('show');
     });
@@ -224,7 +227,8 @@ const cerrarButtons = document.querySelectorAll('.cerrar');
 cerrarButtons.forEach(cerrarBtn => {
     cerrarBtn.addEventListener('click', () => {
         const id = cerrarBtn.id;
-        const idBtn = id.charAt(id.length - 1);
+        // const idBtn = id.charAt(id.length - 2) + id.charAt(id.length - 1); 
+        const idBtn = obtenerUltimosNumeros(id);
         const mod_contenedor = document.getElementById(`mod_contenedor-${idBtn}`);
         mod_contenedor.classList.remove('show');
     });
@@ -234,7 +238,8 @@ const abrirImgBtns = document.querySelectorAll('.abrir-imagen');
 abrirImgBtns.forEach(abrirImgBtn => {
     abrirImgBtn.addEventListener('click', () => {
         const id = abrirImgBtn.id;
-        const idBtn = id.charAt(id.length - 1);
+        // const idBtn = id.charAt(id.length - 2) + id.charAt(id.length - 1); 
+        const idBtn = obtenerUltimosNumeros(id);
         const mod_cont = document.getElementById(`mod_cont-${idBtn}`);
         mod_cont.classList.add('show');
     });
@@ -244,9 +249,15 @@ const closeButtons = document.querySelectorAll('.close');
 closeButtons.forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
         const id = closeBtn.id;
-        const idBtn = id.charAt(id.length - 1);
+        // const idBtn = id.charAt(id.length - 2) + id.charAt(id.length - 1); 
+        const idBtn = obtenerUltimosNumeros(id);
         const mod_cont = document.getElementById(`mod_cont-${idBtn}`)
         mod_cont.classList.remove('show');
     });
 });
 
+const obtenerUltimosNumeros = (cadena) => {
+    const regex = /\d+$/; // Busca uno o más dígitos al final de la cadena
+    const numerosEncontrados = cadena.match(regex);
+    return numerosEncontrados ? numerosEncontrados[0] : null;
+}
