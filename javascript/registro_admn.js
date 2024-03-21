@@ -145,6 +145,22 @@ const getData = () => {
     return datosProcesados;
 }
 
+const ultimoIdAdmin = async () => {
+    try {
+        const respuesta = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            const idAdmin = datos.map(admin => admin.num_administrador)
+            return idAdmin;
+            //console.log(idAdmin);
+        } else {
+            console.error(respuesta.status);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const postData = async () => {
     const newUser = getData();
     console.log(newUser);
@@ -165,9 +181,11 @@ const postData = async () => {
     catch (error) { console.log(error) }
 }
 
-formulario.addEventListener("submit", event => {
-    // event.preventDefault();
+formulario.addEventListener("submit", async event => {
+    //event.preventDefault();
     // postData();
+    const loQueSea = await ultimoIdAdmin();
+    console.log(loQueSea)
     const name = document.querySelector('#admnId').value
     const email = document.querySelector('#emailId').value
     const password = document.querySelector('#password').value
