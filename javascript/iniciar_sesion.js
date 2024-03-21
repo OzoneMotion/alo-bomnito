@@ -137,28 +137,24 @@ async function getData() {
     }
 };
 
+async function getAdmin() {
+    try {
+        // const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const admins = await response.json();
+        return admins;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
 
 function login() {
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
 
-    // si hay usuarios en local storage
-    if (usuariosLocales) {
-        usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
-        
-        if (usuarioEncontrado) {
-            localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-            if (usuarioEncontrado.nameId == "ABC"){
-                window.location = "administrar_productos.html"
-            }else {
-                window.location = "index.html"
-            }
-        } else {
-            window.alert('credenciales invalidas, intenta de nuevo');
-        }
-
-    } else {
         // si no hay usuarios en localStorage trata de obtenerlos de la api
         self.getData().then((users) => {
             console.log('usuarios', users);
@@ -169,14 +165,25 @@ function login() {
             
             if (usuarioEncontrado) {
                 localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
-                console.log("hola")
-                window.location.href = "productos.html"
+                window.location.href = "index.html"
             } else {
-                window.alert('credenciales invalidas, intenta de nuevo');
+                self.getAdmin().then((admin) => {
+                    let adminEncontrado;
+                    const misAdmins = admin;
+                    adminEncontrado = misAdmins.find((admin) => (admin.correo === usuarioActual && admin.contrasenia === passwordActual));
+                    
+                    if (adminEncontrado) {
+                        localStorage.setItem('usuarioActivo', JSON.stringify(adminEncontrado));
+                        window.location.href = "administrar_productos.html"
+                    } else {
+                        console.log(adminEncontrado)
+                        alert("Credenciales invalidas, intente de nuevo.")
+                    }
+                })
             }
         }, (err) => {
             console.log('algo salio mal', err)
         })
     }
 
-}
+

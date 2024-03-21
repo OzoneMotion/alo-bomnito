@@ -9,8 +9,8 @@ async function imprimirUsuario(idCliente) {
 
     // const usuarios = await getData();
     // const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
-    nameId.innerHTML = `${usuariosLocales.nameId}`;
-    emailId.innerHTML = `${usuariosLocales.nameId}`;
+    nameId.innerHTML = `${usuariosLocales.nombre}`;
+    emailId.innerHTML = `${usuariosLocales.correo}`;
     mostrarContrasenia(usuariosLocales)
     verificar()
 }
@@ -33,8 +33,8 @@ function mostrarContrasenia(usuario) {
 function Visibility(){
     //const Usuarios = await getData();
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
-    const password = usuariosLocales.password;
-    const passwordLenght = `${usuariosLocales.password}`.length;
+    const password = usuariosLocales.contrasenia;
+    const passwordLenght = `${usuariosLocales.contrasenia}`.length;
     let passwordAst = ""
 
     for(let i = 1; i < passwordLenght; i++) {
