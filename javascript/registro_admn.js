@@ -4,7 +4,8 @@ const btnSubmit = document.getElementById('btn-crear-submit');  //btn-crear-subm
 const elements = [...inputs];
 
 const regex = {
-    admnId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
+    admnId: /^[a-hj-npr-z0-9]+$/,
+    ///^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^(?=.*[!@#$%^&*()-_=+{};:,<.>]).{8,14}$/, // 8 a 14 numeros y con caracteres especiales.
 }
@@ -136,34 +137,32 @@ togglePasswordVisibility('password2', 'togglePassword2');
 
 const formulario = document.querySelector(".validation-registro");
 
-const getData = () => {
+const getData = async (data) => {
 
     const datos = new FormData(formulario);
     const datosProcesados = Object.fromEntries(datos.entries())
 
+    data['correo'] = datosProcesados.emailId
+    data['contrasenia'] = datosProcesados.password
+
     formulario.reset();
-    return datosProcesados;
+    return data;
+    //console.log(datosProcesados)
 }
 
-const ultimoIdAdmin = async () => {
+async function administradores() {
     try {
-        const respuesta = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
-        if (respuesta.ok) {
-            const datos = await respuesta.json();
-            const idAdmin = datos.map(admin => admin.num_administrador)
-            return idAdmin;
-            //console.log(idAdmin);
-        } else {
-            console.error(respuesta.status);
-        }
+        // const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const admins = await response.json();
+        return admins;
     } catch (error) {
-        console.log(error);
+        console.log('Error:', error);
+        return [];
     }
-}
+};
 
-const postData = async () => {
-    const newUser = getData();
-    console.log(newUser);
+const postData = async (newUser) => {
     try {
         // const response = await fetch("http://localhost:3000/admins", {
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
@@ -182,25 +181,26 @@ const postData = async () => {
 }
 
 formulario.addEventListener("submit", async event => {
-    //event.preventDefault();
-    // postData();
-    const loQueSea = await ultimoIdAdmin();
-    console.log(loQueSea)
+    event.preventDefault();
+    //postData();
+    const adminObtenido = administradores();
+
+
+    self.administradores().then(async (admin) => {
+        let idAdmin
+        idAdmin = admin.find((admin) => admin.num_administrador === name);
+        //console.log(idAdmin)
+
+        if (idAdmin) {
+            const datosProcesados = await getData(idAdmin)
+            postData(datosProcesados)
+        } else {
+            console.error(name + ' no existe');
+        }
+    })
+
     const name = document.querySelector('#admnId').value
     const email = document.querySelector('#emailId').value
     const password = document.querySelector('#password').value
     const password2 = document.querySelector('#password2').value
-
-    // const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
-    // const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    // if (usuarioRegistrado) {
-    //     //redireccion a html de error de correo
-    //     return window.location.href = 'error_correo.html'
-    // }
-
-    // Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
-    // localStorage.setItem('usuarios', JSON.stringify(Usuarios))
-    // console.log("creada")
-    // //redireccion a html de exito haz creado tu cuenta
-    // window.location.href = 'aviso_creado_cuenta.html'
 })
