@@ -67,7 +67,7 @@
       "modo_uso": "Aplicar diariamente con la frecuencia que considere necesaria. Uso corporal.",
       "tipo_piel": "Seca",
       "cantidad_existencia": "50",
-      "precio": 640.0,
+      "precio": 640,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_DB_3.jpg",
@@ -114,7 +114,7 @@
       "modo_uso": "Colocar de 5 a 10 gotas en la palma, con las yemas de los dedos sobre la piel limpia y seca masajear de forma circular.",
       "tipo_piel": "Normal",
       "cantidad_existencia": "50",
-      "precio": 950.0,
+      "precio": 950,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_HVB_2.jpg",
@@ -166,7 +166,7 @@
       "modo_uso": "Aplique una cantidad generosa sobre la piel del rostro antes de la exposición al Sol.Reaplique después de transpirar,\r\nnadar o secarse.Se recomienda reaplicar cada 3 o 4 horas.",
       "tipo_piel": "Normal",
       "cantidad_existencia": "50",
-      "precio": 680.0,
+      "precio": 680,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_SL_2.jpg",
@@ -213,7 +213,7 @@
       "modo_uso": "Aplique por la mañana y noche sobre la piel húmeda.Masajee con suaves movimientos circulares.Enjuague con abundante agua hasta eliminar el producto en su totalidad.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 300.0,
+      "precio": 300,
       "imagenesProductos": [
         {
           "nombre_imagen": "D_VCBS_2.jpg",
@@ -255,7 +255,7 @@
       "modo_uso": "Limpia tu rostro, aplica tu suero favorito y continúa con esta crema hidratante sobre tu rostro y cuello.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 285.0,
+      "precio": 285,
       "imagenesProductos": [
         {
           "nombre_imagen": "N_AK_1.jpg",
@@ -297,7 +297,7 @@
       "modo_uso": "Úsala de día y de noche en rostro y cuello como único producto o después de sueros para una mayor humectación.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 440.0,
+      "precio": 440,
       "imagenesProductos": [
         {
           "nombre_imagen": "R_NGSC_1.jpg",
@@ -339,7 +339,7 @@
       "modo_uso": "Úsalo con el rostro húmedo dando un ligero masaje hasta romper las cápsulas de carbón.Aclara con agua.Es importante agita antes de usar, las esferas de carbón tienden a irse al fondo.",
       "tipo_piel": "Mixta",
       "cantidad_existencia": "50",
-      "precio": 300.0,
+      "precio": 300,
       "imagenesProductos": [
         {
           "nombre_imagen": "R_OFG_1.jpg",
@@ -381,7 +381,7 @@
       "modo_uso": "Úsalo como último paso a tu rutina de belleza.Esparce en el rostro suavemente y con pequeños toques hasta su total absorción.Mantén el producto en un lugar fresco.",
       "tipo_piel": "Grasa",
       "cantidad_existencia": "50",
-      "precio": 360.0,
+      "precio": 360,
       "imagenesProductos": [
         {
           "nombre_imagen": "S_SC_1.jpg",
@@ -423,7 +423,7 @@
       "modo_uso": "Humedezca su rostro y aplique la espuma.Permita actuar al producto de 30 segundos hasta 1 minuto.Enjuague con abundante agua.Para mejor resultado se recomienda utilizarlo diariamente, mañana y noche.",
       "tipo_piel": "Grasa",
       "cantidad_existencia": "50",
-      "precio": 340.0,
+      "precio": 340,
       "imagenesProductos": [
         {
           "nombre_imagen": "TIL_OWC_3.jpg",
@@ -475,7 +475,7 @@
       "modo_uso": "Sobre rostro limpio aplique de manera suave y uniforme formando pequeños círculos con las yemas de sus dedos hasta que el producto se desvanezca por completo.Evite el contacto con los ojos.Se recomienda su uso día y noche.",
       "tipo_piel": "Seca",
       "cantidad_existencia": "50",
-      "precio": 840.0,
+      "precio": 840,
       "imagenesProductos": [
         {
           "nombre_imagen": "Img_4.jpg",
@@ -619,6 +619,27 @@
         }
       ],
       "id_producto": 24
+    },
+    {
+      "id": "41b7",
+      "imagenesProductos": [],
+      "cantidad_existencia": "",
+      "nombre": "",
+      "marca": "",
+      "precio": "",
+      "contenido": "",
+      "descripcion": "Prueba",
+      "modo_uso": "Prueba",
+      "tipo_piel": "Normal",
+      "ingrediente": [
+        {
+          "id_ingrediente": 19,
+          "nombre": "Sanguinaria",
+          "funcion": "Ayuda a eliminar las células muertas de la superficie de la piel.",
+          "id": "5a31"
+        }
+      ],
+      "id_producto": 25
     }
   ],
   "ingrediente": [

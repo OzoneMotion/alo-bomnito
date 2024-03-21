@@ -127,7 +127,7 @@ const inputValidation = (regex, input, name) => {
 // Función para obtener los datos del archivo JSON
 async function getData() {
     try {
-        // const response = await fetch("http://localhost:3000/users");
+        //const response = await fetch("http://localhost:3000/users");
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
         const users = await response.json();
         return users;
