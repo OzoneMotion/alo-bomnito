@@ -11,8 +11,8 @@ async function imprimirUsuario(idCliente) {
     // const usuarios = await getData();
     // const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
     nameId.innerHTML = "Cheems"
-    emailId.innerHTML = `${usuariosLocales.emailId}`;
-    admnId.innerHTML = `${usuariosLocales.nameId}`;
+    emailId.innerHTML = `${usuariosLocales.correo}`;
+    admnId.innerHTML = `${usuariosLocales.nombre}`;
     mostrarContrasenia(usuariosLocales)
     verificar()
 }
@@ -35,8 +35,8 @@ function mostrarContrasenia(usuario) {
 function Visibility(){
     //const Usuarios = await getData();
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
-    const password = usuariosLocales.password;
-    const passwordLenght = `${usuariosLocales.password}`.length;
+    const password = usuariosLocales.contrasenia;
+    const passwordLenght = `${usuariosLocales.contrasenia}`.length;
     let passwordAst = ""
 
     for(let i = 1; i < passwordLenght; i++) {
@@ -64,7 +64,7 @@ function Visibility(){
 
         if (localStorage.getItem('usuarioActivo') == null){
     
-        } else if (admin.nameId == "ABC"){
+        } else if (admin.num_administrador != ""){
             const cuentaIconMobile = document.getElementById("cuentaIconMobile")
             const carritoIconMobile = document.getElementById("carritoIconMobile")
             const homecito = document.getElementById("homecito")

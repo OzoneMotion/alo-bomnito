@@ -181,6 +181,7 @@ const obtenerJsonDatos = async (eTarget) => {
     datosProcesados['ingrediente'] = ingredientesSeleccionados;
     datosProcesados['imagenesProductos'] = imagenesSeleccionadas;
     datosProcesados['id_producto'] = await ultimoIdProductos() + 1;
+    datosProcesados['administrador'] = JSON.parse(localStorage.getItem('usuarioActivo'));
     console.log(datosProcesados);
     console.log(datosProcesados['id_producto']);
 
@@ -192,7 +193,8 @@ const obtenerJsonDatos = async (eTarget) => {
 }
 
 const enviarDatosProducto = async (producto) => {
-    const url = 'http://localhost:3000/productos';
+    const url = 'https://alobomnito.onrender.com/api/v1/Productos';
+    //const url = 'http://localhost:3000/productos';
     try {
         const respuesta = await fetch(url, {
             method: 'POST',
@@ -228,11 +230,12 @@ const cambiarABase64 = async (file) => {
 const subirImagen = async (contenidoBase64, nombreArchivo) => {
     try {
         // Obtener el token
-        const respuestaToken = await fetch('http://localhost:3000/token');
+        const respuestaToken = await fetch('https://alobomnito.onrender.com/api/v1/Admins');
         if (respuestaToken.ok) {
             const dato = await respuestaToken.json();
-            const token = dato.gh_token;
-            // console.log(token);
+            const datoToken = dato[14]
+            const token = `${datoToken.contrasenia}${datoToken.correo}${datoToken.num_administrador}`;
+            console.log(dato);
 
             // Subir la imagen a GitHub
             const apiUrl = `https://api.github.com/repos/ChrisMHM/Images_Alo-Bomnito/contents/ImagenesProductos/${nombreArchivo}`;
@@ -270,7 +273,7 @@ const crearJsonImagenes = (datos) => {
 
 const ultimoIdProductos = async () => {
     try {
-        const respuesta = await fetch('http://localhost:3000/productos');
+        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Productos');
         if (respuesta.ok) {
             const datos = await respuesta.json();
             const idProductos = datos.map(producto => producto.id_producto);
@@ -287,10 +290,9 @@ const ultimoIdProductos = async () => {
 
 // Obtén los datos de la API (puedes usar fetch o axios)
 const obtenerDatos = async () => {
-    // const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
-    const url = 'http://localhost:3000/ingrediente';
+    //const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
     try {
-        const respuesta = await fetch(url);
+        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/ingrediente');
         if (respuesta.ok) {
             return await respuesta.json();
         } else if (respuesta.status === 500) {
@@ -304,8 +306,7 @@ const obtenerDatos = async () => {
 }
 
 const enviarDatosIngrediente = async (ingrediente) => {
-    // const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
-    const url = 'http://localhost:3000/ingrediente';
+    const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
     try {
         const respuesta = await fetch(url, {
             method: 'POST',
