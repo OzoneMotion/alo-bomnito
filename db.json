@@ -624,6 +624,27 @@
         }
       ],
       "id_producto": 24
+    },
+    {
+      "id": "41b7",
+      "imagenesProductos": [],
+      "cantidad_existencia": "",
+      "nombre": "",
+      "marca": "",
+      "precio": "",
+      "contenido": "",
+      "descripcion": "Prueba",
+      "modo_uso": "Prueba",
+      "tipo_piel": "Normal",
+      "ingrediente": [
+        {
+          "id_ingrediente": 19,
+          "nombre": "Sanguinaria",
+          "funcion": "Ayuda a eliminar las células muertas de la superficie de la piel.",
+          "id": "5a31"
+        }
+      ],
+      "id_producto": 25
     }
   ],
   "ingrediente": [

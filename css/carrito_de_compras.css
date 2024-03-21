@@ -45,7 +45,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     background-color: var(--primary);
     width: 700px;
     height: 240px;
@@ -62,7 +62,7 @@ body {
 
 .row-product {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .product-info {
@@ -113,6 +113,7 @@ input:focus {
 
 /* APARTADO DE LA PARTE DE PAGO */
 #subtotal{
+    margin-top: 15px;
     column-count: 2;
 }
 
@@ -204,9 +205,15 @@ input:focus {
 }
 
 
-p {
+p,
+.nombre {
     font-family: var(--fontContenido);
     size: var(--sizeContenido);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    width: 100%;
+    text-align: start;
 }
 
 /* ICONOS USADOS */
@@ -240,14 +247,14 @@ p {
 /* responsive  Mobile*/
 @media only screen and (min-width:350px) and (max-width: 1200px) {
     .total-price {
-        margin-left: 0;
+        margin-left: 25px;
         margin-right: 0;
         margin-bottom: 0;
     }
 
     .cart-info{
         width: 350px;
-        height: 217px;
+        /*height: 225px;*/
         display: block;
         font-family: var(--fontContenido);
         font-size: var(--sizeContenido);

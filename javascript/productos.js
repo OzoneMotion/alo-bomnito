@@ -1,4 +1,4 @@
-// import data from '../productos2.json' assert {type: 'json'}
+ //import data from '../productos2.json' assert {type: 'json'}
 
 const obtenerProductos = async () => {
   try {
