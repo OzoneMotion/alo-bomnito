@@ -113,6 +113,7 @@ input:focus {
 
 /* APARTADO DE LA PARTE DE PAGO */
 #subtotal{
+    margin-top: 15px;
     column-count: 2;
 }
 
