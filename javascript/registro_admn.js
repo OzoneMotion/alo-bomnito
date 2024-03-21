@@ -166,23 +166,24 @@ const postData = async () => {
 }
 
 formulario.addEventListener("submit", event => {
-    // event.preventDefault();
-    // postData();
-    const name = document.querySelector('#admnId').value
-    const email = document.querySelector('#emailId').value
-    const password = document.querySelector('#password').value
-    const password2 = document.querySelector('#password2').value
+    event.preventDefault();
+    // const datosProcesados = obtenerDatos();
+    postData();
+    // const name = document.querySelector('#admnId').value
+    // const email = document.querySelector('#emailId').value
+    // const password = document.querySelector('#password').value
+    // const password2 = document.querySelector('#password2').value
 
-    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
-    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    if (usuarioRegistrado) {
-        //redireccion a html de error de correo
-        return window.location.href = 'error_correo.html'
-    }
+    // const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+    // const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
+    // if (usuarioRegistrado) {
+    //     //redireccion a html de error de correo
+    //     return window.location.href = 'error_correo.html'
+    // }
 
-    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
-    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
-    console.log("creada")
-    //redireccion a html de exito haz creado tu cuenta
-    window.location.href = 'aviso_creado_cuenta.html'
+    // Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
+    // localStorage.setItem('usuarios', JSON.stringify(Usuarios))
+    // console.log("creada")
+    // //redireccion a html de exito haz creado tu cuenta
+    // window.location.href = 'aviso_creado_cuenta.html'
 })
