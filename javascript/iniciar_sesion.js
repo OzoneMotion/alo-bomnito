@@ -102,6 +102,7 @@ const inputValidation = (regex, input, name) => {
     btnSubmit.disabled = !Object.values(names).every(state => state);
 }
 
+
 // Función para obtener los datos del archivo JSON
 async function getData() {
     try {
@@ -131,9 +132,7 @@ async function getAdmin() {
 function login() {
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
-    const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
 
-        // si no hay usuarios en localStorage trata de obtenerlos de la api
         self.getData().then((users) => {
             console.log('usuarios', users);
             const misUsuarios = users;

@@ -18,7 +18,7 @@ const names = {
 
 const formNamesValidation = (e) => {
     const validations = {
-        "admnId": regex.admnId,
+        // "admnId": regex.admnId,
         "emailId": regex.emailId,
         "password": regex.password,
         "password2": regex.password // para utilizar la misma expresion de passwordId
@@ -150,9 +150,7 @@ const ultimoIdAdmin = async () => {
         const respuesta = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
         if (respuesta.ok) {
             const datos = await respuesta.json();
-            const idAdmin = datos.map(admin => admin.num_administrador)
-            return idAdmin;
-            //console.log(idAdmin);
+            return datos;
         } else {
             console.error(respuesta.status);
         }
@@ -166,7 +164,7 @@ const postData = async () => {
     console.log(newUser);
     try {
         // const response = await fetch("http://localhost:3000/admins", {
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
+        const response = await fetch(".", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -182,8 +180,8 @@ const postData = async () => {
 }
 
 formulario.addEventListener("submit", async event => {
-    //event.preventDefault();
-    // postData();
+    event.preventDefault();
+    postData();
     const loQueSea = await ultimoIdAdmin();
     console.log(loQueSea)
     const name = document.querySelector('#admnId').value
@@ -191,16 +189,16 @@ formulario.addEventListener("submit", async event => {
     const password = document.querySelector('#password').value
     const password2 = document.querySelector('#password2').value
 
-    // const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
-    // const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    // if (usuarioRegistrado) {
-    //     //redireccion a html de error de correo
-    //     return window.location.href = 'error_correo.html'
-    // }
+    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
+    if (usuarioRegistrado) {
+        //redireccion a html de error de correo
+        //return window.location.href = 'error_correo.html'
+    }
 
-    // Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
-    // localStorage.setItem('usuarios', JSON.stringify(Usuarios))
-    // console.log("creada")
-    // //redireccion a html de exito haz creado tu cuenta
-    // window.location.href = 'aviso_creado_cuenta.html'
+    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
+    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
+    console.log("creada")
+    //redireccion a html de exito haz creado tu cuenta
+    //window.location.href = 'aviso_creado_cuenta.html'
 })
