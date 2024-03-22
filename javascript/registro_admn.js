@@ -219,7 +219,7 @@ formulario.addEventListener("submit", async event => {
         let idAdmin
         idAdmin = admin.find((admin) => admin.num_administrador === admnId);
 
-        if (idAdmin) {
+        if (!idAdmin) {
             window.location.href = "error_correo.html"
         } else {
             console.log(idAdmin)
