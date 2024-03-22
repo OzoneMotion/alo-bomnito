@@ -180,7 +180,7 @@ const postData = async (newUser) => {
     catch (error) { console.log(error) }
 }
 
-const obtenerCorreo = async () => {
+async function obtenerCorreo() {
     try {
         const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Admins');
         if (respuesta.ok) {
@@ -196,12 +196,13 @@ const obtenerCorreo = async () => {
     }
 }
 
-async function getData() {
+
+async function getClientes() {
     try {
-        // const response = await fetch("http://localhost:3000/users");
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
         const users = await response.json();
-        return users;
+        const correoUsers = users.map(cliente => cliente.correo);
+        return correoUsers;
     } catch (error) {
         console.log('Error:', error);
         return [];
@@ -213,45 +214,40 @@ formulario.addEventListener("submit", async event => {
     //postData();
     const adminObtenido = administradores();
 
-
     self.administradores().then(async (admin) => {
+        //const datosProcesados = await obtenerCorreo(admin)
         let idAdmin
         idAdmin = admin.find((admin) => admin.num_administrador === admnId);
-        //console.log(idAdmin)
 
         if (idAdmin) {
-            self.obtenerCorreo().then(async (adminCorreo) => {
+            window.location.href = "error_correo.html"
+        } else {
+            console.log(idAdmin)
+            self.obtenerCorreo().then(async (admins) => {
                 const datosProcesados = await getData(idAdmin)
                 let correoExiste
-                correoExiste = adminCorreo.find((correo) => correo === datosProcesados.correo)
-
+                correoExiste = admins.find((correo) => correo === datosProcesados.correo)
                 if (correoExiste) {
-                    //console.error( "El correo ya existe" )
+                    //console.error("El correo ya existe")
                     window.location.href = "error_correo.html"
+
                 } else {
+                    self.getClientes().then(async (correosClientes) => {
+                        let correoExiste
+                        correoExiste = correosClientes.find((cliente) => cliente === datosProcesados.correo)
 
-                    self.getData().then(async (clientes) => {
-                        const datosProcesados = await getData(idAdmin)
-                        let clienteCorreoExiste
-                        clienteCorreoExiste = clientes.find((correo) => correo === datosProcesados.correo)
-
-
-                        if (clienteCorreoExiste) {
-                            //console.error( "El correo ya existe" )
+                        if (correoExiste) {
                             window.location.href = "error_correo.html"
-
                         } else {
-                            postData(datosProcesados)
+                            postData(datosProcesados);
                             window.location.href = "aviso_creado_cuenta.html"
                         }
                     })
                 }
             })
-
-        } else {
-            console.error(admnId + ' no existe');
         }
     })
+
 
     const admnId = document.querySelector('#admnId').value
     const email = document.querySelector('#emailId').value
