@@ -3,6 +3,7 @@ function verificar() {
     const cuentitaIniciada = document.getElementById("cuentitaIniciada")
     const cuentita = document.getElementById("cuentita")
     const cuentaIconDesktop = document.getElementById("cuentaIconDesktop")
+    const cuentitaMobil = document.getElementById("cuentitaMobil")
      
     let admin = JSON.parse(localStorage.getItem('usuarioActivo'))
     let count = 1
@@ -21,6 +22,7 @@ function verificar() {
 
         cuentaIconMobile.classList.remove("desactive")
         cuentaIconMobile.classList.add("desactive_desktop")
+        cuentaIconMobile.href = "cuenta_admin.html"
         carritoIconMobile.classList.remove("desactive_desktop")
         carritoIconMobile.classList.add("desactive")
         homecito.classList.add("desactive")
@@ -34,15 +36,17 @@ function verificar() {
         contactito.classList.add("desactive")
         adminPage.classList.remove("desactive")
         cerrarSesion.classList.remove("desactive")
-        cuentaIconDesktop.href = "./cuenta_admin.html"
+        cuentaIconDesktop.href = "cuenta_admin.html"
         carritoIconDesktop.classList.add("desactive")
+        cuentitaMobil.href = "cuenta_admin.html"
     } else {
         cuentitaIniciada.classList.remove("desactive")
         cuentita.classList.remove("desactive_desktop")
         cerrarSesion.classList.remove("desactive")
-        cuentaIconDesktop.href = "./cuenta.html"
+        cuentaIconDesktop.href = "cuenta.html"
         cuentitaIniciada.classList.add("desactive_desktop")
         cuentita.classList.add("desactive")
+        cuentitaMobil.href = "cuenta.html"
      }
 
     console.log(cerrarSesion)
