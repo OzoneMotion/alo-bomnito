@@ -4,7 +4,8 @@ const btnSubmit = document.getElementById('btn-crear-submit');  //btn-crear-subm
 const elements = [...inputs];
 
 const regex = {
-    admnId: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
+    admnId: /^[a-hj-npr-z0-9]+$/,
+    ///^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos
     emailId: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^(?=.*[!@#$%^&*()-_=+{};:,<.>]).{8,14}$/, // 8 a 14 numeros y con caracteres especiales.
 }
@@ -136,18 +137,32 @@ togglePasswordVisibility('password2', 'togglePassword2');
 
 const formulario = document.querySelector(".validation-registro");
 
-const getData = () => {
+const getData = async (data) => {
 
     const datos = new FormData(formulario);
     const datosProcesados = Object.fromEntries(datos.entries())
 
+    data['correo'] = datosProcesados.emailId
+    data['contrasenia'] = datosProcesados.password
+    console.log(data)
     formulario.reset();
-    return datosProcesados;
+    return data;
+    //console.log(datosProcesados)
 }
 
-const postData = async () => {
-    const newUser = getData();
-    console.log(newUser);
+async function administradores() {
+    try {
+        // const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const admins = await response.json();
+        return admins;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
+const postData = async (newUser) => {
     try {
         // const response = await fetch("http://localhost:3000/admins", {
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
@@ -165,24 +180,77 @@ const postData = async () => {
     catch (error) { console.log(error) }
 }
 
-formulario.addEventListener("submit", event => {
-    // event.preventDefault();
-    // postData();
-    const name = document.querySelector('#admnId').value
+async function obtenerCorreo() {
+    try {
+        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Admins');
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            const adminCorreo = datos.map(admin => admin.correo);
+            //console.log(idClientes)
+            return adminCorreo;
+        } else {
+            console.error(respuesta.status);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+async function getClientes() {
+    try {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const users = await response.json();
+        const correoUsers = users.map(cliente => cliente.correo);
+        return correoUsers;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
+formulario.addEventListener("submit", async event => {
+    event.preventDefault();
+    //postData();
+    const adminObtenido = administradores();
+
+    self.administradores().then(async (admin) => {
+        //const datosProcesados = await obtenerCorreo(admin)
+        let idAdmin
+        idAdmin = admin.find((admin) => admin.num_administrador === admnId);
+
+        if (!idAdmin) {
+            window.location.href = "error_numAdmin.html"
+        } else {
+            console.log(idAdmin)
+            self.obtenerCorreo().then(async (admins) => {
+                const datosProcesados = await getData(idAdmin)
+                let correoExiste
+                correoExiste = admins.find((correo) => correo === datosProcesados.correo)
+                if (correoExiste) {
+                    //console.error("El correo ya existe")
+                    window.location.href = "error_correo.html"
+
+                } else {
+                    self.getClientes().then(async (correosClientes) => {
+                        let correoExiste
+                        correoExiste = correosClientes.find((cliente) => cliente === datosProcesados.correo)
+
+                        if (correoExiste) {
+                            window.location.href = "error_correo.html"
+                        } else {
+                            postData(datosProcesados);
+                            window.location.href = "aviso_creado_cuenta.html"
+                        }
+                    })
+                }
+            })
+        }
+    })
+
+
+    const admnId = document.querySelector('#admnId').value
     const email = document.querySelector('#emailId').value
     const password = document.querySelector('#password').value
     const password2 = document.querySelector('#password2').value
-
-    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
-    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    if (usuarioRegistrado) {
-        //redireccion a html de error de correo
-        return window.location.href = 'error_correo.html'
-    }
-
-    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
-    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
-    console.log("creada")
-    //redireccion a html de exito haz creado tu cuenta
-    window.location.href = 'aviso_creado_cuenta.html'
 })

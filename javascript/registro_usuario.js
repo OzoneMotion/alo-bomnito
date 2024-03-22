@@ -112,132 +112,113 @@ const validarPasswords = () => {
     btnSubmit.disabled = !Object.values(names).every(state => state);
 }
 
-
-/*
-
-// Visibilidad de las contraseñas
-const togglePasswordVisibility = (inputId, iconId) => {
-    const input = document.getElementById(inputId);
-    const icon = document.getElementById(iconId);
-
-    icon.addEventListener('click', () => {
-        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
-        input.setAttribute('type', type);
-        icon.classList.toggle('fa-eye-slash');
-        icon.classList.toggle('fa-eye');
-    });
-};
-
-togglePasswordVisibility('password', 'togglePassword1');
-togglePasswordVisibility('password2', 'togglePassword2');
-*/
-
 //Almacenamiento de los datos introducidos en el formulario en la base de datos
 
 const formRegistro = document.querySelector('#validation-registro');
-formRegistro.addEventListener('submit', (e) => {
+
+formRegistro.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const name = document.querySelector('#nameId').value
-    const email = document.querySelector('#emailId').value
-    const password = document.querySelector('#password').value
-    const password2 = document.querySelector('#password2').value
+    self.getClientes().then(async (correosclientes) => {
+        const datosProcesados = await obtenerJsonDatos(e.target);
+        let buscarCorreo;
 
-    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
-    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    if (usuarioRegistrado) {
-        //redireccion a html de error de correo
-        return window.location.href = 'error_correo.html'
-    }
+        buscarCorreo = correosclientes.find((cliente) => cliente === datosProcesados.correo);
+        if (buscarCorreo) {
+            window.location.href = "error_correo.html"
+        } else {
+            console.log(buscarCorreo)
+            self.getAdmin().then(async (correosAdmin) => {
+                let buscarCorreo;
+                buscarCorreo = correosAdmin.find((admin) => admin === datosProcesados.correo);
 
-    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
-    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
-    //redireccion a html de exito haz creado tu cuenta
-    window.location.href = 'aviso_creado_cuenta.html'
+                if (buscarCorreo) {
+                    window.location.href = "error_correo.html"
+                } else {
+                    postData(datosProcesados);
+                    window.location.href = "aviso_creado_cuenta.html"
+                }
+        
+            })
+        }
+
+    })
 
 })
 
+const obtenerJsonDatos = async (e) => {
 
-const formulario = document.querySelector(".validation-registro");
-
-const getData = () => {
-
-    const datos = new FormData(formulario);
+    const datos = new FormData(e);
     const datosProcesados = Object.fromEntries(datos.entries())
+    datosProcesados['nombre'] = datosProcesados.nameId
+    datosProcesados['correo'] = datosProcesados.emailId
+    datosProcesados['contrasenia'] = datosProcesados.password
+    datosProcesados['id_cliente'] = await obtenerId() + 1;
 
-    formulario.reset();
+    console.log(datosProcesados)
+
+    formRegistro.reset();
     return datosProcesados;
 
 }
 
-const postData = async () => {
-    const newUser = getData();
+async function getClientes() {
+    try {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const users = await response.json();
+        const correoUsers = users.map(cliente => cliente.correo);
+        return correoUsers;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
 
+async function getAdmin() {
+    try {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const admins = await response.json();
+        const correoAdmins = admins.map(admin => admin.correo);
+        return correoAdmins;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
+
+const obtenerId = async () => {
+    try {
+        const respuesta = await fetch ('https://alobomnito.onrender.com/api/v1/Clientes');
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            const idClientes = datos.map(cliente => cliente.id_cliente);
+
+            return Math.max(...idClientes);
+        } else {
+            console.error(respuesta.status);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const postData = async (newUser) => {
     try {
         //  const response = await fetch("http://localhost:3000/users", {
          const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
-            method: "POST",
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json"
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(newUser)
         })
         if (response.ok) {
             const jsonResponse = await response.json()
-            //const { username, password } = jsonResponse;
-            const { correo, contrasenia } = jsonResponse;
+            console.log(`Usuario registrado exitosamente ${jsonResponse}`)
+            return response;
 
         }
     }
     catch (error) { console.log(error) }
 }
-
-formulario.addEventListener("submit", event => {
-    event.preventDefault();
-    postData();
-})
-
-//Almacenamiento de datos en localStore
-
-// const formRegistro = document.querySelector('#validation-registro');
-// console.log();
-// formRegistro.addEventListener('submit', async (e) =>{
-//     e.preventDefault();
-
-//     const emailId = document.querySelector('#emailId').value;
-//     const password = document.querySelector('#password').value;
-
-//     console.log(emailId)
-//     console.log(password)
-
-//     const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-//     console.log('Datos almacenados en localStorage:', Usuarios);
-
-//     try {
-//         const response = await fetch("http://localhost:8080/api/v1/Clientes", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify({ emailId : emailId, password: password })
-//         });
-
-//         if (response.ok) {
-//             const jsonResponse = await response.json();
-//             const { emailId, password } = jsonResponse;
-
-//             const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === emailId);
-//             if (usuarioRegistrado){
-//                 return alert ('El usuario ya está registrado');
-//             }
-
-//             Usuarios.push({ emailId: emailId, password: password });
-//             localStorage.setItem('usuarios', JSON.stringify(Usuarios));
-//             alert('Registro exitoso');
-//         }
-//     } catch (error) {
-//         console.log(emailId + password);
-//     }
-
-// });
-

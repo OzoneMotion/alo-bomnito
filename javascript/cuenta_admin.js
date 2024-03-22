@@ -6,26 +6,25 @@ const passwordId =  document.getElementById("password")
 async function imprimirUsuario(idCliente) {
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
     //usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
-    console.log(usuariosLocales)
+    console.log(usuariosLocales.num_administrador)
 
-    // const usuarios = await getData();
-    // const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
-    nameId.innerHTML = "Cheems"
-    emailId.innerHTML = `${usuariosLocales.emailId}`;
-    admnId.innerHTML = `${usuariosLocales.nameId}`;
+    nameId.innerHTML = `${usuariosLocales.nombre}`;
+    emailId.innerHTML = `${usuariosLocales.correo}`;
+    admnId.innerHTML = `${usuariosLocales.num_administrador}`;
     mostrarContrasenia(usuariosLocales)
     verificar()
 }
 
 function mostrarContrasenia(usuario) {
-    const contrasenia = usuario.password;
+    console.log(usuario.contrasenia);
+    const contrasenia = usuario.contrasenia;
     const contraseniaLenght = contrasenia.length;
     let passwordAst = "";
 
     for (let i = 1; i < contraseniaLenght; i++) {
         passwordAst = passwordAst + '*';
     }
-
+    console.log(passwordId.innerText)
     if (passwordId.innerText == "") {
         passwordId.innerHTML = `${passwordAst}`;
     }
@@ -35,8 +34,8 @@ function mostrarContrasenia(usuario) {
 function Visibility(){
     //const Usuarios = await getData();
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
-    const password = usuariosLocales.password;
-    const passwordLenght = `${usuariosLocales.password}`.length;
+    const password = usuariosLocales.contrasenia;
+    const passwordLenght = `${usuariosLocales.contrasenia}`.length;
     let passwordAst = ""
 
     for(let i = 1; i < passwordLenght; i++) {
@@ -64,7 +63,7 @@ function Visibility(){
 
         if (localStorage.getItem('usuarioActivo') == null){
     
-        } else if (admin.nameId == "ABC"){
+        } else if (admin.num_administrador != ""){
             const cuentaIconMobile = document.getElementById("cuentaIconMobile")
             const carritoIconMobile = document.getElementById("carritoIconMobile")
             const homecito = document.getElementById("homecito")

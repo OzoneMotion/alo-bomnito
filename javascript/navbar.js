@@ -42,7 +42,7 @@ navbar.insertAdjacentHTML("afterbegin", ` <nav class="navbar navbar-expand-lg bg
               </a>
             <ul class="collapse colapsable show1" id="collapseCuenta">
               <li>
-                <a class="nav-link" href="mis_datos.html">Mis datos</a>
+                <a class="nav-link" href="cuenta.html" id="cuentitaMobil" >Mis datos</a>
               </li>
             </ul>
             </li>
