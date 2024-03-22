@@ -19,7 +19,7 @@ const names = {
 
 const formNamesValidation = (e) => {
     const validations = {
-        // "admnId": regex.admnId,
+        "admnId": regex.admnId,
         "emailId": regex.emailId,
         "password": regex.password,
         "password2": regex.password // para utilizar la misma expresion de passwordId
@@ -152,20 +152,10 @@ const getData = async (data) => {
 
 async function administradores() {
     try {
-<<<<<<< HEAD
         // const response = await fetch("http://localhost:3000/users");
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
         const admins = await response.json();
         return admins;
-=======
-        const respuesta = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
-        if (respuesta.ok) {
-            const datos = await respuesta.json();
-            return datos;
-        } else {
-            console.error(respuesta.status);
-        }
->>>>>>> b92110f334421928d4faca935d13b907d72f5a7a
     } catch (error) {
         console.log('Error:', error);
         return [];
@@ -175,7 +165,7 @@ async function administradores() {
 const postData = async (newUser) => {
     try {
         // const response = await fetch("http://localhost:3000/admins", {
-        const response = await fetch(".", {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -190,49 +180,81 @@ const postData = async (newUser) => {
     catch (error) { console.log(error) }
 }
 
+const obtenerCorreo = async () => {
+    try {
+        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Admins');
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            const adminCorreo = datos.map(admin => admin.correo);
+            //console.log(idClientes)
+            return adminCorreo;
+        } else {
+            console.error(respuesta.status);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function getData() {
+    try {
+        // const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const users = await response.json();
+        return users;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
 formulario.addEventListener("submit", async event => {
     event.preventDefault();
-<<<<<<< HEAD
     //postData();
     const adminObtenido = administradores();
 
 
     self.administradores().then(async (admin) => {
         let idAdmin
-        idAdmin = admin.find((admin) => admin.num_administrador === name);
+        idAdmin = admin.find((admin) => admin.num_administrador === admnId);
         //console.log(idAdmin)
 
         if (idAdmin) {
-            const datosProcesados = await getData(idAdmin)
-            postData(datosProcesados)
+            self.obtenerCorreo().then(async (adminCorreo) => {
+                const datosProcesados = await getData(idAdmin)
+                let correoExiste
+                correoExiste = adminCorreo.find((correo) => correo === datosProcesados.correo)
+
+                if (correoExiste) {
+                    //console.error( "El correo ya existe" )
+                    window.location.href = "error_correo.html"
+                } else {
+
+                    self.getData().then(async (clientes) => {
+                        const datosProcesados = await getData(idAdmin)
+                        let clienteCorreoExiste
+                        clienteCorreoExiste = clientes.find((correo) => correo === datosProcesados.correo)
+
+
+                        if (clienteCorreoExiste) {
+                            //console.error( "El correo ya existe" )
+                            window.location.href = "error_correo.html"
+
+                        } else {
+                            postData(datosProcesados)
+                            window.location.href = "aviso_creado_cuenta.html"
+                        }
+                    })
+                }
+            })
+
         } else {
-            console.error(name + ' no existe');
+            console.error(admnId + ' no existe');
         }
     })
 
-=======
-    postData();
-    const loQueSea = await ultimoIdAdmin();
-    console.log(loQueSea)
->>>>>>> b92110f334421928d4faca935d13b907d72f5a7a
-    const name = document.querySelector('#admnId').value
+    const admnId = document.querySelector('#admnId').value
     const email = document.querySelector('#emailId').value
     const password = document.querySelector('#password').value
     const password2 = document.querySelector('#password2').value
-<<<<<<< HEAD
-=======
-
-    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
-    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
-    if (usuarioRegistrado) {
-        //redireccion a html de error de correo
-        //return window.location.href = 'error_correo.html'
-    }
-
-    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
-    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
-    console.log("creada")
-    //redireccion a html de exito haz creado tu cuenta
-    //window.location.href = 'aviso_creado_cuenta.html'
->>>>>>> b92110f334421928d4faca935d13b907d72f5a7a
 })
