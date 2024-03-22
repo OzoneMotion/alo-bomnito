@@ -6,26 +6,25 @@ const passwordId =  document.getElementById("password")
 async function imprimirUsuario(idCliente) {
     const usuariosLocales = JSON.parse(localStorage.getItem('usuarioActivo'));
     //usuarioEncontrado = usuariosLocales.find((usuario) => (usuario.emailId === usuarioActual && usuario.password === passwordActual));
-    console.log(usuariosLocales)
+    console.log(usuariosLocales.num_administrador)
 
-    // const usuarios = await getData();
-    // const usuario = usuarios.find(usuario => usuario.idCliente === idCliente)
-    nameId.innerHTML = "Cheems"
+    nameId.innerHTML = `${usuariosLocales.nombre}`;
     emailId.innerHTML = `${usuariosLocales.correo}`;
-    admnId.innerHTML = `${usuariosLocales.nombre}`;
+    admnId.innerHTML = `${usuariosLocales.num_administrador}`;
     mostrarContrasenia(usuariosLocales)
     verificar()
 }
 
 function mostrarContrasenia(usuario) {
-    const contrasenia = usuario.password;
+    console.log(usuario.contrasenia);
+    const contrasenia = usuario.contrasenia;
     const contraseniaLenght = contrasenia.length;
     let passwordAst = "";
 
     for (let i = 1; i < contraseniaLenght; i++) {
         passwordAst = passwordAst + '*';
     }
-
+    console.log(passwordId.innerText)
     if (passwordId.innerText == "") {
         passwordId.innerHTML = `${passwordAst}`;
     }

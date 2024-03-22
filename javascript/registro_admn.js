@@ -19,7 +19,7 @@ const names = {
 
 const formNamesValidation = (e) => {
     const validations = {
-        "admnId": regex.admnId,
+        // "admnId": regex.admnId,
         "emailId": regex.emailId,
         "password": regex.password,
         "password2": regex.password // para utilizar la misma expresion de passwordId
@@ -152,10 +152,20 @@ const getData = async (data) => {
 
 async function administradores() {
     try {
+<<<<<<< HEAD
         // const response = await fetch("http://localhost:3000/users");
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
         const admins = await response.json();
         return admins;
+=======
+        const respuesta = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            return datos;
+        } else {
+            console.error(respuesta.status);
+        }
+>>>>>>> b92110f334421928d4faca935d13b907d72f5a7a
     } catch (error) {
         console.log('Error:', error);
         return [];
@@ -165,7 +175,7 @@ async function administradores() {
 const postData = async (newUser) => {
     try {
         // const response = await fetch("http://localhost:3000/admins", {
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
+        const response = await fetch(".", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -182,6 +192,7 @@ const postData = async (newUser) => {
 
 formulario.addEventListener("submit", async event => {
     event.preventDefault();
+<<<<<<< HEAD
     //postData();
     const adminObtenido = administradores();
 
@@ -199,8 +210,29 @@ formulario.addEventListener("submit", async event => {
         }
     })
 
+=======
+    postData();
+    const loQueSea = await ultimoIdAdmin();
+    console.log(loQueSea)
+>>>>>>> b92110f334421928d4faca935d13b907d72f5a7a
     const name = document.querySelector('#admnId').value
     const email = document.querySelector('#emailId').value
     const password = document.querySelector('#password').value
     const password2 = document.querySelector('#password2').value
+<<<<<<< HEAD
+=======
+
+    const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+    const usuarioRegistrado = Usuarios.find(usuario => usuario.emailId === email)
+    if (usuarioRegistrado) {
+        //redireccion a html de error de correo
+        //return window.location.href = 'error_correo.html'
+    }
+
+    Usuarios.push({ nameId: name, emailId: email, password: password, password2: password2 })
+    localStorage.setItem('usuarios', JSON.stringify(Usuarios))
+    console.log("creada")
+    //redireccion a html de exito haz creado tu cuenta
+    //window.location.href = 'aviso_creado_cuenta.html'
+>>>>>>> b92110f334421928d4faca935d13b907d72f5a7a
 })

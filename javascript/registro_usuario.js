@@ -118,11 +118,31 @@ const formRegistro = document.querySelector('#validation-registro');
 
 formRegistro.addEventListener('submit', async (e) => {
     e.preventDefault()
-    console.log("hola")
-    const datosProcesados = await obtenerJsonDatos(e.target);
 
-    console.log(datosProcesados)
-    postData(datosProcesados);
+    self.getClientes().then(async (correosclientes) => {
+        const datosProcesados = await obtenerJsonDatos(e.target);
+        let buscarCorreo;
+
+        buscarCorreo = correosclientes.find((cliente) => cliente === datosProcesados.correo);
+        if (buscarCorreo) {
+            window.location.href = "error_correo.html"
+        } else {
+            console.log(buscarCorreo)
+            self.getAdmin().then(async (correosAdmin) => {
+                let buscarCorreo;
+                buscarCorreo = correosAdmin.find((admin) => admin === datosProcesados.correo);
+
+                if (buscarCorreo) {
+                    window.location.href = "error_correo.html"
+                } else {
+                    postData(datosProcesados);
+                    window.location.href = "aviso_creado_cuenta.html"
+                }
+        
+            })
+        }
+
+    })
 
 })
 
@@ -141,13 +161,39 @@ const obtenerJsonDatos = async (e) => {
     return datosProcesados;
 
 }
+
+async function getClientes() {
+    try {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const users = await response.json();
+        const correoUsers = users.map(cliente => cliente.correo);
+        return correoUsers;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
+async function getAdmin() {
+    try {
+        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const admins = await response.json();
+        const correoAdmins = admins.map(admin => admin.correo);
+        return correoAdmins;
+    } catch (error) {
+        console.log('Error:', error);
+        return [];
+    }
+};
+
+
 const obtenerId = async () => {
     try {
         const respuesta = await fetch ('https://alobomnito.onrender.com/api/v1/Clientes');
         if (respuesta.ok) {
             const datos = await respuesta.json();
             const idClientes = datos.map(cliente => cliente.id_cliente);
-            console.log(idClientes)
+
             return Math.max(...idClientes);
         } else {
             console.error(respuesta.status);

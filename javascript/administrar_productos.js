@@ -3,13 +3,15 @@
 const obtenerProductos = async () => {
     try {
         // Cambiar la url con el endpoint final para productos
-        const respuesta = await fetch('http://localhost:3000/productos');
-        // const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Productos');
+        //const respuesta = await fetch('http://localhost:3000/productos');
+        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Productos');
         if (!respuesta.ok) {
             throw new Error('Error al obtener los productos. Código de estado: ' + respuesta.status);
+        } else {
+            const productos = await respuesta.json();
+            console.log(productos)
+            return productos;
         }
-        const productos = await respuesta.json();
-        return productos;
     } catch (error) {
         console.error('Error:', error.message);
     }
@@ -62,18 +64,18 @@ const recuperarImagenesProducto = (productos, idProducto) => {
     return resultado;
 }
 
-const deleteProduct = (id) => {
-    const index = productos.findIndex((producto) => {
-        return producto.id_producto == id;
-    });
+// const deleteProduct = (id) => {
+//     const index = productos.findIndex((producto) => {
+//         return producto.id_producto == id;
+//     });
 
-    let validar = confirm('¿Desea eliminar el producto?');
-    console.log(validar);
-    if (validar) {
-        productos.splice(index, 1);
-        alert('El producto fue eliminado');
-    }
-}
+//     let validar = confirm('¿Desea eliminar el producto?');
+//     console.log(validar);
+//     if (validar) {
+//         productos.splice(index, 1);
+//         alert('El producto fue eliminado');
+//     }
+// }
 
 productos.forEach(item => {
     productosID.innerHTML += `<section class="card-container" id="card-producto-${item.id_producto}">

@@ -16,7 +16,7 @@ async function imprimirUsuario(idCliente) {
 }
 
 function mostrarContrasenia(usuario) {
-    const contrasenia = usuario.password;
+    const contrasenia = usuario.contrasenia;
     const contraseniaLenght = contrasenia.length;
     let passwordAst = "";
 

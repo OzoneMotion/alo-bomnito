@@ -101,33 +101,12 @@ const inputValidation = (regex, input, name) => {
 
     btnSubmit.disabled = !Object.values(names).every(state => state);
 }
-//const email = document.querySelector('#emailId').value;
-//const password = document.querySelector('#password').value;
 
-//const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-
-// let validarUsuario = Usuarios.find(usuario => usuario.emailId === email && usuario.password === password);
-
-// if (!validarUsuario) {
-//     mensajeError.style.display = 'block';
-//     // return;
-// } else {
-//     localStorage.setItem('inicio_exitoso', JSON.stringify(validarUsuario));
-//     window.location.href = 'index.html';
-// }
-// inputEmail.addEventListener('input', () => {
-//     mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de correo electrónico
-// });
-
-// inputPassword.addEventListener('input', () => {
-//     mensajeError.style.display = 'none'; // Ocultar el mensaje de error cuando se modifica el campo de contraseña
-// });
 
 // Función para obtener los datos del archivo JSON
 async function getData() {
     try {
-        // const response = await fetch("http://localhost:3000/users");
+        //const response = await fetch("http://localhost:3000/users");
         const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
         const users = await response.json();
         return users;
@@ -153,9 +132,7 @@ async function getAdmin() {
 function login() {
     const usuarioActual = document.getElementById('emailId').value;
     const passwordActual = document.getElementById('password').value;
-    const usuariosLocales = JSON.parse(localStorage.getItem('usuarios'));
 
-        // si no hay usuarios en localStorage trata de obtenerlos de la api
         self.getData().then((users) => {
             console.log('usuarios', users);
             const misUsuarios = users;
