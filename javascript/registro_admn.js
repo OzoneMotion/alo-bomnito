@@ -144,7 +144,7 @@ const getData = async (data) => {
 
     data['correo'] = datosProcesados.emailId
     data['contrasenia'] = datosProcesados.password
-
+    console.log(data)
     formulario.reset();
     return data;
     //console.log(datosProcesados)
@@ -219,8 +219,8 @@ formulario.addEventListener("submit", async event => {
         let idAdmin
         idAdmin = admin.find((admin) => admin.num_administrador === admnId);
 
-        if (idAdmin) {
-            window.location.href = "error_correo.html"
+        if (!idAdmin) {
+            window.location.href = "error_numAdmin.html"
         } else {
             console.log(idAdmin)
             self.obtenerCorreo().then(async (admins) => {
