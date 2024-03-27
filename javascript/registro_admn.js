@@ -153,7 +153,7 @@ const getData = async (data) => {
 async function administradores() {
     try {
         // const response = await fetch("http://localhost:3000/users");
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const response = await fetch("http://3.133.128.90/api/v1/Admins");
         const admins = await response.json();
         return admins;
     } catch (error) {
@@ -165,7 +165,7 @@ async function administradores() {
 const postData = async (newUser) => {
     try {
         // const response = await fetch("http://localhost:3000/admins", {
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins", {
+        const response = await fetch("http://3.133.128.90/api/v1/Admins", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -182,7 +182,7 @@ const postData = async (newUser) => {
 
 async function obtenerCorreo() {
     try {
-        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Admins');
+        const respuesta = await fetch('http://3.133.128.90/api/v1/Admins');
         if (respuesta.ok) {
             const datos = await respuesta.json();
             const adminCorreo = datos.map(admin => admin.correo);
@@ -199,7 +199,7 @@ async function obtenerCorreo() {
 
 async function getClientes() {
     try {
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const response = await fetch("http://3.133.128.90/api/v1/Clientes");
         const users = await response.json();
         const correoUsers = users.map(cliente => cliente.correo);
         return correoUsers;

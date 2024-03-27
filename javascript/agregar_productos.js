@@ -193,7 +193,7 @@ const obtenerJsonDatos = async (eTarget) => {
 }
 
 const enviarDatosProducto = async (producto) => {
-    const url = 'https://alobomnito.onrender.com/api/v1/Productos';
+    const url = 'http://3.133.128.90/api/v1/Productos';
     //const url = 'http://localhost:3000/productos';
     try {
         const respuesta = await fetch(url, {
@@ -230,7 +230,7 @@ const cambiarABase64 = async (file) => {
 const subirImagen = async (contenidoBase64, nombreArchivo) => {
     try {
         // Obtener el token
-        const respuestaToken = await fetch('https://alobomnito.onrender.com/api/v1/Admins');
+        const respuestaToken = await fetch('http://3.133.128.90/api/v1/Admins');
         if (respuestaToken.ok) {
             const dato = await respuestaToken.json();
             const datoToken = dato[14]
@@ -273,7 +273,7 @@ const crearJsonImagenes = (datos) => {
 
 const ultimoIdProductos = async () => {
     try {
-        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Productos');
+        const respuesta = await fetch('http://3.133.128.90/api/v1/Productos');
         if (respuesta.ok) {
             const datos = await respuesta.json();
             const idProductos = datos.map(producto => producto.id_producto);
@@ -292,7 +292,7 @@ const ultimoIdProductos = async () => {
 const obtenerDatos = async () => {
     //const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
     try {
-        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/ingrediente');
+        const respuesta = await fetch('http://3.133.128.90/api/v1/ingrediente');
         if (respuesta.ok) {
             return await respuesta.json();
         } else if (respuesta.status === 500) {
@@ -306,7 +306,7 @@ const obtenerDatos = async () => {
 }
 
 const enviarDatosIngrediente = async (ingrediente) => {
-    const url = 'https://alobomnito.onrender.com/api/v1/ingrediente';
+    const url = 'http://3.133.128.90/api/v1/ingrediente';
     try {
         const respuesta = await fetch(url, {
             method: 'POST',

@@ -107,7 +107,7 @@ const inputValidation = (regex, input, name) => {
 async function getData() {
     try {
         //const response = await fetch("http://localhost:3000/users");
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes");
+        const response = await fetch("http://3.133.128.90/api/v1/Clientes");
         const users = await response.json();
         return users;
     } catch (error) {
@@ -119,7 +119,7 @@ async function getData() {
 async function getAdmin() {
     try {
         // const response = await fetch("http://localhost:3000/users");
-        const response = await fetch("https://alobomnito.onrender.com/api/v1/Admins");
+        const response = await fetch("http://3.133.128.90/api/v1/Admins");
         const admins = await response.json();
         return admins;
     } catch (error) {

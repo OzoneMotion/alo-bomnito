@@ -4,7 +4,7 @@ const obtenerProductos = async () => {
     try {
         // Cambiar la url con el endpoint final para productos
         //const respuesta = await fetch('http://localhost:3000/productos');
-        const respuesta = await fetch('https://alobomnito.onrender.com/api/v1/Productos');
+        const respuesta = await fetch('http://3.133.128.90/api/v1/Productos');
         if (!respuesta.ok) {
             throw new Error('Error al obtener los productos. Código de estado: ' + respuesta.status);
         } else {

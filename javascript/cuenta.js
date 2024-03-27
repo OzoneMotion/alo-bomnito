@@ -80,27 +80,4 @@ function verificar() {
 
 }
 
-
-const getData = async () => {
-    try {
-         const response = await fetch("http://localhost:3000/users", {
-        // const response = await fetch("https://alobomnito.onrender.com/api/v1/Clientes", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        if (response.ok) {
-            return await response.json();
-        } else {
-            console.error('Error al obtener los datos del archivo db.json:', response.statusText);
-            return [];
-        }
-    } catch (error) {
-        console.log('Error:', error);
-        return [];
-    }
-};
-
-
 imprimirUsuario(1);
